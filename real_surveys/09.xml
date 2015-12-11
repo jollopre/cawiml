@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>Test Questionnaire 2</name>
+        <description></description>
+        <date>2015-02-20</date>
+    </survey>
+    <content>
+        <section id="0">
+            <label lang="en">Section 0</label>
+            <intro name="INTRODUCTION">
+                <label lang="en">This is a test questionnaire to be used in testing various aspects of a CAI system</label>
+            </intro>
+            <single name="QA">
+                <label lang="en">Respondent location</label>
+                <close code="1">
+                    <label lang="en">England</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Northern Ireland</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Scotland</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Wales</label>
+                </close>
+            </single>
+            <multiple name="Q1">
+                <label lang="en">Which of the following newspapers do you read?</label>
+                <close code="1">
+                    <label lang="en">Times</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Guardian</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Telegraph</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Sun</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Mirror</label>
+                </close>
+                <close code="6">
+                    <label lang="en">Star</label>
+                </close>
+                <close code="7">
+                    <label lang="en">Express</label>
+                </close>
+                <close code="8">
+                    <label lang="en">Mail</label>
+                </close>
+                <open code="9">
+                    <label lang="en">Other (please specify)</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+                <close code="10">
+                    <label lang="en">None</label>
+                    <exclusive value="true"/>
+                </close>
+            </multiple>
+            <single name="Q4a">
+                <label lang="en">Which supermarkets do you use?</label>
+                <close code="1">
+                    <label lang="en">Sainsburys</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Tesco</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Morrisons</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Waitrose</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Marks &amp; Spencer</label>
+                </close>
+                <close code="6">
+                    <label lang="en">Somerfield</label>
+                </close>
+                <close code="7">
+                    <label lang="en">Lidl</label>
+                </close>
+                <close code="8">
+                    <label lang="en">Iceland</label>
+                </close>
+                <close code="9">
+                    <label lang="en">FarmFoods</label>
+                </close>
+                <close code="10">
+                    <label lang="en">Aldi</label>
+                </close>
+                <open code="11">
+                    <label lang="en">Other (please specify)</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </single>
+            <multiple name="Q4b">
+                <label lang="en">Which supermarkets do you use?</label>
+                <pipe ref="pipe0"/>
+            </multiple>
+            <multiple name="Q4c">
+                <label lang="en">Do you ever shop at any of the following supermarkets?</label>
+                <pipe ref="pipe1"/>
+            </multiple>
+            <multiple name="Q5_ENGLAND">
+                <label lang="en">Which of the crisp brands are you aware of?</label>
+                <close code="1">
+                    <label lang="en">Walkers</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Golden Wonder</label>
+                </close>
+                <close code="3">
+                    <label lang="en">McCoys</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Pringles</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Brannigans</label>
+                </close>
+            </multiple>
+            <multiple name="Q5_NIRELAND">
+                <label lang="en">Which of the crisp brands are you aware of?</label>
+                <close code="1">
+                    <label lang="en">Walkers</label>
+                </close>
+                <close code="2">
+                    <label lang="en">McCoys</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Pringles</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Kettle Chips</label>
+                </close>
+            </multiple>
+            <multiple name="Q5_SCOTLAND">
+                <label lang="en">Which of the crisp brands are you aware of?</label>
+                <close code="1">
+                    <label lang="en">Walkers</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Golden Wonder</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Kettle Chips</label>
+                </close>
+                <close code="4">
+                    <label lang="en">KP</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Pringles</label>
+                </close>
+            </multiple>
+            <multiple name="Q5_WALES">
+                <label lang="en">Which of the crisp brands are you aware of?</label>
+                <close code="1">
+                    <label lang="en">Walkers</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Golden Wonder</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Pringles</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Brannigans</label>
+                </close>
+            </multiple>
+            <multiple name="Q7">
+                <label lang="en">Which of the following do you like to watch?</label>
+                <close code="1">
+                    <label lang="en">Business / financial</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Comedy</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Current affairs</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Films</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Historical</label>
+                </close>
+                <close code="6">
+                    <label lang="en">Music</label>
+                </close>
+                <close code="7">
+                    <label lang="en">Natural history</label>
+                </close>
+                <close code="8">
+                    <label lang="en">News</label>
+                </close>
+                <close code="9">
+                    <label lang="en">Quizzes / Game shows</label>
+                </close>
+                <close code="10">
+                    <label lang="en">Reality TV</label>
+                </close>
+                <close code="11">
+                    <label lang="en">Soap Operas</label>
+                </close>
+                <close code="12">
+                    <label lang="en">Sport</label>
+                </close>
+                <open code="13">
+                    <label lang="en">Other (please specify):</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+                <close code="14">
+                    <label lang="en">None</label>
+                    <exclusive value="true"/>
+                </close>
+            </multiple>
+        </section>
+        <section id="1">
+            <label lang="en">Section 1</label>
+            <grid name="Q2">
+                <label lang="en">For newspaper <pipe ref="pipe0"/> please rate the following features on a scale
+                of 1 to 5 where 1 is "Poor quality" and 5 is "Excellent quality".</label>
+                <single>
+                    <rows>
+                        <close code="A">
+                            <label lang="en">National News</label>
+                        </close>
+                        <close code="B">
+                            <label lang="en">International news</label>
+                        </close>
+                        <close code="C">
+                            <label lang="en">Columnists</label>
+                        </close>
+                        <close code="D">
+                            <label lang="en">Financial/Business news</label>
+                        </close>
+                        <close code="E">
+                            <label lang="en">Arts &amp; Culture</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">1</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">2</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">3</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">4</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">5</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <open name="Q3A">
+                <label lang="en">Why do you rate "National News" as <pipe ref="pipe1"/> for <pipe ref="pipe0"/>?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q3B">
+                <label lang="en">Why do you rate "International News" as <pipe ref="pipe2"/> for <pipe ref="pipe0"/>?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q3C">
+                <label lang="en">Why do you rate "Columnists" as <pipe ref="pipe3"/> for <pipe ref="pipe0"/>?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q3D">
+                <label lang="en">Why do you rate "Financial/Business" as <pipe ref="pipe4"/> for <pipe ref="pipe0"/>?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q3E">
+                <label lang="en">Why do you rate "Arts &amp; Culture" as <pipe ref="pipe5"/> for <pipe ref="pipe0"/>?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+        </section>
+        <section id="2">
+            <label lang="en">Section 2</label>
+            <open name="Q8">
+                <label lang="en">What do you like most about watching <pipe ref="pipe0"/>?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+        </section>
+    </content>
+    <field>
+        <iterator id="p1_iterator" />
+        <iterator id="p7_iterator"/>
+    </field>
+    <routing>
+        <statemodel ref="0">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="INTRODUCTION"/>
+                <variable ref="QA"/>
+                <variable ref="Q1"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q1"/>
+                        <constant type="string" value="10"/>
+                        <operator name="IS_UNSEL"/>
+                    </condition>
+                    <then>
+                        <transition target="p1"/>
+                    </then>
+                    <else>
+                        <transition target="s1"/>
+                    </else>
+                </if>
+            </state>
+            <state id="p1">
+                <for>
+                    <field ref="p1_iterator"/>
+                    <in>
+                        <expr_list>
+                            <variable ref="Q1"/>
+                            <operator name="SEL"/>
+                        </expr_list>
+                    </in>
+                    <transition target="c1"/>
+                </for>
+                <transition target="s1"/>
+            </state>
+            <state id="c1">
+                <include statemodel="1"/>
+            </state>
+            <state id="s1">
+                <variable ref="Q4a"/>
+                <transition target="s2"/>
+            </state>
+            <state id="s2">
+                <variable ref="Q4b"/>
+                <transition target="s3"/>
+            </state>
+            <state id="s3">
+                <variable ref="Q4c"/>
+                <transition target="p2"/>
+            </state>
+            <state id="p2">
+                <if>
+                    <condition>
+                        <variable ref="Q4a"/>
+                        <constant type="string" value="7"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="Q4a"/>
+                        <constant type="string" value="8"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4a"/>
+                        <constant type="string" value="9"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4b"/>
+                        <constant type="string" value="7"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4b"/>
+                        <constant type="string" value="8"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4b"/>
+                        <constant type="string" value="9"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4c"/>
+                        <constant type="string" value="7"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4c"/>
+                        <constant type="string" value="8"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4c"/>
+                        <constant type="string" value="9"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="QA"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="AND"/>
+                    </condition>
+                    <then>
+                        <transition target="s4"/>
+                    </then>
+                    <else>
+                        <transition target="p3"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s4">
+                <variable ref="Q5_ENGLAND"/>
+                <transition target="p3"/>
+            </state>
+            <state id="p3">
+                <if>
+                    <condition>
+                        <variable ref="Q4a"/>
+                        <constant type="string" value="7"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="Q4a"/>
+                        <constant type="string" value="8"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4a"/>
+                        <constant type="string" value="9"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4b"/>
+                        <constant type="string" value="7"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4b"/>
+                        <constant type="string" value="8"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4b"/>
+                        <constant type="string" value="9"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4c"/>
+                        <constant type="string" value="7"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4c"/>
+                        <constant type="string" value="8"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4c"/>
+                        <constant type="string" value="9"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="QA"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="AND"/>  
+                    </condition>
+                    <then>
+                        <transition target="s5"/>
+                    </then>
+                    <else>
+                        <transition target="p4"/>
+                    </else>
+                </if>    
+            </state>
+            <state id="s5">
+                <variable ref="Q5_NIRELAND"/>
+                <transition target="p4"/>
+            </state>
+            <state id="p4">
+                <if>
+                    <condition>
+                        <variable ref="Q4a"/>
+                        <constant type="string" value="7"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="Q4a"/>
+                        <constant type="string" value="8"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4a"/>
+                        <constant type="string" value="9"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4b"/>
+                        <constant type="string" value="7"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4b"/>
+                        <constant type="string" value="8"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4b"/>
+                        <constant type="string" value="9"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4c"/>
+                        <constant type="string" value="7"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4c"/>
+                        <constant type="string" value="8"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4c"/>
+                        <constant type="string" value="9"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="QA"/>
+                        <constant type="string" value="3"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="AND"/>  
+                    </condition>
+                    <then>
+                        <transition target="s6"/>
+                    </then>
+                    <else>
+                        <transition target="p5"/>
+                    </else>
+                </if>    
+            </state>
+            <state id="s6">
+                <variable ref="Q5_SCOTLAND"/>
+                <transition target="p5"/>
+            </state>
+            <state id="p5">
+                <if>
+                    <condition>
+                        <variable ref="Q4a"/>
+                        <constant type="string" value="7"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="Q4a"/>
+                        <constant type="string" value="8"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4a"/>
+                        <constant type="string" value="9"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4b"/>
+                        <constant type="string" value="7"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4b"/>
+                        <constant type="string" value="8"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4b"/>
+                        <constant type="string" value="9"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4c"/>
+                        <constant type="string" value="7"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4c"/>
+                        <constant type="string" value="8"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="Q4c"/>
+                        <constant type="string" value="9"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="QA"/>
+                        <constant type="string" value="4"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="AND"/>  
+                    </condition>
+                    <then>
+                        <transition target="s7"/>
+                    </then>
+                    <else>
+                        <transition target="s8"/>
+                    </else>
+                </if>    
+            </state>
+            <state id="s7">
+                <variable ref="Q5_WALES"/>
+                <transition target="s8"/>
+            </state>
+            <state id="s8">
+                <variable ref="Q7"/>
+                <transition target="p6"/>
+            </state>
+            <state id="p6">
+                <if>
+                    <condition>
+                        <variable ref="Q7"/>
+                        <constant type="string" value="14"/>
+                        <operator name="IS_UNSEL"/>
+                    </condition>
+                    <then>
+                        <transition target="p7"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
+            <state id="p7">
+                <for>
+                    <field ref="p7_iterator"/>
+                    <in>
+                        <expr_list>
+                            <variable ref="Q7"/>
+                            <operator name="SEL"/>
+                        </expr_list>
+                        <randomising>
+                            <all present="4"/>
+                        </randomising>
+                    </in>
+                    <transition target="c2"/>
+                </for>
+                <transition target="sink0"/>
+            </state>
+            <state id="c2">
+                <include statemodel="2"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <statemodel ref="1">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="Q2"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <multivariable ref="Q2" row="A"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <multivariable ref="Q2" row="A"/>
+                        <constant type="string" value="5"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s1"/>
+                    </then>
+                    <else>
+                        <transition target="p1"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s1">
+                <variable ref="Q3A"/>
+                <transition target="p1"/>
+            </state>
+            <state id="p1">
+                <if>
+                    <condition>
+                        <multivariable ref="Q2" row="B"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <multivariable ref="Q2" row="B"/>
+                        <constant type="string" value="5"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s2"/>
+                    </then>
+                    <else>
+                        <transition target="p2"/>
+                    </else>
+                </if>    
+            </state>
+            <state id="s2">
+                <variable ref="Q3B"/>
+                <transition target="p2"/>
+            </state>
+            <state id="p2">
+                <if>
+                    <condition>
+                        <multivariable ref="Q2" row="C"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <multivariable ref="Q2" row="C"/>
+                        <constant type="string" value="5"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s3"/>
+                    </then>
+                    <else>
+                        <transition target="p3"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s3">
+                <variable ref="Q3C"/>
+                <transition target="p3"/>
+            </state>
+            <state id="p3">
+                <if>
+                    <condition>
+                        <multivariable ref="Q2" row="D"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <multivariable ref="Q2" row="D"/>
+                        <constant type="string" value="5"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s4"/>
+                    </then>
+                    <else>
+                        <transition target="p4"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s4">
+                <variable ref="Q3D"/>
+                <transition target="p4"/>
+            </state>
+            <state id="p4">
+                <if>
+                    <condition>
+                        <multivariable ref="Q2" row="E"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <multivariable ref="Q2" row="E"/>
+                        <constant type="string" value="5"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s5"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s5">
+                <variable ref="Q3E"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <statemodel ref="2">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="Q8"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="0"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation>
+        <piping ref="0">
+            <pipe id="pipe0">
+                <variable ref="Q4a"/>
+                <operator name="UNSEL"/>
+            </pipe>
+            <pipe id="pipe1">
+                <variable ref="Q4a"/>
+                <operator name="SEL"/>
+                <variable ref="Q4b"/>
+                <operator name="SEL"/>
+                <operator name="UNION"/>
+            </pipe>
+        </piping>
+        <piping ref="1">
+            <pipe id="pipe0">
+                <variable ref="p1_iterator"/>
+                <operator name="VALUEOF"/>
+            </pipe>
+            <pipe id="pipe1">
+                <multivariable ref="Q2" row="A"/>
+                <operator name="SEL"/>
+            </pipe>
+            <pipe id="pipe2">
+                <multivariable ref="Q2" row="B"/>
+                <operator name="SEL"/>
+            </pipe>
+            <pipe id="pipe3">
+                <multivariable ref="Q2" row="C"/>
+                <operator name="SEL"/>
+            </pipe>
+            <pipe id="pipe4">
+                <multivariable ref="Q2" row="D"/>
+                <operator name="SEL"/>
+            </pipe>
+            <pipe id="pipe5">
+                <multivariable ref="Q2" row="E"/>
+                <operator name="SEL"/>
+            </pipe>
+        </piping>
+        <piping ref="2">
+            <pipe id="pipe0">
+                <variable ref="p7_iterator"/>
+                <operator name="VALUEOF"/>    
+            </pipe>
+        </piping>
+    </personalisation>
+</ssm>

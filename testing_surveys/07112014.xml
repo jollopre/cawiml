@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>Survey example</name>
+        <description>Presentation to highlight features of surveys</description>
+        <date>2014-11-07</date>
+    </survey>
+    <content>
+        <section id="0">
+            <label lang="en">Default block</label>
+            <intro name="INF">
+                <label lang="en">This is a presentation to highlight the status of the processing surveys
+                interface. I hope you enjoy!</label>
+                <label lang="es">Esta es una presentation para remarcar el estado de la interfaz para procesar
+                questionarios.</label>
+            </intro>
+            <single name="Q1">
+                <label lang="en">Which monkeys are you aware of? [FIRST SPONTANEOUS MENTION]</label>
+                <label lang="es">De que monos eres consciente? [PRIMERA MENCION ESPONTANEA]</label>
+                <close code="0">
+                    <label lang="en">Golden Snub-nosed Monkey</label>
+                    <label lang="es">Golden Snub-nosed Monkey</label>
+                </close>
+                <close code="1">
+                    <label lang="en">Javan Lutung</label>
+                    <label lang="es">Javan Lutung</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Back-capped Squirrel Monkey</label>
+                    <label lang="es">Back-capped Squirrel Monkey</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Golden Lion Tamarin</label>
+                    <label lang="es">Golden Lion Tamarin</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Mandrill</label>
+                    <label lang="es">Mandrill</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Zanzibar Red Colobus</label>
+                    <label lang="es">Zanzibar Red Colobus</label>
+                </close>
+                <close code="6">
+                    <label lang="en">Red-shanked Douc</label>
+                    <label lang="es">Red-shanked Douc</label>
+                </close>
+                <close code="7">
+                    <label lang="en">Sumatran Orangutan</label>
+                    <label lang="es">Sumatran Orangutan</label>
+                </close>
+                <open code="8">
+                    <label lang="en">Other, specify:</label>
+                    <label lang="es">Otro, especificar:</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </single>
+            <multiple name="Q2">
+                <label lang="en">Which monkeys are you aware of? [OTHER SPONTANEOUS MENTIONS] [1-3]</label>
+                <label lang="es">De que monos eres consciente? [OTRAS MENCIONES ESPONTANEA] [1-3]</label>
+                <limit>
+                    <min>1</min>
+                    <max>3</max>
+                </limit>
+                <pipe ref="pipe0"/>
+            </multiple>
+            <open name="Q3">
+                <label lang="en">Why was <pipe ref="pipe1"/> the first monkey coming to your mind?</label>
+                <label lang="es">Porque <pipe ref="pipe1"/> fue el primer mono que te vino a la mente?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q4">
+                <label lang="en">Do you use a car?</label>
+                <label lang="es">Utilizas coche?</label>
+                <close code="0">
+                    <label lang="en">Yes</label>
+                    <label lang="es">Si</label>
+                </close>
+                <close code="1">
+                    <label lang="en">No</label>
+                    <label lang="es">No</label>
+                </close>
+            </single>
+            <open name="Q5">
+                <label lang="en">How much do you spend on fuel weekly? [0...100]</label>
+                <label lang="es">Cuanto gastas en gasolina a la semana? [0...100]</label>
+                <integer>
+                    <min>0</min>
+                    <max>100</max>
+                    <value></value>
+                </integer>
+            </open>
+            <open name="Q6">
+                <label lang="en">How many people is watching the presentation? This is intended to show you
+                how looping works.</label>
+                <label lang="es">Cuanta gente esta viendo la presentacion? Esto es intencionado para mostraros
+                como funcionan los bucles.</label>
+                <integer>
+                    <min>0</min>
+                    <max></max>
+                    <value></value>
+                </integer>
+            </open>
+            <intro name="INF2">
+                <label lang="en">We reached the end of the survey and <pipe ref="pipe2"/> people liked the
+                demo. Thanks a lot for attending!</label>
+                <label lang="es">Hemos alcanzado el final del questionario y <pipe ref="pipe2"/> personas le
+                gusto la demostracion. Gracias por asistir!</label>
+            </intro>
+        </section>
+        <section id="1">
+            <label lang="en">Loop block</label>
+            <open name="Q7a">
+                <label lang="en">What is his/her name?</label>
+                <label lang="es">Cual es su nombre?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q7b">
+                <label lang="en">Does he/she likes the demo?</label>
+                <label lang="es">Le gusta la demostracion?</label>
+                <close code="0">
+                    <label lang="en">Yes</label>
+                    <label lang="es">Si</label>
+                </close>
+                <close code="1">
+                    <label lang="en">No</label>
+                    <label lang="es">No</label>
+                </close>
+            </single>
+        </section>
+    </content>
+    <field>
+        <integer id="LIKES" value="0"/>
+        <iterator id="p2_iterator"/>
+    </field>
+    <routing>
+        <statemodel ref="0">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="INF"/>
+                <transition target="s1"/>
+            </state>
+            <state id="s1">
+                <variable ref="Q1"/>
+                <transition target="s2"/>
+            </state>
+            <state id="s2">
+                <variable ref="Q2"/>
+                <transition target="s3"/>
+            </state>
+            <state id="s3">
+                <variable ref="Q3"/>
+                <transition target="s4"/>
+            </state>
+            <state id="s4">
+                <variable ref="Q4"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q4"/>
+                        <constant type="string" value="0"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s5"/>
+                    </then>
+                    <else>
+                        <transition target="s6"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s5">
+                <variable ref="Q5"/>
+                <transition target="p1"/>
+            </state>
+            <state id="p1">
+                <check type="error">
+                    <condition>
+                        <variable ref="Q5"/>
+                        <constant type="integer" value="0"/>
+                        <operator name="GT"/>
+                    </condition>
+                    <label lang="en">A car cannot run without fuel</label>
+                    <label lang="es">Un coche no funciona sin gasolina</label>
+                </check>
+                <transition target="s6"/>
+            </state>
+            <state id="s6">
+                <variable ref="Q6"/>
+                <transition target="p2"/>
+            </state>
+            <state id="p2">
+                <for>
+                    <field ref="p2_iterator"/>
+                    <in>
+                        <range>
+                            <start><constant type="integer" value="0"/></start>
+                            <end><variable ref="Q6"/></end>
+                            <step><constant type="integer" value="1"/></step>
+                        </range>
+                        
+                    </in>
+                    <transition target="c1"/>
+                </for>
+                <transition target="s8"/>
+            </state>
+            <state id="c1">
+                <include statemodel="1"/>
+            </state>
+            <state id="s8">
+                <variable ref="INF2"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <statemodel ref="1">
+            <source id="s7ab"/>
+            <state id="s7ab">
+                <variable ref="Q7a"/>
+                <variable ref="Q7b"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q7b"/>
+                        <constant type="string" value="0"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="p1"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
+            <state id="p1">
+                <computation ref="LIKES">
+                    <assignment>
+                        <variable ref="LIKES"/>
+                        <constant type="integer" value="1"/>
+                        <operator name="ADD"/>
+                    </assignment>
+                </computation>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="0"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation>
+        <piping ref="0">
+            <pipe id="pipe0">
+                <variable ref="Q1"/>
+                <operator name="UNSEL"/>
+            </pipe>
+            <pipe id="pipe1">
+                <variable ref="Q1"/>
+                <operator name="SEL"/>
+            </pipe>
+            <pipe id="pipe2">
+                <variable ref="LIKES"/>
+                <operator name="VALUEOF"/>
+            </pipe>
+        </piping>
+    </personalisation>
+</ssm>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>Open String</name>
+        <description>Open string question demo</description>
+        <date></date>
+    </survey>
+    <content>
+        <section id="0">
+            <label lang="en">Default</label>
+            <open name="Q0">
+                <label lang="en">Type a string value</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+        </section>
+    </content>
+    <field></field>
+    <routing>
+        <statemodel ref="0">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="Q0"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="0"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation></personalisation>
+</ssm>

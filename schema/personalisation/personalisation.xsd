@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    <xs:include schemaLocation="piping.xsd"></xs:include>
+    <xs:include schemaLocation="displaying.xsd"></xs:include>
+    <xs:include schemaLocation="randomising.xsd"></xs:include>
+    <xs:include schemaLocation="rotating.xsd"></xs:include>
+    <xs:complexType name="Personalisation">
+        <xs:sequence>
+            <xs:group ref="s:PersonalisationChoice" minOccurs="0" maxOccurs="unbounded"></xs:group>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:group name="PersonalisationChoice">
+        <xs:choice>
+            <xs:element name="piping" type="s:Piping"></xs:element>
+            <xs:element name="displaying" type="s:Displaying"></xs:element>
+        </xs:choice>
+    </xs:group>
+    <xs:group name="RandomisingOrRotating">
+        <xs:choice>
+            <xs:element name="randomising" type="s:Randomising"></xs:element>
+            <xs:element name="rotating" type="s:Rotating"></xs:element>
+        </xs:choice>
+    </xs:group>
+</xs:schema>

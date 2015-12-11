@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name></name>
+        <description></description>
+        <date></date>
+    </survey>
+    <content>
+        <section id="DEFAULT">
+            <label lang="en">Default</label>
+            <open name="Q0">
+                <label lang="en">Type an integer value</label>
+                <integer>
+                    <min></min>
+                    <max></max>
+                    <value></value>
+                </integer>
+            </open>
+            <open name="Q1">
+                <label lang="en">Type a string value</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q2">
+                <label lang="en">Type a decimal value</label>
+                <decimal>
+                    <value></value>
+                </decimal>
+            </open>
+        </section>
+    </content>
+    <field></field>
+    <routing>
+        <statemodel ref="DEFAULT">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="Q0"/>
+                <variable ref="Q1"/>
+                <variable ref="Q2"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="DEFAULT"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation></personalisation>
+</ssm>

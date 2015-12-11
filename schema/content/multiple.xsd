@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <xs:include schemaLocation="question.xsd"></xs:include>
+    <xs:include schemaLocation="response.xsd"></xs:include>
+    <xs:include schemaLocation="constraint.xsd"></xs:include>
+    <xs:include schemaLocation="../personalisation/personalisation.xsd"></xs:include>
+    <xs:complexType name="Multiple">
+        <xs:complexContent>
+            <xs:extension base="s:Question">
+                <xs:sequence>
+                    <xs:group ref="s:RandomisingOrRotating" minOccurs="0" maxOccurs="1"></xs:group>
+                    <xs:element name="limit" type="s:Range" minOccurs="0"></xs:element>
+                    <xs:group ref="s:ResponseTypes" maxOccurs="unbounded"></xs:group>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

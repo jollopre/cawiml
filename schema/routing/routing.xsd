@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <xs:include schemaLocation="state.xsd"></xs:include>
+    <xs:complexType name="Routing">
+        <xs:sequence>
+            <xs:element name="statemodel" type="s:Statemodel" maxOccurs="unbounded"></xs:element>
+            <xs:element name="entrypoint" type="s:EntryPoint" maxOccurs="1"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="Statemodel">
+        <xs:sequence>
+            <xs:element name="source" type="s:SourceState"></xs:element>
+            <xs:element name="state" type="s:State" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="ref" use="required" type="xs:string"></xs:attribute>    
+    </xs:complexType>
+    <xs:complexType name="EntryPoint">
+        <xs:sequence>
+            <xs:element name="source" type="s:SourceState"></xs:element>
+            <xs:element name="state" type="s:State" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

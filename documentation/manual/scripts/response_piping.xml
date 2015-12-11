@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm>
+    <survey>
+        ...
+    </survey>
+    <content>
+        <section id="1">
+            <label lang="en">Section one</label>
+            <single name="Q7a">
+                <label lang="en">Which fruits are you aware of? [FIRST SPONTANEOUS MENTION]</label>
+                <randomising>
+                    <all/>
+                </randomising>
+                <close code="apple">
+                    <label lang="en">Apple</label>
+                </close>
+                <close code="banana">
+                    <label lang="en">Banana</label>
+                </close>
+                <close code="blueberry">
+                    <label lang="en">Blueberry</label>
+                </close>
+                <close code="grapefruit">
+                    <label lang="en">Grapefruit</label>
+                </close>
+                <close code="melon">
+                    <label lang="en">Melon</label>
+                </close>
+                <close code="orange">
+                    <label lang="en">Orange</label>
+                </close>
+                <close code="pear">
+                    <label lang="en">Pear</label>
+                </close>
+                <close code="pineapple">
+                    <label lang="en">Pineapple</label>
+                    <label lang="es">Piña</label>
+                </close>
+            </single>
+            <multiple name="Q7b">
+                <label lang="en">Which fruits are you aware of? [OTHER SPONTANEOUS MENTIONS]</label>
+                <pipe ref="pipe0"/>
+            </multiple>
+            <multiple name="Q7c">
+                <label lang="en">Which of the following fruits do you eat? [MUST BE SELECTED AT Q7a/Q7b]</label>
+                <pipe ref="pipe1"/>
+            </multiple>
+        </section>
+    </content>
+    <field>
+        ...
+    </field>
+    <routing>
+        ...
+    </routing>
+    <personalisation>
+        <piping ref="1">
+            <pipe id="pipe0">
+                <variable ref="Q7a"/>
+                <operator name="UNSEL"/>
+            </pipe>
+            <pipe id="pipe1">
+                <variable ref="Q7a"/>
+                <operator name="SEL"/>
+                <variable ref="Q7b"/>
+                <operator name="SEL"/>
+                <operator name="UNION"/>
+            </pipe>
+        </piping>
+    </personalisation>
+</ssm>

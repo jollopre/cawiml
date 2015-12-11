@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>04</name>
+        <description>NHBC Road and Sewer Bond Research CATI Questionnaire</description>
+        <date>2008-12-01</date>
+    </survey>
+    <content>
+        <section id="0">
+            <label lang="en">Introduction</label>
+            <intro name="INTRODUCTION">
+                <label lang="en">Good a.m./p.m. We are an independent research company working on behalf of
+                the NHBC. The NHBC currently provide bonds for Road and Sewers for certain builders and are
+                considering introducing a road and sewer bond service to help all builders. If you can
+                spare 5 minutes we just require a bit of feedback to ensure the propositions being considered
+                will be appropiate for a company such as yours.</label>
+            </intro>
+            <single name="Q1">
+                <label lang="en">Do you normally organize the roads and sewer bonds for developments?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+        </section>
+        <section id="1">
+            <label lang="en">Current bonding use</label>
+            <single name="Q2">
+                <label lang="en">How many different building sites does your company work on in a typical year?</label>
+                <open code="1">
+                    <label lang="en">Number:</label>
+                    <integer>
+                        <min></min>
+                        <max></max>
+                        <value></value>
+                    </integer>
+                </open>
+                <close code="99">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <single name="Q3">
+                <label lang="en">If we consider those sites you work on in a typical year, how many normally require
+                bonding for road and sewers?</label>
+                <open code="1">
+                    <label lang="en">Number:</label>
+                    <integer>
+                        <min></min>
+                        <max></max>
+                        <value></value>
+                    </integer>
+                </open>
+                <close code="99">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <single name="Q4">
+                <label lang="en">Where do you currently source bonds from?</label>
+                <close code="1">
+                    <label lang="en">Your bank</label>
+                </close>
+                <open code="2">
+                    <label lang="en">Other source</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+                <close code="99">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+        </section>
+        <section id="2">
+            <label lang="en">Cost of bonds</label>
+            <single name="Q5">
+                <label lang="en">What annual percentage premium do you currently pay for your road and sewer
+                bonds (percentage of bond value)?</label>
+                <open code="1">
+                    <label lang="en">%</label>
+                    <decimal>
+                        <value></value>
+                    </decimal>
+                </open>
+                <close code="99">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <single name="Q6">
+                <label lang="en">In addition to the premium, do you have to pay any set up or admin charges
+                to the bondsman?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+                <close code="99">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <single name="Q6a">
+                <label lang="en">What are the set up / admin charges (£)?</label>
+                <open code="1">
+                    <label lang="en">£</label>
+                    <decimal>
+                        <value></value>
+                    </decimal>
+                </open>
+                <close code="99">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <single name="Q7">
+                <label lang="en">How many times per year do you pay the premium for the road and sewer bonds?</label>
+                <close code="1">
+                    <label lang="en">Once/annual</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Twice per year</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Four times per year</label>
+                </close>
+                <close code="4">
+                    <label lang="en">More than four times per year</label>
+                </close>
+                <close code="99">
+                    <label lang="en">Don't know/unsure</label>
+                </close>
+            </single>
+        </section>
+        <section id="3">
+            <label lang="en">Bond security</label>
+            <single name="Q8">
+                <label lang="en">Do you have to provide any security for your road and sewer bonds over that given
+                for your normal funding arrangement with your bank or other provider?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+                <close code="99">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <multiple name="Q8a">
+                <label lang="en">What additional security do you have to provide to secure the road and sewer
+                bonds?</label>
+                <close code="1">
+                    <label lang="en">Charge over all or part of your land bank/properties</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Charge over the business assets</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Personal securities</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Provide other securities</label>
+                </close>
+                <close code="DK">
+                    <label lang="en">Don't know/unsure</label>
+                    <exclusive value="true"/>
+                </close>
+            </multiple>
+        </section>
+        <section id="4">
+            <label lang="en">Impact of bonds on borrowing limits</label>
+            <single name="Q9">
+                <label lang="en">Are bonds set against any borrowing limit with your bank in that the bond value
+                reduces the funds available to you?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+                <close code="99">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <single name="Q9a">
+                <label lang="en">Has this been a problem in the past?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+                <close code="99">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <single name="Q9b">
+                <label lang="en">Do you expect it to be a problem over the next 1 or 2 years?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+                <close code="99">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <single name="Q10">
+                <label lang="en">If an alternate source of road and sewer bonds was made available that did not
+                affect your bank borrowing limit is this a facility you are likely to consider paying a
+                slight increase in premium for? Please answer on a 7 point scale where 1 is not at all likely
+                and 7 is extremely likely.</label>
+                <close code="1">
+                    <label lang="en">Not at all likely</label>
+                </close>
+                <close code="2">
+                    <label lang="en">2</label>
+                </close>
+                <close code="3">
+                    <label lang="en">3</label>
+                </close>
+                <close code="4">
+                    <label lang="en">4</label>
+                </close>
+                <close code="5">
+                    <label lang="en">5</label>
+                </close>
+                <close code="6">
+                    <label lang="en">6</label>
+                </close>
+                <close code="7">
+                    <label lang="en">Extremely likely</label>
+                </close>
+            </single>
+        </section>
+        <section id="5">
+            <label lang="en">Provision of road and sewer bonds from the NHBC</label>
+            <single name="Q11">
+                <label lang="en">The NHBC are considering providing road and sewer bonds to enable developers to
+                have another alternative to the banks. If this facility is provided for the same premium as
+                your current bond source would you consider road and sewer bonds from the NHBC? Please answer 
+                on a 7 point scale where 1 is not at all likely and 7 is extremely likely.</label>
+                <close code="1">
+                    <label lang="en">Not at all likely</label>
+                </close>
+                <close code="2">
+                    <label lang="en">2</label>
+                </close>
+                <close code="3">
+                    <label lang="en">3</label>
+                </close>
+                <close code="4">
+                    <label lang="en">4</label>
+                </close>
+                <close code="5">
+                    <label lang="en">5</label>
+                </close>
+                <close code="6">
+                    <label lang="en">6</label>
+                </close>
+                <close code="7">
+                    <label lang="en">Extremely likely</label>
+                </close>
+            </single>
+            <single name="Q12">
+                <label lang="en">Finally, what annual premium would you expect to pay for an NHBC road and sewer
+                bond?</label>
+                <open code="1">
+                    <label lang="en">%</label>
+                    <decimal>
+                        <value></value>
+                    </decimal>
+                </open>
+                <close code="99">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+        </section>
+        <section id="6">
+            <label lang="en">Profile</label>
+            <single name="Q13">
+                <label lang="en">Finally, for the purpose of classification can you please advise your job role?</label>
+                <close code="1">
+                    <label lang="en">MD/Owner</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Finance Manager/Director</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Company Secretary/Legal/Solicitor</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Project Manager/Director</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Engineering Manager/Director</label>
+                </close>
+                <close code="6">
+                    <label lang="en">Construction Manager/Director</label>
+                </close>
+                <close code="7">
+                    <label lang="en">Technical Manager/Director</label>
+                </close>
+                <close code="8">
+                    <label lang="en">Administration/office</label>
+                </close>
+                <open code="OS">
+                    <label lang="en">Other specified</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+                <close code="99">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+        </section>
+    </content>
+    <field></field>
+    <routing>
+        <statemodel ref="0">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="INTRODUCTION"/>
+                <transition target="s1"/>
+            </state>
+            <state id="s1">
+                <variable ref="Q1"/>
+                <transition target="p1"/>
+            </state>
+            <state id="p1">
+                <if>
+                    <condition>
+                        <variable ref="Q1"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="terminate"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+            <state id="terminate">
+                <terminate/>
+            </state>
+        </statemodel>
+        <statemodel ref="1">
+            <source id="s2"/>
+            <state id="s2">
+                <variable ref="Q2"/>
+                <transition target="s3"/>
+            </state>
+            <state id="s3">
+                <variable ref="Q3"/>
+                <transition target="s4"/>
+            </state>
+            <state id="s4">
+                <variable ref="Q4"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q4"/>
+                        <constant type="string" value="99"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="terminate"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
+            <state id="terminate">
+                <terminate></terminate>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <statemodel ref="2">
+            <source id="s5"/>
+            <state id="s5">
+                <variable ref="Q5"/>
+                <transition target="s6"/>
+            </state>
+            <state id="s6">
+                <variable ref="Q6"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q6"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s6a"/>
+                    </then>
+                    <else>
+                        <transition target="s7"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s6a">
+                <variable ref="Q6a"/>
+                <transition target="s7"/>
+            </state>
+            <state id="s7">
+                <variable ref="Q7"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <statemodel ref="3">
+            <source id="s8"/>
+            <state id="s8">
+                <variable ref="Q8"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q8"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s8a"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s8a">
+                <variable ref="Q8a"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <statemodel ref="4">
+            <source id="s9"/>
+            <state id="s9">
+                <variable ref="Q9"/>
+                <transition target="s9a"/>
+            </state>
+            <state id="s9a">
+                <variable ref="Q9a"/>
+                <transition target="s9b"/>
+            </state>
+            <state id="s9b">
+                <variable ref="Q9b"/>
+                <transition target="s10"/>
+            </state>
+            <state id="s10">
+                <variable ref="Q10"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <statemodel ref="5">
+            <source id="s11"/>
+            <state id="s11">
+                <variable ref="Q11"/>
+                <transition target="s12"/>
+            </state>
+            <state id="s12">
+                <variable ref="Q12"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <statemodel ref="6">
+            <source id="s13"/>
+            <state id="s13">
+                <variable ref="Q13"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="0"/>
+                <transition target="c1"/>
+            </state>
+            <state id="c1">
+                <include statemodel="1"/>
+                <transition target="c2"/>
+            </state>
+            <state id="c2">
+                <include statemodel="2"/>
+                <transition target="c3"/>
+            </state>
+            <state id="c3">
+                <include statemodel="3"/>
+                <transition target="c4"/>
+            </state>
+            <state id="c4">
+                <include statemodel="4"/>
+                <transition target="c5"/>
+            </state>
+            <state id="c5">
+                <include statemodel="5"/>
+                <transition target="c6"/>
+            </state>
+            <state id="c6">
+                <include statemodel="6"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation></personalisation>
+</ssm>

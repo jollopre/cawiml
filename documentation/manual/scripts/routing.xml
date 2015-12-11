@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm>
+    <survey>
+        ...
+    </survey>
+    <content>
+        <section id="1">
+            ...
+        </section>
+        <section id="...">
+            
+        </section>
+        <section id="n">
+            ...
+        </section>
+    </content>
+    <field>
+        ...
+    </field>
+    <routing>
+        <statemodel ref="1">
+            ...
+        </statemodel>
+        <statemodel ref="...">
+            ...
+        </statemodel>
+        <statemodel ref="n">
+            ...
+        </statemodel>
+        <entrypoint><!-- marks the beginning for the routing -->
+            ...
+        </entrypoint>
+    </routing>
+</ssm>

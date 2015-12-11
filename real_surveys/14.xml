@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>14</name>
+        <description>Hot Tea Research</description>
+        <date></date>
+    </survey>
+    <content>
+        <section id="0">
+            <label lang="en">0</label>
+            <grid name="S1">
+                <label lang="en">Good morning/afternoon, can I just check do you sell/serve hot tea and hot coffee
+                    at this location?</label>
+                <single>
+                    <rows>
+                        <close code="1">
+                            <label lang="en">Hot tea</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Hot coffee</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Yes</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">No</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <multiple name="S2">
+                <label lang="en">And what type of establishment is this?</label>
+                <close code="1">
+                    <label lang="en">Hotel (50+ beds(</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Full service restaurant - traditional / European</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Independent cafe, tea shop, coffee shop, incl. small, local chain</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Office (employing more than 100 people at that location)</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Factory (employing more than 100 people at that location)</label>
+                </close>
+            </multiple>
+            <single name="S3">
+                <label lang="en">Can I speak to the person responsible for selecting the types of tea and coffee
+                that are sold/drunk at this establishment? He/she will probably be either the Food &amp; Beverages
+                Manager or the Catering Manager</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <intro name="INF1">
+                <label lang="en">Good morning/afternoon, my name is _ and I am calling on behalf of a leading
+                supplier of tea. We are undertaking research to gain a better understanding of their business
+                customers and to investigate how they can improve the quality of their service. This is not a
+                sales call.</label>
+            </intro>
+            <single name="S4">
+                <label lang="en">Can I confirm are you the person who is primarily responsible for selecting
+                the types of tea &amp; coffee that are sold/drunk at this establishment?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Refused</label>
+                </close>
+            </single>
+            <multiple name="Q1">
+                <label lang="en">Which of the following types of tea and coffee do you sell/serve at this
+                establishment?</label>
+                <close code="1">
+                    <label lang="en">Standard tea (e.g. Assam tea)</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Speciality tea (e.g. flavoured tea)</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Instant coffee</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Fresh coffee (coffee made from ground beans)</label>
+                </close>
+            </multiple>
+            <multiple name="Q2">
+                <label lang="en">When people who work here want to have a drink of tea or coffee, what are the most
+                common ways they go about it?</label>
+                <close code="1">
+                    <label lang="en">They buy it from outside the premises to drink here</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Get it from vending machines on the premises</label>
+                </close>
+                <close code="3">
+                    <label lang="en">They make it themselves in or close to where they work</label>
+                </close>
+                <close code="4">
+                    <label lang="en">It is provided from a trolley at "tea breaks"</label>
+                </close>
+                <close code="5">
+                    <label lang="en">They use the office canteen/restaurant</label>
+                </close>
+                <open code="6">
+                    <label lang="en">Other options ((write in)):</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </multiple>
+            <multiple name="Q3">
+                <label lang="en">Where tea or coffee is available on the premises for people who work here, do they have
+                to pay for it themselves, is it subsidised or is it provided free by the company?</label>
+                <close code="1">
+                    <label lang="en">Pay for it themselves</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Subsidised by the company</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Provided free by the company</label>
+                </close>
+            </multiple>
+            <grid name="Q4">
+                <label lang="en">How much do you charge for the following, based on a standard sized cup of tea
+                or coffee?</label>
+                <numeric>
+                    <rows>
+                        <close code="A">
+                            <label lang="en">Standard tea (e.g. Assam tea)</label>
+                        </close>
+                        <close code="B">
+                            <label lang="en">Speciality tea (e.g. flavoured tea)</label>
+                        </close>
+                        <close code="C">
+                            <label lang="en">Fresh coffee</label>
+                        </close>
+                        <close code="D">
+                            <label lang="en">Cappuccino</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Price per standard cup</label>
+                        </close>
+                    </columns>
+                </numeric>
+            </grid>
+            <grid name="Q5" refused="true">
+                <label lang="en">How many kilos of each of the following types of tea are bought in a month to
+                sell/serve hot tea at this establishment?</label>
+                <numeric>
+                    <rows>
+                        <close code="A">
+                            <label lang="en">Tea bags supplied in bulk (cartons, bags etc)</label>
+                        </close>
+                        <close code="B">
+                            <label lang="en">Individually wrapped tea bags (e.g. paper envelopes)</label>
+                        </close>
+                        <close code="C">
+                            <label lang="en">Loose leaf tea</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Weight in Kg</label>
+                        </close>
+                    </columns>
+                </numeric>
+            </grid>
+            <grid name="Q6">
+                <label lang="en">Alternatively, how many packets of each type of the following types of tea
+                would you buy in a month and what is the weight in grams of a packet?</label>
+                <numeric>
+                    <rows>
+                        <close code="A">
+                            <label lang="en">Tea bags supplied in bulk (cartons, bags etc)</label>
+                        </close>
+                        <close code="B">
+                            <label lang="en">Individually wrapped tea bags (e.g. paper envelopes)</label>
+                        </close>
+                        <close code="C">
+                            <label lang="en">Loose leaf tea</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Number of packets</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Packet weight in grams</label>
+                        </close>
+                    </columns>
+                </numeric>
+            </grid>
+            <grid name="Q7">
+                <label lang="en">For each of the following types of tea, how much do you spend per month
+                to sell/server hot tea at this establishment?</label>
+                <numeric>
+                    <rows>
+                        <close code="A">
+                            <label lang="en">Tea bags supplied in bulk (cartons, bags etc)</label>
+                        </close>
+                        <close code="B">
+                            <label lang="en">Individually wrapped tea bags (e.g. paper envelopes)</label>
+                        </close>
+                        <close code="C">
+                            <label lang="en">Loose leaf tea</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Amount</label>
+                        </close>
+                    </columns>
+                </numeric>
+            </grid>
+            <grid name="Q8" refused="true">
+                <label lang="en">About how much per kilo does each of these types of tea cost that you buy
+                in?</label>
+                <numeric>
+                    <rows>
+                        <close code="A">
+                            <label lang="en">Tea bags supplied in bulk (cartons, bags etc)</label>
+                        </close>
+                        <close code="B">
+                            <label lang="en">Individually wrapped tea bags (e.g. paper envelopes)</label>
+                        </close>
+                        <close code="C">
+                            <label lang="en">Loose leaf tea</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Cost per Kg</label>
+                        </close>
+                    </columns>
+                </numeric>
+            </grid>
+            <grid name="Q9">
+                <label lang="en">If you don't know what the cost per kilo is, what is the cost per packet and
+                what is the weight in grams of packet for each of the following types of tea?</label>
+                <numeric>
+                    <rows>
+                        <close code="A">
+                            <label lang="en">Tea bags supplied in bulk (cartons, bags etc)</label>
+                        </close>
+                        <close code="B">
+                            <label lang="en">Individually wrapped tea bags (e.g. paper envelopes)</label>
+                        </close>
+                        <close code="C">
+                            <label lang="en">Loose leaf tea</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Cost per packet</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Packet weight in grams</label>
+                        </close>
+                    </columns>
+                </numeric>
+            </grid>
+            <open name="Q10_tea">
+                <label lang="en">What brands of tea do you mainly buy from your suppliers?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q10_coffee">
+                <label lang="en">What brands of coffee do you mainly buy from your suppliers?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <multiple name="Q11">
+                <label lang="en">Which individuals by job function determine which types of tea are sold/served
+                at this establishment?</label>
+                <close code="1">
+                    <label lang="en">Catering Manager</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Facilities Manager</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Food and Beverage Manager</label>
+                </close>
+                <close code="4">
+                    <label lang="en">General Manager</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Kitchen/Canteen Manager</label>
+                </close>
+                <close code="6">
+                    <label lang="en">Managing Director</label>
+                </close>
+                <close code="7">
+                    <label lang="en">Operations Manager</label>
+                </close>
+                <close code="8">
+                    <label lang="en">Owner/partner</label>
+                </close>
+                <close code="9">
+                    <label lang="en">Purchasing Director/Manager/Team</label>
+                </close>
+                <close code="10">
+                    <label lang="en">Restaurant Manager</label>
+                </close>
+                <open code="11">
+                    <label lang="en">Others (WRITE IN)</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </multiple>
+            <multiple name="Q12">
+                <label lang="en">Who, by job function finally decides which supplier gets the order for tea?</label>
+                <close code="1">
+                    <label lang="en">Catering Manager</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Facilities Manager</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Food and Beverage Manager</label>
+                </close>
+                <close code="4">
+                    <label lang="en">General Manager</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Kitchen/Canteen Manager</label>
+                </close>
+                <close code="6">
+                    <label lang="en">Managing Director</label>
+                </close>
+                <close code="7">
+                    <label lang="en">Operations Manager</label>
+                </close>
+                <close code="8">
+                    <label lang="en">Owner/partner</label>
+                </close>
+                <close code="9">
+                    <label lang="en">Purchasing Director/Manager/Team</label>
+                </close>
+                <close code="10">
+                    <label lang="en">Restaurant Manager</label>
+                </close>
+                <open code="11">
+                    <label lang="en">Others (WRITE IN)</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </multiple>
+            <multiple name="Q13">
+                <label lang="en">What types of companies do you buy most of your tea from?</label>
+                <close code="1">
+                    <label lang="en">General food &amp; drink wholesaler</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Specialist tea &amp; coffee wholesaler</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Cash &amp; Carry</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Supermarket</label>
+                </close>
+                <open code="5">
+                    <label lang="en">Others (write in)</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </multiple>
+            <open name="Q14">
+                <label lang="en">What the names are of the companies from whom you buy most of your tea?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q15">
+                <label lang="en">When you order tea or coffee from your suppliers, do they mainly deliver the tea and
+                coffee separately from one another or together?</label>
+                <close code="1">
+                    <label lang="en">Mainly separately</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Mainly together</label>
+                </close>
+            </single>
+            <single name="Q16">
+                <label lang="en">Do they deliver the tea and coffee with other items?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <open name="Q17">
+                <label lang="en">Apart from supplying cheaper priced tea, what could your suppliers do to help you
+                sell/serve more tea?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q18a" refused="true">
+                <label lang="en">How many people are employed full time at this establishment?</label>
+                <integer>
+                    <min></min>
+                    <max></max>
+                    <value></value>
+                </integer>
+            </open>
+            <single name="Q18b">
+                <label lang="en">Employees category</label>
+                <close code="1">
+                    <label lang="en">0 to 4</label>
+                </close>
+                <close code="2">
+                    <label lang="en">5 to 9</label>
+                </close>
+                <close code="3">
+                    <label lang="en">10 to 19</label>
+                </close>
+                <close code="4">
+                    <label lang="en">20 to 49</label>
+                </close>
+                <close code="5">
+                    <label lang="en">50 to 99</label>
+                </close>
+                <close code="6">
+                    <label lang="en">100 to 249</label>
+                </close>
+                <close code="7">
+                    <label lang="en">250 to 499</label>
+                </close>
+                <close code="8">
+                    <label lang="en">500 to 999</label>
+                </close>
+                <close code="9">
+                    <label lang="en">1000+</label>
+                </close>
+            </single>
+            <open name="Q19a" refused="true">
+                <label lang="en">How many beds does this hotel have?</label>
+                <integer>
+                    <min></min>
+                    <max></max>
+                    <value></value>
+                </integer>
+            </open>
+            <single name="Q19b">
+                <label lang="en">Beds category</label>
+                <close code="1">
+                    <label lang="en">50 to 99</label>
+                </close>
+                <close code="2">
+                    <label lang="en">100 to 249</label>
+                </close>
+                <close code="3">
+                    <label lang="en">250 to 499</label>
+                </close>
+                <close code="4">
+                    <label lang="en">500 to 999</label>
+                </close>
+                <close code="5">
+                    <label lang="en">1000+</label>
+                </close>
+            </single>
+            <open name="Q20">
+                <label lang="en">What was the occupancy rate overall for last year (2009)?</label>
+                <decimal>
+                    <value></value>
+                </decimal>
+            </open>
+            <single name="Q21">
+                <label lang="en">If hotels are classified using a five star system and restaurants a five rosette
+                system, where 5 is best, how would you classify this establishment in terms of the quality of
+                food and drink and the service provided?</label>
+                <close code="1">
+                    <label lang="en">Worst</label>
+                </close>
+                <close code="2">
+                    <label lang="en">2</label>
+                </close>
+                <close code="3">
+                    <label lang="en">3</label>
+                </close>
+                <close code="4">
+                    <label lang="en">4</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Best</label>
+                </close>
+            </single>
+            <open name="Q22a" refused="true">
+                <label lang="en">Thinking of the areas where food and drink is served, how many place sittings
+                does this establishment have?</label>
+                <integer>
+                    <min></min>
+                    <max></max>
+                    <value></value>
+                </integer>
+            </open>
+            <single name="Q22b">
+                <label lang="en">Place sittings category</label>
+                <close code="1">
+                    <label lang="en">0</label>
+                </close>
+                <close code="2">
+                    <label lang="en">1 to 9</label>
+                </close>
+                <close code="3">
+                    <label lang="en">10 to 49</label>
+                </close>
+                <close code="4">
+                    <label lang="en">50 to 99</label>
+                </close>
+                <close code="5">
+                    <label lang="en">100 to 199</label>
+                </close>
+                <close code="6">
+                    <label lang="en">200 to 299</label>
+                </close>
+                <close code="7">
+                    <label lang="en">300 to 399</label>
+                </close>
+                <close code="8">
+                    <label lang="en">400 to 499</label>
+                </close>
+                <close code="9">
+                    <label lang="en">500 to 749</label>
+                </close>
+                <close code="10">
+                    <label lang="en">750 to 1000</label>
+                </close>
+                <close code="11">
+                    <label lang="en">1000+</label>
+                </close>
+            </single>
+            <open name="Q23a" refused="true">
+                <label lang="en">If you include self-service, if applicable how many covers would be served at this
+                establishment in a typical week?</label>
+                <integer>
+                    <min></min>
+                    <max></max>
+                    <value></value>
+                </integer>
+            </open>
+            <single name="Q23b">
+                <label lang="en">Covers category</label>
+                <close code="1">
+                    <label lang="en">Less than 50</label>
+                </close>
+                <close code="2">
+                    <label lang="en">50 to 99</label>
+                </close>
+                <close code="3">
+                    <label lang="en">100 to 199</label>
+                </close>
+                <close code="4">
+                    <label lang="en">200 to 299</label>
+                </close>
+                <close code="5">
+                    <label lang="en">300 to 399</label>
+                </close>
+                <close code="6">
+                    <label lang="en">400 to 499</label>
+                </close>
+                <close code="7">
+                    <label lang="en">500 to 749</label>
+                </close>
+                <close code="8">
+                    <label lang="en">750 to 999</label>
+                </close>
+                <close code="9">
+                    <label lang="en">1000 to 1249</label>
+                </close>
+                <close code="10">
+                    <label lang="en">1250 to 1499</label>
+                </close>
+                <close code="11">
+                    <label lang="en">1500 to 1749</label>
+                </close>
+                <close code="12">
+                    <label lang="en">1750 to 1999</label>
+                </close>
+                <close code="13">
+                    <label lang="en">2000 to 2499</label>
+                </close>
+                <close code="14">
+                    <label lang="en">2500 to 2999</label>
+                </close>
+                <close code="15">
+                    <label lang="en">3000 to 3999</label>
+                </close>
+                <close code="16">
+                    <label lang="en">4000 to 4999</label>
+                </close>
+                <close code="17">
+                    <label lang="en">5000+</label>
+                </close>
+            </single>
+        </section>
+    </content>
+    <field></field>
+    <routing>
+        <statemodel ref="0">
+            <source id="ss1"/>
+            <state id="ss1">
+                <variable ref="S1"/>
+                <transition target="ss2"/>
+            </state>
+            <state id="ss2">
+                <variable ref="S2"/>
+                <transition target="ss3"/>
+            </state>
+            <state id="ss3">
+                <variable ref="S3"/>
+                <transition target="ss4"/>
+            </state>
+            <state id="ss4">
+                <variable ref="INF1"/>
+                <variable ref="S4"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="S4"/>
+                        <constant type="string" value="3"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="sink0"/>
+                    </then>
+                    <else>
+                        <transition target="s1"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s1">
+                <variable ref="Q1"/>
+                <transition target="s2"/>
+            </state>
+            <state id="s2">
+                <variable ref="Q2"/>
+                <transition target="s3"/>
+            </state>
+            <state id="s3">
+                <variable ref="Q3"/>
+                <transition target="s4"/>
+            </state>
+            <state id="s4">
+                <variable ref="Q4"/>
+                <transition target="s5"/>
+            </state>
+            <state id="s5">
+                <variable ref="Q5"/>
+                <transition target="p1"/>
+            </state>
+            <state id="p1">
+                <if>
+                    <condition>
+                        <!-- Q5 IS REFUSED -->
+                    </condition>
+                    <then>
+                        <transition target="s6s7"/>
+                    </then>
+                    <else>
+                        <transition target="s10"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s6s7">
+                <variable ref="Q6"/>
+                <variable ref="Q7"/>
+                <transition target="s8"/>
+            </state>
+            <state id="s8">
+                <variable ref="Q8"/>
+                <transition target="p2"/>
+            </state>
+            <state id="p2">
+                <if>
+                    <condition>
+                        <!-- Q8 is REFUSED -->
+                    </condition>
+                    <then>
+                        <transition target="s9"/>
+                    </then>
+                    <else>
+                        <transition target="s10"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s9">
+                <variable ref="Q9"/>
+                <transition target="s10"/>
+            </state>
+            <state id="s10">
+                <variable ref="Q10_tea"/>
+                <variable ref="Q10_coffee"/>
+                <transition target="s11"/>
+            </state>
+            <state id="s11">
+                <variable ref="Q11"/>
+                <transition target="s12"/>
+            </state>
+            <state id="s12">
+                <variable ref="Q12"/>
+                <transition target="s13"/>
+            </state>
+            <state id="s13">
+                <variable ref="Q13"/>
+                <transition target="s14"/>
+            </state>
+            <state id="s14">
+                <variable ref="Q14"/>
+                <transition target="p3"/>
+            </state>
+            <state id="p3">
+                <if>
+                    <condition>
+                        <multivariable ref="S1" row="1"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <multivariable ref="S1" row="2"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="AND"/>
+                    </condition>
+                    <then>
+                        <transition target="s15"/>
+                    </then>
+                    <else>
+                        <transition target="s16"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s15">
+                <variable ref="Q15"/>
+                <transition target="s16"/>
+            </state>
+            <state id="s16">
+                <variable ref="Q16"/>
+                <transition target="s17"/>
+            </state>
+            <state id="s17">
+                <variable ref="Q17"/>
+                <transition target="s18"/>
+            </state>
+            <state id="s18">
+                <variable ref="Q18a"/>
+                <variable ref="Q18b"/>
+                <transition target="p4"/>
+            </state>
+            <state id="p4">
+                <if>
+                    <condition>
+                        <variable ref="S2"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s19"/>
+                    </then>
+                    <else>
+                        <transition target="p5"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s19">
+                <variable ref="Q19a"/>
+                <variable ref="Q19b"/>
+                <transition target="p5"/>
+            </state>
+            <state id="p5">
+                <if>
+                    <condition>
+                        <variable ref="S2"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s20"/>
+                    </then>
+                    <else>
+                        <transition target="s21"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s20">
+                <variable ref="Q20"/>
+                <transition target="s21"/>
+            </state>
+            <state id="s21">
+                <variable ref="Q21"/>
+                <transition target="s22"/>
+            </state>
+            <state id="s22">
+                <variable ref="Q22a"/>
+                <variable ref="Q22b"/>
+                <transition target="s23"/>
+            </state>
+            <state id="s23">
+                <variable ref="Q23a"/>
+                <variable ref="Q23b"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="0"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation></personalisation>
+</ssm>

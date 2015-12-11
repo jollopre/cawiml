@@ -1,0 +1,3 @@
+install brew
+install xquartz
+brew install gnuplot —with-x11

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm>
+    <survey>
+        ...
+    </survey>
+    <content>
+        <section id="1">
+            <label lang="en">Default Section</label>
+            <single name="Q0">
+                <label lang="en">Can we ask a set of questions? It only takes 5 minutes or even less.</label>
+                <close code="yes">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="no">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+        </section>
+    </content>
+    <field>
+        ...
+    </field>
+    <routing>
+        <statemodel ref="1">
+            ...
+            <state id="p0"><!-- PSEUDO STATE IF -->
+                <if>
+                    <condition>
+                        <variable ref="Q0"/>
+                        <constant type="string" value="no"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="sink0"/>
+                    </then>
+                    <else>
+                        <transition target="s2"/>
+                    </else>
+                </if>
+            </state>
+            <state id="sink0">
+                ...
+            </state>
+            <state id="s2">
+                ...
+            </state>
+        </statemodel>
+    </routing>
+</ssm>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm>
+    <survey>
+        ...
+    </survey>
+    <content>
+        <section id="1">
+            <label lang="en">Default Section</label>
+            ...
+            <open name="Q2">
+                <label lang="en">How many people live in the main property? (including yourself)</label>
+                <integer>
+                    <min></min>
+                    <max></max>
+                    <value></value>
+                </integer>
+            </open>
+            ...
+        </section>
+        <section id="2">
+            ...
+        </section>
+    </content>
+    <field>
+        <iterator id="p2_iterator"/>
+    </field>
+    <routing>
+        <statemodel ref="1">
+            ...
+            <state id="p2"><!-- PSEUDO FOR RANGE STATE -->
+                <for>
+                    <field ref="p2_iterator"/>
+                    <in>
+                        <range>
+                            <start><constant type="integer" value="0"/></start>
+                            <end><variable ref="Q2"/></end>
+                            <step><constant type="integer" value="1"/></step>
+                        </range>
+                    </in>
+                    <transition target="c0"/> 
+                </for>
+                <transition target="p3"/>
+            </state>
+            <state id="c0"><!-- COMPOSITE STATE -->
+                <include statemodel="2"/>
+            </state>
+            ...
+        </statemodel>
+        <statemodel ref="2">
+            ...
+        </statemodel>
+    </routing>
+</ssm>

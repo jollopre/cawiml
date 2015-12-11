@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <xs:include schemaLocation="open.xsd"></xs:include>
+    <xs:include schemaLocation="constraint.xsd"></xs:include>
+    <xs:include schemaLocation="label.xsd"></xs:include>
+    <xs:include schemaLocation="../routing/rpn.xsd"></xs:include>
+    <xs:include schemaLocation="../personalisation/displaying.xsd"></xs:include>
+    <xs:complexType name="Close">
+        <xs:sequence>
+            <xs:element name="label" type="s:Label" maxOccurs="unbounded"></xs:element>
+            <xs:element name="display" type="s:DisplayRef" minOccurs="0"></xs:element>
+            <xs:element name="exclusive" type="s:Exclusive" minOccurs="0"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="code" use="required" type="s:Name"></xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="OpenResponse">
+        <xs:sequence>
+            <xs:element name="label" type="s:Label" maxOccurs="unbounded"></xs:element>
+            <xs:group ref="s:OpenChoice" maxOccurs="1"></xs:group>
+            <xs:element name="display" type="s:DisplayRef" minOccurs="0"></xs:element>
+            <xs:element name="exclusive" type="s:Exclusive" minOccurs="0"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="code" use="required" type="s:Name"></xs:attribute>
+    </xs:complexType>
+    <xs:group name="ResponseTypes">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element name="close" type="s:Close"></xs:element>
+                <xs:element name="open" type="s:OpenResponse"></xs:element>
+                <xs:element name="pipe" type="s:PipeRef"></xs:element>
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+</xs:schema>

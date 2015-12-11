@@ -1,0 +1,35 @@
+<grid name="Q1">
+    <label lang="en">Please state to what extend do you agree with these statements about nutritional
+        supplements:</label>
+    <single>
+        <rows>
+            <close code="b">
+                <label lang="en">Nutritional supplements are relevant to maintain well-being in hectic
+                    lifestyles.</label>
+            </close>
+            <close code="c">
+                <label lang="en">Nutritional supplements can be effective in weight management.</label>
+            </close>
+            <close code="d">
+                <label lang="en">Nutritional supplements help to achieve better sport performance.</label>
+            </close>
+        </rows>
+        <columns>
+            <close code="1">
+                <label lang="en">Strongly disagree</label>
+            </close>
+            <close code="2">
+                <label lang="en">Disagree</label>
+            </close>
+            <close code="3">
+                <label lang="en">Neither</label>
+            </close>
+            <close code="4">
+                <label lang="en">Agree</label>
+            </close>
+            <close code="5">
+                <label lang="en">Strongly agree</label>
+            </close>
+        </columns>
+    </single>
+</grid>

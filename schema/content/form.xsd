@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    - The group of open responses can be rotated or randomized
+    - The entire open responses can be rotated or randomized
+-->
+<xs:schema
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <xs:include schemaLocation="question.xsd"></xs:include>
+    <xs:include schemaLocation="response.xsd"></xs:include>
+    <xs:include schemaLocation="group.xsd"></xs:include>
+    <xs:complexType name="Form">
+        <xs:complexContent>
+            <xs:extension base="s:Question">
+                <xs:choice>
+                    <xs:group ref="s:FormChoice" maxOccurs="unbounded"></xs:group>       
+                </xs:choice>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="FormGroup">
+        <xs:complexContent>
+            <xs:extension base="s:Group">
+                <xs:sequence>
+                    <xs:element name="open" type="s:OpenResponse" maxOccurs="unbounded"></xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:group name="FormChoice">
+        <xs:choice>
+            <xs:element name="group" type="s:FormGroup"></xs:element>
+            <xs:element name="open" type="s:OpenResponse" maxOccurs="unbounded"></xs:element>     
+        </xs:choice>    
+    </xs:group>
+</xs:schema>

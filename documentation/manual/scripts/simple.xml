@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm>
+    <survey>
+        ...
+    </survey>
+    <content>
+        <section id="1">
+            <label lang="en">Default Section</label>
+            <single name="Q0">
+                <label lang="en">Can we ask a set of questions? It only takes 5 minutes or even less.</label>
+                <close code="yes">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="no">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+        </section>
+    </content>
+    <field>
+        ...
+    </field>
+    <routing>
+        <statemodel ref="1">
+            <state id="s0">
+                <variable ref="Q0" />
+                <transition target="p0"/>
+            </state>
+        </statemodel>
+    </routing>
+</ssm>

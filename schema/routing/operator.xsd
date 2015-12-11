@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <xs:simpleType name="OperatorType">
+        <xs:restriction base="xs:string">
+            <!-- EQUALITY AND RELATIONAL OPERATORS -->
+            <xs:enumeration value="EQ"></xs:enumeration><!-- Equal to -->
+            <xs:enumeration value="NE"></xs:enumeration><!-- Not equal to -->
+            <xs:enumeration value="LT"></xs:enumeration><!-- Less than -->
+            <xs:enumeration value="LE"></xs:enumeration><!-- Less than or equal to -->
+            <xs:enumeration value="GT"></xs:enumeration><!-- Greater than -->
+            <xs:enumeration value="GE"></xs:enumeration><!-- Greater than or equal to -->
+            <!-- CONDITIONAL OPERATORS -->
+            <xs:enumeration value="OR"></xs:enumeration><!-- Conditional-OR -->
+            <xs:enumeration value="AND"></xs:enumeration><!-- Conditional-AND -->
+            <!-- ARITHMETIC OPERATORS -->
+            <xs:enumeration value="ADD"></xs:enumeration><!-- + -->
+            <xs:enumeration value="SUB"></xs:enumeration><!-- - -->
+            <xs:enumeration value="MUL"></xs:enumeration><!-- * -->
+            <xs:enumeration value="DIV"></xs:enumeration><!-- / -->
+            <xs:enumeration value="MOD"></xs:enumeration><!-- % -->
+            <!-- MAP FUNCTIONS -->
+            <xs:enumeration value="GET"></xs:enumeration>
+            <xs:enumeration value="IS_SEL"></xs:enumeration><!-- Is selected -->
+            <xs:enumeration value="IS_UNSEL"></xs:enumeration><!-- Is unselected -->
+            <!-- SET OPERATORS -->
+            <xs:enumeration value="UNION"></xs:enumeration><!-- Union of sets -->
+            <xs:enumeration value="INTERSECTION"></xs:enumeration><!-- Intersection of sets -->
+            <!-- UNARY OPERATORS -->
+            <xs:enumeration value="POS"></xs:enumeration><!-- Positive value -->
+            <xs:enumeration value="NEG"></xs:enumeration><!-- Negative value -->
+            <xs:enumeration value="INC"></xs:enumeration><!-- Increments a value by 1 -->
+            <xs:enumeration value="DEC"></xs:enumeration><!-- Decrements a value by 1 -->
+            <xs:enumeration value="NOT"></xs:enumeration><!-- Inverts the value of a boolean -->
+            <!-- UNARY FUNCTIONS -->
+            <xs:enumeration value="EMPTY"></xs:enumeration>
+            <xs:enumeration value="SIZE"></xs:enumeration>
+            <xs:enumeration value="SEL"></xs:enumeration><!-- Select -->
+            <xs:enumeration value="UNSEL"></xs:enumeration><!-- Unselect -->
+            <xs:enumeration value="ALL"></xs:enumeration><!-- Select and Unselect-->
+            <xs:enumeration value="VALUEOF"></xs:enumeration><!-- Gets the value of variable converted to String -->
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="Operator">
+        <xs:attribute name="name" type="s:OperatorType" use="required"></xs:attribute>
+    </xs:complexType>
+</xs:schema>

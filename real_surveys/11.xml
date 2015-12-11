@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>11</name>
+        <description>Canadean Quarterly beverage packaging pricing monitor, 2012</description>
+        <date>2012-01-01</date>
+    </survey>
+    <content>
+        <section id="0">
+            <label lang="en">Screening block</label>
+            <intro name="S0">
+                <label lang="en">Good morning/afternoon, my name is _. I am calling from Canadean, an independent
+                market research company based in the UK. This is not a sales call.</label>
+            </intro>
+            <single name="S3">
+                <label lang="en">Would it be possible to do the interview now?</label>
+                <close code="01">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="02">
+                    <label lang="en">Yes, but later</label>
+                </close>
+                <close code="03">
+                    <label lang="en">No, not interested</label>
+                </close>
+            </single>
+            <single name="S4">
+                <label lang="en">Is there someone else in your company who is primarily responsible for selecting
+                packaging materials that your company uses that I could speak with?</label>
+                <close code="01">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="02">
+                    <label lang="en">No</label>
+                </close>
+                <close code="99">
+                    <label lang="en">Refused</label>
+                </close>
+            </single>
+            <single name="S5">
+                <label lang="en">Would receive a copy of the results?</label>
+                <close code="01">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="02">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+        </section>
+        <section id="1">
+            <label lang="en">Default block</label>
+            <multiple name="Q1">
+                <label lang="en">In which of the following areas of the dairy drink and soft drinks markets are
+                you currently active?</label>
+                <close code="1">
+                    <label lang="en">White Milk</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Cream</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Condensed &amp; Evaporated Milk</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Drinking Yoghurt</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Flavoured Milk</label>
+                </close>
+                <close code="6">
+                    <label lang="en">Fermented Milk</label>
+                </close>
+                <close code="7">
+                    <label lang="en">Soy-based Drinks</label>
+                </close>
+                <close code="8">
+                    <label lang="en">Carbonated Soft Drinks</label>
+                </close>
+                <close code="9">
+                    <label lang="en">Juices &amp; Nectars</label>
+                </close>
+                <close code="10">
+                    <label lang="en">Still Fruit Drinks</label>
+                </close>
+                <close code="11">
+                    <label lang="en">Iced tea &amp; Coffee</label>
+                </close>
+                <close code="12">
+                    <label lang="en">Sports Drinks</label>
+                </close>
+                <close code="13">
+                    <label lang="en">Energy Drinks</label>
+                </close>
+            </multiple>
+            <multiple name="Q2">
+                <label lang="en">Which of the following packaging types do you buy?</label>
+                <close code="1">
+                    <label lang="en">Glass Bottles</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Cartons for long life (ambients) products</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Cartons for short life (fresh) products</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Cans</label>
+                </close>
+                <close code="5">
+                    <label lang="en">PET Bottles</label>
+                </close>
+                <close code="6">
+                    <label lang="en">HDPE Bottles</label>
+                </close>
+            </multiple>
+            <multiple name="Q3_1">
+                <label lang="en">What are the main sizes of Glass Bottles that you buy?</label>
+                <close code="1">
+                    <label lang="en">200ml/9.5 Oz</label>
+                </close>
+                <close code="2">
+                    <label lang="en">500ml/16 Oz</label>
+                </close>
+                <close code="3">
+                    <label lang="en">750ml/20 Oz</label>
+                </close>
+                <close code="4">
+                    <label lang="en">1500ml/64 Oz</label>
+                </close>
+                <open code="5">
+                    <label lang="en">Other (write in)</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </multiple>
+            <multiple name="Q3_2">
+                <label lang="en">What are the main sizes of Cartons for long life (ambients) products that you buy?</label>
+                <close code="1">
+                    <label lang="en">250ml/8 Oz</label>
+                </close>
+                <close code="2">
+                    <label lang="en">500ml/16 Oz</label>
+                </close>
+                <close code="3">
+                    <label lang="en">1000ml/32 Oz</label>
+                </close>
+                <close code="4">
+                    <label lang="en">1500ml/64 Oz</label>
+                </close>
+                <open code="5">
+                    <label lang="en">Other (write in)</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </multiple>
+            <multiple name="Q3_3">
+                <label lang="en">What are the main sizes of Cartons for short life (fresh) products that you buy?</label>
+                <close code="1">
+                    <label lang="en">250ml/8 Oz</label>
+                </close>
+                <close code="2">
+                    <label lang="en">500ml/16 Oz</label>
+                </close>
+                <close code="3">
+                    <label lang="en">1000ml/32 Oz</label>
+                </close>
+                <close code="4">
+                    <label lang="en">1500ml/64 Oz</label>
+                </close>
+                <open code="5">
+                    <label lang="en">Other (write in)</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </multiple>
+            <multiple name="Q3_4">
+                <label lang="en">What are the main sizes of Cans that you buy?</label>
+                <close code="1">
+                    <label lang="en">330ml/12 Oz</label>
+                </close>
+                <open code="2">
+                    <label lang="en">Other (write in)</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </multiple>
+            <multiple name="Q3_5">
+                <label lang="en">What are the main sizes of PET Bottles that you buy?</label>
+                <close code="1">
+                    <label lang="en">250ml/8 Oz</label>
+                </close>
+                <close code="2">
+                    <label lang="en">500ml/16 Oz</label>
+                </close>
+                <close code="3">
+                    <label lang="en">600ml/20 Oz</label>
+                </close>
+                <close code="4">
+                    <label lang="en">1000ml/32 Oz</label>
+                </close>
+                <close code="5">
+                    <label lang="en">1500ml/64 Oz</label>
+                </close>
+                <open code="6">
+                    <label lang="en">Other (write in)</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </multiple>
+            <multiple name="Q3_6">
+                <label lang="en">What are the main sizes of HDPE that you buy?</label>
+                <close code="1">
+                    <label lang="en">250ml/8 Oz</label>
+                </close>
+                <close code="2">
+                    <label lang="en">500ml/16 Oz</label>
+                </close>
+                <close code="3">
+                    <label lang="en">1000ml/32 Oz</label>
+                </close>
+                <close code="4">
+                    <label lang="en">2000ml/64 Oz</label>
+                </close>
+                <open code="5">
+                    <label lang="en">Other (write in)</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </multiple>
+            <open name="Q10">
+                <label lang="en">What other important factors do you think might influence beverage packaging prices
+                over the next 12 months?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <intro name="Q11">
+                <label lang="en">That is the end of the questionnaire. Thanks you very much for sparing your time
+                    to help us with this survey.
+                    As I said at the beginning, your comments will be kept confidential and none of the information will
+                    be attributed to you or your company in any way.
+                    In order to send you a copy of the survey findings however, could I please just check your name,
+                    department and email address?</label>
+            </intro>
+            <open name="Q11_name">
+                <label lang="en">Name:</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q11_position">
+                <label lang="en">Position/Deparment:</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q11_email">
+                <label lang="en">Email:</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <intro name="INF">
+                <label lang="en">If respondent requires further information about this survey or Canadean's packaging
+                services in general, please ask them to contact.</label>
+            </intro>
+        </section>
+        <section id="2">
+            <label lang="en">Looping</label>
+            <open name="Q4a">
+                <label lang="en">What per cent changes have you seen in your packaging purchase prices
+                over the last 3 months? STATE % CHANGE IN PERIOD AS NEGATIVE OR POSITIVE</label>
+                <decimal>
+                    <value></value>
+                </decimal>
+            </open>
+            <open name="Q4b">
+                <label lang="en">What per cent changes have you seen in your packaging purchase prices
+                over the last 12 months? STATE % CHANGE IN PERIOD AS NEGATIVE OR POSITIVE</label>
+                <decimal>
+                    <value></value>
+                </decimal>
+            </open>
+            <open name="Q5">
+                <label lang="en">What in your view have been the main underlying reasons for these changes
+                in price?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q6">
+                <label lang="en">If you exclude the cost of closure, about how much do you currently pay?
+                MAKE SURE YOU RECORD THE CURRENCY</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q7">
+                <label lang="en">About how much do you order annually? MAKE SURE YOU RECORD THE UNITS, e.g. 
+                IF THEY ANSWER IN MILLIONS, STATE THIS</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q8a">
+                <label lang="en">What per cent changes do you expect to see in your packaging purchase prices
+                over the next 3 months? STATE % CHANGE IN PERIOD AS NEGATIVE OR POSITIVE</label>
+                <decimal>
+                    <value></value>
+                </decimal>
+            </open>
+            <open name="Q8b">
+                <label lang="en">What per cent changes do you expect to see in your packaging purchase prices
+                over the next 12 months? STATE % CHANGE IN PERIOD AS NEGATIVE OR POSITIVE</label>
+                <decimal>
+                    <value></value>
+                </decimal>
+            </open>
+            <open name="Q9">
+                <label lang="en">Why do you say that?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+        </section>
+    </content>
+    <field>
+        <iterator id="p2_iterator"/>
+        <iterator id="p4_iterator"/>
+        <iterator id="p6_iterator"/>
+        <iterator id="p8_iterator"/>
+        <iterator id="p10_iterator"/>
+        <iterator id="p11_iterator"/>
+    </field>
+    <routing>
+        <statemodel ref="0">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="S0"/>
+                <transition target="s3"/>
+            </state>
+            <state id="s3">
+                <variable ref="S3"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="S3"/>
+                        <constant type="string" value="01"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s5"/>
+                    </then>
+                    <else>
+                        <transition target="s4"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s4">
+                <variable ref="S4"/>
+                <transition target="p1"/>
+            </state>
+            <state id="p1">
+                <if>
+                    <condition>
+                        <variable ref="S4"/>
+                        <constant type="string" value="02"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="S4"/>
+                        <constant type="string" value="99"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="terminate0"/>
+                    </then>
+                    <else>
+                        <transition target="s5"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s5">
+                <variable ref="S5"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+            <state id="terminate0">
+                <terminate/>
+            </state>
+        </statemodel>
+        <statemodel ref="1">
+            <source id="s1"/>
+            <state id="s1">
+                <variable ref="Q1"/>
+                <transition target="s2"/>
+            </state>
+            <state id="s2">
+                <variable ref="Q2"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q2"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s3_1"/>
+                    </then>
+                    <else>
+                        <transition target="p1"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s3_1">
+                <variable ref="Q3_1"/>
+                <transition target="p2"/>
+            </state>
+            <state id="p2">
+                <for>
+                    <field ref="p2_iterator"/>
+                    <in>
+                        <expr_list>
+                            <variable ref="Q3_1"/>
+                            <operator name="SEL"/>    
+                        </expr_list>
+                    </in>
+                    <transition target="c2_1"/>
+                </for>
+                <transition target="p1"/>
+            </state>
+            <state id="c2_1">
+                <include statemodel="2"/>
+            </state>
+            <state id="p1">
+                <if>
+                    <condition>
+                        <variable ref="Q2"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>   
+                    </condition>
+                    <then>
+                        <transition target="s3_2"/>
+                    </then>
+                    <else>
+                        <transition target="p3"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s3_2">
+                <variable ref="Q3_2"/>
+                <transition target="p4"/>
+            </state>
+            <state id="p4">
+                <for>
+                    <field ref="p4_iterator"/>
+                    <in>
+                        <expr_list>
+                            <variable ref="Q3_2"/>
+                            <operator name="SEL"/>    
+                        </expr_list>  
+                    </in>
+                    <transition target="c2_2"/>
+                </for>
+                <transition target="p3"/>
+            </state>
+            <state id="c2_2">
+                <include statemodel="2"/>
+            </state>
+            <state id="p3">
+                <if>
+                    <condition>
+                        <variable ref="Q2"/>
+                        <constant type="string" value="3"/>
+                        <operator name="IS_SEL"/> 
+                    </condition>
+                    <then>
+                        <transition target="s3_3"/>
+                    </then>
+                    <else>
+                        <transition target="p5"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s3_3">
+                <variable ref="Q3_3"/>
+                <transition target="p6"/>
+            </state>
+            <state id="p6">
+                <for>
+                    <field ref="p6_iterator"/>
+                    <in>
+                        <expr_list>
+                            <variable ref="Q3_3"/>
+                            <operator name="SEL"/>    
+                        </expr_list>
+                    </in>
+                    <transition target="c2_3"/>
+                </for>
+                <transition target="p5"/>
+            </state>
+            <state id="c2_3">
+                <include statemodel="2"/>
+            </state>
+            <state id="p5">
+                <if>
+                    <condition>
+                        <variable ref="Q2"/>
+                        <constant type="string" value="4"/>
+                        <operator name="IS_SEL"/> 
+                    </condition>
+                    <then>
+                        <transition target="s3_4"/>
+                    </then>
+                    <else>
+                        <transition target="p7"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s3_4">
+                <variable ref="Q3_4"/>
+                <transition target="p8"/>
+            </state>
+            <state id="p8">
+                <for>
+                    <field ref="p8_iterator"/>
+                    <in>
+                        <expr_list>
+                            <variable ref="Q3_4"/>
+                            <operator name="SEL"/>
+                        </expr_list>
+                    </in>
+                    <transition target="c2_4"/>
+                </for>    
+                <transition target="p7"/>
+            </state>
+            <state id="c2_4">
+                <include statemodel="2"/>
+            </state>
+            <state id="p7">
+                <if>
+                    <condition>
+                        <variable ref="Q2"/>
+                        <constant type="string" value="5"/>
+                        <operator name="IS_SEL"/>   
+                    </condition>
+                    <then>
+                        <transition target="s3_5"/>
+                    </then>
+                    <else>
+                        <transition target="p9"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s3_5">
+                <variable ref="Q3_5"/>
+                <transition target="p10"/>
+            </state>
+            <state id="p10">
+                <for>
+                    <field ref="p10_iterator"/>
+                    <in>
+                        <expr_list>
+                            <variable ref="Q3_5"/>
+                            <operator name="SEL"/>
+                        </expr_list> 
+                    </in>
+                    <transition target="c2_5"/>
+                </for>
+                <transition target="p9"/>
+            </state>
+            <state id="c2_5">
+                <include statemodel="2"/>
+            </state>
+            <state id="p9">
+                <if>
+                    <condition>
+                        <variable ref="Q2"/>
+                        <constant type="string" value="6"/>
+                        <operator name="IS_SEL"/>   
+                    </condition>
+                    <then>
+                        <transition target="s3_6"/>
+                    </then>
+                    <else>
+                        <transition target="s10"/>
+                    </else>
+                </if>    
+            </state>
+            <state id="s3_6">
+                <variable ref="Q3_6"/>
+                <transition target="p11"/>
+            </state>
+            <state id="p11">
+                <for>
+                    <field ref="p11_iterator"/>
+                    <in>
+                        <expr_list>
+                            <variable ref="Q3_6"/>
+                            <operator name="SEL"/>
+                        </expr_list> 
+                    </in>
+                    <transition target="c2_6"/>
+                </for>
+                <transition target="s10"/>
+            </state>
+            <state id="c2_6">
+                <include statemodel="2"/>
+            </state>
+            <state id="s10">
+                <variable ref="Q10"/>
+                <transition target="s11"/>
+            </state>
+            <state id="s11">
+                <variable ref="Q11"/>
+                <variable ref="Q11_name"/>
+                <variable ref="Q11_position"/>
+                <variable ref="Q11_email"/>
+                <variable ref="INF"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <statemodel ref="2">
+            <source id="s4"/>
+            <state id="s4">
+                <variable ref="Q4a"/>
+                <variable ref="Q4b"/>
+                <transition target="s5"/>
+            </state>
+            <state id="s5">
+                <variable ref="Q5"/>
+                <transition target="s6"/>
+            </state>
+            <state id="s6">
+                <variable ref="Q6"/>
+                <transition target="s7"/>
+            </state>
+            <state id="s7">
+                <variable ref="Q7"/>
+                <transition target="s8"/>
+            </state>
+            <state id="s8">
+                <variable ref="Q8a"/>
+                <variable ref="Q8b"/>
+                <transition target="s9"/>
+            </state>
+            <state id="s9">
+                <variable ref="Q9"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="0"/>
+                <transition target="c1"/>
+            </state>
+            <state id="c1">
+                <include statemodel="1"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation></personalisation>
+</ssm>

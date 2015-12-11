@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name></name>
+        <description></description>
+        <date></date>
+    </survey>
+    <content>
+        <section id="DEFAULT">
+            <label lang="en">Default Block</label>
+            <single name="Q0">
+                <label lang="en">What's your favourite colour?</label>
+                <close code="red">
+                    <label lang="en">Red</label>
+                </close>
+                <close code="black">
+                    <label lang="en">Black</label>
+                </close>
+                <close code="white">
+                    <label lang="en">White</label>
+                </close>
+                <close code="green">
+                    <label lang="en">Green</label>
+                </close>
+                <open code="other">
+                    <label lang="en">Other</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+                <open code="other2">
+                    <label lang="en">Other integer</label>
+                    <integer>
+                        <min>1</min>
+                        <max>6</max>
+                        <value>5</value>
+                    </integer>
+                </open>
+                <open code="other3">
+                    <label lang="en">Other decimal</label>
+                    <decimal>
+                        <value></value>
+                    </decimal>
+                </open>
+            </single>
+        </section>
+    </content>
+    <field></field>
+    <routing>
+        <statemodel ref="DEFAULT">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="Q0"/>
+                <transition target="s1"/>
+            </state>
+            <state id="s1">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="DEFAULT"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation></personalisation>
+</ssm>

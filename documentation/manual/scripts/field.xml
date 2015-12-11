@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm>
+    <survey>
+        ...
+    </survey>
+    <content>
+        ...
+    </content>
+    <field>
+        <decimal id="decimalVariable" value="0.0"/>
+        <integer id="integerVariable" value="0"/>
+        <string id="stringVariable" value="Hello World!"/>
+        <iterator id="p2_iterator"/>
+    </field>
+    <routing>
+        ...
+    </routing>
+</ssm>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>Grid multiple</name>
+        <description>Grid multiple example</description>
+        <date></date>
+    </survey>
+    <content>
+        <section id="0">
+            <label lang="en">Section 0</label>
+            <intro name="INF0">
+                <label lang="en">We are going to show a multiple grid question</label>
+            </intro>
+            <grid name="Q1">
+                <label lang="en">Which of these are</label>
+                <multiple>
+                    <rows>
+                        <close code="01">
+                            <label lang="en">Coke</label>
+                        </close>
+                        <close code="02">
+                            <label lang="en">Pepsi</label>
+                        </close>
+                        <close code="03">
+                            <label lang="en">Fanta</label>
+                        </close>
+                        <close code="04">
+                            <label lang="en">Aquarius</label>
+                        </close>
+                        <close code="05">
+                            <label lang="en">Sprite</label>
+                        </close>
+                        <close code="06">
+                            <label lang="en">Lucozade</label>
+                        </close>
+                        <close code="07">
+                            <label lang="en">Schweppes</label>
+                        </close>
+                        <close code="08">
+                            <label lang="en">Redbull</label>
+                        </close>
+                        <close code="09">
+                            <label lang="en">Monster Energy</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="01">
+                            <label lang="en">Fun</label>
+                        </close>
+                        <close code="02">
+                            <label lang="en">Sexy</label>
+                        </close>
+                        <close code="03">
+                            <label lang="en">Masculine</label>
+                        </close>
+                        <close code="99">
+                            <label lang="en">Don't know</label>
+                            <exclusive value="true"/>
+                        </close>
+                    </columns>
+                </multiple>
+            </grid>
+            <intro name="INF1">
+                <label lang="en">Thanks and close</label>
+            </intro>
+        </section>
+    </content>
+    <field></field>
+    <routing>
+        <statemodel ref="0">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="INF0"/>
+                <transition target="s1"/>
+            </state>
+            <state id="s1">
+                <variable ref="Q1"/>
+                <transition target="s2"/>
+            </state>
+            <state id="s2">
+                <variable ref="INF1"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="0"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation></personalisation>
+</ssm>

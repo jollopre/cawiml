@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>02</name>
+        <description>VFL Care Home Survey</description>
+        <date>2009-05-19</date>
+    </survey>
+    <content>
+        <section id="DEFAULT">
+            <label lang="en">Default block</label>
+            <intro name="INF">
+                <label lang="en">Good morning/afternoon, my name is [NAME] and I'm calling on behalf of 
+                Vegetarian for Life, a charity that supports older people who are vegetarian or vegan. Can
+                you spare a few minutes of your time to answer some quick questions? [If required] We are calling
+                to get some quick feedback, this isn't a fundraising call.</label>
+            </intro>
+            <single name="S1">
+                <label lang="en">Can I take your job title please?</label>
+                <close code="1">
+                    <label lang="en">Manager</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Assistant Manager</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Care Assistant</label>
+                </close>
+                <open code="4">
+                    <label lang="en">Other, please specify:</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </single>
+            <open name="Q1">
+                <label lang="en">How many residents do you have in your home?</label>
+                <integer>
+                    <min></min>
+                    <max></max>
+                    <value></value>
+                </integer>
+            </open>
+            <single name="Q2">
+                <label lang="en">How many of your residents are vegetarian?(For the purposes of this survey we
+                define a vegetarian who doesn't eat meat or fish).</label>
+                <open code="0">
+                    <label lang="en">Number:</label>
+                    <integer>
+                        <min></min>
+                        <max></max>
+                        <value></value>
+                    </integer>
+                </open>
+                <close code="None">
+                    <label lang="en">None</label>
+                </close>
+                <close code="DK">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <single name="Q2a">
+                <label lang="en">How many of your residents are vegan?
+                A vegan is defined as someone who doesn't eat meat or fish or any animal-derived products
+                such as eggs or dairy</label>
+                <open code="0">
+                    <label lang="en">Number:</label>
+                    <integer>
+                        <min></min>
+                        <max></max>
+                        <value></value>
+                    </integer>
+                </open>
+                <close code="None">
+                    <label lang="en">None</label>
+                </close>
+                <close code="DK">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <single name="Q3">
+                <label lang="en">Before today, were you aware of the charity Vegetarian  for Life?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <single name="Q3a">
+                <label lang="en">Have you ever visited the Vegetarian for Life website?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <single name="Q3b">
+                <label lang="en">How useful did you find the website on a scale of 1-5, where 5
+                is very useful and 1 is not at all useful?</label>
+                <close code="1">
+                    <label lang="en">Not at all useful</label>
+                </close>
+                <close code="2">
+                    <label lang="en"></label>
+                </close>
+                <close code="3">
+                    <label lang="en"></label>
+                </close>
+                <close code="4">
+                    <label lang="en"></label>
+                </close>
+                <close code="5">
+                    <label lang="en">Very useful</label>
+                </close>
+            </single>
+            <single name="Q4">
+                <label lang="en">Do you remember seeing, in 2008, the Vegetarian for Life guide
+                'Catering for older vegetarians and vegans'?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+                <close code="98">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <single name="Q4a">
+                <label lang="en">Would you like us to send you a copy?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <single name="Q5">
+                <label lang="en">Vegetarian for Life are publishing, later this year, a positive-living handbook
+                for older vegetarians and vegans called Vegetarian Living. Would like copies sent to you for
+                distribution to your vegetarian/vegan residents?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <single name="Q6">
+                <label lang="en">And finally, would you be interested in receiving information about subsidised
+                courses- for your caterinf staff or management- on vegetarian or vegan catering for care homes
+                (at £25 per attendee for a full day course)?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <intro name="INF2">
+                <label lang="en">We've now reached the end of the survey, thanks very much for your time.</label>
+            </intro>
+        </section>
+    </content>
+    <field></field>
+    <routing>
+        <statemodel ref="DEFAULT">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="INF"/>
+                <transition target="screening"/>
+            </state>
+            <state id="screening">
+                <variable ref="S1"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="S1"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="S1"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>        
+                    </condition>
+                    <then>
+                        <transition target="s1"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s1">
+                <variable ref="Q1"/>
+                <transition target="s2"/>
+            </state>
+            <state id="s2">
+                <variable ref="Q2"/>
+                <transition target="s2a"/>
+            </state>
+            <state id="s2a">
+                <variable ref="Q2a"/>
+                <transition target="s3"/>
+            </state>
+            <state id="s3">
+                <variable ref="Q3"/>
+                <transition target="p1"/>
+            </state>
+            <state id="p1">
+                <if>
+                    <condition>
+                        <variable ref="Q3"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s3a"/>
+                    </then>
+                    <else>
+                        <transition target="s4"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s3a">
+                <variable ref="Q3a"/>
+                <transition target="p2"/>
+            </state>
+            <state id="p2">
+                <if>
+                    <condition>
+                        <variable ref="Q3a"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s3b"/>
+                    </then>
+                    <else>
+                        <transition target="s4"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s3b">
+                <variable ref="Q3b"/>
+                <transition target="s4"/>
+            </state>
+            <state id="s4">
+                <variable ref="Q4"/>
+                <transition target="p3"/>
+            </state>
+            <state id="p3">
+                <if>
+                    <condition>
+                        <variable ref="Q4"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s5"/>
+                    </then>
+                    <else>
+                        <transition target="s4a"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s4a">
+                <variable ref="Q4a"/>
+                <transition target="s5"/>
+            </state>
+            <state id="s5">
+                <variable ref="Q5"/>
+                <transition target="s6"/>
+            </state>
+            <state id="s6">
+                <variable ref="Q6"/>
+                <transition target="s7"/>
+            </state>
+            <state id="s7">
+                <variable ref="INF2"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="DEFAULT"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation></personalisation>
+</ssm>

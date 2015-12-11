@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    <xs:complexType name="Include">
+        <xs:annotation>
+            <xs:documentation>
+                It appends other statemodel over the state.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="statemodel" type="xs:string" use="required"></xs:attribute>
+    </xs:complexType>
+</xs:schema>

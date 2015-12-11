@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <xs:include schemaLocation="constraint.xsd"></xs:include>
+    <xs:include schemaLocation="label.xsd"></xs:include>
+    <xs:include schemaLocation="intro.xsd"></xs:include>
+    <xs:include schemaLocation="grid.xsd"></xs:include>
+    <xs:include schemaLocation="multiple.xsd"></xs:include>
+    <xs:include schemaLocation="open.xsd"></xs:include>
+    <xs:include schemaLocation="single.xsd"></xs:include>
+    <xs:include schemaLocation="rank.xsd"></xs:include>
+    <xs:complexType name="Section">
+        <xs:sequence>
+            <xs:element name="label" type="s:Label" maxOccurs="unbounded"></xs:element>
+            <xs:group ref="s:QuestionChoice" minOccurs="0" maxOccurs="unbounded"></xs:group>
+        </xs:sequence>
+        <xs:attribute name="id" use="required" type="s:Name"></xs:attribute>    
+    </xs:complexType>
+    <xs:group name="QuestionChoice">
+        <xs:choice>
+            <xs:element name="intro" type="s:Intro"></xs:element>
+            <xs:element name="grid" type="s:Grid"></xs:element>
+            <xs:element name="multiple" type="s:Multiple"></xs:element>
+            <xs:element name="open" type="s:Open"></xs:element>
+            <xs:element name="rank" type="s:Rank"></xs:element>
+            <xs:element name="single" type="s:Single"></xs:element>
+        </xs:choice>
+    </xs:group>
+</xs:schema>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    <xs:include schemaLocation="if.xsd"></xs:include>
+    <xs:include schemaLocation="for.xsd"></xs:include>
+    <xs:include schemaLocation="check.xsd"></xs:include>
+    <xs:include schemaLocation="computation.xsd"></xs:include>
+    <xs:include schemaLocation="transition.xsd"></xs:include>
+    
+    <xs:group name="Pseudo">
+        <xs:choice>
+            <xs:group ref="s:IfState"></xs:group>
+            <xs:group ref="s:OtherState"></xs:group>
+        </xs:choice>
+    </xs:group>
+    <xs:group name="IfState">
+        <xs:sequence>
+            <xs:element name="if" type="s:If"></xs:element>
+        </xs:sequence>
+    </xs:group>
+    <xs:group name="OtherState">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element name="for" type="s:For"></xs:element>
+                <xs:element name="check" type="s:Check"></xs:element>
+                <xs:element name="computation" type="s:Computation"></xs:element>
+            </xs:choice>
+            <xs:element name="transition" type="s:Transition"></xs:element>
+        </xs:sequence>
+    </xs:group>
+</xs:schema>

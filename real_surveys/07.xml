@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>07</name>
+        <description>Thomson Business Strata Study Questionnaire</description>
+        <date>2008-11-01</date>
+    </survey>
+    <content>
+        <section id="0">
+            <label lang="en">Screening block</label>
+            <intro name="INTRODUCTION">
+                <label lang="en">Good am/pm. My name is _ from 2Europe, an independent research agengy. We are
+                carrying out a short study on behalf of Thomson Local in connection with a New Connections
+                or Business Search Pro database you have purchased. This will only take a few minutes of your time.
+                (IF ASKED - The study will be used to help understand the value gained from the databases provided).
+                </label>
+            </intro>
+            <single name="S1">
+                <label lang="en">Customer type</label>
+                <close code="1">
+                    <label lang="en">Business Search Pro (BSP)</label>
+                </close>
+                <close code="2">
+                    <label lang="en">New Connections (NC)</label>
+                </close>
+            </single>
+            <single name="Q1">
+                <label lang="en">For classification purposes can you advise; are you the person who uses the
+                databases you purchase?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+        </section>
+        <section id="1">
+            <label lang="en">Demographics</label>
+            <single name="Q2">
+                <label lang="en">How many people/employees work in your company?</label>
+                <close code="1">
+                    <label lang="en">1-2 employees (HOME)</label>
+                </close>
+                <close code="2">
+                    <label lang="en">3-9 employees (MICRO)</label>
+                </close>
+                <close code="3">
+                    <label lang="en">10-99 employees (SMALL)</label>
+                </close>
+                <close code="4">
+                    <label lang="en">100-500 employees (MEDIUM)</label>
+                </close>
+                <close code="5">
+                    <label lang="en">500+ employees (LARGE)</label>
+                </close>
+            </single>
+            <single name="Q2a">
+                <label lang="en">What is the approximate turnover of the company?</label>
+                <open code="1">
+                    <label lang="en">£</label>
+                    <integer>
+                        <min></min>
+                        <max></max>
+                        <value></value>
+                    </integer>
+                </open>
+                <close code="REF">
+                    <label lang="en">Refused</label>
+                </close>
+                <close code="DK">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <single name="Q3">
+                <label lang="en">For the purposes of classification can you specify which of the following most
+                closely matches your company activity?</label>
+                <close code="1">
+                    <label lang="en">Manufacturing</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Service</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Retail and distribution</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Public sector</label>
+                </close>
+            </single>
+            <single name="Q4">
+                <label lang="en">Where is your main office located?</label>
+                <close code="1">
+                    <label lang="en">Scotland, Northern Ireland and Wales</label>
+                </close>
+                <close code="2">
+                    <label lang="en">North England</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Midlands</label>
+                </close>
+                <close code="4">
+                    <label lang="en">South England</label>
+                </close>
+                <close code="5">
+                    <label lang="en">London and M25</label>
+                </close>
+            </single>
+            <multiple name="Q5">
+                <label lang="en">Thinking about the most recent database you purchased from Thomson Local, how
+                did you go on the use the records in the database you received?</label>
+                <close code="1">
+                    <label lang="en">Posted/direct mail</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Telephoned</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Email</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Not used</label>
+                    <exclusive value="true"/>
+                </close>
+            </multiple>
+            <open name="Q6">
+                <label lang="en">How many records did you purchase?</label>
+                <integer>
+                    <min></min>
+                    <max></max>
+                    <value></value>
+                </integer>
+            </open>
+            <single name="Q7">
+                <label lang="en">What percentage of those you contacted would you say you converted to leads?</label>
+                <open code="1">
+                    <label lang="en">%</label>
+                    <decimal>
+                        <value></value>
+                    </decimal>
+                </open>
+                <close code="NONE">
+                    <label lang="en">None</label>
+                </close>
+            </single>
+            <single name="Q7a">
+                <label lang="en">What percentage of those you contacted would you expect to convert to leads?</label>
+                <open code="1">
+                    <label lang="en">%</label>
+                    <decimal>
+                        <value></value>
+                    </decimal>
+                </open>
+                <close code="NONE">
+                    <label lang="en">None</label>
+                </close>
+            </single>
+            <single name="Q8">
+                <label lang="en">What percentage of those leads would you say you converted to sales?</label>
+                <open code="1">
+                    <label lang="en">%</label>
+                    <decimal>
+                        <value></value>
+                    </decimal>
+                </open>
+                <close code="NONE">
+                    <label lang="en">None</label>
+                </close>
+            </single>
+            <single name="Q8a">
+                <label lang="en">What percentage of those leads would you expect to convert to sales?</label>
+                <open code="1">
+                    <label lang="en">%</label>
+                    <decimal>
+                        <value></value>
+                    </decimal>
+                </open>
+                <close code="DK">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <open name="Q9" refused="true">
+                <label lang="en">Considering the jobs or sales that result from using the contacts in the database,
+                what do you consider is the average value of a job or sale?</label>
+                <decimal>
+                    <value></value>
+                </decimal>
+            </open>
+            <open name="Q9_MIN" refused="true">
+                <label lang="en">Considering the jobs or sales that result from using the contacts in the database, 
+                    what do you consider is the minimum value of a job or sale?</label>
+                <decimal>
+                    <value></value>
+                </decimal>
+            </open>
+            <open name="Q9_MAX" refused="true">
+                <label lang="en">Considering the jobs or sales that result from using the contacts in the database, 
+                    what do you consider is the maximum value of a job or sale?</label>
+                <decimal>
+                    <value></value>
+                </decimal>
+            </open>
+            <open name="Q10">
+                <label lang="en">And finally thinking about all the leads you receive from all sources, on average
+                what percentage of leads do you convert to sales?</label>
+                <decimal>
+                    <value></value>
+                </decimal>
+            </open>
+        </section>
+    </content>
+    <field></field>
+    <routing>
+        <statemodel ref="0">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="INTRODUCTION"/>
+                <transition target="s1"/>
+            </state>
+            <state id="s1">
+                <variable ref="S1"/>
+                <transition target="s2"/>
+            </state>
+            <state id="s2">
+                <variable ref="Q1"/>
+                <transition target="p1"/>
+            </state>
+            <state id="p1">
+                <if>
+                    <condition>
+                        <variable ref="Q1"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="terminate0"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+            <state id="terminate0">
+                <terminate/>
+            </state>
+        </statemodel>
+        <statemodel ref="1">
+            <source id="s2"/>
+            <state id="s2">
+                <variable ref="Q2"/>
+                <transition target="s2a"/>
+            </state>
+            <state id="s2a">
+                <variable ref="Q2a"/>
+                <transition target="s3"/>
+            </state>
+            <state id="s3">
+                <variable ref="Q3"/>
+                <transition target="s4"/>
+            </state>
+            <state id="s4">
+                <variable ref="Q4"/>
+                <transition target="s5"/>
+            </state>
+            <state id="s5">
+                <variable ref="Q5"/>
+                <transition target="s6"/>
+            </state>
+            <state id="s6">
+                <variable ref="Q6"/>
+                <transition target="s7"/>
+            </state>
+            <state id="s7">
+                <variable ref="Q7"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q7"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s8"/>
+                    </then>
+                    <else>
+                        <transition target="s7a"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s7a">
+                <variable ref="Q7a"/>
+                <transition target="p1"/>
+            </state>
+            <state id="p1">
+                <if>
+                    <condition>
+                        <variable ref="Q7a"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s8"/>
+                    </then>
+                    <else>
+                        <transition target="s9"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s8">
+                <variable ref="Q8"/>
+                <transition target="p2"/>
+            </state>
+            <state id="p2">
+                <if>
+                    <condition>
+                        <variable ref="Q8"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s9"/>
+                    </then>
+                    <else>
+                        <transition target="s8a"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s8a">
+                <variable ref="Q8a"/>
+                <transition target="s9"/>
+            </state>
+            <state id="s9">
+                <variable ref="Q9"/>
+                <variable ref="Q9_MIN"/>
+                <variable ref="Q9_MAX"/>
+                <transition target="s10"/>
+            </state>
+            <state id="s10">
+                <variable ref="Q10"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="0"/>
+                <transition target="c1"/>
+            </state>
+            <state id="c1">
+                <include statemodel="1"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation></personalisation>
+</ssm>

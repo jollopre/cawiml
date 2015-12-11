@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>15</name>
+        <description>Lebara Awareness Survey - Pre Survey</description>
+        <date></date>
+    </survey>
+    <content>
+        <section id="0">
+            <label lang="en">Default</label>
+            <intro name="INF1">
+                <label lang="en">Good am/pm. My name is _ from an independent research agency. We are carrying
+                out a short study considering your opinions about organisations providing phone services. Can
+                you spare some time to take part; it will only take about 10 minutes.</label>
+            </intro>
+            <single name="S1">
+                <label lang="en">For the purposes of classification can you specify your approximate age?</label>
+                <close code="1">
+                    <label lang="en">&lt;16 years</label>
+                </close>
+                <close code="2">
+                    <label lang="en">16-20 years</label>
+                </close>
+                <close code="3">
+                    <label lang="en">21-30 years</label>
+                </close>
+                <close code="4">
+                    <label lang="en">31-40 years</label>
+                </close>
+                <close code="5">
+                    <label lang="en">41-50 years</label>
+                </close>
+                <close code="6">
+                    <label lang="en">50+ years</label>
+                </close>
+            </single>
+            <single name="S2">
+                <label lang="en">Do you use a mobile phone?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <single name="S3">
+                <label lang="en">Did you personally select the mobile phone network provider you are with?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <single name="S4">
+                <label lang="en">Do you use a calling card for land line telephones?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <open name="S5">
+                <label lang="en">Which calling card do you use?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="S6">
+                <label lang="en">What is your gender?</label>
+                <close code="1">
+                    <label lang="en">Male</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Female</label>
+                </close>
+            </single>
+            <single name="S7">
+                <label lang="en">Which of the following most closely matches your family origins?</label>
+                <close code="1">
+                    <label lang="en">Afro Caribbean</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Americas</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Asian</label>
+                </close>
+                <close code="4">
+                    <label lang="en">British</label>
+                </close>
+                <close code="5">
+                    <label lang="en">East European</label>
+                </close>
+                <close code="6">
+                    <label lang="en">West European</label>
+                </close>
+                <close code="7">
+                    <label lang="en">Other</label>
+                </close>
+            </single>
+            <single name="Q1" refused="true">
+                <label lang="en">When you think of network providers for mobile phones, which companies come
+                to mind?</label>
+                <close code="1">
+                    <label lang="en">IDT Mobile</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Lebara</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Mobile World</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Nomi Mobile</label>
+                </close>
+                <close code="5">
+                    <label lang="en">O2</label>
+                </close>
+                <close code="6">
+                    <label lang="en">Orange</label>
+                </close>
+                <close code="7">
+                    <label lang="en">Three Mobile</label>
+                </close>
+                <close code="8">
+                    <label lang="en">T Mobile</label>
+                </close>
+                <close code="9">
+                    <label lang="en">Virgin</label>
+                </close>
+                <close code="10">
+                    <label lang="en">Vodafone</label>
+                </close>
+                <open code="11">
+                    <label lang="en">Other</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </single>
+            <multiple name="Q1a" refused="true">
+                <label lang="en">When you think of network providers for mobile phones, which companies come
+                to mind?</label>
+                <pipe ref="pipe0"/>
+            </multiple>
+            <multiple name="Q2">
+                <label lang="en">Which, (if any) of the following network providers ara you aware of?</label>
+                <randomising>
+                    <all/>
+                </randomising>
+                <pipe ref="pipe1"/>
+            </multiple>
+            <multiple name="Q3">
+                <label lang="en">Which, (if any) of the following network providers do you use?</label>
+                <randomising>
+                    <all/>
+                </randomising>
+                <pipe ref="pipe2"/>
+            </multiple>
+            <multiple name="Q5" refused="true">
+                <label lang="en">What products or services come to mind when thinking of Lebara?</label>
+                <limit>
+                    <min>2</min>
+                    <max></max>
+                </limit>
+                <close code="1">
+                    <label lang="en">Low cost mobile phone network</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Low cost calling cards</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Multi lingual customer service</label>
+                </close>
+                <open code="4">
+                    <label lang="en">Ohter, specify</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+                <close code="5">
+                    <label lang="en">None</label>
+                    <exclusive value="true"/>
+                </close>
+            </multiple>
+            <multiple name="Q6">
+                <label lang="en">Which, if any of the following mobile services offered by Lebara are you aware of?</label>
+                <randomising>
+                    <all/>
+                </randomising>
+                <pipe ref="pipe3"/>
+            </multiple>
+            <grid name="Q7">
+                <label lang="en">Thinking about the mobile network provider Lebara, how far do you agree with the
+                following statements? Please use a scale of 1 to 5 where 1 means you completely disagree, 3 means
+                you neither agree nor disagree and 5 means you strongly agree</label>
+                <single>
+                    <rows>
+                        <rotating>
+                            <all/>
+                        </rotating>
+                        <close code="1">
+                            <label lang="en">Easy to use phone services</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Hassle free</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">No access codes to use</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Good quality mobile phone service</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">High quality mobile phone service</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">1</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">2</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">3</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">4</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">5</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <single name="Q8">
+                <label lang="en">Which of the following apply to how you view Lebara as a mobile phone network
+                provider?</label>
+                <rotating>
+                    <all/>
+                </rotating>
+                <close code="1">
+                    <label lang="en">It is the only network operator I would consider using</label>
+                </close>
+                <close code="2">
+                    <label lang="en">It is the one of my preferred network operators</label>
+                </close>
+                <close code="3">
+                    <label lang="en">It is not a preferred network operator but one I may consider in the future</label>
+                </close>
+                <close code="4">
+                    <label lang="en">I have heard of Lebara but do not know much about them</label>
+                </close>
+                <close code="5">
+                    <label lang="en">I have heard of Lebara but would never consider them</label>
+                </close>
+                <close code="6">
+                    <label lang="en">I have never heard of Lebara</label>
+                </close>
+            </single>
+            <open name="Q9">
+                <label lang="en">Now thinking specifically about the company Lebara, how did you first hear of
+                the mobile phone network provider?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <multiple name="Q10">
+                <label lang="en">Which mobile phone network providers do you recall have advertised or promoted
+                their services in the last 6 months?</label>
+                <close code="1">
+                    <label lang="en">IDT Mobile</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Lebara</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Mobile World</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Nomi Mobile</label>
+                </close>
+                <close code="5">
+                    <label lang="en">O2</label>
+                </close>
+                <close code="6">
+                    <label lang="en">Orange</label>
+                </close>
+                <close code="7">
+                    <label lang="en">Three Mobile</label>
+                </close>
+                <close code="8">
+                    <label lang="en">T Mobile</label>
+                </close>
+                <close code="9">
+                    <label lang="en">Virgin</label>
+                </close>
+                <close code="10">
+                    <label lang="en">Vodafone</label>
+                </close>
+                <open code="11">
+                    <label lang="en">Other</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </multiple>
+            <single name="Q11">
+                <label lang="en">Do you recall any advertising or other promotions from Lebara?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <multiple name="Q12">
+                <label lang="en">Where/what was the source of advertising or other promotions from Lebara?</label>
+                <close code="1">
+                    <label lang="en">Internet</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Magazine advertising</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Newspaper advertising</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Newagents</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Posters</label>
+                </close>
+                <close code="6">
+                    <label lang="en">In store Point of sale material</label>
+                </close>
+                <close code="7">
+                    <label lang="en">Phones4U</label>
+                </close>
+                <close code="8">
+                    <label lang="en">Other mobile phone shop</label>
+                </close>
+                <close code="9">
+                    <label lang="en">Word of mouth</label>
+                </close>
+            </multiple>
+            <multiple name="Q13">
+                <label lang="en">Which, (if any) of the following promotions for Lebara do you recall?</label>
+                <pipe ref="pipe4"/>
+            </multiple>
+            <single name="Q14">
+                <label lang="en">Can you specify the newspapers you read?</label>
+                <close code="1">
+                    <label lang="en">None</label>
+                </close>
+                <open code="2">
+                    <label lang="en">Other, specify</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </single>
+            <single name="Q15">
+                <label lang="en">Can you specify the magazines you read?</label>
+                <close code="1">
+                    <label lang="en">None</label>
+                </close>
+                <open code="2">
+                    <label lang="en">Other, specify</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </single>
+        </section>
+    </content>
+    <field></field>
+    <routing>
+        <statemodel ref="0">
+            <source id="ss0"/>
+            <state id="ss0">
+                <variable ref="INF1"/>
+                <transition target="ss1"/>
+            </state>
+            <state id="ss1">
+                <variable ref="S1"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="S1"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="S1"/>
+                        <constant type="string" value="6"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="sink0"/>
+                    </then>
+                    <else>
+                        <transition target="ss2"/>
+                    </else>
+                </if>
+            </state>
+            <state id="ss2">
+                <variable ref="S2"/>
+                <transition target="p1"/>
+            </state>
+            <state id="p1">
+                <if>
+                    <condition>
+                        <variable ref="S2"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="S2"/>
+                        <constant type="string" value="3"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="sink0"/>
+                    </then>
+                    <else>
+                        <transition target="ss3"/>
+                    </else>
+                </if>
+            </state>
+            <state id="ss3">
+                <variable ref="S3"/>
+                <transition target="p2"/>
+            </state>
+            <state id="p2">
+                <if>
+                    <condition>
+                        <variable ref="S3"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="S3"/>
+                        <constant type="string" value="3"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>   
+                    </condition>
+                    <then>
+                        <transition target="sink0"/>
+                    </then>
+                    <else>
+                        <transition target="ss4"/>
+                    </else>
+                </if>
+            </state>
+            <state id="ss4">
+                <variable ref="S4"/>
+                <transition target="ss5"/>
+            </state>
+            <state id="ss5">
+                <variable ref="S5"/>
+                <transition target="ss6"/>
+            </state>
+            <state id="ss6">
+                <variable ref="S6"/>
+                <transition target="ss7"/>
+            </state>
+            <state id="ss7">
+                <variable ref="S7"/>
+                <transition target="p3"/>
+            </state>
+            <state id="p3">
+                <if>
+                    <condition>
+                        <variable ref="S7"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="S7"/>
+                        <constant type="string" value="4"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <variable ref="S7"/>
+                        <constant type="string" value="6"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="S7"/>
+                        <constant type="string" value="7"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>            
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="sink0"/>
+                    </then>
+                    <else>
+                        <transition target="s1"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s1">
+                <variable ref="Q1" />
+                <transition target="p4"/>
+            </state>
+            <state id="p4">
+                <if>
+                    <condition>
+                        <variable ref="Q1"/>
+                        <operator name="EMPTY"/>
+                    </condition>
+                    <then>
+                        <transition target="sink0"/>
+                    </then>
+                    <else>
+                        <transition target="s1a"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s1a">
+                <variable ref="Q1a"/>
+                <transition target="p5"/>
+            </state>
+            <state id="p5">
+                <if>
+                    <condition>
+                        <variable ref="Q1a"/>
+                        <operator name="UNSEL"/>
+                        <operator name="EMPTY"/>
+                        <operator name="NOT"/>
+                    </condition>
+                    <then>
+                        <transition target="s2"/>
+                    </then>
+                    <else>
+                        <transition target="p10"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s2">
+                <variable ref="Q2"/>
+                <transition target="p10"/>
+            </state>
+            <state id="p10">
+                <if>
+                    <condition>
+                        <variable ref="Q1"/>
+                        <operator name="SEL"/>
+                        <variable ref="Q1a"/>
+                        <operator name="SEL"/>
+                        <operator name="UNION"/>
+                        <variable ref="Q2"/>
+                        <operator name="SEL"/>
+                        <operator name="UNION"/>
+                        <operator name="EMPTY"/>
+                        <operator name="NOT"/>
+                    </condition>
+                    <then>
+                        <transition target="s3"/>
+                    </then>
+                    <else>
+                        <transition target="s5"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s3">
+                <variable ref="Q3"/>
+                <transition target="s5"/>
+            </state>
+            <state id="s5">
+                <variable ref="Q5"/>
+                <transition target="p6"/>
+            </state>
+            <state id="p6">
+                <if>
+                    <condition>
+                        <variable ref="Q5"/>
+                        <operator name="UNSEL"/>
+                        <operator name="EMPTY"/>
+                        <operator name="NOT"/>
+                    </condition>
+                    <then>
+                        <transition target="s6"/>
+                    </then>
+                    <else>
+                        <transition target="s7"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s6">
+                <variable ref="Q6"/>
+                <transition target="s7"/>
+            </state>
+            <state id="s7">
+                <variable ref="Q7"/>
+                <transition target="s8"/>
+            </state>
+            <state id="s8">
+                <variable ref="Q8"/>
+                <transition target="p7"/>
+            </state>
+            <state id="p7">
+                <if>
+                    <condition>
+                        <variable ref="Q1"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="Q2"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s9"/>
+                    </then>
+                    <else>
+                        <transition target="s10"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s9">
+                <variable ref="Q9"/>
+                <transition target="s10"/>
+            </state>
+            <state id="s10">
+                <variable ref="Q10"/>
+                <transition target="p8"/>
+            </state>
+            <state id="p8">
+                <if>
+                    <condition>
+                        <variable ref="Q10"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="NOT"/>
+                    </condition>
+                    <then>
+                        <transition target="s11"/>
+                    </then>
+                    <else>
+                        <transition target="s12"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s11">
+                <variable ref="Q11"/>
+                <transition target="s12"/>
+            </state>
+            <state id="s12">
+                <variable ref="Q12"/>
+                <transition target="p9"/>
+            </state>
+            <state id="p9">
+                <if>
+                    <condition>
+                        <variable ref="Q12"/>
+                        <operator name="UNSEL"/>
+                        <operator name="EMPTY"/>
+                        <operator name="NOT"/> 
+                    </condition>
+                    <then>
+                        <transition target="s13"/>
+                    </then>
+                    <else>
+                        <transition target="s14"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s13">
+                <variable ref="Q13"/>
+                <transition target="s14"/>
+            </state>
+            <state id="s14">
+                <variable ref="Q14"/>
+                <transition target="s15"/>
+            </state>
+            <state id="s15">
+                <variable ref="Q15"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="0"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation>
+        <piping ref="0">
+            <pipe id="pipe0">
+                <variable ref="Q1"/>
+                <operator name="UNSEL"/>
+            </pipe>
+            <pipe id="pipe1">
+                <variable ref="Q1a"/>
+                <operator name="UNSEL"/>
+            </pipe>
+            <pipe id="pipe2">
+                <variable ref="Q1"/>
+                <operator name="SEL"/>
+                <variable ref="Q1a"/>
+                <operator name="SEL"/>
+                <operator name="UNION"/>
+                <variable ref="Q2"/>
+                <operator name="SEL"/>
+                <operator name="UNION"/>
+            </pipe>
+            <pipe id="pipe3">
+                <variable ref="Q5"/>
+                <operator name="UNSEL"/>
+            </pipe>
+            <pipe id="pipe4">
+                <variable ref="Q12"/>
+                <operator name="UNSEL"/>
+            </pipe>
+        </piping>
+    </personalisation>
+</ssm>

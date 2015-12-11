@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm>
+    <survey>
+        <name>01</name>
+        <description>Description of the survey</description>
+        <date>2015-07-01</date>
+    </survey>
+    ...
+</ssm>

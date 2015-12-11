@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm>
+    <survey>
+        ...
+    </survey>
+    <content>
+        <section id="0">
+            ...
+        </section>
+        <section id="1">
+            ...
+        </section>
+    </content>
+    <field>
+        ...
+    </field>
+    <routing>
+        <statemodel ref="0">
+            ...
+            <state id="c0"><!-- COMPOSITE STATE -->
+                <include statemodel="1"/>
+                <transition target="sink0"/>
+            </state>
+            ...
+        </statemodel>
+        <statemodel ref="1">
+            ...
+        </statemodel>
+    </routing>
+</ssm>

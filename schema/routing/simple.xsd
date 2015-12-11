@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    <xs:include schemaLocation="rpn.xsd"></xs:include>
+    <xs:include schemaLocation="transition.xsd"></xs:include>
+    <xs:group name="Simple">
+        <xs:sequence>
+            <xs:element name="variable" type="s:QuestionRef" maxOccurs="unbounded"></xs:element>
+            <xs:element name="transition" type="s:Transition"></xs:element>
+        </xs:sequence>
+    </xs:group>
+    <xs:complexType name="QuestionRef">
+        <xs:attribute name="ref" use="required">
+            <xs:annotation>
+                <xs:documentation>
+                    It references to a field or question of the block which the statemodel references.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <xs:include schemaLocation="question.xsd"></xs:include>
+    <xs:complexType name="Intro">
+        <xs:complexContent>
+            <xs:extension base="s:Question">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

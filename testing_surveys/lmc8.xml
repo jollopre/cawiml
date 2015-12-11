@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>LMC 8</name>
+        <description>LMC 8 feedback survey</description>
+        <date>2015-06-19</date>
+    </survey>
+    <content>
+        <section id="0">
+            <label lang="en">Section 0</label>
+            <intro name="INF">
+                <label lang="en">Thank you for taking the time to complete this survey. The aim of this survey is
+                to demonstrate some of the activities performed on the last months</label>
+            </intro>
+            <multiple name="Q0">
+                <label lang="en">What are the survey stages proposed by the KTP associate?</label>
+                <limit>
+                    <min>5</min>
+                    <max>5</max>
+                </limit>
+                <close code="1">
+                    <label lang="en">Planning</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Design</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Collection</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Management</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Analysis</label>
+                </close>
+                <close code="6">
+                    <label lang="en">Reporting</label>
+                </close>
+                <close code="7">
+                    <label lang="en">Deployment</label>
+                </close>
+                <close code="8">
+                    <label lang="en">Don't know</label>
+                    <exclusive value="true"/>
+                </close>
+            </multiple>
+            <grid name="Q1">
+                <label lang="en">On a scale of 1-10 (where 1 = poor and 10 = excellent), please rate the following
+                statements of today's associate LMC meeting presentation?</label>
+                <single>
+                    <rows>
+                        <close code="1">
+                            <label lang="en">Activity done from last LMC meeting</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Achievements from last LMC meeting</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Business Impact of the project</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">1</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">2</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">3</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">4</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">5</label>
+                        </close>
+                        <close code="6">
+                            <label lang="en">6</label>
+                        </close>
+                        <close code="7">
+                            <label lang="en">7</label>
+                        </close>
+                        <close code="8">
+                            <label lang="en">8</label>
+                        </close>
+                        <close code="9">
+                            <label lang="en">9</label>
+                        </close>
+                        <close code="10">
+                            <label lang="en">10</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <grid name="Q2">
+                <label lang="en">Please select the usability principles found for each interface developed in
+                this project</label>
+                <multiple>
+                    <rows>
+                        <close code="1">
+                            <label lang="en">Design</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Collection</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Management</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Structure (related things together)</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Simplicity (shortcuts, common tasks)</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Visibility (visible tasks without distracting)</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Feedback (messages for changes and errors)</label>
+                        </close>
+                    </columns>
+                </multiple>
+            </grid>
+            <open name="Q3">
+                <label lang="en">We'd love to hear any feedback you have on today's associate LMC meeting 
+                    presentation?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <intro name="END">
+                <label lang="en">We are happy that you understood the survey stages proposed from the KTP
+                associate</label>
+            </intro>
+        </section>
+    </content>
+    <field></field>
+    <routing>
+        <statemodel ref="0">
+            <source id="INF"/>
+            <state id="INF">
+                <variable ref="INF"/>
+                <transition target="Q0"/>
+            </state>
+            <state id="Q0">
+                <variable ref="Q0"/>
+                <transition target="Q1"/>
+            </state>
+            <state id="Q1">
+                <variable ref="Q1"/>
+                <transition target="Q2"/>
+            </state>
+            <state id="Q2">
+                <variable ref="Q2"/>
+                <transition target="Q3"/>
+            </state>
+            <state id="Q3">
+                <variable ref="Q3"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q0"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="Q0"/>
+                        <constant type="string" value="3"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="AND"/>
+                        <variable ref="Q0"/>
+                        <constant type="string" value="4"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="AND"/>
+                        <variable ref="Q0"/>
+                        <constant type="string" value="5"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="AND"/>
+                        <variable ref="Q0"/>
+                        <constant type="string" value="6"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="AND"/>
+                    </condition>
+                    <then>
+                        <transition target="END"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
+            <state id="END">
+                <variable ref="END"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="0"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation></personalisation>
+</ssm>

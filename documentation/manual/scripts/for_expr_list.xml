@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm>
+    <survey>
+        ...
+    </survey>
+    <content>
+        <section id="1">
+            <label lang="en">Default Section</label>
+            ...
+            <multiple name="Q7">
+                <label lang="en">Which of the following do you like to watch?</label>
+                <close code="1">
+                    <label lang="en">Business / financial</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Comedy</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Current affairs</label>
+                </close>
+                ...
+                <open code="13">
+                    <label lang="en">Other (please specify):</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+                <close code="14">
+                    <label lang="en">None</label>
+                    <exclusive value="true"/>
+                </close>
+            </multiple>
+            ...
+        </section>
+        <section id="2">
+            ...
+        </section>
+    </content>
+    <field>
+        <iterator id="p7_iterator"/>
+    </field>
+    <routing>
+        <statemodel ref="1">
+            ...
+            <state id="p7">
+                <for>
+                    <field ref="p7_iterator"/>
+                    <in>
+                        <expr_list>
+                            <variable ref="Q7"/>
+                            <operator name="SEL"/>
+                        </expr_list>
+                        <randomising>
+                            <all present="4"/>
+                        </randomising>
+                    </in>
+                    <transition target="c2"/>
+                </for>
+                <transition target="sink0"/>
+            </state>
+            <state id="c2">
+                <include statemodel="2"/>
+            </state>
+            ...
+        </statemodel>
+        <statemodel ref="2">
+            ...
+        </statemodel>
+    </routing>
+</ssm>

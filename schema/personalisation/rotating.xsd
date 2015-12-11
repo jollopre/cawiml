@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    <xs:complexType name="Rotating">
+        <xs:choice>
+            <xs:element name="all" type="s:RotatingAll"></xs:element>
+            <xs:element name="subset" type="s:RotatingSubset"></xs:element>
+        </xs:choice>    
+    </xs:complexType>
+    <xs:complexType name="RotatingAll">
+        <xs:annotation>
+            <xs:documentation>
+                Rotates all the codes of the list.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="present" type="xs:integer">
+            <xs:annotation>
+                <xs:documentation>Defines the number of codes to show after rotating all.</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="RotatingSubset">
+        <xs:annotation>
+            <xs:documentation>
+                Rotates a subset of codes specified by code. If a code is not included in the
+                subset, its position will be the order in which is defined in the list.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="code" type="s:RotatingCode" minOccurs="0" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="RotatingCode">
+        <xs:attribute name="ref" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation>Specifies the code of the list which refers.</xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+</xs:schema>

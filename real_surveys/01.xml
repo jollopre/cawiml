@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>01</name>
+        <description>Carton Sealing Questionnaire</description>
+        <date>2009-06-24</date>
+    </survey>
+    <content>
+        <section id="DEFAULT">
+            <label lang="en">Default Block</label>
+            <intro name="INF">
+                <label lang="en">Good morning/afternoon. My name is _ and I am calling from PEXEL, an independent
+                market research agency. We are currently conducting nation wide research concerning commercial/
+                industrial carton sealing needs. Would you be able to spare 5 minutes to answer a few 
+                questions?</label>
+            </intro>
+            <multiple name="Q1">
+                <label lang="en">What tape are you using for carton sealing?</label>
+                <close code="1">
+                    <label lang="en">Hotmelt</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Acrylic</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Natural Rubber</label>
+                </close>
+                <open code="4">
+                	<label lang="en">Other (please specify)</label>
+                	<string>
+                		<value></value>
+                	</string>
+                </open>
+                <open code="98">
+                    <label lang="en">Don't know (specify tape colour)</label>
+                    <string>
+                    	<value></value>
+                    </string>
+                    <exclusive value="true"/>
+                </open>
+            </multiple>
+            <single name="Q2">
+                <label lang="en">How do you apply the tape?</label>
+                <close code="1">
+                    <label lang="en">By machine</label>
+                </close>
+                <close code="2">
+                    <label lang="en">By hand</label>
+                </close>
+            </single>
+            <multiple name="Q3">
+                <label lang="en">Whose tape are you using?</label>
+                <close code="1">
+                    <label lang="en">3M</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Intertape</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Shuretape</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Henkel</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Distributors' Private Band</label>
+                </close>
+                <open code="6">
+                    <label lang="en">Other (please specify)</label>
+                    <string>
+                    	<value></value>
+                    </string>
+                </open>
+                <close code="98">
+                    <label lang="en">Don't know</label>
+                    <exclusive value="true"/>
+                </close>
+            </multiple>
+            <open name="Q4">
+                <label lang="en">Can you tell us what product number(s) you are using?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q5">
+                <label lang="en">What lengths and widths of tape do you purchase?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q6">
+                <label lang="en">What is the price range of the tape are buying ($ / roll)?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q7">
+                <label lang="en">Do you purchase the tape through a distributor or direct from the manufacturer?</label>
+                <close code="1">
+                    <label lang="en">Distributor</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Manufacturer</label>
+                </close>
+            </single>
+            <single name="Q7a">
+                <label lang="en">Would you be willing to buy directly from a tape manufacturer?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <open name="Q7b">
+                <label lang="en">Why is that?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <multiple name="Q8">
+                <label lang="en">What factors do you use to decide where to source the tape?</label>
+                <close code="1">
+                    <label lang="en">Quality</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Cost</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Delivery</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Service</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Relationship</label>
+                </close>
+                <open code="6">
+                    <label lang="en">Other (please specify)</label>
+                    <string>
+                    	<value></value>
+                    </string>
+                </open>
+            </multiple>
+            <open name="Q8a">
+                <label lang="en">Could you please explain the quality requirements you have for the tape?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q9">
+                <label lang="en">Approximately, how much do you spend on packaging tape annually ($)?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q10">
+                <label lang="en">How many ROLLS of tape do you purchase annually?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q11">
+                <label lang="en">How often do you purchase packing tape?</label>
+                <close code="1">
+                    <label lang="en">Annually (contract)</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Spot (as needed)</label>
+                </close>
+            </single>
+            <open name="Q11a">
+                <label lang="en">Why is that?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q12">
+                <label lang="en">Who is the main decision maker regarding what tape to use?</label>
+                <close code="1">
+                    <label lang="en">Purchasing (corporate)</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Purchasing (plant)</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Plant Manager</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Packing Engineer</label>
+                </close>
+                <open code="5">
+                    <label lang="en">Other specified</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </single>
+            <single name="Q13">
+                <label lang="en">Are you the decision maker?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <open name="Q13a_Name">
+                <label lang="en">Decision maker name</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q13a_Phone">
+                <label lang="en">Decision maker phone number</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q14">
+                <label lang="en">Would you be willing to change the tape you use?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <open name="Q14b">
+                <label lang="en">Why is that?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q15">
+                <label lang="en">Would you be willing to receive a price quotation from a tape manufacturer?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+        </section>
+    </content>
+    <field></field>
+    <routing>
+        <statemodel ref="DEFAULT">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="INF"/>
+                <transition target="s1"/>
+            </state>
+            <state id="s1">
+                <variable ref="Q1"/>
+                <transition target="s2"/>
+            </state>
+            <state id="s2">
+                <variable ref="Q2"/>
+                <transition target="s3"/>
+            </state>
+            <state id="s3">
+                <variable ref="Q3"/>
+                <transition target="s4"/>
+            </state>
+            <state id="s4">
+                <variable ref="Q4"/>
+                <transition target="s5"/>
+            </state>
+            <state id="s5">
+                <variable ref="Q5"/>
+                <transition target="s6"/>
+            </state>
+            <state id="s6">
+                <variable ref="Q6"/>
+                <transition target="s7"/>
+            </state>
+            <state id="s7">
+                <variable ref="Q7"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q7"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s7a"/>
+                    </then>
+                    <else>
+                        <transition target="s8"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s7a">
+                <variable ref="Q7a"/>
+                <transition target="s7b"/>
+            </state>
+            <state id="s7b">
+                <variable ref="Q7b"/>
+                <transition target="s8"/>
+            </state>
+            <state id="s8">
+                <variable ref="Q8"/>
+                <transition target="p1"/>
+            </state>
+            <state id="p1">
+                <if>
+                    <condition>
+                        <variable ref="Q8"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>    
+                    </condition>
+                    <then>
+                        <transition target="s8a"/>
+                    </then>
+                    <else>
+                        <transition target="s9"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s8a">
+                <variable ref="Q8a"/>
+                <transition target="s9"/>
+            </state>
+            <state id="s9">
+                <variable ref="Q9"/>
+                <transition target="s10"/>
+            </state>
+            <state id="s10">
+                <variable ref="Q10"/>
+                <transition target="s11"/>
+            </state>
+            <state id="s11">
+                <variable ref="Q11"/>
+                <transition target="s11a"/>
+            </state>
+            <state id="s11a">
+                <variable ref="Q11a"/>
+                <transition target="s12"/>
+            </state>
+            <state id="s12">
+                <variable ref="Q12"/>
+                <transition target="s13"/>
+            </state>
+            <state id="s13">
+                <variable ref="Q13"/>
+                <transition target="p2"/>
+            </state>
+            <state id="p2">
+                <if>
+                    <condition>
+                        <variable ref="Q13"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s14"/>
+                    </then>
+                    <else>
+                        <transition target="s13a"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s13a">
+                <variable ref="Q13a_Name"/>
+                <variable ref="Q13a_Phone"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="s14">
+                <variable ref="Q14"/>
+                <transition target="s14b"/>
+            </state>
+            <state id="s14b">
+                <variable ref="Q14b"/>
+                <transition target="p3"/>
+            </state>
+            <state id="p3">
+                <if>
+                    <condition>
+                        <variable ref="Q14"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s15"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s15">
+                <variable ref="Q15"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="DEFAULT"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation></personalisation>
+</ssm>

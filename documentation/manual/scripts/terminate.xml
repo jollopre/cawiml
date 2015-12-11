@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm>
+    <survey>
+        ...
+    </survey>
+    <content>
+        <section id="1">
+            <label lang="en">Current bonding use</label>
+            <single name="Q4">
+                <label lang="en">Where do you currently source bonds from?</label>
+                <close code="1">
+                    <label lang="en">Your bank</label>
+                </close>
+                <open code="2">
+                    <label lang="en">Other source</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+                <close code="99">
+                    <label lang="en">Do not know</label>
+                </close>
+            </single>
+        </section>
+        <section id="2">
+            ...
+        </section>
+    </content>
+    <field>
+        ...
+    </field>
+    <routing>
+        <statemodel ref="1">
+            <source id="s4" /><!-- First state to execute -->
+            <state id="s4">
+                <variable ref="Q4" />
+                <transition target="p4" />
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q4"/>
+                        <constant type="string" value="99"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="terminate"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
+            <state id="terminate">	<!-- TERMINATE STATE-->
+                <terminate></terminate>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <statemodel ref="2">
+            ...
+        </statemodel>
+        <entrypoint>
+            <source id="c1"/><!-- First state to execute -->
+            <state id="c1">
+                <include statemodel="1"/>
+                <transition target="c2"/>
+            </state>
+            <state id="c1">
+                <include statemodel="2"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+</ssm>

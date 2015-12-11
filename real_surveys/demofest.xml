@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>Questionnaire example for DEMOfest 14</name>
+        <description>This is an unreal questionnaire presented for 11th February at DEMOfest.</description>
+        <date>2014-02-15</date>
+    </survey>
+    <content>
+        <section id="DEFAULT">
+            <label lang="en">Default Section</label>
+            <single name="Q0">
+                <label lang="en">Can we ask a set of questions? It only takes 5 minutes or even less.</label>
+                <close code="yes">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="no">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <multiple name="Q1">
+                <label lang="en">Where is/are your properties located?</label>
+                <close code="england">
+                    <label lang="en">England</label>
+                </close>
+                <close code="northern">
+                    <label lang="en">Northern Ireland</label>
+                </close>
+                <close code="scotland">
+                    <label lang="en">Scotland</label>
+                </close>
+                <close code="wales">
+                    <label lang="en">Wales</label>
+                </close>
+            </multiple>
+            <open name="Q2">
+                <label lang="en">How many people live in the main property? (including yourself)</label>
+                <integer>
+                    <min></min>
+                    <max></max>
+                    <value></value>
+                </integer>
+            </open>
+            <open name="Q4">
+                <label lang="en">What in your view are the main issues?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+        </section>
+        <section id="PERSON">
+            <label lang="en">Person</label>
+            <single name="Q3a">
+                <label lang="en">What is the marital status of <pipe ref="pipe0"/> ?</label>
+                <close code="never">
+                    <label lang="en">Never been married</label>
+                </close>
+                <close code="married">
+                    <label lang="en">Married</label>
+                </close>
+                <close code="separated">
+                    <label lang="en">Separated</label>
+                </close>
+                <close code="divorced">
+                    <label lang="en">Divorced</label>
+                </close>
+                <close code="widowed">
+                    <label lang="en">Widowed</label>
+                </close>
+            </single>
+            <open name="Q3b">
+                <label lang="en">How old is the member?</label>
+                <integer>
+                    <min>0</min>
+                    <max>120</max>
+                    <value></value>
+                </integer>
+            </open>
+            <single name="Q3c">
+                <label lang="en">Is he/she working?</label>
+                <close code="yes">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="no">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+        </section>
+    </content>
+    <field>
+        <integer id="working" value="0"/>
+        <iterator id="p2_iterator"/>
+    </field>
+    <routing>
+        <statemodel ref="DEFAULT">
+            <source id="s0"/>
+            <state id="s0"><!-- SIMPLE STATE -->
+                <variable ref="Q0"/>
+                <transition target="p0"/>
+            </state>
+            <state id="sink0"><!-- SINK STATE -->
+                <sink/>
+            </state>
+            <state id="s2"><!-- SIMPLE STATE -->
+                <variable ref="Q1"/>
+                <transition target="p1"/>
+            </state>
+            <state id="s3"><!-- SIMPLE STATE -->
+                <variable ref="Q2"/>
+                <transition target="p2"/>
+            </state>
+            <state id="s4"><!-- SIMPLE STATE -->
+                <variable ref="Q4"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="c0"><!-- COMPOSITE STATE -->
+                <include statemodel="PERSON"/>
+            </state>
+            <state id="p0"><!-- PSEUDO STATE -->
+                <if>
+                    <condition><!-- QO = No -->
+                        <variable ref="Q0"/>
+                        <constant type="string" value="no"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="sink0"/>
+                    </then>
+                    <else>
+                        <transition target="s2"/>
+                    </else>
+                </if>
+            </state>
+            <state id="p1"><!-- PSEUDO STATE -->
+                <if>
+                    <condition><!-- IF Q1 <> Scotland -->
+                        <variable ref="Q1"/>
+                        <constant type="string" value="scotland"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="NOT"/>  
+                    </condition>
+                    <then>
+                        <transition target="sink0"/>
+                    </then>
+                    <else>
+                        <transition target="s3"/>
+                    </else>
+                </if>
+            </state>
+            <state id="p2"><!-- PSEUDO STATE -->
+                <for>
+                    <field ref="p2_iterator"/>
+                    <in>
+                        <range>
+                            <start><constant type="integer" value="0"/></start>
+                            <end><variable ref="Q2"/></end>
+                            <step><constant type="integer" value="1"/></step>
+                        </range>
+                    </in>
+                    <transition target="c0"/> 
+                </for>
+                <transition target="p3"/>
+            </state>
+            <state id="p3"><!-- PSEUDO STATE -->
+                <if>
+                    <condition><!-- Q2 > 3 AND WORKING = 1 -->
+                        <variable ref="Q2"/>
+                        <constant type="integer" value="3"/>
+                        <operator name="GT"/>
+                        <variable ref="working"/>
+                        <constant type="integer" value="1"/>
+                        <operator name="EQ"/>
+                        <operator name="AND"/>
+                    </condition>
+                    <then>
+                        <transition target="s4"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
+        </statemodel>
+        <statemodel ref="PERSON">
+            <source id="s0"/>
+            <state id="s0"><!-- SIMPLE STATE -->
+                <variable ref="Q3a"/>  
+                <transition target="s1"/>
+            </state>
+            <state id="s1"><!-- SIMPLE STATE -->
+                <variable ref="Q3b"/>    
+                <transition target="p0"/>
+            </state>
+            <state id="s2"><!-- SIMPLE STATE -->
+                <variable ref="Q3c"/>
+                <transition target="p2"/>
+            </state>
+            <state id="sink0"><!-- SINK STATE -->
+                <sink/>
+            </state>
+            <state id="p0"><!-- PSEUDO STATE, CHOICE -->
+                <if>
+                    <condition><!-- Q3b < 18 -->
+                        <variable ref="Q3b"/>
+                        <constant type="integer" value="18"/>
+                        <operator name="LT"/>   
+                    </condition>
+                    <then>
+                        <transition target="p1"/>
+                    </then>
+                    <else>
+                        <transition target="s2"/>
+                    </else>
+                </if>
+            </state>
+            <state id="p1"><!-- PSEUDO STATE, CHECK -->
+                <check type="error">
+                    <condition>
+                        <variable ref="Q3a"/>
+                        <constant type="string" value="never"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <label lang="en">People younger than 18 have never been married.</label>
+                </check>
+                <transition target="s2"/>
+            </state>
+            <state id="p2"><!-- PSEUDO STATE, CHOICE -->
+                <if>
+                    <condition><!-- Q3c = Yes -->
+                        <variable ref="Q3c"/>
+                        <constant type="string" value="yes"/>
+                        <operator name="IS_SEL"/>  
+                    </condition>
+                    <then>
+                        <transition target="p3"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
+            <state id="p3"><!-- PSEUDO STATE, COMPUTATION -->
+                <computation ref="working">
+                    <assignment>
+                        <variable ref="working"></variable>
+                        <constant type="integer" value="1"/>
+                        <operator name="ADD"/>
+                    </assignment>
+                </computation>
+                <transition target="sink0"/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0"><!-- COMPOSITE STATE -->
+                <include statemodel="DEFAULT"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation>
+        <piping ref="PERSON">
+            <pipe id="pipe0">
+                <variable ref="p2_iterator"/>
+                <operator name="VALUEOF"/>
+            </pipe>
+        </piping>
+    </personalisation>
+ </ssm>

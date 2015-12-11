@@ -1,0 +1,23 @@
+<multiple name="Q0">
+    <label lang="en">What are you looking for from your work?</label>
+    <limit>
+        <min>1</min>
+        <max>3</max>
+    </limit>
+    <close code="money">
+        <label lang="en">Money</label>
+    </close>
+    <close code="motivation">
+        <label lang="en">Motivation</label>
+    </close>
+    <close code="development">
+        <label lang="en">Development</label>
+    </close>
+    <close code="leadership">
+        <label lang="en">Leadership</label>
+    </close>
+    <close code="dontknow">
+        <label lang="en">Don't know</label>
+        <exclusive value="true"/>
+    </close>
+</multiple>

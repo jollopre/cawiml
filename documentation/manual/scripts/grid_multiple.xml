@@ -1,0 +1,31 @@
+<grid name="Q1">
+    <label lang="en">Which of these are</label>
+    <multiple>
+        <rows>
+            <close code="01">
+                <label lang="en">Coke</label>
+            </close>
+            <close code="02">
+                <label lang="en">Pepsi</label>
+            </close>
+            <close code="03">
+                <label lang="en">Fanta</label>
+            </close>
+        </rows>
+        <columns>
+            <close code="01">
+                <label lang="en">Fun</label>
+            </close>
+            <close code="02">
+                <label lang="en">Sexy</label>
+            </close>
+            <close code="03">
+                <label lang="en">Masculine</label>
+            </close>
+            <close code="99">
+                <label lang="en">Do not know</label>
+                <exclusive value="true"/>
+            </close>
+        </columns>
+    </multiple>
+</grid>

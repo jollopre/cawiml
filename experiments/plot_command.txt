@@ -1,0 +1,3 @@
+set boxwidth 0.9 relative
+set style fill solid 1.0
+plot 'content.dat' using 1:2:xticlabels(3) with boxes title 'Content', 'routing.dat' using 1:2:xticlabels(3) with boxes title 'Routing', 'personalisation.dat' using 1:2:xticlabels(3) with boxes title 'Personalisation'

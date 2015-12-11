@@ -1,0 +1,946 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>Contrywide</name>
+        <description>Countrywide survey</description>
+        <date></date>
+    </survey>
+    <content>
+        <section id="DEFAULT">
+            <label lang="en">Countrywide - Sales Evaluation</label>
+            <single name="start">
+                <label lang="en">Good am/pm, my name is ______ and I am calling from Countrywide 
+                    Mortgage Services. We understand that you recently applied for a MORTGAGE/REMORTGAGE 
+                    via Countrywide Mortgage Services, as part of our commitment to continued customer 
+                    service we would like to invite you to take part in a short questionnaire regarding 
+                    this experience to help us improve our service to you.
+                    The conversation will not take longer than 10 minutes, and your feedback will be 
+                    greatly appreciated.
+                    Are you OK to start?</label>
+                <close code="yes">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="no">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <open name="Q1">
+                <label lang="en">How good would you rate the information provided to you at outset
+                    regarding Countrywide's overall service and products proposition? Please answer on a 1
+                    to 5 scale where 5 is 'Very Good', 3 is 'Neither Good or Poor' and 1 is 'Very poor'.</label>
+                <integer>
+                    <min>1</min>
+                    <max>5</max>
+                    <value></value>
+                </integer>
+            </open>
+            <open name="Q1a">
+                <label lang="en">Why was the information provided to you Poor or Very Poor?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q2">
+                <label lang="en">Did your Mortgage Consultant keep you regularly informed about the progress
+                    of your mortgage?</label>
+                <close code="always">
+                    <label lang="en">Always</label>
+                </close>
+                <close code="sometimes">
+                    <label lang="en">Sometimes</label>
+                </close>
+                <close code="rarely">
+                    <label lang="en">Rarely</label>
+                </close>
+                <close code="only">
+                    <label lang="en">Only when I asked/prompted</label>
+                </close>
+                <close code="never">
+                    <label lang="en">Never</label>
+                </close>
+            </single>
+            <multiple name="Q3">
+                <label lang="en">During your discussions/meetings with your Mortgage Consultant what
+                    products/services did they offer you?</label>
+                <close code="mortgage">
+                    <label lang="en">Mortgage</label>
+                </close>
+                <close code="life_insurance">
+                    <label lang="en">Life insurance</label>
+                </close>
+                <close code="critical_illness_cover">
+                    <label lang="en">Critical illness cover</label>
+                </close>
+                <close code="income_protection">
+                    <label lang="en">Income Protection</label>
+                </close>
+                <close code="buildings_insurance">
+                    <label lang="en">Buildings Insurance</label>
+                </close>
+                <close code="contents_insurance">
+                    <label lang="en">Contents Insurance</label>
+                </close>
+                <close code="accident">
+                    <label lang="en">Accident, Sickness and Unemployment Cover</label>
+                </close>
+                <close code="wills">
+                    <label lang="en">Wills Writing Services</label>
+                </close>
+                <close code="countrywide_conveyancing_services">
+                    <label lang="en">Countrywide Conveyancing Services</label>
+                </close>
+                <close code="none">
+                    <label lang="en">None</label>
+                    <exclusive value="true"/>
+                </close>
+                <close code="dontknow">
+                    <label lang="en">Don't know</label>
+                    <exclusive value="true"/>
+                </close>
+            </multiple>
+            <multiple name="Q3a">
+                <label lang="en">During your discussions/meetings with your Mortgage Consultant were 
+                    you offered the following...?</label>
+                <pipe ref="pipe0"/>
+            </multiple>
+            <grid name="Q3b" refused="true">
+                <label lang="en">Did your Mortgage Consultant explain to you that Countrywide could
+                    offer you...</label>
+                <single>
+                    <rows>
+                        <pipe ref="pipe1"/><!-- UNSELECTED AT Q3a -->
+                    </rows>
+                    <columns>
+                        <close code="yes">
+                            <label lang="en">Yes</label>
+                        </close>
+                        <close code="no">
+                            <label lang="en">No</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <multiple name="Q4">
+                <label lang="en">Are you interested in learning about any of the following?</label>
+                <pipe ref="pipe2"/><!-- Q3b where No IS SELECTED -->
+                <close code="none">
+                    <label lang="en">None of above</label>
+                    <exclusive value="true"/>
+                </close>
+            </multiple>
+            <single name="Q4a">
+                <label lang="en">Would you like Countrywide to contact you and let you know about the
+                    services you are interested in?</label>
+                <close code="yes">
+                    <label lang="en">Yes, please</label>
+                </close>
+                <close code="no">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <open name="Q5">
+                <label lang="en">How did you find the information provided to you verbally by your Mortgage
+                    Consultant, at each appointment? Please answer on a 1 to 5 scale where 5 is 'Very Good', 
+                    3 is 'Neither Good or Poor' and 1 is 'Very Poor'.</label>
+                <integer>
+                    <min>1</min>
+                    <max>5</max>
+                    <value></value>
+                </integer>  
+            </open>
+            <open name="Q5a">
+                <label lang="en">Why was the information provided to you Poor or Very Poor?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q6">
+                <label lang="en">Did you receive a copy of the Countrywide Welcome Pack?</label>
+                <close code="yes">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="no">
+                    <label lang="en">No</label>
+                </close>
+                <close code="dontknow">
+                    <label lang="en">Don't recall / Don't know</label>
+                </close>
+            </single>
+            <open name="Q6a">
+                <label lang="en">How did you find the brochures and paperwork provided by your Mortgage
+                    Consultant? Please answer on a 1 to 5 scale where 5 is 'Very Good', 3 is 'Neither Good or 
+                    Poor' and 1 is 'Very Poor'.</label>
+                <integer>
+                    <min>1</min>
+                    <max>5</max>
+                    <value></value>
+                </integer>  
+            </open>
+            <open name="Q6b">
+                <label lang="en">Why was the brochure/paperwork provided to you Poor or Very Poor?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <grid name="Q7">
+                <label lang="en">How would you rate the overall performance of your Mortgage Consultant 
+                    in the following areas? Please answer using a 1 to 5 scale where 5 is 'Very Good', 3 is 
+                    'Neither Good or Poor' and 1 is 'Very Poor'.</label>
+                <single>
+                    <rows>
+                        <close code="i">
+                            <label lang="en">Knowledge of Countrywide</label>
+                        </close>
+                        <close code="ii">
+                            <label lang="en">Knowledge of the mortgage market</label>
+                        </close>
+                        <close code="iii">
+                            <label lang="en">Knowlege of AXA and the products they offer</label>
+                        </close>
+                        <close code="iv">
+                            <label lang="en">Knowledge of Friends Provident and the products they offer</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Very Poor</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Poor</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Neither Good or Poor</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Good</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Very Good</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <open name="Q7a_i">
+                <label lang="en">Why was the overall performance of the consultant Poor or Very Poor in 
+                    Knowledge of Countrywide?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q7a_ii">
+                <label lang="en">Why was the overall performance of the consultant Poor or Very Poor in
+                    Knowledge of the mortgage market?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q7a_iii">
+                <label lang="en">Why was the overall performance of the consultant Poor or Very Poor in
+                    Knowlege of AXA and the products they offer</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q7a_iv">
+                <label lang="en">Why was the overall performance of the consultant Poor or Very Poor in
+                    Knowledge of Friends Provident and the products they offer?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <grid name="Q8">
+                <label lang="en">How would you rate the overall importance placed on the following areas 
+                    by your Mortgage Consultant? Please answer using a 1 to 5 scale where 5 is 'Very Good', 3 is 
+                    'Neither Good or Poor' and 1 is 'Very Poor'.</label>
+                <single>
+                    <rows>
+                        <close code="i">
+                            <label lang="en">The need for accurate budget planning</label>
+                        </close>
+                        <close code="ii">
+                            <label lang="en">The consequences of not having adequate insurance arrangements 
+                                in place for your home</label>
+                        </close>
+                        <close code="iii">
+                            <label lang="en">The consequences of not having adequate insurance arrangements 
+                                in place for your mortgage</label>
+                        </close>
+                        <close code="iv">
+                            <label lang="en">The consequences of not having adequate insurance arrangements 
+                                in place for personal circumstances</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Not at all important</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Unimportant</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Neither Important or Unimportant</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Important</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Very Important</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <open name="Q8a_i">
+                <label lang="en">Why was the overall importance placed on each area provided to you Not 
+                    important in The need for accurate budget planning?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q8a_ii">
+                <label lang="en">Why was the overall importance placed on each area provided to you Not 
+                    important in The consequences of not having adequate insurance arrangements 
+                    in place for your home?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q8a_iii">
+                <label lang="en">Why was the overall importance placed on each area provided to you Not 
+                    important in The consequences of not having adequate insurance arrangements 
+                    in place for your mortgage?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q8a_iv">
+                <label lang="en">Why was the overall importance placed on each area provided to you Not 
+                    important in The consequences of not having adequate insurance arrangements 
+                    in place for personal circumstances</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <grid name="Q9">
+                <label lang="en">Specifically related to insurance, how would you rate the overall 
+                    performance of our Mortgage Consultant in the following areas? Please answer using a 1 
+                    to 5 scale where 5 is 'Very Good', 3 is 'Neither Good or Poor' and 1 is 'Very Poor'.</label>
+                <single>
+                    <rows>
+                        <close code="i">
+                            <label lang="en">Explaining the different types of insurance available to you 
+                                for your home</label>
+                        </close>
+                        <close code="ii">
+                            <label lang="en">Explaining the different types of insurance available to you 
+                                for your mortgage</label>
+                        </close>
+                        <close code="iii">
+                            <label lang="en">Explaining the different types of insurance available to you 
+                                for your personal circumstances</label>
+                        </close>
+                        <close code="iv">
+                            <label lang="en">Dealing with any concerns/objections you raised in relation to 
+                                our insurance recommendation for your home</label>
+                        </close>
+                        <close code="v">
+                            <label lang="en">Dealing with any concerns/objections you raised in relation to 
+                                our insurance recommendation for your mortgage</label>
+                        </close>
+                        <close code="vi">
+                            <label lang="en">Dealing with any concerns/objections you raised in relation to 
+                                our insurance recommendation for your personal circumstances</label>
+                        </close>
+                        <close code="vii">
+                            <label lang="en">Providing a suitable alternative recommendation for your 
+                                insurance needs for your home</label>
+                        </close>
+                        <close code="viii">
+                            <label lang="en">Providing a suitable alternative recommendation for your 
+                                insurance needs for your mortgage</label>
+                        </close>
+                        <close code="ix">
+                            <label lang="en">Providing a suitable alternative recommendation for your 
+                                insurance needs for your personal circumstances</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Very Poor</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Poor</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Neither Good or Poor</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Good</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Very Good</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <open name="Q9a_i">
+                <label lang="en">Why was the overall performance placed on each area provided to you 
+                    poor in Explaining the different types of insurance available to you 
+                    for your home?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q9a_ii">
+                <label lang="en">Why was the overall performance placed on each area provided to you 
+                    poor in Explaining the different types of insurance available to you 
+                    for your mortgage?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q9a_iii">
+                <label lang="en">Why was the overall performance placed on each area provided to you 
+                    poor in Explaining the different types of insurance available to you 
+                    for your personal circumstances?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q9a_iv">
+                <label lang="en">Why was the overall performance placed on each area provided to you 
+                    poor in Dealing with any concerns/objections you raised in relation to 
+                    our insurance recommendation for your home?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q9a_v">
+                <label lang="en">Why was the overall performance placed on each area provided to you 
+                    poor in Dealing with any concerns/objections you raised in relation to 
+                    our insurance recommendation for your mortgage?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q9a_vi">
+                <label lang="en">Why was the overall performance placed on each area provided to you 
+                    poor in Dealing with any concerns/objections you raised in relation to 
+                    our insurance recommendation for your personal circumstances?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q9a_vii">
+                <label lang="en">Why was the overall performance placed on each area provided to you 
+                    poor in Providing a suitable alternative recommendation for your 
+                    insurance needs for your home?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q9a_viii">
+                <label lang="en">Why was the overall performance placed on each area provided to you 
+                    poor in Providing a suitable alternative recommendation for your 
+                    insurance needs for your mortgage?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q9a_ix">
+                <label lang="en">Why was the overall performance placed on each area provided to you 
+                    poor in Providing a suitable alternative recommendation for your 
+                    insurance needs for your personal circumstances?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <grid name="Q10">
+                <label lang="en">Do you feel following ideas could further improve the service we are 
+                    providing to our customers?</label>
+                <single>
+                    <rows>
+                        <close code="0">
+                            <label lang="en">Offer more insurance products (e.g. Pet, Motor, Travel)</label>
+                        </close>
+                        <close code="1">
+                            <label lang="en">Extended opening times of branches</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Opportunity for home appointments</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Opportunity for telephone appointments</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Opportunity to complete a mortgage online</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Opportunity to complete insurance online</label>
+                        </close>
+                        
+                    </rows>
+                    <columns>
+                        <close code="yes">
+                            <label lang="en">Yes</label>
+                        </close>
+                        <close code="no">
+                            <label lang="en">No</label>
+                        </close>
+                        <close code="dontknow">
+                            <label lang="en">Don't know</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <open name="Q10a">
+                <label lang="en">Is there anything else we can do to improve the service we are provide 
+                    to our customers?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q11">
+                <label lang="en">Would you like a Countrywide mortgage consultant to contact you regarding 
+                    any other issues?</label>
+                <close code="yes">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="no">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <open name="Q12_date">
+                <label lang="en">Date best to contact</label>
+                <date></date>
+            </open>
+            <open name="Q12_time">
+                <label lang="en">Time best to contact</label>
+                <time></time>
+            </open>
+            <intro name="END">
+                <label lang="en">Thanks for your time. We appreciate your feedback.</label>
+            </intro>
+        </section>
+        <section id="ITEM">
+            <label lang="en">Product item</label>
+            <single name="Q3c">
+                <label lang="en">Did you take up <pipe ref="pipe0"/>?</label>
+                <close code="yes">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="no">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <open name="Q3d">
+                <label lang="en">Why did you not take up <pipe ref="pipe0"/>?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+        </section>
+    </content>
+    <field>
+        <iterator id="p3_iterator"/>
+    </field>
+    <routing>
+        <statemodel ref="DEFAULT">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="start"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="start"/>
+                        <constant type="string" value="no"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="sink0"/>
+                    </then>
+                    <else>
+                        <transition target="s2"/>
+                    </else>
+                </if>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+            <state id="s2">
+                <variable ref="Q1"/>
+                <transition target="p1"/>
+            </state>
+            <state id="p1">
+                <if>
+                    <condition>
+                        <variable ref="Q1"/>
+                        <constant type="integer" value="1"/>
+                        <operator name="EQ"/>
+                        <variable ref="Q1"/>
+                        <constant type="integer" value="2"/>
+                        <operator name="EQ"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s3"/>
+                    </then>
+                    <else>
+                        <transition target="s4"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s3">
+                <variable ref="Q1a"/>
+                <transition target="s4"/>
+            </state>
+            <state id="s4">
+                <variable ref="Q2"/>
+                <transition target="s5"/>
+            </state>
+            <state id="s5">
+                <variable ref="Q3"/>
+                <transition target="s6"/>
+            </state>
+            <state id="s6">
+                <variable ref="Q3a"/>
+                <transition target="p2"/>
+            </state>
+            <state id="p2">
+                <if>
+                    <condition>
+                        <variable ref="Q3a"/>
+                        <operator name="UNSEL"/>
+                        <operator name="EMPTY"/>
+                        <operator name="NOT"/>
+                    </condition>
+                    <then>
+                        <transition target="s7"/>
+                    </then>
+                    <else>
+                        <transition target="s8"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s7">
+                <variable ref="Q3b"/>
+                <transition target="p3"/>
+            </state>
+            <state id="p3">
+                <for>
+                    <field ref="p3_iterator"/>
+                    <in>
+                        <expr_list>
+                            <variable ref="Q3b"/> <!-- Q3b where Yes -->
+                            <operator name="SEL"/>
+                        </expr_list>
+                    </in>
+                    <transition target="c0"/>
+                </for>
+                <transition target="s8"/>
+            </state>
+            <state id="c0">
+                <include statemodel="ITEM"/>
+            </state>
+            <state id="s8">
+                <variable ref="Q4"/>
+                <transition target="p4"/>
+            </state>
+            <state id="p4">
+                <if>
+                    <condition>
+                        <variable ref="Q4"/>
+                        <constant type="string" value="none"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s10"/>
+                    </then>
+                    <else>
+                        <transition target="s9"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s9">
+                <variable ref="Q4a"/>
+                <transition target="s10"/>
+            </state>
+            <state id="s10">
+                <variable ref="Q5"/>
+                <transition target="p5"/>
+            </state>
+            <state id="p5">
+                <if>
+                    <condition>
+                        <variable ref="Q5"/>
+                        <constant type="integer" value="1"/>
+                        <operator name="EQ"/>
+                        <variable ref="Q5"/>
+                        <constant type="integer" value="2"/>
+                        <operator name="EQ"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s11"/>
+                    </then>
+                    <else>
+                        <transition target="s12"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s11">
+                <variable ref="Q5a"/>
+                <transition target="s12"/>
+            </state>
+            <state id="s12">
+                <variable ref="Q6"/>
+                <transition target="p6"/>
+            </state>
+            <state id="p6">
+                <if>
+                    <condition>
+                        <variable ref="Q6"/>
+                        <constant type="string" value="no"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="Q6"/>
+                        <constant type="string" value="dontknow"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s13"/>
+                    </then>
+                    <else>
+                        <transition target="s14"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s13">
+                <variable ref="Q7"/>
+                <transition target="p8"/>
+            </state>
+            <state id="s14">
+                <variable ref="Q6a"/>
+                <transition target="p7"/>
+            </state>
+            <state id="p7">
+                <if>
+                    <condition>
+                        <variable ref="Q6a"/>
+                        <constant type="integer" value="1"/>
+                        <operator name="EQ"/>
+                        <variable ref="Q6a"/>
+                        <constant type="integer" value="2"/>
+                        <operator name="EQ"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s15"/>
+                    </then>
+                    <else>
+                        <transition target="s13"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s15">
+                <variable ref="Q6b"/>
+                <transition target="s13"/>
+            </state>
+            <state id="p8">
+                <if>
+                    <condition>
+                        <variable ref="Q7"/> <!-- Q7 where 'Poor' or 'Very Poor' -->
+                        <operator name="SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s16"/>
+                    </then>
+                    <else>
+                        <transition target="s17"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s16">
+                <variable ref="Q7a_i"/>
+                <variable ref="Q7a_ii"/>
+                <variable ref="Q7a_iii"/>
+                <variable ref="Q7a_iv"/>
+                <transition target="s17"/>
+            </state>
+            <state id="s17">
+                <variable ref="Q8"/>
+                <transition target="p9"/>
+            </state>
+            <state id="p9">
+                <if>
+                    <condition>
+                        <variable ref="Q8"/> <!-- Q8 where 'unimportant' or 'veryUnimportant' -->
+                        <operator name="SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s18"/>
+                    </then>
+                    <else>
+                        <transition target="s19"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s18">
+                <variable ref="Q8a_i"/>
+                <variable ref="Q8a_ii"/>
+                <variable ref="Q8a_iii"/>
+                <variable ref="Q8a_iv"/>
+                <transition target="s19"/>
+            </state>
+            <state id="s19">
+                <variable ref="Q9"/>
+                <transition target="p10"/>
+            </state>
+            <state id="p10">
+                <if>
+                    <condition>
+                        <variable ref="Q9"/> <!-- Q9 where 'poor' or 'veryPoor' -->
+                        <operator name="SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s20"/>
+                    </then>
+                    <else>
+                        <transition target="s21"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s20">
+                <variable ref="Q9a_i"/>
+                <variable ref="Q9a_ii"/>
+                <variable ref="Q9a_iii"/>
+                <variable ref="Q9a_iv"/>
+                <variable ref="Q9a_v"/>
+                <variable ref="Q9a_vi"/>
+                <variable ref="Q9a_vii"/>
+                <variable ref="Q9a_viii"/>
+                <variable ref="Q9a_ix"/>
+                <transition target="s21"/>
+            </state>
+            <state id="s21">
+                <variable ref="Q10"/>
+                <transition target="s22"/>
+            </state>
+            <state id="s22">
+                <variable ref="Q10a"/>
+                <transition target="p11"/>
+            </state>
+            <state id="p11">
+                <if>
+                    <condition>
+                        <variable ref="Q4a"/>
+                        <constant type="string" value="no"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s23"/>
+                    </then>
+                    <else>
+                        <transition target="p12"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s23">
+                <variable ref="Q11"/>
+                <transition target="p12"/>
+            </state>
+            <state id="p12">
+                <if>
+                    <condition>
+                        <variable ref="Q4a"/>
+                        <constant type="string" value="yes"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="Q11"/>
+                        <constant type="string" value="yes"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s25"/>
+                    </then>
+                    <else>
+                        <transition target="s24"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s24">
+                <variable ref="END"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="s25">
+                <variable ref="Q12_date"/>
+                <variable ref="Q12_time"/>
+                <transition target="s24"/>
+            </state>
+        </statemodel>
+        <statemodel ref="ITEM">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="Q3c"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q3c"/>
+                        <constant type="string" value="no"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s1"/>
+                    </then>
+                    <else>
+                        <transition target="s2"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s1">
+                <variable ref="Q3d"/>
+                <transition target="s2"/>
+            </state>
+            <state id="s2">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="DEFAULT"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation>
+        <piping ref="DEFAULT">
+            <pipe id="pipe0">
+                <variable ref="Q3"/>
+                <operator name="UNSEL"/>
+            </pipe>
+            <pipe id="pipe1">
+                <variable ref="Q3a"/>
+                <operator name="UNSEL"/>
+            </pipe>
+            <pipe id="pipe2">
+                <variable ref="Q3b"/> <!-- Q3b where No is SEL -->
+                <operator name="SEL"/>
+            </pipe>
+        </piping>
+        <piping ref="ITEM">
+            <pipe id="pipe0">
+                <variable ref="p3_iterator"/>
+                <operator name="VALUEOF"/>
+            </pipe>
+        </piping>
+    </personalisation>
+</ssm>

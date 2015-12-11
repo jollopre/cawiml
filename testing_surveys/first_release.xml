@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>First release</name>
+        <description>This is the first release of the questionnaire processing</description>
+        <date>2014-08-01</date>
+    </survey>
+    <content>
+        <section id="DEFAULT">
+            <label lang="en">This is the default block</label>
+            <intro name="INF">
+                <label lang="en">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultrices sit amet erat non blandit. Curabitur eu metus justo. Donec urna lorem, lobortis ut sollicitudin eget, hendrerit sed risus. Morbi eu metus a est congue sodales at quis eros. Nulla ut lacinia arcu, vitae ornare est. Nunc malesuada orci imperdiet lorem porta bibendum. Donec vestibulum adipiscing libero euismod tincidunt. Fusce posuere facilisis accumsan. Maecenas pharetra bibendum ipsum, in dapibus urna consequat id. Duis sollicitudin sollicitudin lectus, eget mollis tortor dapibus at. Sed accumsan nibh nec metus mollis accumsan. Vestibulum aliquam aliquam ante. Pellentesque rutrum ligula nec lorem varius consequat. Vivamus porttitor eros a orci suscipit aliquam. Vivamus nisl erat, iaculis a dui quis, pretium dapibus velit. Fusce ultrices elementum dignissim.</label>
+            </intro>
+            <multiple name="Q0" refused="true">
+                <label lang="en">Which of the following fruits do you eat?</label>
+                <limit>
+                    <min>2</min>
+                    <max>4</max>
+                </limit>
+                <close code="apple">
+                    <label lang="en">Apple</label>
+                </close>
+                <close code="banana">
+                    <label lang="en">Banana</label>
+                </close>
+                <close code="blueberry">
+                    <label lang="en">Blueberry</label>
+                </close>
+                <close code="grapefruit">
+                    <label lang="en">Grapefruit</label>
+                </close>
+                <close code="melon">
+                    <label lang="en">Melon</label>
+                </close>
+                <close code="orange">
+                    <label lang="en">Orange</label>
+                </close>
+                <close code="pear">
+                    <label lang="en">Pear</label>
+                </close>
+                <close code="pineapple">
+                    <label lang="en">Pineapple</label>
+                </close>
+                <close code="raspberry">
+                    <label lang="en">Raspberry</label>
+                </close>
+                <close code="strawberry">
+                    <label lang="en">Strawberry</label>
+                </close>
+                <open code="other">
+                    <label lang="en">Other, please specify</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </multiple>
+            <single name="Q1">
+                <label lang="en">What's your favourite colour?</label>
+                <close code="red">
+                    <label lang="en">Red</label>
+                </close>
+                <close code="black">
+                    <label lang="en">Black</label>
+                </close>
+                <close code="white">
+                    <label lang="en">White</label>
+                </close>
+                <close code="green">
+                    <label lang="en">Green</label>
+                </close>
+                <open code="other">
+                    <label lang="en">Other, please specify</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </single>
+            <multiple name="Q2" refused="true">
+                <label lang="en">What of the following monkeys do you know?</label>
+                <limit>
+                    <min>1</min>
+                    <max></max>
+                </limit>
+                <close code="diana">
+                    <label lang="en">Diana Monkey</label>
+                </close>
+                <close code="mandrill">
+                    <label lang="en">Mandrill</label>
+                </close>
+                <close code="olive">
+                    <label lang="en">Olive Baboon</label>
+                </close>
+                <close code="grivet">
+                    <label lang="en">Grivet</label>
+                </close>
+                <close code="dontknow">
+                    <label lang="en">I don't know any</label>
+                    <exclusive value="true"/>
+                </close>
+            </multiple>
+            <single name="Q3">
+                <label lang="en">What's the result of multiply 2 by 10?</label>
+                <close code="1">
+                    <label lang="en">1</label>
+                </close>
+                <close code="2">
+                    <label lang="en">2</label>
+                </close>
+                <close code="10">
+                    <label lang="en">10</label>
+                </close>
+                <open code="other">
+                    <label lang="en">Other, please specify</label>
+                    <integer>
+                        <min>0</min>
+                        <max>20</max>
+                        <value></value>
+                    </integer>
+                </open>
+            </single>
+            <open name="Q4">
+                <label lang="en">What do you think about this new interface?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q5">
+                <label lang="en">How old are you?</label>
+                <integer>
+                    <min>0</min>
+                    <max>100</max>
+                    <value></value>
+                </integer>
+            </open>
+            <open name="Q6">
+                <label lang="en">How much do you usually pay for a cup of tea?</label>
+                <decimal>
+                    <value></value>
+                </decimal>
+            </open>
+        </section>
+    </content>
+    <field></field>
+    <routing>
+        <statemodel ref="DEFAULT">
+            <source id="s5"/>
+            <state id="s5">
+                <variable ref="INF"/>
+                <transition target="s0"/>
+            </state>
+            <state id="s0">
+                <variable ref="Q0"/>
+                <transition target="s1"/>
+            </state>
+            <state id="s1">
+                <variable ref="Q1"/>
+                <transition target="s2"/>
+            </state>
+            <state id="s2">
+                <variable ref="Q2"/>
+                <variable ref="Q3"/>
+                <transition target="s3"/>
+            </state>
+            <state id="s3">
+                <variable ref="Q4"/>
+                <variable ref="Q5"/>
+                <variable ref="Q6"/>
+                <transition target="s4"/>
+            </state>
+            <state id="s4">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="DEFAULT"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation></personalisation>
+</ssm>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <xs:include schemaLocation="../content/constraint.xsd"></xs:include>
+    <xs:include schemaLocation="../routing/rpn.xsd"></xs:include>
+    <xs:complexType name="Piping">
+        <xs:sequence>
+            <xs:element name="pipe" type="s:Pipe" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="ref" use="required" type="xs:string"></xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="Pipe">
+        <xs:group ref="s:Rpn"></xs:group>
+        <xs:attribute name="id" use="required" type="xs:string"></xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="PipeRef">
+        <xs:attribute name="ref" use="required" type="xs:string"></xs:attribute>
+    </xs:complexType> 
+</xs:schema>

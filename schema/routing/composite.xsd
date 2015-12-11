@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    <xs:include schemaLocation="include.xsd"></xs:include>
+    <xs:include schemaLocation="transition.xsd"></xs:include>
+    <xs:group name="Composite">
+        <xs:annotation>
+            <xs:documentation>
+                A composite state allows factoring and reusing datamodels.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="include" type="s:Include"></xs:element>
+            <xs:element name="transition" type="s:Transition" minOccurs="0"></xs:element>
+        </xs:sequence>
+    </xs:group>
+</xs:schema>

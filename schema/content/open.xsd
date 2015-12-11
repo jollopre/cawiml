@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <xs:include schemaLocation="question.xsd"></xs:include>
+    <xs:include schemaLocation="constraint.xsd"></xs:include>
+    <xs:complexType name="Open">
+        <xs:complexContent>
+            <xs:extension base="s:Question">
+                <xs:group ref="s:OpenChoice" maxOccurs="1"></xs:group>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:group name="OpenChoice">
+        <xs:choice>
+            <xs:element name="integer" type="s:OpenInteger"></xs:element>
+            <xs:element name="decimal" type="s:OpenDecimal"></xs:element>
+            <xs:element name="string" type="s:OpenString"></xs:element>
+            <xs:element name="date" type="xs:date" default="1970-01-01"></xs:element>
+            <xs:element name="time" type="xs:time" default="00:00:00"></xs:element>
+        </xs:choice>
+    </xs:group>
+    <xs:complexType name="OpenInteger">
+        <xs:sequence>
+            <xs:group ref="s:Limit"></xs:group>
+            <xs:element name="value" type="xs:integer" default="0"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="OpenDecimal">
+        <xs:sequence>
+            <xs:element name="value" type="xs:decimal" default="0.0"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="OpenString">
+        <xs:sequence>
+            <xs:element name="value" type="xs:string" default="NULL"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

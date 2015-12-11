@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm>
+    <survey>
+        ...
+    </survey>
+    <content>
+        <section id="1">
+            ...
+        </section>
+        ...
+    </content>
+    <field>
+        ...
+    </field>
+    <routing>
+        <statemodel ref="1">
+            ...
+            <state id="p3"><!-- PSEUDO STATE, COMPUTATION -->
+                <computation ref="working">
+                    <assignment>
+                        <variable ref="working"/>
+                        <constant type="integer" value="1"/>
+                        <operator name="ADD"/>
+                    </assignment>
+                </computation>
+                <transition target="sink0"/>
+            </state>
+            ...
+        </statemodel>
+        ...
+        <entrypoint>
+            ...
+        </entrypoint>
+    </routing>
+</ssm>

@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>Training Survey</name>
+        <description>Survey to evaluate our training sessions</description>
+        <date>2015-05-14</date>
+    </survey>
+    <content>
+        <section id="0">
+            <label lang="en">PRE TRAINING</label>
+            <intro name="INF0">
+                <label lang="en">Thank you for taking the time to complete this survey. Please note that this is completely
+                    anonymous and will in no way affect the outcome of the training/interview you have attended. This is 
+                    NOT an assessment: the aim of this is to improve our training sessions and make them the best they can
+                    be. In order for this survey to be worthwhile, it is important that you are completely honest with 
+                    your feedback. Thank you in advance! 
+                    The Pexel Team. 
+                </label>
+            </intro>
+            <single name="Q1">
+                <label lang="en">How did you apply for this job?</label>
+                <close code="01">
+                    <label lang="en">www.indeed.co.uk</label>
+                </close>
+                <close code="02">
+                    <label lang="en">www.gumtree.com</label>
+                </close>
+                <close code="03">
+                    <label lang="en">University job website</label>
+                </close>
+                <close code="04">
+                    <label lang="en">Referral from current Pexel employee</label>
+                </close>
+                <close code="05">
+                    <label lang="en">Referral from former Pexel employee</label>
+                </close>
+                <close code="06">
+                    <label lang="en">After reading on the website I e-mailed jobs@pexel.co.uk</label>
+                </close>
+                <open code="07">
+                    <label lang="en">Other, please specify:</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </single>
+            <single name="Q2">
+                <label lang="en">How easy or difficult was the application process using the following scale:</label>
+                <close code="01">
+                    <label lang="en">Very easy</label>
+                </close>
+                <close code="02">
+                    <label lang="en">Easy</label>
+                </close>
+                <close code="03">
+                    <label lang="en">Neither easy nor difficult</label>
+                </close>
+                <close code="04">
+                    <label lang="en">Difficult</label>
+                </close>
+                <close code="05">
+                    <label lang="en">Very difficult</label>
+                </close>
+            </single>
+            <multiple name="Q3">
+                <label lang="en">Was the information provided to you before you attended ...</label>
+                <close code="01">
+                    <label lang="en">Helpful?</label>
+                </close>
+                <close code="02">
+                    <label lang="en">Clear?</label>
+                </close>
+                <close code="03">
+                    <label lang="en">None of these</label>
+                    <exclusive value="true"/>
+                </close>
+            </multiple>
+            <open name="Q3a">
+                <label lang="en">Why was the information neither helpful nor clear to you before you attended?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q4">
+                <label lang="en">Would it have been helpful to have had more information provided before you attended
+                today's session?</label>
+                <close code="01">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="02">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <open name="Q4a">
+                <label lang="en">What specifically would have helped you to feel more prepared?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q5">
+                <label lang="en">Be honest! Did you read the modules?</label>
+                <close code="01">
+                    <label lang="en">Yes, all of them</label>
+                </close>
+                <close code="02">
+                    <label lang="en">Yes, some of them</label>
+                </close>
+                <close code="03">
+                    <label lang="en">No, none of them</label>
+                </close>
+            </single>
+            <single name="Q5a">
+                <label lang="en">Did they help you to feel more prepared?</label>
+                <close code="01">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="02">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <open name="Q5b">
+                <label lang="en">Why not? Can you please give us an example?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+        </section>
+        <section id="1">
+            <label lang="en">TRAINING CONTENT</label>
+            <grid name="Q6">
+                <label lang="en">On a scale of 1-10 (where 1 = poor and 10 = excellent), please rate the following 
+                    statements of today’s session</label>
+                <single>
+                    <rows>
+                        <close code="01">
+                            <label lang="en">Clarity of training materials</label>
+                        </close>
+                        <close code="02">
+                            <label lang="en">How engaged you felt throughout the day</label>
+                        </close>
+                        <close code="03">
+                            <label lang="en">How much you enjoyed the session</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">1</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">2</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">3</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">4</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">5</label>
+                        </close>
+                        <close code="6">
+                            <label lang="en">6</label>
+                        </close>
+                        <close code="7">
+                            <label lang="en">7</label>
+                        </close>
+                        <close code="8">
+                            <label lang="en">8</label>
+                        </close>
+                        <close code="9">
+                            <label lang="en">9</label>
+                        </close>
+                        <close code="10">
+                            <label lang="en">10</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <grid name="Q7">
+                <label lang="en">On a scale of 1-10 (where 1 = do not understand at all and 10 = completely understand), 
+                    please rate your understanding of the following statements:</label>
+                <single>
+                    <rows>
+                        <close code="01">
+                            <label lang="en">How to introduce yourself to the respondent</label>
+                        </close>
+                        <close code="02">
+                            <label lang="en">How to explain the research</label>
+                        </close>
+                        <close code="03">
+                            <label lang="en">Handling objections</label>
+                        </close>
+                        <close code="04">
+                            <label lang="en">Navigation of NEBU</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">1</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">2</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">3</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">4</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">5</label>
+                        </close>
+                        <close code="6">
+                            <label lang="en">6</label>
+                        </close>
+                        <close code="7">
+                            <label lang="en">7</label>
+                        </close>
+                        <close code="8">
+                            <label lang="en">8</label>
+                        </close>
+                        <close code="9">
+                            <label lang="en">9</label>
+                        </close>
+                        <close code="10">
+                            <label lang="en">10</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <single name="Q9">
+                <label lang="en">Are you a native English speaker?</label>
+                <close code="01">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="02">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <single name="Q9a">
+                <label lang="en">Was there any point today where you felt what was being taught was unnecessary?</label>
+                <close code="01">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="02">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <open name="Q9b">
+                <label lang="en">Please tell us what you felt was unnecessary?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q9c">
+                <label lang="en">How much did you understand of what was taught today as a percentage?</label>
+                <integer>
+                    <min>0</min>
+                    <max>100</max>
+                    <value></value>
+                </integer>
+            </open>
+            <multiple name="Q9d">
+                <label lang="en">What could the trainer have done to help you understand?</label>
+                <close code="01">
+                    <label lang="en">Slow down</label>
+                </close>
+                <close code="02">
+                    <label lang="en">Speak more clearly</label>
+                </close>
+                <close code="03">
+                    <label lang="en">Repeat material</label>
+                </close>
+                <close code="04">
+                    <label lang="en">Use more examples to explain better</label>
+                </close>
+                <open code="05">
+                    <label lang="en">Other, please specify:</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+                <close code="06">
+                    <label lang="en">There was nothing more the trainer could have done</label>
+                    <exclusive value="true"/>
+                </close>
+            </multiple>
+        </section>
+        <section id="2">
+            <label lang="en">TRAINER PERFORMANCE</label>
+            <single name="Q10">
+                <label lang="en">Who trained you today?</label>
+                <open code="01">
+                    <label lang="en">Please, specify:</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+                <close code="02">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <grid name="Q11">
+                <label lang="en">On a scale of 1-10 (where 1 = poor and 10 = excellent), please rate the following 
+                    statements of today’s session:</label>
+                <single>
+                    <rows>
+                        <close code="01">
+                            <label lang="en">Attitude</label>
+                        </close>
+                        <close code="02">
+                            <label lang="en">Approachability</label>
+                        </close>
+                        <close code="03">
+                            <label lang="en">Clarity</label>
+                        </close>
+                        <close code="04">
+                            <label lang="en">Audibility</label>
+                        </close>
+                        <close code="05">
+                            <label lang="en">Friendliness</label>
+                        </close>
+                        <close code="06">
+                            <label lang="en">Explanation of procedure</label>
+                        </close>
+                        <close code="07">
+                            <label lang="en">Explanation of training materials</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">1</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">2</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">3</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">4</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">5</label>
+                        </close>
+                        <close code="6">
+                            <label lang="en">6</label>
+                        </close>
+                        <close code="7">
+                            <label lang="en">7</label>
+                        </close>
+                        <close code="8">
+                            <label lang="en">8</label>
+                        </close>
+                        <close code="9">
+                            <label lang="en">9</label>
+                        </close>
+                        <close code="10">
+                            <label lang="en">10</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <open name="Q12">
+                <label lang="en">Finally, we’d love to hear any feedback you have on the training and application 
+                    processes as a whole, and if there are any improvements you can think of.</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+        </section>
+    </content>
+    <field></field>
+    <routing>
+        <statemodel ref="0">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="INF0"/>
+                <transition target="s1"/>
+            </state>
+            <state id="s1">
+                <variable ref="Q1"/>
+                <transition target="s2"/>
+            </state>
+            <state id="s2">
+                <variable ref="Q2"/>
+                <transition target="s3"/>
+            </state>
+            <state id="s3">
+                <variable ref="Q3"/>
+                <transition target="p3"/>
+            </state>
+            <state id="p3">
+                <if>
+                    <condition>
+                        <variable ref="Q3"/>
+                        <constant type="string" value="03"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s3a"/>
+                    </then>
+                    <else>
+                        <transition target="s4"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s3a">
+                <variable ref="Q3a"/>
+                <transition target="s4"/>
+            </state>
+            <state id="s4">
+                <variable ref="Q4"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q4"/>
+                        <constant type="string" value="01"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s4a"/>
+                    </then>
+                    <else>
+                        <transition target="s5"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s4a">
+                <variable ref="Q4a"/>
+                <transition target="s5"/>
+            </state>
+            <state id="s5">
+                <variable ref="Q5"/>
+                <transition target="p1"/>
+            </state>
+            <state id="p1">
+                <if>
+                    <condition>
+                        <variable ref="Q5"/>
+                        <constant type="string" value="03"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="sink0"/>
+                    </then>
+                    <else>
+                        <transition target="s5a"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s5a">
+                <variable ref="Q5a"/>
+                <transition target="p2"/>
+            </state>
+            <state id="p2">
+                <if>
+                    <condition>
+                        <variable ref="Q5a"/>
+                        <constant type="string" value="01"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="sink0"/>
+                    </then>
+                    <else>
+                        <transition target="s5b"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s5b">
+                <variable ref="Q5b"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <statemodel ref="1">
+            <source id="s6"/>
+            <state id="s6">
+                <variable ref="Q6"/>
+                <transition target="s7"/>
+            </state>
+            <state id="s7">
+                <variable ref="Q7"/>
+                <transition target="s9"/>
+            </state>
+            <state id="s9">
+                <variable ref="Q9"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q9"/>
+                        <constant type="string" value="01"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s9a"/>
+                    </then>
+                    <else>
+                        <transition target="s9c"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s9a">
+                <variable ref="Q9a"/>
+                <transition target="p1"/>
+            </state>
+            <state id="p1">
+                <if>
+                    <condition>
+                        <variable ref="Q9a"/>
+                        <constant type="string" value="02"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="sink0"/>
+                    </then>
+                    <else>
+                        <transition target="s9b"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s9b">
+                <variable ref="Q9b"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="s9c">
+                <variable ref="Q9c"/>
+                <transition target="p2"/>
+            </state>
+            <state id="p2">
+                <if>
+                    <condition>
+                        <variable ref="Q9c"/>
+                        <constant type="integer" value="70"/>
+                        <operator name="LT"/>
+                    </condition>
+                    <then>
+                        <transition target="s9d"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s9d">
+                <variable ref="Q9d"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <statemodel ref="2">
+            <source id="s10"/>
+            <state id="s10">
+                <variable ref="Q10"/>
+                <transition target="s11"/>
+            </state>
+            <state id="s11">
+                <variable ref="Q11"/>
+                <transition target="s12"/>
+            </state>
+            <state id="s12">
+                <variable ref="Q12"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="0"/>
+                <transition target="c1"/>
+            </state>
+            <state id="c1">
+                <include statemodel="1"/>
+                <transition target="c2"/>
+            </state>
+            <state id="c2">
+                <include statemodel="2"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation></personalisation>
+</ssm>

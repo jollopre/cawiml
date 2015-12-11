@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    <xs:include schemaLocation="../content/label.xsd"></xs:include>
+    <xs:include schemaLocation="../content/constraint.xsd"></xs:include>
+    <xs:include schemaLocation="../content/open.xsd"></xs:include>
+    <xs:complexType name="Field">
+        <xs:group ref="s:FieldType" minOccurs="0" maxOccurs="unbounded"></xs:group>        
+    </xs:complexType>
+    <xs:group name="FieldType">
+        <xs:choice>
+            <xs:element name="integer" type="s:Integer"></xs:element>
+            <xs:element name="decimal" type="s:Decimal"></xs:element>
+            <xs:element name="string" type="s:String"></xs:element>
+            <xs:element name="list" type="s:List"></xs:element>
+            <xs:element name="iterator">
+                <xs:complexType>
+                    <xs:attribute name="id" type="s:Name" use="required"></xs:attribute>
+                </xs:complexType>
+            </xs:element>
+        </xs:choice>
+    </xs:group>
+    <xs:complexType name="Integer">
+        <xs:attribute name="id" type="s:Name" use="required"></xs:attribute>
+        <xs:attribute name="value" type="xs:integer" use="required"></xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="Decimal">
+        <xs:attribute name="id" type="s:Name" use="required"></xs:attribute>
+        <xs:attribute name="value" type="xs:decimal" use="required"></xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="String">
+        <xs:attribute name="id" type="s:Name" use="required"></xs:attribute>
+        <xs:attribute name="value" type="xs:string" use="required"></xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="List">
+        <xs:sequence>
+            <xs:element name="listItem" type="s:Item" minOccurs="0" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="name" use="required" type="s:Name"></xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="Item">
+        <xs:sequence>
+            <xs:element name="label" type="s:Label" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="name" use="required" type="s:Name"></xs:attribute>    
+    </xs:complexType>
+</xs:schema>

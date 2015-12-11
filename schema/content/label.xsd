@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    <xs:include schemaLocation="../personalisation/piping.xsd"></xs:include>
+    <xs:complexType name="Label" mixed="true">
+        <xs:sequence>
+            <xs:element name="pipe" type="s:PipeRef" minOccurs="0" maxOccurs="unbounded">
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="lang" type="s:LanguageType" use="required"></xs:attribute>
+    </xs:complexType>
+    <xs:simpleType name="LanguageType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="en"></xs:enumeration>
+            <xs:enumeration value="es"></xs:enumeration>
+            <xs:enumeration value="fr"></xs:enumeration>
+            <xs:enumeration value="nl"></xs:enumeration>    
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

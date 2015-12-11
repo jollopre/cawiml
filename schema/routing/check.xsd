@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    <xs:include schemaLocation="rpn.xsd"></xs:include>
+    <xs:include schemaLocation="../content/label.xsd"></xs:include>
+    <xs:include schemaLocation="transition.xsd"></xs:include>
+    <xs:complexType name="Check">
+        <xs:sequence>
+            <xs:element name="condition" type="s:Condition"></xs:element>
+            <xs:element name="label" type="s:Label" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="type" type="s:CheckTypes" use="required"></xs:attribute>            
+    </xs:complexType>
+    <xs:simpleType name="CheckTypes">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="warning"></xs:enumeration>
+            <xs:enumeration value="error"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

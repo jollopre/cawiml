@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm>
+    <survey>
+        ...
+    </survey>
+    <content>
+        <section id="PERSON">
+            <label lang="en">Person</label>
+            <single name="Q3a"><!-- Marital status question -->
+                ...
+            </single>
+            <open name="Q3b"><!-- Age question -->
+                ...
+            </open>
+        </section>
+    </content>
+    <field>
+        ...
+    </field>
+    <routing>
+        <statemodel ref="PERSON">
+            <state id="p0"><!-- PSEUDO STATE IF-->
+                <if>
+                    <condition><!-- Q3b < 18 -->
+                        <variable ref="Q3b"/>
+                        <constant type="integer" value="18"/>
+                        <operator name="LT"/>   
+                    </condition>
+                    <then>
+                        <transition target="p1"/>
+                    </then>
+                    <else>
+                        <transition target="s2"/>
+                    </else>
+                </if>
+            </state>
+            <state id="p1"><!-- PSEUDO STATE, CHECK -->
+                <check type="error">
+                    <condition>
+                        <variable ref="Q3a"/>
+                        <constant type="string" value="never"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <label lang="en">People younger than 18 have never been married.</label>
+                </check>
+                <transition target="s2"/>
+            </state>
+            <state id="s2">
+                ...
+            </state>
+        </statemodel>
+    </routing>
+</ssm>

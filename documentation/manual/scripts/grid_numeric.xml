@@ -1,0 +1,29 @@
+<grid name="Q9">
+    <label lang="en">How would you rate the performance of the following nutritional supplements
+        providers in the following areas? (Scale of 1-5, where 1=very poor performance and 5=very good
+        performance+Pass)</label>
+    <numeric>
+        <rows>
+            <close code="1">
+                <label lang="en">They offer good-quality products.</label>
+            </close>
+            <close code="2">
+                <label lang="en">They are a leading producer of nutritional supplements</label>
+            </close>
+            <close code="3">
+                <label lang="en">They are a scientific company</label>
+            </close>
+        </rows>
+        <columns>
+            <close code="1">
+                <label lang="en">X</label>
+            </close>
+            <close code="2">
+                <label lang="en">Y</label>
+            </close>
+            <close code="3">
+                <label lang="en">Z</label>
+            </close>
+        </columns>
+    </numeric>
+</grid>

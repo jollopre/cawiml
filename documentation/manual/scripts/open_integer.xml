@@ -1,0 +1,8 @@
+<open name="Q2">
+    <label lang="en">How many people live in the main property? (including yourself)</label>
+    <integer>
+        <min></min>
+        <max></max>
+        <value></value>
+    </integer>
+</open>

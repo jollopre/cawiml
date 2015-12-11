@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>03</name>
+        <description>Journalists</description>
+        <date></date>
+    </survey>
+    <content>
+        <section id="DEFAULT">
+            <label lang="en">Default section</label>
+            <intro name="INF">
+                <label lang="en">You are invited to participate in a survey to understand the perception and awareness
+                of nutricional supplement companies and direct selling companies.
+                As a thank you for participating, we will be pleased to make a donation of €50 to the charity
+                of your choice.
+                The survey is conducted by an independent consultancy ReputationInc. Your answers will be strictly
+                confidential.
+                Thanks you very much for your time</label>
+            </intro>
+            <grid name="Q1">
+                <label lang="en">Please state to what extend do you agree with these statements about nutritional
+                supplements:</label>
+                <single>
+                    <rows>
+                        <close code="a">
+                            <label lang="en">I generally trust nutritional supplements.</label>
+                        </close>
+                        <close code="b">
+                            <label lang="en">Nutritional supplements are relevant to maintain well-being in hectic
+                                lifestyles.</label>
+                        </close>
+                        <close code="c">
+                            <label lang="en">Nutritional supplements can be effective in weight management.</label>
+                        </close>
+                        <close code="d">
+                            <label lang="en">Nutritional supplements help to achieve better sport performance.</label>
+                        </close>
+                        <close code="e">
+                            <label lang="en">Nutritional supplements enhance concentration.</label>
+                        </close> 
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Strongly disagree</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Disagree</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Neither</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Agree</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Strongly agree</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <multiple name="Q2">
+                <label lang="en">Which nutritional supplements providers are you aware of?</label>
+                <open code="1">
+                    <label lang="en">first:</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+                <open code="2">
+                    <label lang="en">second:</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+                <open code="3">
+                    <label lang="en">third:</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+                <open code="4">
+                    <label lang="en">fourth:</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+                <open code="5">
+                    <label lang="en">fifth:</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </multiple>
+            <single name="Q3">
+                <label lang="en">In your opinion, who is the leading food supplements provider? Which
+                other food supplement providers would you describe as "leading"</label>
+                <pipe ref="pipe0"/>
+            </single>
+            <multiple name="Q3a">
+                <label lang="en">Which other food supplement providers would you describe as "leading"?</label>
+                <pipe ref="pipe1"/>
+            </multiple>
+            <open name="Q4">
+                <label lang="en">Why do you think this company is the leading provider of food supplements?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q5">
+                <label lang="en">What do you see as potential risks and threats to companies in the nutritional
+                supplements industry?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q6">
+                <label lang="en">How favourable is your opinion of COMPANIES IN GENERAL that sell their products
+                through direct selling model?</label>
+                <close code="1">
+                    <label lang="en">Very unfavourable</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Unfavourable</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Neither</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Favourable</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Very favourable</label>
+                </close>
+            </single>
+            <single name="Q7">
+                <label lang="en">How favourable is your opinion of FOOD SUPPLEMENT COMPANIES that sell their
+                products through direct selling model?</label>
+                <close code="1">
+                    <label lang="en">Very unfavourable</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Unfavourable</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Neither</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Favourable</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Very favourable</label>
+                </close>
+            </single>
+            <grid name="Q8">
+                <label lang="en">Please state to what extend do you agree with these statements about direct
+                selling/multilevel marketing companies</label>
+                <single>
+                    <rows>
+                        <close code="a">
+                            <label lang="en">Direct selling business model is sustainable.</label>
+                        </close>
+                        <close code="b">
+                            <label lang="en">Direct selling business model is transparent.</label>
+                        </close>
+                        <close code="c">
+                            <label lang="en">Direct selling business model is a business opportunity for
+                                young entrepreneurs</label>
+                        </close>
+                        <close code="d">
+                            <label lang="en">Direct selling companies enable flexible career opportunity for
+                                distributors</label>
+                        </close>
+                        <close code="e">
+                            <label lang="en">Direct selling companies enable distributors to earn sustainable
+                                income</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Strongly disagree</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Disagree</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Neither</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Agree</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Strongly agree</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <grid name="Q9" refused="true">
+                <label lang="en">How would you rate the performance of the following nutritional supplements
+                providers in the following areas? (Scale of 1-5, where 1=very poor performance and 5=very good
+                performance+Pass)</label>
+                <numeric>
+                    <rows>
+                        <close code="1">
+                            <label lang="en">They offer good-quality products.</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">They are a leading producer of nutritional supplements</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">They are a scientific company</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">They are an ethical company</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">They are a trustworthy company</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Herbalife</label>
+                        </close>
+                    </columns>
+                </numeric>
+            </grid>
+            <single name="Q10">
+                <label lang="en">What is the first thing that comes to mind when you think of Herbalife?</label>
+                <open code="1">
+                    <label lang="en">type here:</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+                <close code="2">
+                    <label lang="en">I have never heard of Herbalife</label>
+                </close>
+            </single>
+            <single name="Q11">
+                <label lang="en">Are you aware of Herbalife Family Foundation?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <open name="Q11a">
+                <label lang="en">What do you know and think about the Herbalife Family Foundation?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q12">
+                <label lang="en">Are you aware of Herbalife sport sponsorship projects?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <open name="Q12a">
+                <label lang="en">What sports do Herbalife sponsor?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <grid name="Q13">
+                <label lang="en">Please state to what extent you agree with these statements</label>
+                <single>
+                    <rows>
+                        <close code="a">
+                            <label lang="en">Herbalife has strong leaders.</label>
+                        </close>
+                        <close code="b">
+                            <label lang="en">Herbalife is a well-managed company.</label>
+                        </close>
+                        <close code="c">
+                            <label lang="en">Herbalife makes a positive social and economic impact
+                                in the communities and countries in which it operates</label>
+                        </close>
+                        <close code="d">
+                            <label lang="en">Herbalife is committed to bringing good nutrition to
+                                underpriviliged children</label>
+                        </close>
+                        <close code="e">
+                            <label lang="en">Herbalife improves the life of orphans around the world.</label>
+                        </close>
+                        <close code="f">
+                            <label lang="en">Herbalife is responsive to the concerns of the communities in which
+                                they operate.</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Strongly disagree</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Disagree</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Neither</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Agree</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Strongly agree</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <grid name="Q14">
+                <label lang="en">Please state to what extent you agree with these statements</label>
+                <single>
+                    <rows>
+                        <close code="a">
+                            <label lang="en">Herbalife's products are healthy.</label>
+                        </close>
+                        <close code="b">
+                            <label lang="en">Herbalife's products are nutritious.</label>
+                        </close>
+                        <close code="c">
+                            <label lang="en">Herbalife's products work.</label>
+                        </close>
+                        <close code="d">
+                            <label lang="en">Herbalife's products are backed by scientific research.</label>
+                        </close>
+                        <close code="e">
+                            <label lang="en">Herbalife's products are endorsed by doctors.</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Strongly disagree</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Disagree</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Neither</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Agree</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Strongly agree</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <single name="Q15">
+                <label lang="en">Overall, how favourable is your general impression of Herbalife?</label>
+                <close code="1">
+                    <label lang="en">Very unfavourable</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Unfavourable</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Neither</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Favourable</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Very favourable</label>
+                </close>
+            </single>
+            <open name="Q16">
+                <label lang="en">Can you please describe your impression of Herbalife in more detail?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+        </section>
+    </content>
+    <field></field>
+    <routing>
+        <statemodel ref="DEFAULT">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="INF"/>
+                <transition target="s1"/>
+            </state>
+            <state id="s1">
+                <variable ref="Q1"/>
+                <transition target="s2"/>
+            </state>
+            <state id="s2">
+                <variable ref="Q2"/>
+                <transition target="s3"/>
+            </state>
+            <state id="s3">
+                <variable ref="Q3"/>
+                <transition target="s3a"/>
+            </state>
+            <state id="s3a">
+                <variable ref="Q3a"/>
+                <transition target="s4"/>
+            </state>
+            <state id="s4">
+                <variable ref="Q4"/>
+                <transition target="s5"/>
+            </state>
+            <state id="s5">
+                <variable ref="Q5"/>
+                <transition target="s6"/>
+            </state>
+            <state id="s6">
+                <variable ref="Q6"/>
+                <transition target="s7"/>
+            </state>
+            <state id="s7">
+                <variable ref="Q7"/>
+                <transition target="s8"/>
+            </state>
+            <state id="s8">
+                <variable ref="Q8"/>
+                <transition target="s9"/>
+            </state>
+            <state id="s9">
+                <variable ref="Q9"/>
+                <transition target="s10"/>
+            </state>
+            <state id="s10">
+                <variable ref="Q10"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q10"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="sink0"/>
+                    </then>
+                    <else>
+                        <transition target="s11"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s11">
+                <variable ref="Q11"/>
+                <transition target="p1"/>
+            </state>
+            <state id="p1">
+                <if>
+                    <condition>
+                        <variable ref="Q11"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s11a"/>
+                    </then>
+                    <else>
+                        <transition target="s12"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s11a">
+                <variable ref="Q11a"/>
+                <transition target="s12"/>
+            </state>
+            <state id="s12">
+                <variable ref="Q12"/>
+                <transition target="p2"/>
+            </state>
+            <state id="p2">
+                <if>
+                    <condition>
+                        <variable ref="Q12"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s12a"/>
+                    </then>
+                    <else>
+                        <transition target="s13"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s12a">
+                <variable ref="Q12a"/>
+                <transition target="s13"/>
+            </state>
+            <state id="s13">
+                <variable ref="Q13"/>
+                <transition target="s14"/>
+            </state>
+            <state id="s14">
+                <variable ref="Q14"/>
+                <transition target="s15"/>
+            </state>
+            <state id="s15">
+                <variable ref="Q15"/>
+                <transition target="s16"/>
+            </state>
+            <state id="s16">
+                <variable ref="Q16"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="DEFAULT"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation>
+        <piping ref="DEFAULT">
+            <pipe id="pipe0">
+                <variable ref="Q2"/>
+                <operator name="SEL"/>
+            </pipe>
+            <pipe id="pipe1">
+                <variable ref="Q3"/>
+                <operator name="UNSEL"/>
+            </pipe>
+            <pipe id="pipe2">
+                <variable ref="Q3"/>
+                <operator name="SEL"/>
+                <variable ref="Q3a"/>
+                <operator name="SEL"/>
+                <operator name="UNION"/>
+            </pipe>
+        </piping>
+    </personalisation>
+</ssm>

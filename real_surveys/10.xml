@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>10</name>
+        <description>Nominet SMB Awareness</description>
+        <date>2008-01-01</date>
+    </survey>
+    <content>
+        <section id="0">
+            <label lang="en">Introduction</label>
+            <single name="S0">
+                <label lang="en">We are carrying out a short study considering your awareness and opinions about
+                organisations providing internet/email services. Can you spare some time to take part; it will only
+                take about 5 minutes.</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+        </section>
+        <section id="1">
+            <label lang="en">Demographics</label>
+            <single name="Q1">
+                <label lang="en">Approximately how many employees work in your company in this country.</label>
+                <close code="1">
+                    <label lang="en">1-9</label>
+                </close>
+                <close code="2">
+                    <label lang="en">10-99</label>
+                </close>
+                <close code="3">
+                    <label lang="en">100-249</label>
+                </close>
+                <close code="4">
+                    <label lang="en">250-499</label>
+                </close>
+                <close code="5">
+                    <label lang="en">500-999</label>
+                </close>
+                <close code="6">
+                    <label lang="en">1000+</label>
+                </close>
+                <close code="7">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <single name="Q2">
+                <label lang="en">For the purposes of classification can you specify which of the following most
+                closely matches your company activity?</label>
+                <close code="1">
+                    <label lang="en">Manufacturing</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Services sectors</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Retail and distribution</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Public sector</label>
+                </close>
+            </single>
+            <single name="Q3">
+                <label lang="en">Where is your main office located?</label>
+                <close code="1">
+                    <label lang="en">Scotland, Northern Ireland and Wales</label>
+                </close>
+                <close code="2">
+                    <label lang="en">North England</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Midlands</label>
+                </close>
+                <close code="4">
+                    <label lang="en">South England</label>
+                </close>
+                <close code="5">
+                    <label lang="en">London and M25</label>
+                </close>
+            </single>
+        </section>
+        <section id="2">
+            <label lang="en">Nominet Awareness Questions</label>
+            <multiple name="Q4">
+                <label lang="en">What does the term 'domain name' mean to you?</label>
+                <close code="1">
+                    <label lang="en">Email address</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Web site address</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Your online identity</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Name that identifies a computer(s) on the Internet</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Something to do with the internet</label>
+                </close>
+                <open code="6">
+                    <label lang="en">Other</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+                <close code="7">
+                    <label lang="en">Nothing / don't know</label>
+                    <exclusive value="true"/>
+                </close>
+            </multiple>
+            <intro name="Q4a">
+                <label lang="en">Domain names are used in web addresses to identify particular web pages. For example
+                in the web address www.bbc.co.uk the domain name is bbc.co.uk.</label>
+            </intro>
+            <multiple name="Q5">
+                <label lang="en">If you think of organisations that are involved in the domain name indistry -
+                who comes to mind?</label>
+                <close code="1">
+                    <label lang="en">Nominet</label>
+                </close>
+                <open code="2">
+                    <label lang="en">Other:</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+                <open code="3">
+                    <label lang="en">Other:</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+                <open code="4">
+                    <label lang="en">Other:</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+                <open code="5">
+                    <label lang="en">Other:</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </multiple>
+            <single name="Q6">
+                <label lang="en">Have you heard of Nominet?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Unsure/Don't know</label>
+                </close>
+            </single>
+            <multiple name="Q7">
+                <label lang="en">How / where dod you hear about Nominet?</label>
+                <close code="1">
+                    <label lang="en">Word of mouth</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Press / Online Advertising</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Via a web site</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Via a search engine</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Registered a domain name</label>
+                </close>
+                <close code="6">
+                    <label lang="en">Transferring a domain name</label>
+                </close>
+                <close code="7">
+                    <label lang="en">Received a certificate</label>
+                </close>
+            </multiple>
+        </section>
+        <section id="3">
+            <label lang="en">Nominet Perception Questions</label>
+            <grid name="Q8">
+                <label lang="en">Please specify how much you agree with the following statements describing
+                what you believe Nominet does? Use a scale of 1 to 5 where 1 means you do not agree at all
+                and 5 means you strongly agree.</label>
+                <single>
+                    <rows>
+                        <close code="1">
+                            <label lang="en">Provide web hosting for .uk domain names</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">A regulatory body</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Hold the .uk registration details</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Sell .uk domain names globally</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Sell .uk domain names to uk individuals and businesses</label>
+                        </close>
+                        <close code="6">
+                            <label lang="en">Manage the .uk domain name space</label>
+                        </close>
+                        <close code="7">
+                            <label lang="en">Sell .com domain names</label>
+                        </close>
+                        <close code="8">
+                            <label lang="en">Work for the government</label>
+                        </close>
+                        <close code="9">
+                            <label lang="en">Run the UK ENUM registry (Telephone Number Mapping)</label>
+                        </close>
+                        <close code="10">
+                            <label lang="en">Issue Certificates for renewals</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">1</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">2</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">3</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">4</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">5</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <grid name="Q9">
+                <label lang="en">Please specify how much you agree with the following words used to describe
+                Nominet? Use the same 1 to 5 scale where 1 means you do not agree at all and 5 means you
+                strongly agree</label>
+                <single>
+                    <rows>
+                        <close code="1">
+                            <label lang="en">Trusted</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Registry</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Innovative</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Government</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Spammer</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">1</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">2</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">3</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">4</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">5</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <single name="Q10">
+                <label lang="en">Would you recommend Nominet to a friend or colleague?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Unsure/Don't know</label>
+                </close>
+            </single>
+        </section>
+        <section id="4">
+            <label lang="en">Domain Question</label>
+            <single name="Q11">
+                <label lang="en">How many Domain names does your business have?</label>
+                <close code="1">
+                    <label lang="en">1 or more</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Unsure/Don't know</label>
+                </close>
+            </single>
+            <single name="Q12">
+                <label lang="en">How many of these are .uk?</label>
+                <close code="1">
+                    <label lang="en">1 or more</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Unsure/Don't know</label>
+                </close>
+            </single>
+            <single name="Q13">
+                <label lang="en">Would you say that .uk is your primary domain name?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Unsure/Don't know</label>
+                </close>
+            </single>
+        </section>
+    </content>
+    <field></field>
+    <routing>
+        <statemodel ref="0">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="S0"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="S0"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="terminate0"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+            <state id="terminate0">
+                <terminate/>
+            </state>
+        </statemodel>
+        <statemodel ref="1">
+            <source id="s1"/>
+            <state id="s1">
+                <variable ref="Q1"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q1"/>
+                        <constant type="string" value="6"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="Q1"/>
+                        <constant type="string" value="7"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="terminate0"/>
+                    </then>
+                    <else>
+                        <transition target="s2"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s2">
+                <variable ref="Q2"/>
+                <transition target="s3"/>
+            </state>
+            <state id="s3">
+                <variable ref="Q3"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+            <state id="terminate0">
+                <terminate/>
+            </state>
+        </statemodel>
+        <statemodel ref="2">
+            <source id="s4"/>
+            <state id="s4">
+                <variable ref="Q4"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q4"/>
+                        <constant type="string" value="7"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s4a"/>
+                    </then>
+                    <else>
+                        <transition target="s5"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s4a">
+                <variable ref="Q4a"/>
+                <transition target="s5"/>
+            </state>
+            <state id="s5">
+                <variable ref="Q5"/>
+                <transition target="p1"/>
+            </state>
+            <state id="p1">
+                <if>
+                    <condition>
+                        <variable ref="Q5"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s6"/>
+                    </then>
+                    <else>
+                        <transition target="s7"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s6">
+                <variable ref="Q6"/>
+                <transition target="p2"/>
+            </state>
+            <state id="p2">
+                <if>
+                    <condition>
+                        <variable ref="Q6"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s7"/>
+                    </then>
+                    <else>
+                        <transition target="c4"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s7">
+                <variable ref="Q7"/>
+                <transition target="c3"/>
+            </state>
+            <state id="c3">
+                <include statemodel="3"/>
+                <transition target="c4"/>
+            </state>
+            <state id="c4">
+                <include statemodel="4"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <statemodel ref="3">
+            <source id="s8"/>
+            <state id="s8">
+                <variable ref="Q8"/>
+                <transition target="s9"/>
+            </state>
+            <state id="s9">
+                <variable ref="Q9"/>
+                <transition target="s10"/>
+            </state>
+            <state id="s10">
+                <variable ref="Q10"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <statemodel ref="4">
+            <source id="s11"/>
+            <state id="s11">
+                <variable ref="Q11"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q11"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s12"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s12">
+                <variable ref="Q12"/>
+                <transition target="p1"/>
+            </state>
+            <state id="p1">
+                <if>
+                    <condition>
+                        <variable ref="Q12"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s13"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s13">
+                <variable ref="Q13"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="0"/>
+                <transition target="c1"/>
+            </state>
+            <state id="c1">
+                <include statemodel="1"/>
+                <transition target="c2"/>
+            </state>
+            <state id="c2">
+                <include statemodel="2"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation></personalisation>
+</ssm>

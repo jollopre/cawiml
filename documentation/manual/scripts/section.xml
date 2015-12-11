@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm>
+    <survey>
+        ...
+    </survey>
+    <content>
+        <section id="1">
+            ...
+        </section>
+        <section id="...">
+            ...
+        </section>
+        <section id="n">
+            ...
+        </section>
+    </content>
+    ...
+</ssm>

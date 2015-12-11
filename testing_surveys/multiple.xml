@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>Multiple Question</name>
+        <description>This is a test for multiple questions</description>
+        <date>2014-09-20</date>
+    </survey>
+    <content>
+        <section id="DEFAULT">
+            <label lang="en">Default Block</label>
+            <multiple name="Q0">
+                <label lang="en">What are you looking for from your work?</label>
+                <limit>
+                    <min>1</min>
+                    <max>3</max>
+                </limit>
+                <close code="money">
+                    <label lang="en">Money</label>
+                </close>
+                <close code="motivation">
+                    <label lang="en">Motivation</label>
+                </close>
+                <close code="development">
+                    <label lang="en">Development</label>
+                </close>
+                <close code="leadership">
+                    <label lang="en">Leadership</label>
+                </close>
+                <close code="dontknow">
+                    <label lang="en">Don't know</label>
+                    <exclusive value="true"/>
+                </close>
+                <open code="other">
+                    <label lang="en">Other</label>
+                    <string>
+                        <value>Default text</value>
+                    </string>
+                    <exclusive value="true"/>
+                </open>
+                <open code="other2">
+                    <label lang="en">Other integer</label>
+                    <integer>
+                        <min>1</min>
+                        <max>4</max>
+                        <value>2</value>
+                    </integer>
+                </open>
+                <open code="other3">
+                    <label lang="en">Other decimal</label>
+                    <decimal>
+                        <value>0.0</value>
+                    </decimal>
+                </open>
+            </multiple>
+        </section>
+    </content>
+    <field></field>
+    <routing>
+        <statemodel ref="DEFAULT">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="Q0"/>
+                <transition target="s1"/>
+            </state>
+            <state id="s1">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="DEFAULT"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation></personalisation>
+</ssm>

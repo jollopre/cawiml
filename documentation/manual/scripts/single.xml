@@ -1,0 +1,26 @@
+<single name="Q0">
+    <label lang="en">Question to ask</label>
+    <close code="1">
+        <label lang="en">response 1</label>
+    </close>
+    <open code="2">
+        <label lang="en">Other verbatim response 2</label>
+        <string>
+            <value></value>
+        </string>
+    </open>
+    <open code="3">
+        <label lang="en">Other integer response 3</label>
+        <integer>
+            <min>1</min>
+            <max>6</max>
+            <value>5</value>
+        </integer>
+    </open>
+    <open code="4">
+        <label lang="en">Other decimal response 4</label>
+        <decimal>
+            <value></value>
+        </decimal>
+    </open>
+</single>

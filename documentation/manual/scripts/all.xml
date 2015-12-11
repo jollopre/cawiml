@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm>
+    <survey>
+        ...
+    </survey>
+    <content>
+        <section id="1">
+            <label lang="en">Section one</label>
+            <multiple name="Qx">
+                <label lang="en">What are your favourite items?</label>
+                <randomising>
+                    <all present="3"/>
+                </randomising>
+                <close code="1">
+                    <label lang="en">Response 1</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Response 2</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Response 3</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Response 4</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Response 5</label>
+                </close>
+                <close code="6">
+                    <label lang="en">Response 6</label>
+                </close>
+                <close code="99">
+                    <label lang="en">None of these</label>
+                </close>
+            </multiple>
+        </section>
+    </content>
+    <field>
+        ...
+    </field>
+    <routing>
+        ...
+    </routing>
+    <personalisation>
+        ...
+    </personalisation>
+</ssm>

@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>12</name>
+        <description>LoudHouse</description>
+        <date></date>
+    </survey>
+    <content>
+        <section id="0">
+            <label lang="en">Profile</label>
+            <single name="Q1">
+                <label lang="en">Please confirm your job title?</label>
+                <close code="1">
+                    <label lang="en">Wealth manager</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Relationship manager</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Private Client Specialist</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Asset Manager</label>
+                </close>
+                <open code="5">
+                    <label lang="en">Other, please specify</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </single>
+            <single name="Q2">
+                <label lang="en">What type of business do you work in?</label>
+                <close code="1">
+                    <label lang="en">Retail Bank</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Private Bank</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Asset management</label>
+                </close>
+                <open code="4">
+                    <label lang="en">Other, please specify</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </single>
+            <single name="Q3">
+                <label lang="en">And can I confirm your job involves the provision of wealth management services?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+        </section>
+        <section id="1">
+            <label lang="en">Challenges</label>
+            <grid name="Q4">
+                <label lang="en">Thinking about your client's attitudes please tell me how strongly do you agree or
+                disagree with each of the following?</label>
+                <single>
+                    <rows>
+                        <close code="1">
+                            <label lang="en">Clients are more risk averse than they were before the downturn</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Clients are looking for more personalised financial solutions</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Trust in wealth management advisors has been damaged by and during
+                                the downturn</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Strongly disagree</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Disagree</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Neutral</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Agree</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Strongly agree</label>
+                        </close>
+                        <close code="6">
+                            <label lang="en">DK/NS</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <grid name="Q5">
+                <label lang="en">How serious would you say the following are in terms of challenge to you over the
+                next 2 years? Please give a score between 1 and 5, where 1 represents no real challenge and 5
+                represents a critical challenge</label>
+                <single>
+                    <rows>
+                        <close code="1">
+                            <label lang="en">Investor trust in the security of the private banking sector</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Government intervention/onwership</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Customer retention and acquisition</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Volume of mergers and acquisitions</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Development of new investment products</label>
+                        </close>
+                        <close code="6">
+                            <label lang="en">Retention of key staff</label>
+                        </close>
+                        <close code="7">
+                            <label lang="en">Increasing regulation</label>
+                        </close>
+                        <close code="8">
+                            <label lang="en">Increased service demands from clients</label>
+                        </close>
+                        <open code="9">
+                            <label lang="en">Other please specify</label>
+                            <string>
+                                <value></value>
+                            </string>
+                        </open>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">1</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">2</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">3</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">4</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">5</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <multiple name="Q6">
+                <label lang="en">And which are the three biggest challenges you will face in the coming 2 years?</label>
+                <limit>
+                    <min>3</min>
+                    <max>3</max>
+                </limit>
+                <close code="1">
+                    <label lang="en">Investor trust in the security of the private banking sector</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Government intervention/onwership</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Customer retention and acquisition</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Volume of mergers and acquisitions</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Development of new investment products</label>
+                </close>
+                <close code="6">
+                    <label lang="en">Retention of key staff</label>
+                </close>
+                <close code="7">
+                    <label lang="en">Increasing regulation</label>
+                </close>
+                <close code="8">
+                    <label lang="en">Increased service demands from clients</label>
+                </close>
+                <open code="9">
+                    <label lang="en">Other please specify</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </multiple>
+            <grid name="Q7">
+                <label lang="en">How important will the following be in tackling the three most serious problems
+                you will face in the coming 2 years?</label>
+                <single>
+                    <rows>
+                        <close code="1">
+                            <label lang="en">Organisational agility (e.g. short time to market, SOA)</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Cost effectiveness</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Risk management</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Compliance</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Effective use of outsourcing</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Not at all important</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Not important</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Neutral</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Important</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Extremely important</label>
+                        </close>
+                        <close code="6">
+                            <label lang="en">DK/NS</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <open name="Q8">
+                <label lang="en">What else would you say your organisation needs to do to deal with the biggest
+                challenges you face in the next 2 years?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <grid name="Q9">
+                <label lang="en">How would you rate your organisation in the following areas?</label>
+                <single>
+                    <rows>
+                        <close code="1">
+                            <label lang="en">Organisational agility (e.g. short time to market, SOA)</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Cost effectiveness</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Risk management</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Compliance</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Effective use of outsourcing</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Very poor</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Poor</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Neither good nor poor</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Good</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Excellent</label>
+                        </close>
+                        <close code="6">
+                            <label lang="en">DK/NS</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <multiple name="Q10">
+                <label lang="en">Which of these will your organisation focus on most in the next 12 months?</label>
+                <close code="1">
+                    <label lang="en">Organisational agility (e.g. short time to market, SOA)</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Cost effectiveness</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Risk management</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Compliance</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Outsourcing</label>
+                </close>
+            </multiple>
+            <single name="Q11">
+                <label lang="en">Overall how well would you say your organisational IT systems support you in your role?</label>
+                <close code="1">
+                    <label lang="en">Extremely well</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Quite well</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Neither well or badly</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Quite badly</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Very badly</label>
+                </close>
+                <close code="6">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <open name="Q12">
+                <label lang="en">Can you briefly tell me how your organisational IT systems could better support
+                you in your role?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <grid name="Q13">
+                <label lang="en">Have you ever experienced an issue with IT systems that may have resulted in:</label>
+                <single>
+                    <rows>
+                        <close code="1">
+                            <label lang="en">Lost revenues</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Lost investment opportunities</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Inability to evaluate investment risk</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Negative impact on final clients(e.g. issues with reporting,
+                                statements, web banking)</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Difficulties in regulatory reporting</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Yes</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">No</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">DK/NS</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <open name="Q14">
+                <label lang="en">Can you tell me what happened?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q15">
+                <label lang="en">Do you know if any part of your banking IT system is outsourced?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <single name="Q16">
+                <label lang="en">And approximately how much of your banking IT system is outsourced?</label>
+                <close code="1">
+                    <label lang="en">Less than 5%</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Between 6% and 25%</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Between 26% and 50%</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Between 51% and 75%</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Over 75%</label>
+                </close>
+                <close code="6">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <single name="Q17">
+                <label lang="en">Which part of your banking IT system is outsourced?</label>
+                <close code="1">
+                    <label lang="en">Hardware</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Support/helpdesk</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Front-office applications</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Back-office applications</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Non critical applications</label>
+                </close>
+                <open code="6">
+                    <label lang="en">Other, please state</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+                <close code="7">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <single name="Q18">
+                <label lang="en">How important is your IT system in helping your organisation reach its targets?</label>
+                <close code="1">
+                    <label lang="en">Very important</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Quite important</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Neither important or unimportant</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Quite unimportant</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Very unimportant</label>
+                </close>
+                <close code="6">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+            <single name="Q19">
+                <label lang="en">Finally, to what extend do you feel confident regarding your company's performance
+                over the next 2 years?</label>
+                <close code="1">
+                    <label lang="en">Very confident</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Quite confident</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Not very confident</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Not at all confident</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Don't know</label>
+                </close>
+            </single>
+        </section>
+    </content>
+    <field></field>
+    <routing>
+        <statemodel ref="0">
+            <source id="s1"/>
+            <state id="s1">
+                <variable ref="Q1"/>
+                <transition target="s2"/>
+            </state>
+            <state id="s2">
+                <variable ref="Q2"/>
+                <transition target="s3"/>
+            </state>
+            <state id="s3">
+                <variable ref="Q3"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q3"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="terminate0"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+            <state id="terminate0">
+                <terminate/>
+            </state>
+        </statemodel>
+        <statemodel ref="1">
+            <source id="s4"/>
+            <state id="s4">
+                <variable ref="Q4"/>
+                <transition target="s5"/>
+            </state>
+            <state id="s5">
+                <variable ref="Q5"/>
+                <transition target="s6"/>
+            </state>
+            <state id="s6">
+                <variable ref="Q6"/>
+                <transition target="s7"/>
+            </state>
+            <state id="s7">
+                <variable ref="Q7"/>
+                <transition target="s8"/>
+            </state>
+            <state id="s8">
+                <variable ref="Q8"/>
+                <transition target="s9"/>
+            </state>
+            <state id="s9">
+                <variable ref="Q9"/>
+                <transition target="s10"/>
+            </state>
+            <state id="s10">
+                <variable ref="Q10"/>
+                <transition target="s11"/>
+            </state>
+            <state id="s11">
+                <variable ref="Q11"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q11"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="Q11"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>            
+                        <operator name="OR"/>
+                        <variable ref="Q11"/>
+                        <constant type="string" value="3"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s13"/>
+                    </then>
+                    <else>
+                        <transition target="s12"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s12">
+                <variable ref="Q12"/>
+                <transition target="s13"/>
+            </state>
+            <state id="s13">
+                <variable ref="Q13"/>
+                <transition target="p1"/>
+            </state>
+            <state id="p1">
+                <if>
+                    <condition>
+                        <multivariable ref="Q13" row="1"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <multivariable ref="Q13" row="2"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <multivariable ref="Q13" row="3"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <multivariable ref="Q13" row="4"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <operator name="OR"/>
+                        <multivariable ref="Q13" row="5"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s15"/>
+                    </then>
+                    <else>
+                        <transition target="s14"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s14">
+                <variable ref="Q14"/>
+                <transition target="s15"/>
+            </state>
+            <state id="s15">
+                <variable ref="Q15"/>
+                <transition target="p2"/>
+            </state>
+            <state id="p2">
+                <if>
+                    <condition>
+                        <variable ref="Q15"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="Q15"/>
+                        <constant type="string" value="3"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s17"/>
+                    </then>
+                    <else>
+                        <transition target="s16"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s16">
+                <variable ref="Q16"/>
+                <transition target="s17"/>
+            </state>
+            <state id="s17">
+                <variable ref="Q17"/>
+                <transition target="s18"/>
+            </state>
+            <state id="s18">
+                <variable ref="Q18"/>
+                <transition target="s19"/>
+            </state>
+            <state id="s19">
+                <variable ref="Q19"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="0"/>
+                <transition target="c1"/>
+            </state>
+            <state id="c1">
+                <include statemodel="1"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation></personalisation>
+</ssm>

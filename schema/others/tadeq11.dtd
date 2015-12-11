@@ -1,0 +1,93 @@
+<!-- **************************** -->
+<!-- TADEQ Quest.dtd version 1.1h -->
+<!-- **************************** -->
+<!ELEMENT questionnaire (language*, description*, attribute*, local_variable*, qobject+)>
+<!ATTLIST questionnaire id   CDATA #REQUIRED
+                        freq CDATA #IMPLIED>
+
+<!ELEMENT qobject (question | array | split | computation | check | loop | statement | goto | subquestionnaire)>
+<!ATTLIST qobject number CDATA #REQUIRED
+                  name CDATA #REQUIRED
+                  view (expanded | collapsed) "collapsed"
+                  freq CDATA #IMPLIED>
+<!-- the name attribute should be unique in the questionnaire -->
+
+<!-- all types of objects of a questionnaire -->
+<!ELEMENT question (text+, (closed | numeric | open | date | time), description*, status?, tag?, spec_item?, attribute*, response_time?)>
+
+<!ELEMENT array  (range, (question | subquestionnaire) )>
+
+<!ELEMENT split (condition, text*, if_true?, if_false?, text_false*, involved*)>
+<!ELEMENT if_true (qobject*) >
+<!ATTLIST if_true freq CDATA #IMPLIED>
+
+<!ELEMENT if_false (qobject*) >
+<!ATTLIST if_false freq CDATA #IMPLIED>
+
+<!ELEMENT computation (variable, expression, text*, involved*)>
+
+<!ELEMENT check (condition, text*, involved*)>
+<!ATTLIST check type (hard | soft) "hard">
+
+<!ELEMENT loop (range, text*, qobject+)>
+<!ATTLIST loop variable CDATA #REQUIRED>
+
+<!ELEMENT statement (specification, text*, involved*)>
+
+<!ELEMENT goto EMPTY>
+<!ATTLIST goto name CDATA #REQUIRED>
+<!-- the name attribute should be unique in the questionnaire -->
+
+
+<!ELEMENT subquestionnaire (description*, attribute*, local_variable*, qobject*)>
+<!ATTLIST subquestionnaire id CDATA #REQUIRED>
+
+<!-- types of subs of objects -->
+<!ELEMENT attribute EMPTY>
+<!ATTLIST attribute name   CDATA #REQUIRED
+                    value  CDATA #REQUIRED>
+
+<!ELEMENT closed (item+)>
+<!ATTLIST closed max CDATA "1">
+
+<!ELEMENT item       (text+, goto?)>
+<!ATTLIST item code   CDATA #REQUIRED
+               name   CDATA #REQUIRED>
+
+<!ELEMENT numeric (range, (integer | real) )>
+<!ELEMENT integer EMPTY>
+<!ELEMENT real EMPTY>
+<!ATTLIST real decimals CDATA #IMPLIED>
+
+<!ELEMENT open        EMPTY>
+<!ATTLIST open length CDATA #REQUIRED>
+
+<!ELEMENT range EMPTY>
+<!ATTLIST range lower CDATA #REQUIRED
+                upper CDATA #REQUIRED
+                average_freq CDATA #IMPLIED>
+
+<!ELEMENT spec_item   (dontknow?, refusal?, empty?, na?) >
+<!ELEMENT dontknow    (item)>
+<!ELEMENT refusal     (item)>
+<!ELEMENT empty       (item)>
+<!ELEMENT na          (item)>
+
+<!-- leaves -->
+<!ELEMENT condition      (#PCDATA)>
+<!ELEMENT date           EMPTY    >
+<!ELEMENT description    (#PCDATA)>
+<!ELEMENT expression     (#PCDATA)>
+<!ELEMENT involved       (#PCDATA)>
+<!ELEMENT language       (#PCDATA)>
+<!ELEMENT local_variable (#PCDATA)>
+<!ELEMENT lower          (#PCDATA)>
+<!ELEMENT specification  (#PCDATA)>
+<!ELEMENT status         (#PCDATA)>
+<!ELEMENT tag            (#PCDATA)>
+<!ELEMENT text           (#PCDATA)>
+<!ELEMENT text_false     (#PCDATA)>
+<!ELEMENT time           EMPTY    >
+<!ELEMENT upper          (#PCDATA)>
+<!ELEMENT variable       (#PCDATA)>
+<!ELEMENT response_time  (#PCDATA)>

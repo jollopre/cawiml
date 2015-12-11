@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <xs:include schemaLocation="transition.xsd"></xs:include>
+    <xs:include schemaLocation="rpn.xsd"></xs:include>
+    <xs:include schemaLocation="../personalisation/personalisation.xsd"></xs:include>
+    <xs:complexType name="For">
+        <xs:sequence>
+            <xs:element name="field" type="s:FieldRef"></xs:element>
+            <xs:element name="in" type="s:In"></xs:element>
+            <xs:element name="transition" type="s:Transition"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="FieldRef">
+        <xs:attribute name="ref" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation>
+                    References to a variable from field section.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="In">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element name="range" type="s:RangeType">
+                    <xs:annotation>
+                        <xs:documentation>
+                            The range accepts integer operands coming from constants, variables or expr_integer and
+                            contains start, end and step to address the starting, the stop and the operation to perform
+                            at every step of the loop respectively.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="list" type="s:VariableRpn">
+                    <xs:annotation>
+                        <xs:documentation>
+                            The list to refer must be a list defined in field context.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="expr_list" type="s:Condition">
+                    <xs:annotation>
+                        <xs:documentation>
+                            Expression returning a list operand.
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:choice>
+            <xs:group ref="s:RandomisingOrRotating" minOccurs="0"></xs:group>
+        </xs:sequence>    
+    </xs:complexType>
+    <xs:complexType name="RangeType">
+        <xs:sequence>
+            <xs:element name="start" type="s:RangeResult"></xs:element>
+            <xs:element name="end" type="s:RangeResult"></xs:element>
+            <xs:element name="step" type="s:RangeResult"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="RangeResult">
+        <xs:choice>
+            <xs:element name="constant" type="s:Constant"></xs:element>
+            <xs:element name="variable" type="s:VariableRpn"></xs:element>
+            <xs:element name="expr_integer" type="s:Condition"></xs:element>
+        </xs:choice>
+    </xs:complexType>
+</xs:schema>

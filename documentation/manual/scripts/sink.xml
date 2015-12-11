@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm>
+    <survey>
+        ...
+    </survey>
+    <content>
+        <section id="1">
+            ...
+        </section>
+    </content>
+    <field>
+        ...
+    </field>
+    <routing>
+        <statemodel ref="1">
+            ...
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q0"/>
+                        <constant type="string" value="no"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="sink0"/>
+                    </then>
+                    <else>
+                        <transition target="s2"/>
+                    </else>
+                </if>
+            </state>
+            <state id="sink0"><!-- SINK STATE -->
+                <sink/>
+            </state>
+            <state id="s2">
+                ...
+            </state>
+        </statemodel>
+    </routing>
+</ssm>

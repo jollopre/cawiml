@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <xs:simpleType name="Name">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z0-9_])+"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="Range">
+        <xs:sequence>
+            <xs:element name="min" type="xs:integer" default="0"></xs:element>
+            <xs:element name="max" type="xs:integer" default="999"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:group name="Limit">
+        <xs:sequence>
+            <xs:element name="min" type="xs:integer" default="0"></xs:element>
+            <xs:element name="max" type="xs:integer" default="999"></xs:element>
+        </xs:sequence>
+    </xs:group>
+    <xs:complexType name="Exclusive">
+        <xs:attribute name="value" type="xs:boolean" use="required"></xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="Transpose">
+        <xs:attribute name="value" type="xs:boolean" use="required"></xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="Order">
+        <xs:attribute name="value" type="xs:boolean" use="required"></xs:attribute>
+    </xs:complexType>
+</xs:schema>

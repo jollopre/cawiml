@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm>
+    <survey>
+        ...
+    </survey>
+    <content>
+        <section id="1">
+            <label lang="en">Section one</label>
+            <multiple name="Q0">
+                <label lang="en">What colours do you like?</label>
+                <close code="red">
+                    <label lang="en">Red</label>
+                </close>
+                <close code="white">
+                    <label lang="en">White</label>
+                </close>
+                <close code="green">
+                    <label lang="en">Green</label>
+                </close>
+                <close code="yellow">
+                    <label lang="en">Yellow</label>
+                </close>
+            </multiple>
+            <open name="Q1">
+                <label lang="en">Why do you like the colours <pipe ref="pipe0"/> of <pipe ref="pipe4"/>?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+        </section>
+    </content>
+    <field>
+        ...
+    </field>
+    <routing>
+        ...
+    </routing>
+    <personalisation>
+        <piping ref="1">
+            <pipe id="pipe0">
+                <variable ref="Q0"/>
+                <operator name="SEL"/>
+            </pipe>
+            <pipe id="pipe4">
+                <variable ref="Q0"/>
+                <operator name="VALUEOF"/>
+            </pipe>
+        </piping>
+    </personalisation>
+</ssm>

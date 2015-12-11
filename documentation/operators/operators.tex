@@ -1,0 +1,101 @@
+\documentclass{article}
+\usepackage{multirow}
+
+\title{Survey State Model (SSM) Operators}
+\author{Jose Lloret \\
+\texttt{jose@pexel.co.uk} \\
+\texttt{j.m.lloret-perez@rgu.ac.uk}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Binary Operators}
+Binary operators are those which need two operands in order to solve an expression.
+\subsection{Equality and relational operators}
+
+The equality and relational operators perform a comparison and return a boolean \emph{true} or \emph{false}.
+\begin{center}
+  \begin{tabular}{| c |  c | c |}
+    \hline
+    \textbf{Operator Name} &\textbf{Operand1} & \textbf{Operand2} \\ \hline
+    \multirow{3}{*}{ EQ (Equals to)} & String & String \\
+       &	Integer / Decimal & Integer / Decimal \\
+    \hline
+    \multirow{3}{*}{ NE (Not Equals to)} & String & String\\
+       &	Integer / Decimal & Integer / Decimal \\
+    \hline
+    \multirow{1}{*}{LT (Less than)} & Integer / Decimal & Integer / Decimal \\
+     \hline
+     \multirow{1}{*}{LE (Less equals)} & Integer / Decimal & Integer / Decimal \\
+     \hline
+     \multirow{1}{*}{GT (Greater than)} & Integer / Decimal & Integer / Decimal \\
+     \hline
+     \multirow{1}{*}{GE (Greater equals)} & Integer / Decimal & Integer / Decimal \\
+     \hline
+  \end{tabular}
+\end{center}
+\subsection{Conditional operators}
+
+The conditional operators apply standard boolean algebra operations to their operands and return a boolean \emph{true} or \emph{false}.
+\begin{center}
+  \begin{tabular}{| c | c | c |}
+    \hline
+    \textbf{Operator Name} & \textbf{Operand1} & \textbf{Operand2} \\ \hline
+    OR& Boolean & Boolean \\ \hline
+    AND & Boolean & Boolean \\ \hline
+ \end{tabular}
+\end{center}
+\subsection{Arithmetical operators}
+
+The arithmetical operators apply standard mathematical operations to their operands. The result varies depending on the operands, i.e. both operands integer returns integer, both operands decimal returns decimal or any of both decimal returns decimal.
+
+\begin{center}
+  \begin{tabular}{| c | c | c | }
+    \hline
+    \textbf{Operator Name} & \textbf{Operand1} & \textbf{Operand2} \\ \hline
+    \multirow{1}{*}{ ADD (Addition)} & Integer / Decimal & Integer / Decimal\\
+    \hline
+    \multirow{1}{*}{ SUB (Subtraction)} & Integer / Decimal & Integer / Decimall\\
+    \hline
+    \multirow{1}{*}{ MUL (Multiplication)} & Integer / Decimal & Integer / Decimal\\
+    \hline
+    \multirow{1}{*}{ DIV (Division)} & Integer / Decimal & Integer / Decimal \\
+    \hline
+    \multirow{1}{*}{ MOD (Module)} & Integer & Integer \\
+    \hline
+ \end{tabular}
+\end{center}
+\subsection{List operators}
+\begin{center}
+  \begin{tabular}{| c | p{3cm} | c | c | c|}
+    \hline
+    \textbf{Operator Name} & \textbf{Description} & \textbf{Operand1} & \textbf{Operand2} & \textbf{Result} \\ \hline
+    \multirow{1}{*}{IS\_SEL} & Checks whether the string is selected in the list or not & List & String & Boolean \\ \hline
+    \multirow{1}{*}{IS\_UNSEL} & Checks whether the string is unselected in the list or not & List & String & Boolean \\ \hline
+    \multirow{1}{*}{UNION} & Creates a list with the set of elements from operand1 and operand2 & List & List & List \\ \hline
+    \multirow{1}{*}{INTERSECTION} & Creates a list containing all elements of operand1 that also belong to operand2 (or equivalently, all elements of operand2 that also belong to operand1), but no other elements & List & List & List \\ \hline
+  \end{tabular}
+\end{center}
+\newpage
+\section{Unary Operators}
+Unary operators are those which need just one operand for solving an expression.
+\begin{center}
+  \begin{tabular}{| c | p{3.5cm}| p{3cm} | p{3cm}| }
+    \hline
+    \textbf{Operator Name} & \textbf{Description} & \textbf{Operand1} & \textbf{Result} \\ \hline
+     POS & Returns the positive value of operand1 & Integer / Decimal & Integer / Decimal \\ \hline
+     NEG & Returns the negative value of operand1 & Integer / Decimal & Integer / Decimal \\ \hline
+    INC & Increments one unit the operand1 & Integer & Integer \\ \hline
+    DEC & Decrements one unit the operand1 & Integer & Integer \\ \hline
+    NOT & Negates the boolean operand1 & Boolean & Boolean \\ \hline
+    EMPTY & Checks whether the operand1 is empty or not & String / List & Boolean \\ \hline
+    SIZE & Returns the size of operand1, i.e. string size or number of items.  & String / List & Boolean \\ \hline
+    SEL  & Returns a list with the items of the list that are selected & List & List \\ \hline
+    UNSEL & Returns a list with the items of the list that are unselected & List & List \\ \hline
+    ALL & Returns all the elements of a list & List & List \\ \hline
+    VALUEOF & Returns the value of the operand1 as string & String / Integer / Decimal / List & String \\ \hline
+  \end{tabular}
+\end{center}
+\end{document}

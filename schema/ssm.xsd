@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+   targetNamespace="http://ssm.com/content"
+   xmlns:s="http://ssm.com/content"
+   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+   elementFormDefault="qualified">
+   <xs:include schemaLocation="metadata.xsd"></xs:include>
+   <xs:include schemaLocation="content/content.xsd"></xs:include>
+   <xs:include schemaLocation="routing/field.xsd"></xs:include>
+   <xs:include schemaLocation="routing/routing.xsd"></xs:include>
+   <xs:include schemaLocation="personalisation/personalisation.xsd"></xs:include>
+   <xs:element name="ssm" type="s:Ssm"></xs:element>
+   <xs:complexType name="Ssm">
+      <xs:annotation>
+         <xs:documentation>
+            Survey State Model (SSM) is an authoring XML language to represent every feature of
+            electronic questionnaires.
+         </xs:documentation>
+      </xs:annotation>
+      <xs:sequence>
+         <xs:element name="survey" type="s:Metadata">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">
+                  Defines information of the survey.    
+               </xs:documentation>
+            </xs:annotation>
+         </xs:element> 
+         <xs:element name="content" type="s:Content">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">
+                  Defines the questions as well as how they are grouped in sections.
+               </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+         <xs:element name="field" type="s:Field">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">
+                  Defines the additional variables of the survey.
+               </xs:documentation>
+            </xs:annotation>    
+         </xs:element>
+         <xs:element name="routing" type="s:Routing">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">
+                  Defines the routing through the survey using state-transiton modelling.
+               </xs:documentation>
+            </xs:annotation>     
+         </xs:element>
+         <xs:element name="personalisation" type="s:Personalisation">
+            <xs:annotation>
+               <xs:documentation xml:lang="en">
+                  Defines the features which permit adapting the content to the respondent.
+               </xs:documentation>
+            </xs:annotation>
+         </xs:element>
+      </xs:sequence>
+   </xs:complexType>
+</xs:schema>

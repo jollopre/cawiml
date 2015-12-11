@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <xs:include schemaLocation="operator.xsd"></xs:include>
+    <xs:group name="Rpn">
+        <xs:sequence>
+            <xs:group ref="s:Token" minOccurs="0" maxOccurs="unbounded"></xs:group>
+        </xs:sequence>
+    </xs:group>
+    <xs:group name="Token">
+        <xs:choice>
+            <xs:element name="constant" type="s:Constant"></xs:element>
+            <xs:element name="variable" type="s:VariableRpn"></xs:element>
+            <xs:element name="multivariable" type="s:MultiVariableRpn"></xs:element>
+            <xs:element name="operator" type="s:Operator"></xs:element>  
+        </xs:choice>
+    </xs:group>
+    <!-- CONDITION -->
+    <xs:complexType name="Condition">
+        <xs:group ref="s:Rpn"></xs:group>
+    </xs:complexType>
+    <!-- ASSIGNMENT -->
+    <xs:complexType name="Assignment">
+        <xs:choice>
+            <xs:group ref="s:Rpn"></xs:group>
+        </xs:choice>
+    </xs:complexType>
+    <!-- RPN CONSTANT OPERAND -->
+    <xs:complexType name="Constant">
+        <xs:attribute name="type" type="s:ConstantTypes" use="required"></xs:attribute>
+        <xs:attribute name="value" use="required"></xs:attribute>
+    </xs:complexType>
+    <xs:simpleType name="ConstantTypes">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="integer"></xs:enumeration>
+            <xs:enumeration value="string"></xs:enumeration>
+            <xs:enumeration value="decimal"></xs:enumeration>
+            <xs:enumeration value="boolean"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- RPN VARIABLE OPERAND -->
+    <xs:complexType name="VariableRpn">
+        <xs:attribute name="ref" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation>
+                    It references to a field or question of a section defined in content context.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+    <!-- RPN MULTIVARIABLE OPERAND -->
+    <xs:complexType name="MultiVariableRpn">
+        <xs:attribute name="ref" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation>
+                    It references to a grid question of a section defined in content context.
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="row" type="xs:string" use="required">
+            <xs:annotation>
+                <xs:documentation>
+                    It references to a row from the grid
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="column" type="xs:string">
+            <xs:annotation>
+                <xs:documentation>
+                    It references to a column from the grid
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>Piping features</name>
+        <description>Piping features applicable for parameters and dynamic responses</description>
+        <date>2014-09-15</date>
+    </survey>
+    <content>
+        <section id="S1">
+            <label lang="en">Section one</label>
+            <label lang="es">Seccion uno</label>
+            <multiple name="Q0">
+                <label lang="en">What colours do you like?</label>
+                <label lang="es">Que colores te gustan?</label>
+                <close code="red">
+                    <label lang="en">Red</label>
+                    <label lang="es">Rojo</label>
+                </close>
+                <close code="white">
+                    <label lang="en">White</label>
+                    <label lang="es">Blanco</label>
+                </close>
+                <close code="green">
+                    <label lang="en">Green</label>
+                    <label lang="es">Verde</label>
+                </close>
+                <close code="yellow">
+                    <label lang="en">Yellow</label>
+                    <label lang="es">Amarillo</label>
+                </close>
+                <open code="other">
+                    <label lang="en">Other</label>
+                    <label lang="es">Otro</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+            </multiple>
+            <open name="Q1">
+                <label lang="en">Why do you like the colours <pipe ref="pipe0"/> of <pipe ref="pipe4"/>?</label>
+                <label lang="es">Porque te gustan los colores <pipe ref="pipe0"/> of <pipe ref="pipe4"/>?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q2">
+                <label lang="en">Why do not you like the colours <pipe ref="pipe1"/>?</label>
+                <label lang="es">Porque no te gustan los colores <pipe ref="pipe1"/>?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <multiple name="Q3">
+                <label lang="en">What products/services did they offer you? (DO NOT PROMPT)</label>
+                <label lang="es">Que productos/servicios te ofrecieron? (NO RECORDAR)</label>
+                <close code="mortgage">
+                    <label lang="en">Mortgage</label>
+                    <label lang="es">Hipoteca</label>
+                </close>
+                <close code="life_insurance">
+                    <label lang="en">Life insurance</label>
+                    <label lang="es">Seguro de vida</label>
+                </close>
+                <close code="critical_illness_cover">
+                    <label lang="en">Critical illness Cover</label>
+                    <label lang="es">Cobertura para enfermedad critica</label>
+                </close>
+                <close code="income_protection">
+                    <label lang="en">Income protection</label>
+                    <label lang="es">Proteccion de salario</label>
+                </close>
+                <close code="buildings_insurance">
+                    <label lang="en">Buildings insurance</label>
+                    <label lang="es">Seguro del inmueble</label>
+                </close>
+                <close code="dont_know">
+                    <label lang="en">Don't know</label>
+                    <label lang="es">No sabe</label>
+                    <exclusive value="true"/>
+                </close>
+            </multiple>
+            <multiple name="Q4">
+                <label lang="en">During your discussions/meetings were you offered the following...?</label>
+                <label lang="es">Durante tus reuniones se te ofrecio los siguientes...?</label>
+                <pipe ref="pipe2"/>
+            </multiple>
+        </section>
+    </content>
+    <field>
+        <iterator id="p0_iterator"/>
+    </field>
+    <routing>
+        <statemodel ref="S1">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="Q0"/>
+                <transition target="s1"/>
+            </state>
+            <state id="s1">
+                <variable ref="Q1"/>
+                <variable ref="Q2"/>
+                <transition target="s2"/>
+            </state>
+            <state id="s2">
+                <variable ref="Q3"/>
+                <transition target="s3"/>
+            </state>
+            <state id="s3">
+                <variable ref="Q4"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <!--state id="p0">
+                <for>
+                    <field ref="p0_iterator"/>
+                    <in>
+                        <range>
+                            <start><constant type="integer" value="0"/></start>
+                            <end><constant type="integer" value="2"/></end>
+                            <step><constant type="integer" value="1"/></step>
+                        </range>
+                    </in>
+                    <transition target="c0"/> 
+                </for>
+                <transition target="sink0"/>
+            </state-->
+            <state id="c0">
+                <include statemodel="S1"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation>
+        <piping ref="S1">
+            <pipe id="pipe0">
+                <variable ref="Q0"/>
+                <operator name="SEL"/>
+            </pipe>
+            <pipe id="pipe1">
+                <variable ref="Q0"/>
+                <operator name="UNSEL"/>
+            </pipe>
+            <pipe id="pipe2">
+                <variable ref="Q3"/>
+                <operator name="UNSEL"/>
+            </pipe>
+            <pipe id="pipe4">
+                <variable ref="Q0"/>
+                <operator name="VALUEOF"/>
+            </pipe>
+        </piping>
+    </personalisation>
+</ssm>

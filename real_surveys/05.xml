@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>05</name>
+        <description>FAO Susannah Howard, Torex</description>
+        <date>2008-04-23</date>
+    </survey>
+    <content>
+        <section id="0">
+            <label lang="en">Default block</label>
+            <single name="INF">
+                <label lang="en">Good morning/afternoon, this is _ calling on behalf of Torex Pharmacy Solutions.
+                We are currently seeking feedback from pharmacists throughout the UK with regard to their current
+                Point of Sales management, in order to understand what are the main challenges and requirements
+                within your sector. Could you spare me 5 minutes of your time?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+            <single name="screening">
+                <label lang="en">Could I just check, are you the owner or chief pharmacist?</label>
+                <close code="1">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="2">
+                    <label lang="en">No (seek referral)</label>
+                </close>
+            </single>
+            <grid name="Q1">
+                <label lang="en">Does your Point of Sale contain details of</label>
+                <single>
+                    <rows>
+                        <close code="1">
+                            <label lang="en">Stock</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Prices</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Transactions</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Yes</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">No</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <intro name="Q2">
+                <label lang="en">Could you tell me the following about your current POS system?</label>
+            </intro>
+            <open name="Q2a">
+                <label lang="en">Brand</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q2b">
+                <label lang="en">Age of system</label>
+                <integer>
+                    <min></min>
+                    <max></max>
+                    <value></value>
+                </integer>
+            </open>
+            <open name="Q2c">
+                <label lang="en">Purchase price of the system</label>
+                <decimal>
+                    <value></value>
+                </decimal>
+            </open>
+            <intro name="Q3">
+                <label lang="en">The next question is broken down into a number of elements. It concerns
+                a particular POS system that Torex provides. The features... I'm now going to ask you to rate
+                the different features, on a scale of 1-5, where 1= Not at all useful, and 5 = Very Useful.</label>
+            </intro>
+            <single name="Q3a">
+                <label lang="en">How useful do you think pharmacists in general might be in a system that can
+                automatically order the product from the cheapest source when stock levels are low?</label>
+                <close code="1">
+                    <label lang="en">Not at all useful</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Not useful</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Neither</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Useful</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Very Useful</label>
+                </close>
+            </single>
+            <open name="Q3aa">
+                <label lang="en">Why do you say that?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q3b">
+                <label lang="en">How useful do you think pharmacists in general might be in a system that
+                automatically identifies which products are the bestsellers and can automatically reorder?</label>
+                <close code="1">
+                    <label lang="en">Not at all useful</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Not useful</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Neither</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Useful</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Very Useful</label>
+                </close>
+            </single>
+            <open name="Q3ba">
+                <label lang="en">Why do you say that?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q3c">
+                <label lang="en">How useful do you think pharmacists in general might be in a system that does
+                automatic stock takes?</label>
+                <close code="1">
+                    <label lang="en">Not at all useful</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Not useful</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Neither</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Useful</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Very Useful</label>
+                </close>
+            </single>
+            <open name="Q3ca">
+                <label lang="en">Why do you say that?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q3d">
+                <label lang="en">How useful do you think pharmacists in general might be in a Point of Sales
+                system that has customer loyalty scheme designed to help pharmacists retain valuable customers
+                and compete with the chains?</label>
+                <close code="1">
+                    <label lang="en">Not at all useful</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Not useful</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Neither</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Useful</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Very Useful</label>
+                </close>
+            </single>
+            <open name="Q3da">
+                <label lang="en">Why do you say that?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q3e">
+                <label lang="en">How useful do you think pharmacists in general would find a fast touchscreen
+                till, scanner and printer that speeds up the customer transactions?</label>
+                <close code="1">
+                    <label lang="en">Not at all useful</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Not useful</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Neither</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Useful</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Very Useful</label>
+                </close>
+            </single>
+            <open name="Q3ea">
+                <label lang="en">Why do you say that?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q3f">
+                <label lang="en">How useful do you think pharmacists in general might be Point of Sales system
+                that automatically keeps up to date RRP or C+D pricing?</label>
+                <close code="1">
+                    <label lang="en">Not at all useful</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Not useful</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Neither</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Useful</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Very Useful</label>
+                </close>
+            </single>
+            <open name="Q3fa">
+                <label lang="en">Why do you say that?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q3g">
+                <label lang="en">How useful do you think pharmacists in general would find a Point of Sales
+                system that automatically identified poor sellers or old stock?</label>
+                <close code="1">
+                    <label lang="en">Not at all useful</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Not useful</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Neither</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Useful</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Very Useful</label>
+                </close>
+            </single>
+            <open name="Q3ga">
+                <label lang="en">Why do you say that?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q3h">
+                <label lang="en">How useful do you think pharmacists in general would find a Point of Sale system
+                that can automatically collect and collate Community Pharmacy Questionnaire data, which can be
+                tailored to ask their own questions?</label>
+                <close code="1">
+                    <label lang="en">Not at all useful</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Not useful</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Neither</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Useful</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Very Useful</label>
+                </close>
+            </single>
+            <open name="Q3ha">
+                <label lang="en">Why do you say that?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <multiple name="Q4">
+                <label lang="en">What are the three main issues for you personally as far as point of sale,
+                pricing, stock control and IT management are concerned?</label>
+                <close code="a">
+                    <label lang="en">Maintenance cost</label>
+                </close>
+                <close code="b">
+                    <label lang="en">Reliability</label>
+                </close>
+                <close code="c">
+                    <label lang="en">Ease of Use</label>
+                </close>
+                <close code="d">
+                    <label lang="en">Capital cost</label>
+                </close>
+                <close code="e">
+                    <label lang="en">Support</label>
+                </close>
+                <close code="f">
+                    <label lang="en">Value for Money</label>
+                </close>
+                <close code="g">
+                    <label lang="en">Integration with current hardware</label>
+                </close>
+                <close code="h">
+                    <label lang="en">Return on Investment Timescale</label>
+                </close>
+                <close code="i">
+                    <label lang="en">One stop shop solution</label>
+                </close>
+                <close code="j">
+                    <label lang="en">Business downtime for installation and training</label>
+                </close>
+            </multiple>
+            <single name="Q5">
+                <label lang="en">That's the very last question of our feedback survey. On behalf of Torex Pharmacy
+                Solutions I would like to thank you for your participation.
+                As a matter of courtesy, if you are interested in receiving any information about this product
+                via email, we are have to oblige. Would you like some information?</label>
+                <open code="1">
+                    <label lang="en">Yes, solicit email</label>
+                    <string>
+                        <value></value>
+                    </string>
+                </open>
+                <close code="2">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+        </section>
+    </content>
+    <field></field>
+    <routing>
+        <statemodel ref="0">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="INF"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="INF"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s0screening"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s0screening">
+                <variable ref="screening"/>
+                <transition target="s1"/>
+            </state>
+            <state id="s1">
+                <variable ref="Q1"/>
+                <transition target="p1"/>
+            </state>
+            <state id="p1">
+                <if>
+                    <condition>
+                        <multivariable ref="Q1" row="1"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <multivariable ref="Q1" row="2"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                        <multivariable ref="Q1" row="3"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s2"/>
+                    </then>
+                    <else>
+                        <transition target="s3a"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s2">
+                <variable ref="Q2"/>
+                <variable ref="Q2a"/>
+                <variable ref="Q2b"/>
+                <variable ref="Q2c"/>
+                <transition target="s3a"/>
+            </state>
+            <state id="s3a">
+                <variable ref="Q3a"/>
+                <transition target="p2"/>
+            </state>
+            <state id="p2">
+                <if>
+                    <condition>
+                        <variable ref="Q3a"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="Q3a"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s3aa"/>
+                    </then>
+                    <else>
+                        <transition target="s3b"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s3aa">
+                <variable ref="Q3aa"/>
+                <transition target="s3b"/>
+            </state>
+            <state id="s3b">
+                <variable ref="Q3b"/>
+                <transition target="p3"/>
+            </state>
+            <state id="p3">
+                <if>
+                    <condition>
+                        <variable ref="Q3b"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="Q3b"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s3ba"/>
+                    </then>
+                    <else>
+                        <transition target="s3c"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s3ba">
+                <variable ref="Q3ba"/>
+                <transition target="s3c"/>
+            </state>
+            <state id="s3c">
+                <variable ref="Q3c"/>
+                <transition target="p4"/>
+            </state>
+            <state id="p4">
+                <if>
+                    <condition>
+                        <variable ref="Q3c"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="Q3c"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s3ca"/>
+                    </then>
+                    <else>
+                        <transition target="s3d"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s3ca">
+                <variable ref="Q3ca"/>
+                <transition target="s3d"/>
+            </state>
+            <state id="s3d">
+                <variable ref="Q3d"/>
+                <transition target="p5"/>
+            </state>
+            <state id="p5">
+                <if>
+                    <condition>
+                        <variable ref="Q3d"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="Q3d"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s3da"/>
+                    </then>
+                    <else>
+                        <transition target="s3e"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s3da">
+                <variable ref="Q3da"/>
+                <transition target="s3e"/>
+            </state>
+            <state id="s3e">
+                <variable ref="Q3e"/>
+                <transition target="p6"/>
+            </state>
+            <state id="p6">
+                <if>
+                    <condition>
+                        <variable ref="Q3e"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="Q3e"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s3ea"/>
+                    </then>
+                    <else>
+                        <transition target="s3f"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s3ea">
+                <variable ref="Q3ea"/>
+                <transition target="s3f"/>
+            </state>
+            <state id="s3f">
+                <variable ref="Q3f"/>
+                <transition target="p7"/>
+            </state>
+            <state id="p7">
+                <if>
+                    <condition>
+                        <variable ref="Q3f"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="Q3f"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s3fa"/>
+                    </then>
+                    <else>
+                        <transition target="s3g"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s3fa">
+                <variable ref="Q3fa"/>
+                <transition target="s3g"/>
+            </state>
+            <state id="s3g">
+                <variable ref="Q3g"/>
+                <transition target="p8"/>
+            </state>
+            <state id="p8">
+                <if>
+                    <condition>
+                        <variable ref="Q3g"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="Q3g"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s3ga"/>
+                    </then>
+                    <else>
+                        <transition target="s3h"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s3ga">
+                <variable ref="Q3ga"/>
+                <transition target="s3h"/>
+            </state>
+            <state id="s3h">
+                <variable ref="Q3h"/>
+                <transition target="p9"/>
+            </state>
+            <state id="p9">
+                <if>
+                    <condition>
+                        <variable ref="Q3h"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="Q3h"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="s3ha"/>
+                    </then>
+                    <else>
+                        <transition target="s4"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s3ha">
+                <variable ref="Q3ha"/>
+                <transition target="s4"/>
+            </state>
+            <state id="s4">
+                <variable ref="Q4"/>
+                <transition target="s5"/>
+            </state>
+            <state id="s5">
+                <variable ref="Q5"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="0"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation></personalisation>
+</ssm>

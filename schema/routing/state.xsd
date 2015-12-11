@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <xs:include schemaLocation="simple.xsd"></xs:include>
+    <xs:include schemaLocation="pseudo.xsd"></xs:include>
+    <xs:include schemaLocation="composite.xsd"></xs:include>
+    <!-- ROUTING DEFINITION FOR BLOCK RULES -->
+    <xs:complexType name="State">
+        <xs:choice>
+            <xs:group ref="s:Simple"></xs:group>
+            <xs:group ref="s:Pseudo"></xs:group>
+            <xs:group ref="s:Composite"></xs:group>
+            <xs:element name="sink" type="s:SinkState"></xs:element>
+            <xs:element name="terminate"></xs:element>
+        </xs:choice>
+        <xs:attribute name="id" use="required" type="xs:string"></xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="SourceState">
+        <xs:annotation>
+            <xs:documentation>
+                It is the first state to execute in the statemodel because it does not have any predecessor state.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attribute name="id" use="required"></xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="SinkState">
+        <xs:annotation>
+            <xs:documentation>
+                The end of the block is reached.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:complexType>
+    <xs:complexType name="Terminate">
+        <xs:annotation>
+            <xs:documentation>
+                The end of survey is reached.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:complexType>
+</xs:schema>

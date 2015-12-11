@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+    targetNamespace="http://www.surveysm.com"
+    xmlns:s="http://www.surveysm.com"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <xs:include schemaLocation="constraint.xsd"></xs:include>
+    <xs:include schemaLocation="label.xsd"></xs:include>
+    <xs:complexType name="Question" abstract="true">
+        <xs:sequence>
+            <xs:element name="label" type="s:Label" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="name" use="required" type="s:Name"></xs:attribute>
+        <xs:attribute name="refused" use="optional" type="xs:boolean">
+            <xs:annotation>
+                <xs:documentation xml:lang="en">
+                    The question offers the possibility of being refused to respond.    
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>        
+    </xs:complexType>
+</xs:schema>

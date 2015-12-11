@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="http://www.surveysm.com"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    <survey>
+        <name>13</name>
+        <description>Business Information Services Research</description>
+        <date></date>
+    </survey>
+    <content>
+        <section id="0">
+            <label lang="en">Default</label>
+            <single name="COUNTRY">
+                <label lang="en">Country</label>
+                <close code="1">
+                    <label lang="en">USA</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Brazil</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Germany</label>
+                </close>
+                <close code="4">
+                    <label lang="en">UK</label>
+                </close>
+                <close code="5">
+                    <label lang="en">UAE</label>
+                </close>
+            </single>
+            <single name="SECTOR">
+                <label lang="en">Sector</label>
+                <close code="1">
+                    <label lang="en">Production &amp; Manufacturing</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Construction</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Wholesale &amp; Retail</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Hotels &amp; catering</label>
+                </close>
+                <close code="5">
+                    <label lang="en">Finance</label>
+                </close>
+            </single>
+            <intro name="INF1">
+                <label lang="en">Many thanks for agreeing to help. Our client is a supplier of business information and
+                credit rating reports.
+                The main purpose of the interview is to determine what factors you consider important when deciding
+                from which supplier you buy these types of reports and to get your opinions about the reports
+                themselves.
+                Can I reassure you that your comments will be used to build up an overall picture of the situation
+                and they will not be linked in any way to you or your company.</label>
+            </intro>
+            <single name="Q1">
+                <label lang="en">Which of the following two statements applies to you?</label>
+                <close code="1">
+                    <label lang="en">I take the final decision as to which companies we use</label>
+                </close>
+                <close code="2">
+                    <label lang="en">I recommend which companies to use, but a colleague takes the final decision</label>
+                </close>
+            </single>
+            <grid name="Q2">
+                <label lang="en">About how many of these "business information reports would your company typically
+                order in a year from each of the companies that supply you with these reports?</label>
+                <numeric>
+                    <rows>
+                        <close code="1">
+                            <label lang="en">Coface</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Kiss (Orel Fussli Business Information)</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Graydon</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Rime</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Dunn &amp; Bradstreet</label>
+                        </close>
+                        <open code="6">
+                            <label lang="en">Other 1</label>
+                            <string>
+                                <value></value>
+                            </string>
+                        </open>
+                        <open code="7">
+                            <label lang="en">Other 2</label>
+                            <string>
+                                <value></value>
+                            </string>
+                        </open>
+                        <open code="8">
+                            <label lang="en">Other 3</label>
+                            <string>
+                                <value></value>
+                            </string>
+                        </open>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Enter number</label>
+                        </close>
+                    </columns>
+                </numeric>
+            </grid>
+            <open name="Q3">
+                <label lang="en">About how many people in your company would use each report that is bought?</label>
+                <integer>
+                    <min></min>
+                    <max></max>
+                    <value></value>
+                </integer>
+            </open>
+            <multiple name="Q4">
+                <label lang="en">In which departments including your own, do the most frequent users of these
+                reports work?</label>
+                <close code="1">
+                    <label lang="en">Accounts / finance</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Corporate Communications</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Customer Service</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Distribution</label>
+                </close>
+                <close code="5">
+                    <label lang="en">External Sales</label>
+                </close>
+                <close code="6">
+                    <label lang="en">General Administration</label>
+                </close>
+                <close code="7">
+                    <label lang="en">Human Resources</label>
+                </close>
+                <close code="8">
+                    <label lang="en">Information Technology</label>
+                </close>
+                <close code="9">
+                    <label lang="en">Internal Sales</label>
+                </close>
+                <close code="10">
+                    <label lang="en">Legal &amp; Compliance</label>
+                </close>
+                <close code="11">
+                    <label lang="en">Marketing</label>
+                </close>
+                <close code="12">
+                    <label lang="en">Purchasing / Procurement</label>
+                </close>
+                <open code="13">
+                    <label lang="en">Other 1 (write in deparment name)</label>
+                    <integer>
+                        <min></min>
+                        <max></max>
+                        <value></value>
+                    </integer>
+                </open>
+                <open code="14">
+                    <label lang="en">Other 2 (write in deparment name)</label>
+                    <integer>
+                        <min></min>
+                        <max></max>
+                        <value></value>
+                    </integer>
+                </open>
+                <open code="15">
+                    <label lang="en">Other 3 (write in deparment name)</label>
+                    <integer>
+                        <min></min>
+                        <max></max>
+                        <value></value>
+                    </integer>
+                </open>
+            </multiple>
+            <open name="Q5">
+                <label lang="en">Typically how many times would you refer to one of these reports once it has been
+                purchased?</label>
+                <integer>
+                    <min></min>
+                    <max></max>
+                    <value></value>
+                </integer>
+            </open>
+            <grid name="Q6">
+                <label lang="en">Using a scale of 1 to 5. How important are the following factors in the decision
+                as to which company to buy business information reports from?</label>
+                <single>
+                    <rows>
+                        <close code="1">
+                            <label lang="en">1</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">2</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">3</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">4</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">5</label>
+                        </close>
+                        <close code="6">
+                            <label lang="en">6</label>
+                        </close>
+                        <close code="7">
+                            <label lang="en">7</label>
+                        </close>
+                        <close code="8">
+                            <label lang="en">8</label>
+                        </close>
+                        <close code="9">
+                            <label lang="en">9</label>
+                        </close>
+                        <close code="10">
+                            <label lang="en">10</label>
+                        </close>
+                        <close code="11">
+                            <label lang="en">11</label>
+                        </close>
+                        <close code="12">
+                            <label lang="en">12</label>
+                        </close>
+                        <close code="13">
+                            <label lang="en">13</label>
+                        </close>
+                        <close code="14">
+                            <label lang="en">14</label>
+                        </close>
+                        <close code="15">
+                            <label lang="en">15</label>
+                        </close>
+                        <close code="16">
+                            <label lang="en">16</label>
+                        </close>
+                        <close code="17">
+                            <label lang="en">17</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">Not at all important</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">relatively unimportant</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">quite important</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">very important</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">essential</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <open name="Q7">
+                <label lang="en">What other factors do you consider to be very important or essential when
+                considering from which company to buy?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <grid name="Q8">
+                <label lang="en">Using a scale of 1 to 5. How satisfied are you with Dunn &amp; Bradstreet and
+                <pipe ref="pipe0"/> from whom you buy business information reports, for each of the following
+                attributes?</label>
+                <numeric>
+                    <rows>
+                        <close code="1">
+                            <label lang="en">Easy of placing orders over the internet or telephone</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Being given a precise delivery date when you place the order</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Time taken for the report to be delivered to you</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Reliable delivery service</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Ability to deliver orders at very short notice</label>
+                        </close>
+                        <close code="6">
+                            <label lang="en">Company information linked to a recognised unique reference
+                                like a DUNS number</label>
+                        </close>
+                        <close code="7">
+                            <label lang="en">Range of topics in the report such as credit ratings, financial
+                                statements, legal information</label>
+                        </close>
+                        <close code="8">
+                            <label lang="en">Depth of information provided on these topics</label>
+                        </close>
+                        <close code="9">
+                            <label lang="en">Success rate of investigations carried out by the supplier</label>
+                        </close>
+                        <close code="10">
+                            <label lang="en">How up-to-date the investigation carried out by the supplier is</label>
+                        </close>
+                        <close code="11">
+                            <label lang="en">Overall clarity of the format and layout of the report</label>
+                        </close>
+                        <close code="12">
+                            <label lang="en">Use of colours to improve the clarity of the report</label>
+                        </close>
+                        <close code="13">
+                            <label lang="en">Use of graphs, charts and pictures to improve the clarity of
+                                the report</label>
+                        </close>
+                        <close code="14">
+                            <label lang="en">Availability of the report in your language</label>
+                        </close>
+                        <close code="15">
+                            <label lang="en">Value for money</label>
+                        </close>
+                        <close code="16">
+                            <label lang="en">Cheapest price available</label>
+                        </close>
+                        <close code="17">
+                            <label lang="en">Quality of service from all members of staff you deal with</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">D&amp;B</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Coface</label>
+                            <display ref="display1"/>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Kiss (Orell)</label>
+                            <display ref="display2"/>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Graydon</label>
+                            <display ref="display3"/>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Rime</label>
+                            <display ref="display4"/>
+                        </close>
+                        <close code="6">
+                            <label lang="en">Other (spare)</label>
+                        </close>
+                    </columns>
+                </numeric>
+            </grid>
+            <grid name="Q9">
+                <label lang="en">Can you tell me how strongly you agree or disagree with the following statements
+                for business information reports provided by Dunn &amp; Bradsteet and <pipe ref="pipe0"/> using
+                the following 1 to 5 scale where
+                5 = agree very strongly
+                4 = agree somewhat
+                3 = neither agree nor disagree
+                2 = disagree somewhat
+                1 = disagree very strongly
+                ?</label>
+                <numeric>
+                    <rows>
+                        <close code="1">
+                            <label lang="en">The report is clear and easy to read</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">The report provides me with a good overview of the type of company
+                                in terms of its size, ownership and what it does</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">The report provides me with a clear summary of how healthy the
+                                company is in terms of its financial performance and its credit rating</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">The detail and content of the financial data in the report matches
+                                exactly what I need</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">The report provides me with sufficient historic data on the company's
+                                performance for my needs</label>
+                        </close>
+                        <close code="6">
+                            <label lang="en">The report uses charts and graphs which make the information in the
+                                report easier to understand</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">D&amp;B</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Coface</label>
+                            <display ref="display1"/>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Kiss (Orell)</label>
+                            <display ref="display2"/>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Graydon</label>
+                            <display ref="display3"/>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Rime</label>
+                            <display ref="display4"/>
+                        </close>
+                        <close code="6">
+                            <label lang="en">Other (spare)</label>
+                        </close>
+                    </columns>
+                </numeric>
+            </grid>
+            <open name="Q10">
+                <label lang="en">Thinking about the content and layout of the reports you buy from
+                Dunn&amp;Bradstreet, what would you most like to see improved?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <open name="Q11">
+                <label lang="en">Thinking about the content and layout of the reports you buy from
+                <pipe ref="pipe0"/>, what would you most like to see improved?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <grid name="Q12">
+                <label lang="en">How likely would you be to recommend Dunn &amp; Bradsteet and <pipe ref="pipe0"/> to
+                other people in your business, who are not in direct competition with you? Please use
+                a scale of 1 to 5 where '5' is "definitely would recommend" and '1' is "definitely
+                would not recommend".</label>
+                <numeric>
+                    <rows>
+                        <close code="1">
+                            <label lang="en">Likeliness to recommend</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">D&amp;B</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Coface</label>
+                            <display ref="display1"/>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Kiss (Orell)</label>
+                            <display ref="display2"/>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Graydon</label>
+                            <display ref="display3"/>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Rime</label>
+                            <display ref="display4"/>
+                        </close>
+                        <close code="6">
+                            <label lang="en">Other (spare)</label>
+                        </close>
+                    </columns>
+                </numeric>
+            </grid>
+            <grid name="Q13">
+                <label lang="en">If you had complete freedom of choice, that is, no contractual requirements,
+                company policy or influence, how likely would you be to purchase from Dunn &amp; Bradsteet and
+                <pipe ref="pipe0"/> the next time you orderer these types of reports? Please use a scale of 1 to 5 
+                where '5' is "definitely would repurchase" and '1' is "definitely would not repurchase".</label>
+                <numeric>
+                    <rows>
+                        <close code="1">
+                            <label lang="en">Willingness to repurchase</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="1">
+                            <label lang="en">D&amp;B</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">Coface</label>
+                            <display ref="display1"/>
+                        </close>
+                        <close code="3">
+                            <label lang="en">Kiss (Orell)</label>
+                            <display ref="display2"/>
+                        </close>
+                        <close code="4">
+                            <label lang="en">Graydon</label>
+                            <display ref="display3"/>
+                        </close>
+                        <close code="5">
+                            <label lang="en">Rime</label>
+                            <display ref="display4"/>
+                        </close>
+                        <close code="6">
+                            <label lang="en">Other (spare)</label>
+                        </close>
+                    </columns>
+                </numeric>
+            </grid>
+            <open name="Q14a">
+                <label lang="en">Finally, can you please confirm your job title?</label>
+                <string>
+                    <value></value>
+                </string>
+            </open>
+            <single name="Q14b">
+                <label lang="en">and the department in which you work?</label>
+                <close code="1">
+                    <label lang="en">Accounts / finance</label>
+                </close>
+                <close code="2">
+                    <label lang="en">Corporate Communications</label>
+                </close>
+                <close code="3">
+                    <label lang="en">Customer Service</label>
+                </close>
+                <close code="4">
+                    <label lang="en">Distribution</label>
+                </close>
+                <close code="5">
+                    <label lang="en">External Sales</label>
+                </close>
+                <close code="6">
+                    <label lang="en">General Administration</label>
+                </close>
+                <close code="7">
+                    <label lang="en">Human Resources</label>
+                </close>
+                <close code="8">
+                    <label lang="en">Information Technology</label>
+                </close>
+                <close code="9">
+                    <label lang="en">Internal Sales</label>
+                </close>
+                <close code="10">
+                    <label lang="en">Legal &amp; Compliance</label>
+                </close>
+                <close code="11">
+                    <label lang="en">Marketing</label>
+                </close>
+                <close code="12">
+                    <label lang="en">Purchasing / Procurement</label>
+                </close>
+                <open code="13">
+                    <label lang="en">Other 1 (write in deparment name)</label>
+                    <integer>
+                        <min></min>
+                        <max></max>
+                        <value></value>
+                    </integer>
+                </open>
+                <open code="14">
+                    <label lang="en">Other 2 (write in deparment name)</label>
+                    <integer>
+                        <min></min>
+                        <max></max>
+                        <value></value>
+                    </integer>
+                </open>
+                <open code="15">
+                    <label lang="en">Other 3 (write in deparment name)</label>
+                    <integer>
+                        <min></min>
+                        <max></max>
+                        <value></value>
+                    </integer>
+                </open>
+            </single>
+        </section>
+    </content>
+    <field>
+        <string id="supplier" value=""/>
+    </field>
+    <routing>
+        <statemodel ref="0">
+            <source id="s0"/>
+            <state id="s0">
+                <variable ref="COUNTRY"/>
+                <variable ref="SECTOR"/>
+                <variable ref="INF1"/>
+                <transition target="p_COUNTRY"/>
+            </state>
+            <state id="p_COUNTRY">
+                <if>
+                    <condition>
+                        <variable ref="COUNTRY"/>
+                        <constant type="string" value="1"/>
+                        <operator name="EQ"/>
+                        <variable ref="COUNTRY"/>
+                        <constant type="string" value="2"/>
+                        <operator name="EQ"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="p_cofface"/>
+                    </then>
+                    <else>
+                        <transition target="p_COUNTRY2"/>
+                    </else>
+                </if>
+            </state>
+            <state id="p_cofface">
+                <computation ref="supplier">
+                    <assignment>
+                        <constant type="string" value="Cofface"/>
+                    </assignment>
+                </computation>
+                <transition target="p_COUNTRY2"/>
+            </state>
+            <state id="p_COUNTRY2">
+                <if>
+                    <condition>
+                        <variable ref="COUNTRY"/>
+                        <constant type="string" value="3"/>
+                        <operator name="EQ"/>
+                    </condition>
+                    <then>
+                        <transition target="p_kiss"/>
+                    </then>
+                    <else>
+                        <transition target="p_COUNTRY3"/>
+                    </else>
+                </if>    
+            </state>
+            <state id="p_kiss">
+                <computation ref="supplier">
+                    <assignment>
+                        <constant type="string" value="Kiss"/>
+                    </assignment>
+                </computation>
+                <transition target="p_COUNTRY3"/>
+            </state>
+            <state id="p_COUNTRY3">
+                <if>
+                    <condition>
+                        <variable ref="COUNTRY"/>
+                        <constant type="string" value="4"/>
+                        <operator name="EQ"/>
+                    </condition>
+                    <then>
+                        <transition target="p_graydon"/>
+                    </then>
+                    <else>
+                        <transition target="p_COUNTRY4"/>
+                    </else>
+                </if>    
+            </state>
+            <state id="p_graydon">
+                <computation ref="supplier">
+                    <assignment>
+                        <constant type="string" value="Graydon"/>
+                    </assignment>
+                </computation>
+                <transition target="p_COUNTRY4"/>
+            </state>
+            <state id="p_COUNTRY4">
+                <if>
+                    <condition>
+                        <variable ref="COUNTRY"/>
+                        <constant type="string" value="5"/>
+                        <operator name="EQ"/>
+                    </condition>
+                    <then>
+                        <transition target="p_rime"/>
+                    </then>
+                    <else>
+                        <transition target="s1"/>
+                    </else>
+                </if>    
+            </state>
+            <state id="p_rime">
+                <computation ref="supplier">
+                    <assignment>
+                        <constant type="string" value="Rime"/>
+                    </assignment>
+                </computation>
+                <transition target="s1"/>
+            </state>
+            <state id="s1">
+                <variable ref="Q1"/>
+                <transition target="s2"/>
+            </state>
+            <state id="s2">
+                <variable ref="Q2"/>
+                <transition target="s3"/>
+            </state>
+            <state id="s3">
+                <variable ref="Q3"/>
+                <transition target="s4"/>
+            </state>
+            <state id="s4">
+                <variable ref="Q4"/>
+                <transition target="s5"/>
+            </state>
+            <state id="s5">
+                <variable ref="Q5"/>
+                <transition target="s6"/>
+            </state>
+            <state id="s6">
+                <variable ref="Q6"/>
+                <transition target="s7"/>
+            </state>
+            <state id="s7">
+                <variable ref="Q7"/>
+                <transition target="s8"/>
+            </state>
+            <state id="s8">
+                <variable ref="Q8"/>
+                <transition target="s9"/>
+            </state>
+            <state id="s9">
+                <variable ref="Q9"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <!-- DUNN & BRADSTREET RATED AT Q8-->
+                    </condition>
+                    <then>
+                        <transition target="s10"/>
+                    </then>
+                    <else>
+                        <transition target="p1"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s10">
+                <variable ref="Q10"/>
+                <transition target="p1"/>
+            </state>
+            <state id="p1">
+                <if>
+                    <condition>
+                        <!-- OTHER SUPPLIER RATED AT Q8 -->
+                    </condition>
+                    <then>
+                        <transition target="s11"/>
+                    </then>
+                    <else>
+                        <transition target="s12"/>
+                    </else>
+                </if>
+            </state>
+            <state id="s11">
+                <variable ref="Q11"/>
+                <transition target="s12"/>
+            </state>
+            <state id="s12">
+                <variable ref="Q12"/>
+                <transition target="s13"/>
+            </state>
+            <state id="s13">
+                <variable ref="Q13"/>
+                <transition target="s14"/>
+            </state>
+            <state id="s14">
+                <variable ref="Q14a"/>
+                <variable ref="Q14b"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="0"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation>
+        <piping ref="0">
+            <pipe id="pipe0">
+                <variable ref="supplier"/>
+                <operator name="VALUEOF"/>
+            </pipe>
+        </piping>
+        <displaying ref="0">
+            <display id="display1"><!-- USA or Brazil -->
+                <variable ref="COUNTRY"/>
+                <constant type="string" value="1"/>
+                <operator name="IS_SEL"/>
+                <variable ref="COUNTRY"/>
+                <constant type="string" value="2"/>
+                <operator name="IS_SEL"/>
+                <operator name="OR"/>
+            </display>
+            <display id="display2"><!-- Germany -->
+                <variable ref="COUNTRY"/>
+                <constant type="string" value="3"/>
+                <operator name="IS_SEL"/>
+            </display>
+            <display id="display3">
+                <variable ref="COUNTRY"/><!-- UK -->
+                <constant type="string" value="4"/>
+                <operator name="IS_SEL"/>
+            </display>
+            <display id="display4">
+                <variable ref="COUNTRY"/><!-- UAE -->
+                <constant type="string" value="5"/>
+                <operator name="IS_SEL"/>
+            </display>
+        </displaying>
+    </personalisation>
+</ssm>
