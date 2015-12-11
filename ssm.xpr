@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="17.1">
+    <meta>
+        <filters directoryPatterns="" filePatterns="" positiveFilePatterns="" showHiddenFiles="false"/>
+        <options/>
+    </meta>
+    <projectTree name="ssm.xpr">
+        <folder path="real_surveys/"/>
+        <folder path="schema/"/>
+        <folder path="testing_surveys/"/>
+        <file name="README.md"/>
+    </projectTree>
+</project>

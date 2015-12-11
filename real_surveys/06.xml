@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ssm xmlns="http://www.surveysm.com"
+<ssm xmlns="https://github.com/jollopre/ssm"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.surveysm.com ../ssm.xsd">
+    xsi:schemaLocation="https://github.com/jollopre/ssm ../schema/ssm.xsd">
     <survey>
         <name>Training Survey</name>
         <description>Survey to evaluate our training sessions</description>

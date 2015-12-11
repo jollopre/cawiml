@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2" xml:lang="en">
     <title>Schematron rules for Survey State Model (SSM)</title>
-    <ns uri="http://www.surveysm.com" prefix="ssm"></ns>
+    <ns uri="https://github.com/jollopre/ssm" prefix="ssm"></ns>
         <!-- 
         *
         *

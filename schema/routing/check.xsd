@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema 
-    targetNamespace="http://www.surveysm.com"
-    xmlns:s="http://www.surveysm.com"
+    targetNamespace="https://github.com/jollopre/ssm"
+    xmlns:s="https://github.com/jollopre/ssm"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified">
     <xs:include schemaLocation="rpn.xsd"></xs:include>
