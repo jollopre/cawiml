@@ -12,7 +12,7 @@
             <label lang="en">Default block</label>
             <intro name="INF">
                 <label lang="en">Good morning/afternoon, my name is [NAME] and I'm calling on behalf of 
-                Vegetarian for Life, a charity that supports older people who are vegetarian or vegan. Can
+                VFL, a charity that supports older people who are vegetarian or vegan. Can
                 you spare a few minutes of your time to answer some quick questions? [If required] We are calling
                 to get some quick feedback, this isn't a fundraising call.</label>
             </intro>
@@ -80,7 +80,7 @@
                 </close>
             </single>
             <single name="Q3">
-                <label lang="en">Before today, were you aware of the charity Vegetarian  for Life?</label>
+                <label lang="en">Before today, were you aware of the charity VFL?</label>
                 <close code="1">
                     <label lang="en">Yes</label>
                 </close>
@@ -89,7 +89,7 @@
                 </close>
             </single>
             <single name="Q3a">
-                <label lang="en">Have you ever visited the Vegetarian for Life website?</label>
+                <label lang="en">Have you ever visited the VFL?</label>
                 <close code="1">
                     <label lang="en">Yes</label>
                 </close>
@@ -117,7 +117,7 @@
                 </close>
             </single>
             <single name="Q4">
-                <label lang="en">Do you remember seeing, in 2008, the Vegetarian for Life guide
+                <label lang="en">Do you remember seeing, in 2008, the VFL guide
                 'Catering for older vegetarians and vegans'?</label>
                 <close code="1">
                     <label lang="en">Yes</label>
@@ -139,7 +139,7 @@
                 </close>
             </single>
             <single name="Q5">
-                <label lang="en">Vegetarian for Life are publishing, later this year, a positive-living handbook
+                <label lang="en">VFL are publishing, later this year, a positive-living handbook
                 for older vegetarians and vegans called Vegetarian Living. Would like copies sent to you for
                 distribution to your vegetarian/vegan residents?</label>
                 <close code="1">
