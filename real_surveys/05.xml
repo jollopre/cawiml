@@ -4,14 +4,14 @@
     xsi:schemaLocation="https://github.com/jollopre/ssm ../schema/ssm.xsd">
     <survey>
         <name>05</name>
-        <description>FAO Susannah Howard, Torex</description>
+        <description></description>
         <date>2008-04-23</date>
     </survey>
     <content>
         <section id="0">
             <label lang="en">Default block</label>
             <single name="INF">
-                <label lang="en">Good morning/afternoon, this is _ calling on behalf of Torex Pharmacy Solutions.
+                <label lang="en">Good morning/afternoon, this is _ calling on behalf of X .
                 We are currently seeking feedback from pharmacists throughout the UK with regard to their current
                 Point of Sales management, in order to understand what are the main challenges and requirements
                 within your sector. Could you spare me 5 minutes of your time?</label>
@@ -80,7 +80,7 @@
             </open>
             <intro name="Q3">
                 <label lang="en">The next question is broken down into a number of elements. It concerns
-                a particular POS system that Torex provides. The features... I'm now going to ask you to rate
+                a particular POS system that X provides. The features... I'm now going to ask you to rate
                 the different features, on a scale of 1-5, where 1= Not at all useful, and 5 = Very Useful.</label>
             </intro>
             <single name="Q3a">
@@ -320,7 +320,7 @@
                 </close>
             </multiple>
             <single name="Q5">
-                <label lang="en">That's the very last question of our feedback survey. On behalf of Torex Pharmacy
+                <label lang="en">That's the very last question of our feedback survey. On behalf of X Pharmacy
                 Solutions I would like to thank you for your participation.
                 As a matter of courtesy, if you are interested in receiving any information about this product
                 via email, we are have to oblige. Would you like some information?</label>

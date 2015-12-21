@@ -4,7 +4,7 @@
     xsi:schemaLocation="https://github.com/jollopre/ssm ../schema/ssm.xsd">
     <survey>
         <name>04</name>
-        <description>NHBC Road and Sewer Bond Research CATI Questionnaire</description>
+        <description>X Road and Sewer Bond Research CATI Questionnaire</description>
         <date>2008-12-01</date>
     </survey>
     <content>
@@ -12,7 +12,7 @@
             <label lang="en">Introduction</label>
             <intro name="INTRODUCTION">
                 <label lang="en">Good a.m./p.m. We are an independent research company working on behalf of
-                the NHBC. The NHBC currently provide bonds for Road and Sewers for certain builders and are
+                the X. The X currently provide bonds for Road and Sewers for certain builders and are
                 considering introducing a road and sewer bond service to help all builders. If you can
                 spare 5 minutes we just require a bit of feedback to ensure the propositions being considered
                 will be appropiate for a company such as yours.</label>
@@ -237,11 +237,11 @@
             </single>
         </section>
         <section id="5">
-            <label lang="en">Provision of road and sewer bonds from the NHBC</label>
+            <label lang="en">Provision of road and sewer bonds from the X</label>
             <single name="Q11">
-                <label lang="en">The NHBC are considering providing road and sewer bonds to enable developers to
+                <label lang="en">The X are considering providing road and sewer bonds to enable developers to
                 have another alternative to the banks. If this facility is provided for the same premium as
-                your current bond source would you consider road and sewer bonds from the NHBC? Please answer 
+                your current bond source would you consider road and sewer bonds from the X? Please answer 
                 on a 7 point scale where 1 is not at all likely and 7 is extremely likely.</label>
                 <close code="1">
                     <label lang="en">Not at all likely</label>
@@ -266,7 +266,7 @@
                 </close>
             </single>
             <single name="Q12">
-                <label lang="en">Finally, what annual premium would you expect to pay for an NHBC road and sewer
+                <label lang="en">Finally, what annual premium would you expect to pay for an X road and sewer
                 bond?</label>
                 <open code="1">
                     <label lang="en">%</label>

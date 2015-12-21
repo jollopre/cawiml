@@ -220,13 +220,13 @@
                     <columns>
                         <!-- responses selected in Q3 and Q3a is represented in pipe2 but Pipe for columns not supported yet-->
                         <close code="1">
-                            <label lang="en">Herbalife</label>
+                            <label lang="en">X</label>
                         </close>
                     </columns>
                 </numeric>
             </grid>
             <single name="Q10">
-                <label lang="en">What is the first thing that comes to mind when you think of Herbalife?</label>
+                <label lang="en">What is the first thing that comes to mind when you think of X?</label>
                 <open code="1">
                     <label lang="en">type here:</label>
                     <string>
@@ -234,11 +234,11 @@
                     </string>
                 </open>
                 <close code="2">
-                    <label lang="en">I have never heard of Herbalife</label>
+                    <label lang="en">I have never heard of X</label>
                 </close>
             </single>
             <single name="Q11">
-                <label lang="en">Are you aware of Herbalife Family Foundation?</label>
+                <label lang="en">Are you aware of X Family Foundation?</label>
                 <close code="1">
                     <label lang="en">Yes</label>
                 </close>
@@ -247,13 +247,13 @@
                 </close>
             </single>
             <open name="Q11a">
-                <label lang="en">What do you know and think about the Herbalife Family Foundation?</label>
+                <label lang="en">What do you know and think about the X Family Foundation?</label>
                 <string>
                     <value></value>
                 </string>
             </open>
             <single name="Q12">
-                <label lang="en">Are you aware of Herbalife sport sponsorship projects?</label>
+                <label lang="en">Are you aware of X sport sponsorship projects?</label>
                 <close code="1">
                     <label lang="en">Yes</label>
                 </close>
@@ -262,7 +262,7 @@
                 </close>
             </single>
             <open name="Q12a">
-                <label lang="en">What sports do Herbalife sponsor?</label>
+                <label lang="en">What sports do X sponsor?</label>
                 <string>
                     <value></value>
                 </string>
@@ -272,24 +272,24 @@
                 <single>
                     <rows>
                         <close code="a">
-                            <label lang="en">Herbalife has strong leaders.</label>
+                            <label lang="en">X has strong leaders.</label>
                         </close>
                         <close code="b">
-                            <label lang="en">Herbalife is a well-managed company.</label>
+                            <label lang="en">X is a well-managed company.</label>
                         </close>
                         <close code="c">
-                            <label lang="en">Herbalife makes a positive social and economic impact
+                            <label lang="en">X makes a positive social and economic impact
                                 in the communities and countries in which it operates</label>
                         </close>
                         <close code="d">
-                            <label lang="en">Herbalife is committed to bringing good nutrition to
+                            <label lang="en">X is committed to bringing good nutrition to
                                 underpriviliged children</label>
                         </close>
                         <close code="e">
-                            <label lang="en">Herbalife improves the life of orphans around the world.</label>
+                            <label lang="en">X improves the life of orphans around the world.</label>
                         </close>
                         <close code="f">
-                            <label lang="en">Herbalife is responsive to the concerns of the communities in which
+                            <label lang="en">X is responsive to the concerns of the communities in which
                                 they operate.</label>
                         </close>
                     </rows>
@@ -317,19 +317,19 @@
                 <single>
                     <rows>
                         <close code="a">
-                            <label lang="en">Herbalife's products are healthy.</label>
+                            <label lang="en">X's products are healthy.</label>
                         </close>
                         <close code="b">
-                            <label lang="en">Herbalife's products are nutritious.</label>
+                            <label lang="en">X's products are nutritious.</label>
                         </close>
                         <close code="c">
-                            <label lang="en">Herbalife's products work.</label>
+                            <label lang="en">X's products work.</label>
                         </close>
                         <close code="d">
-                            <label lang="en">Herbalife's products are backed by scientific research.</label>
+                            <label lang="en">X's products are backed by scientific research.</label>
                         </close>
                         <close code="e">
-                            <label lang="en">Herbalife's products are endorsed by doctors.</label>
+                            <label lang="en">X's products are endorsed by doctors.</label>
                         </close>
                     </rows>
                     <columns>
@@ -352,7 +352,7 @@
                 </single>
             </grid>
             <single name="Q15">
-                <label lang="en">Overall, how favourable is your general impression of Herbalife?</label>
+                <label lang="en">Overall, how favourable is your general impression of X?</label>
                 <close code="1">
                     <label lang="en">Very unfavourable</label>
                 </close>
@@ -370,7 +370,7 @@
                 </close>
             </single>
             <open name="Q16">
-                <label lang="en">Can you please describe your impression of Herbalife in more detail?</label>
+                <label lang="en">Can you please describe your impression of X in more detail?</label>
                 <string>
                     <value></value>
                 </string>
