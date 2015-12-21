@@ -94,8 +94,7 @@
                 </open>
             </multiple>
             <single name="Q3">
-                <label lang="en">In your opinion, who is the leading food supplements provider? Which
-                other food supplement providers would you describe as "leading"</label>
+                <label lang="en">In your opinion, who is the leading food supplements provider?</label>
                 <pipe ref="pipe0"/>
             </single>
             <multiple name="Q3a">
@@ -219,6 +218,7 @@
                         </close>
                     </rows>
                     <columns>
+                        <!-- responses selected in Q3 and Q3a is represented in pipe2 but Pipe for columns not supported yet-->
                         <close code="1">
                             <label lang="en">Herbalife</label>
                         </close>
