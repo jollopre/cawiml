@@ -782,11 +782,8 @@
                 <operator name="UNSEL"/>
             </pipe>
             <pipe id="pipe1">
-                <variable ref="Q4a"/>
-                <operator name="SEL"/>
                 <variable ref="Q4b"/>
-                <operator name="SEL"/>
-                <operator name="UNION"/>
+                <operator name="UNSEL"/>
             </pipe>
         </piping>
         <piping ref="1">

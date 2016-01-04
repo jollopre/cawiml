@@ -4,7 +4,7 @@
     xsi:schemaLocation="https://github.com/jollopre/ssm ../schema/ssm.xsd">
     <survey>
         <name>10</name>
-        <description>Nominet SMB Awareness</description>
+        <description>X SMB Awareness</description>
         <date>2008-01-01</date>
     </survey>
     <content>
@@ -84,7 +84,7 @@
             </single>
         </section>
         <section id="2">
-            <label lang="en">Nominet Awareness Questions</label>
+            <label lang="en">X Awareness Questions</label>
             <multiple name="Q4">
                 <label lang="en">What does the term 'domain name' mean to you?</label>
                 <close code="1">
@@ -121,7 +121,7 @@
                 <label lang="en">If you think of organisations that are involved in the domain name indistry -
                 who comes to mind?</label>
                 <close code="1">
-                    <label lang="en">Nominet</label>
+                    <label lang="en">X</label>
                 </close>
                 <open code="2">
                     <label lang="en">Other:</label>
@@ -149,7 +149,7 @@
                 </open>
             </multiple>
             <single name="Q6">
-                <label lang="en">Have you heard of Nominet?</label>
+                <label lang="en">Have you heard of X?</label>
                 <close code="1">
                     <label lang="en">Yes</label>
                 </close>
@@ -161,7 +161,7 @@
                 </close>
             </single>
             <multiple name="Q7">
-                <label lang="en">How / where dod you hear about Nominet?</label>
+                <label lang="en">How / where did you hear about X?</label>
                 <close code="1">
                     <label lang="en">Word of mouth</label>
                 </close>
@@ -186,10 +186,10 @@
             </multiple>
         </section>
         <section id="3">
-            <label lang="en">Nominet Perception Questions</label>
+            <label lang="en">X Perception Questions</label>
             <grid name="Q8">
                 <label lang="en">Please specify how much you agree with the following statements describing
-                what you believe Nominet does? Use a scale of 1 to 5 where 1 means you do not agree at all
+                what you believe X does? Use a scale of 1 to 5 where 1 means you do not agree at all
                 and 5 means you strongly agree.</label>
                 <single>
                     <rows>
@@ -245,7 +245,7 @@
             </grid>
             <grid name="Q9">
                 <label lang="en">Please specify how much you agree with the following words used to describe
-                Nominet? Use the same 1 to 5 scale where 1 means you do not agree at all and 5 means you
+                X? Use the same 1 to 5 scale where 1 means you do not agree at all and 5 means you
                 strongly agree</label>
                 <single>
                     <rows>
@@ -285,7 +285,7 @@
                 </single>
             </grid>
             <single name="Q10">
-                <label lang="en">Would you recommend Nominet to a friend or colleague?</label>
+                <label lang="en">Would you recommend X to a friend or colleague?</label>
                 <close code="1">
                     <label lang="en">Yes</label>
                 </close>
@@ -301,18 +301,28 @@
             <label lang="en">Domain Question</label>
             <single name="Q11">
                 <label lang="en">How many Domain names does your business have?</label>
-                <close code="1">
-                    <label lang="en">1 or more</label>
-                </close>
+                <open code="1">
+                    <label lang="en">Enter number:</label>
+                    <integer>
+                        <min>1</min>
+                        <max></max>
+                        <value></value>
+                    </integer>
+                </open>
                 <close code="2">
                     <label lang="en">Unsure/Don't know</label>
                 </close>
             </single>
             <single name="Q12">
                 <label lang="en">How many of these are .uk?</label>
-                <close code="1">
-                    <label lang="en">1 or more</label>
-                </close>
+                <open code="1">
+                    <label lang="en">Enter number:</label>
+                    <integer>
+                        <min>1</min>
+                        <max></max>
+                        <value></value>
+                    </integer>
+                </open>
                 <close code="2">
                     <label lang="en">Unsure/Don't know</label>
                 </close>
@@ -436,6 +446,7 @@
                         <variable ref="Q5"/>
                         <constant type="string" value="1"/>
                         <operator name="IS_SEL"/>
+                        <operator name="NOT"/>
                     </condition>
                     <then>
                         <transition target="s6"/>

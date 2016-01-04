@@ -4,14 +4,14 @@
     xsi:schemaLocation="https://github.com/jollopre/ssm ../schema/ssm.xsd">
     <survey>
         <name>11</name>
-        <description>Canadean Quarterly beverage packaging pricing monitor, 2012</description>
+        <description>X Quarterly beverage packaging pricing monitor, 2012</description>
         <date>2012-01-01</date>
     </survey>
     <content>
         <section id="0">
             <label lang="en">Screening block</label>
             <intro name="S0">
-                <label lang="en">Good morning/afternoon, my name is _. I am calling from Canadean, an independent
+                <label lang="en">Good morning/afternoon, my name is _. I am calling from X, an independent
                 market research company based in the UK. This is not a sales call.</label>
             </intro>
             <single name="S3">
@@ -269,7 +269,7 @@
                 </string>
             </open>
             <intro name="INF">
-                <label lang="en">If respondent requires further information about this survey or Canadean's packaging
+                <label lang="en">If respondent requires further information about this survey or X's packaging
                 services in general, please ask them to contact.</label>
             </intro>
         </section>
@@ -325,7 +325,8 @@
                 </decimal>
             </open>
             <open name="Q9">
-                <label lang="en">Why do you say that?</label>
+                <label lang="en">Why do you say that? PROBE THE REASONING BEHIND THEIR PRICE EXPECTATIONS AND ANY 
+                DIFFERENCES IN EXPECTATIONS</label>
                 <string>
                     <value></value>
                 </string>
