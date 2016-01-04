@@ -82,7 +82,7 @@
                             <label lang="en">Rime</label>
                         </close>
                         <close code="5">
-                            <label lang="en">Dunn &amp; Bradstreet</label>
+                            <label lang="en">X</label>
                         </close>
                         <open code="6">
                             <label lang="en">Other 1</label>
@@ -250,7 +250,7 @@
                     </rows>
                     <columns>
                         <close code="1">
-                            <label lang="en">Not at all important</label>
+                            <label lang="en">not at all important</label>
                         </close>
                         <close code="2">
                             <label lang="en">relatively unimportant</label>
@@ -275,7 +275,7 @@
                 </string>
             </open>
             <grid name="Q8">
-                <label lang="en">Using a scale of 1 to 5. How satisfied are you with Dunn &amp; Bradstreet and
+                <label lang="en">Using a scale of 1 to 5. How satisfied are you with X and
                 <pipe ref="pipe0"/> from whom you buy business information reports, for each of the following
                 attributes?</label>
                 <numeric>

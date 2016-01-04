@@ -4,7 +4,7 @@
     xsi:schemaLocation="https://github.com/jollopre/ssm ../schema/ssm.xsd">
     <survey>
         <name>15</name>
-        <description>Lebara Awareness Survey - Pre Survey</description>
+        <description>X Awareness Survey - Pre Survey</description>
         <date></date>
     </survey>
     <content>
@@ -118,7 +118,7 @@
                     <label lang="en">IDT Mobile</label>
                 </close>
                 <close code="2">
-                    <label lang="en">Lebara</label>
+                    <label lang="en">X</label>
                 </close>
                 <close code="3">
                     <label lang="en">Mobile World</label>
@@ -171,7 +171,7 @@
                 <pipe ref="pipe2"/>
             </multiple>
             <multiple name="Q5" refused="true">
-                <label lang="en">What products or services come to mind when thinking of Lebara?</label>
+                <label lang="en">What products or services come to mind when thinking of X?</label>
                 <limit>
                     <min>2</min>
                     <max></max>
@@ -197,14 +197,14 @@
                 </close>
             </multiple>
             <multiple name="Q6">
-                <label lang="en">Which, if any of the following mobile services offered by Lebara are you aware of?</label>
+                <label lang="en">Which, if any of the following mobile services offered by X are you aware of?</label>
                 <randomising>
                     <all/>
                 </randomising>
                 <pipe ref="pipe3"/>
             </multiple>
             <grid name="Q7">
-                <label lang="en">Thinking about the mobile network provider Lebara, how far do you agree with the
+                <label lang="en">Thinking about the mobile network provider X, how far do you agree with the
                 following statements? Please use a scale of 1 to 5 where 1 means you completely disagree, 3 means
                 you neither agree nor disagree and 5 means you strongly agree</label>
                 <single>
@@ -248,7 +248,7 @@
                 </single>
             </grid>
             <single name="Q8">
-                <label lang="en">Which of the following apply to how you view Lebara as a mobile phone network
+                <label lang="en">Which of the following apply to how you view X as a mobile phone network
                 provider?</label>
                 <rotating>
                     <all/>
@@ -263,17 +263,17 @@
                     <label lang="en">It is not a preferred network operator but one I may consider in the future</label>
                 </close>
                 <close code="4">
-                    <label lang="en">I have heard of Lebara but do not know much about them</label>
+                    <label lang="en">I have heard of X but do not know much about them</label>
                 </close>
                 <close code="5">
-                    <label lang="en">I have heard of Lebara but would never consider them</label>
+                    <label lang="en">I have heard of X but would never consider them</label>
                 </close>
                 <close code="6">
-                    <label lang="en">I have never heard of Lebara</label>
+                    <label lang="en">I have never heard of X</label>
                 </close>
             </single>
             <open name="Q9">
-                <label lang="en">Now thinking specifically about the company Lebara, how did you first hear of
+                <label lang="en">Now thinking specifically about the company X, how did you first hear of
                 the mobile phone network provider?</label>
                 <string>
                     <value></value>
@@ -286,7 +286,7 @@
                     <label lang="en">IDT Mobile</label>
                 </close>
                 <close code="2">
-                    <label lang="en">Lebara</label>
+                    <label lang="en">X</label>
                 </close>
                 <close code="3">
                     <label lang="en">Mobile World</label>
@@ -320,7 +320,7 @@
                 </open>
             </multiple>
             <single name="Q11">
-                <label lang="en">Do you recall any advertising or other promotions from Lebara?</label>
+                <label lang="en">Do you recall any advertising or other promotions from X?</label>
                 <close code="1">
                     <label lang="en">Yes</label>
                 </close>
@@ -332,7 +332,7 @@
                 </close>
             </single>
             <multiple name="Q12">
-                <label lang="en">Where/what was the source of advertising or other promotions from Lebara?</label>
+                <label lang="en">Where/what was the source of advertising or other promotions from X?</label>
                 <close code="1">
                     <label lang="en">Internet</label>
                 </close>
@@ -362,7 +362,7 @@
                 </close>
             </multiple>
             <multiple name="Q13">
-                <label lang="en">Which, (if any) of the following promotions for Lebara do you recall?</label>
+                <label lang="en">Which, (if any) of the following promotions for X do you recall?</label>
                 <pipe ref="pipe4"/>
             </multiple>
             <single name="Q14">
@@ -657,6 +657,21 @@
             <state id="s11">
                 <variable ref="Q11"/>
                 <transition target="s12"/>
+            </state>
+            <state id="p11">
+                <if>
+                    <condition>
+                        <variable ref="Q11"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="s12"/>
+                    </then>
+                    <else>
+                        <transition target="s14"/>
+                    </else>
+                </if>
             </state>
             <state id="s12">
                 <variable ref="Q12"/>

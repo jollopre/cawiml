@@ -4,7 +4,7 @@
     xsi:schemaLocation="https://github.com/jollopre/ssm ../schema/ssm.xsd">
     <survey>
         <name>12</name>
-        <description>LoudHouse</description>
+        <description></description>
         <date></date>
     </survey>
     <content>
@@ -555,7 +555,7 @@
                         <operator name="IS_SEL"/>            
                         <operator name="OR"/>
                         <variable ref="Q11"/>
-                        <constant type="string" value="3"/>
+                        <constant type="string" value="6"/>
                         <operator name="IS_SEL"/>
                         <operator name="OR"/>
                     </condition>
@@ -579,30 +579,30 @@
                 <if>
                     <condition>
                         <multivariable ref="Q13" row="1"/>
-                        <constant type="string" value="2"/>
+                        <constant type="string" value="1"/>
                         <operator name="IS_SEL"/>
                         <multivariable ref="Q13" row="2"/>
-                        <constant type="string" value="2"/>
+                        <constant type="string" value="1"/>
                         <operator name="IS_SEL"/>
                         <operator name="OR"/>
                         <multivariable ref="Q13" row="3"/>
-                        <constant type="string" value="2"/>
+                        <constant type="string" value="1"/>
                         <operator name="IS_SEL"/>
                         <multivariable ref="Q13" row="4"/>
-                        <constant type="string" value="2"/>
+                        <constant type="string" value="1"/>
                         <operator name="IS_SEL"/>
                         <operator name="OR"/>
                         <operator name="OR"/>
                         <multivariable ref="Q13" row="5"/>
-                        <constant type="string" value="2"/>
+                        <constant type="string" value="1"/>
                         <operator name="IS_SEL"/>
                         <operator name="OR"/>
                     </condition>
                     <then>
-                        <transition target="s15"/>
+                        <transition target="s14"/>
                     </then>
                     <else>
-                        <transition target="s14"/>
+                        <transition target="s15"/>
                     </else>
                 </if>
             </state>

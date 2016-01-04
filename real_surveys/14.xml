@@ -35,7 +35,7 @@
             <multiple name="S2">
                 <label lang="en">And what type of establishment is this?</label>
                 <close code="1">
-                    <label lang="en">Hotel (50+ beds(</label>
+                    <label lang="en">Hotel (50+ beds)</label>
                 </close>
                 <close code="2">
                     <label lang="en">Full service restaurant - traditional / European</label>
@@ -388,7 +388,7 @@
                 </open>
             </multiple>
             <open name="Q14">
-                <label lang="en">What the names are of the companies from whom you buy most of your tea?</label>
+                <label lang="en">What are the names of the companies from whom you buy most of your tea?</label>
                 <string>
                     <value></value>
                 </string>
@@ -555,7 +555,7 @@
                 </close>
             </single>
             <open name="Q23a" refused="true">
-                <label lang="en">If you include self-service, if applicable how many covers would be served at this
+                <label lang="en">If you include self-service, if applicable, how many covers would be served at this
                 establishment in a typical week?</label>
                 <integer>
                     <min></min>
@@ -631,6 +631,21 @@
                 <variable ref="S2"/>
                 <transition target="ss3"/>
             </state>
+            <state id="p6">
+                <if>
+                    <condition>
+                        <multivariable ref="S1" row="1"/>
+                        <constant type="string" value="1"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="ss3"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
             <state id="ss3">
                 <variable ref="S3"/>
                 <transition target="ss4"/>
@@ -644,8 +659,12 @@
                 <if>
                     <condition>
                         <variable ref="S4"/>
+                        <constant type="string" value="2"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="S4"/>
                         <constant type="string" value="3"/>
                         <operator name="IS_SEL"/>
+                        <operator name="OR"/>
                     </condition>
                     <then>
                         <transition target="sink0"/>
@@ -678,13 +697,14 @@
             <state id="p1">
                 <if>
                     <condition>
+                        <constant type="boolean" value="false"/>
                         <!-- Q5 IS REFUSED -->
                     </condition>
                     <then>
                         <transition target="s6s7"/>
                     </then>
                     <else>
-                        <transition target="s10"/>
+                        <transition target="s8"/>
                     </else>
                 </if>
             </state>
@@ -700,6 +720,7 @@
             <state id="p2">
                 <if>
                     <condition>
+                        <constant type="boolean" value="false"/>
                         <!-- Q8 is REFUSED -->
                     </condition>
                     <then>
