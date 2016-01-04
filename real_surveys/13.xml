@@ -724,37 +724,11 @@
             </state>
             <state id="s9">
                 <variable ref="Q9"/>
-                <transition target="p0"/>
-            </state>
-            <state id="p0">
-                <if>
-                    <condition>
-                        <!-- DUNN & BRADSTREET RATED AT Q8-->
-                    </condition>
-                    <then>
-                        <transition target="s10"/>
-                    </then>
-                    <else>
-                        <transition target="p1"/>
-                    </else>
-                </if>
+                <transition target="s10"/>
             </state>
             <state id="s10">
                 <variable ref="Q10"/>
-                <transition target="p1"/>
-            </state>
-            <state id="p1">
-                <if>
-                    <condition>
-                        <!-- OTHER SUPPLIER RATED AT Q8 -->
-                    </condition>
-                    <then>
-                        <transition target="s11"/>
-                    </then>
-                    <else>
-                        <transition target="s12"/>
-                    </else>
-                </if>
+                <transition target="s11"/>
             </state>
             <state id="s11">
                 <variable ref="Q11"/>

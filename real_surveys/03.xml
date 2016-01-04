@@ -15,7 +15,7 @@
                 of nutricional supplement companies and direct selling companies.
                 As a thank you for participating, we will be pleased to make a donation of €50 to the charity
                 of your choice.
-                The survey is conducted by an independent consultancy ReputationInc. Your answers will be strictly
+                The survey is conducted by an independent consultancy X. Your answers will be strictly
                 confidential.
                 Thanks you very much for your time</label>
             </intro>
@@ -95,11 +95,11 @@
             </multiple>
             <single name="Q3">
                 <label lang="en">In your opinion, who is the leading food supplements provider?</label>
-                <pipe ref="pipe0"/>
+                <pipe ref="pipe0"/><!-- SELECTED AT Q2 -->
             </single>
             <multiple name="Q3a">
                 <label lang="en">Which other food supplement providers would you describe as "leading"?</label>
-                <pipe ref="pipe1"/>
+                <pipe ref="pipe1"/><!-- UNSELECTED AT Q3 -->
             </multiple>
             <open name="Q4">
                 <label lang="en">Why do you think this company is the leading provider of food supplements?</label>
@@ -195,11 +195,11 @@
                     </columns>
                 </single>
             </grid>
-            <grid name="Q9" refused="true">
+            <grid name="Q9">
                 <label lang="en">How would you rate the performance of the following nutritional supplements
-                providers in the following areas? (Scale of 1-5, where 1=very poor performance and 5=very good
+                providers in the following areas for X? (Scale of 1-5, where 1=very poor performance and 5=very good
                 performance+Pass)</label>
-                <numeric>
+                <single>
                     <rows>
                         <close code="1">
                             <label lang="en">They offer good-quality products.</label>
@@ -218,12 +218,23 @@
                         </close>
                     </rows>
                     <columns>
-                        <!-- responses selected in Q3 and Q3a is represented in pipe2 but Pipe for columns not supported yet-->
                         <close code="1">
-                            <label lang="en">X</label>
+                            <label lang="en">very poor performance</label>
+                        </close>
+                        <close code="2">
+                            <label lang="en">poor performance</label>
+                        </close>
+                        <close code="3">
+                            <label lang="en">neither</label>
+                        </close>
+                        <close code="4">
+                            <label lang="en">good performance</label>
+                        </close>
+                        <close code="5">
+                            <label lang="en">very good performance</label>
                         </close>
                     </columns>
-                </numeric>
+                </single>
             </grid>
             <single name="Q10">
                 <label lang="en">What is the first thing that comes to mind when you think of X?</label>
@@ -530,13 +541,6 @@
             <pipe id="pipe1">
                 <variable ref="Q3"/>
                 <operator name="UNSEL"/>
-            </pipe>
-            <pipe id="pipe2">
-                <variable ref="Q3"/>
-                <operator name="SEL"/>
-                <variable ref="Q3a"/>
-                <operator name="SEL"/>
-                <operator name="UNION"/>
             </pipe>
         </piping>
     </personalisation>
