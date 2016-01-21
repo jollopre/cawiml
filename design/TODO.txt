@@ -1,8 +1,0 @@
-ssm.routing:
--StateModel references to Section
--Check references to Label
--Computation references to Field
--For references to Field
--For refenreces to Random/Rotation
-
-ssm.personalisation
