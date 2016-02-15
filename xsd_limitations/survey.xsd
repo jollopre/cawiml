@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="survey">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="section" type="SectionType" minOccurs="1" maxOccurs="unbounded"></xs:element>
+                <xs:element name="routing" type="RoutingType" minOccurs="1" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:key name="sectionKey">
+            <xs:selector xpath="section"></xs:selector>
+            <xs:field xpath="@id"></xs:field>
+        </xs:key>
+        <xs:key name="questionKey">
+            <xs:selector xpath="section/intro | section/single | section/multiple | section/open"></xs:selector>
+            <xs:field xpath="@id"></xs:field>
+        </xs:key>
+        <xs:keyref name="sectionKeyRef" refer="sectionKey">
+            <xs:selector xpath="routing"></xs:selector>
+            <xs:field xpath="@ref"></xs:field>
+        </xs:keyref>
+        <xs:keyref name="questionKeyRef" refer="questionKey">
+            <xs:selector xpath="routing/variable"></xs:selector>
+            <xs:field xpath="@ref"></xs:field>
+        </xs:keyref>
+    </xs:element>
+    <xs:complexType name="SectionType">
+        <xs:sequence minOccurs="1" maxOccurs="unbounded">
+            <xs:group ref="QuestionChoice"></xs:group>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"></xs:attribute>
+    </xs:complexType>
+    <xs:group name="QuestionChoice">
+        <xs:choice>
+            <xs:element name="intro" type="QuestionType"></xs:element>
+            <xs:element name="single" type="QuestionType"></xs:element>
+            <xs:element name="multiple" type="QuestionType"></xs:element>
+            <xs:element name="open" type="QuestionType"></xs:element>
+        </xs:choice>
+    </xs:group>
+    <xs:complexType name="QuestionType">
+        <xs:attribute name="id" type="xs:string" use="required"></xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="RoutingType">
+        <xs:sequence>
+            <xs:element name="variable">
+                <xs:complexType>
+                    <xs:attribute name="ref" type="xs:string" use="required"></xs:attribute>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="ref" type="xs:string" use="required"></xs:attribute>
+    </xs:complexType>
+</xs:schema>

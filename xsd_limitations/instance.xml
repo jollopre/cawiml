@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<survey xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="survey.xsd">
+    <section id="section1">
+        <intro id="Q0"/>
+        <multiple id="Q1"/>
+    </section>
+    <section id="section2">
+        <intro id="Q2"/>
+    </section>
+    <routing ref="section1">
+        <variable ref="Q2"/>
+    </routing>
+</survey>

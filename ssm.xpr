@@ -17,6 +17,7 @@
         <folder path="real_surveys/"/>
         <folder path="schema/"/>
         <folder path="testing_surveys/"/>
+        <folder path="xsd_limitations/"/>
         <file name="README.md"/>
     </projectTree>
 </project>
