@@ -43,7 +43,7 @@
     </xs:complexType>
     <xs:complexType name="RoutingType">
         <xs:sequence>
-            <xs:element name="variable">
+            <xs:element name="variable" maxOccurs="unbounded">
                 <xs:complexType>
                     <xs:attribute name="ref" type="xs:string" use="required"></xs:attribute>
                 </xs:complexType>
