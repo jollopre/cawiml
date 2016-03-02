@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="https://github.com/jollopre/ssm"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://github.com/jollopre/ssm ../schema/ssm.xsd">
+    <survey>
+        <name>Paper questionnaire instance</name>
+        <description>Example survey for MRes thesis</description>
+        <date>2016-03-01</date>
+    </survey>
+    <content>
+        <section id="Outer">
+            <label lang="en">Outer</label>
+            <intro name="INF1">
+                <label lang="en">We are conducting a survey in order to determine how important are for a driver’s car
+                    a set of features.</label>
+            </intro>
+            <single name="Q1">
+                <label lang="en">How often do you use your car?</label>
+                <close code="01">
+                    <label lang="en">Never</label>
+                </close>
+                <close code="02">
+                    <label lang="en">Almost Never</label>
+                </close>
+                <close code="03">
+                    <label lang="en">Occassionally/Sometimes</label>
+                </close>
+                <close code="04">
+                    <label lang="en">Almost every time</label>
+                </close>
+                <close code="05">
+                    <label lang="en">Every time</label>
+                </close>
+            </single>
+            <single name="Q2">
+                <label lang="en">Which brands are you aware of? [FIRST SPONTANEOUS MENTION]</label>
+                <close code="01">
+                    <label lang="en">A</label>
+                </close>
+                <close code="02">
+                    <label lang="en">B</label>
+                </close>
+                <close code="03">
+                    <label lang="en">C</label>
+                </close>
+                <close code="04">
+                    <label lang="en">D</label>
+                </close>
+                <close code="05">
+                    <label lang="en">E</label>
+                </close>
+                <close code="06">
+                    <label lang="en">F</label>
+                </close>
+                <close code="07">
+                    <label lang="en">G</label>
+                </close>
+                <close code="08">
+                    <label lang="en">H</label>
+                </close>
+                <close code="99">
+                    <label lang="en">Don't know</label>
+                    <exclusive value="true"/>
+                </close>
+            </single>
+            <multiple name="Q3" refused="true">
+                <label lang="en">Which brands are you aware of? [OTHER SPONTANEOUS MENTIONS Q2]</label>
+                <pipe ref="pipe0"/>
+            </multiple>
+            <grid name="Q4">
+                <label lang="en">Using a scale 1 to 5 where; 5=essential, 4=very important, 3=quite important,
+                2=relatively unimportant, 1=not at all important. How important are the following safety features
+                when you want to buy a car?</label>
+                <single>
+                    <rows>
+                        <close code="01">
+                            <label lang="en">Cruise Control</label>
+                        </close>
+                        <close code="02">
+                            <label lang="en">Seat Heater</label>
+                        </close>
+                        <close code="03">
+                            <label lang="en">Automatic transmision</label>
+                        </close>
+                        <close code="04">
+                            <label lang="en">Sunroof</label>
+                        </close>
+                        <close code="05">
+                            <label lang="en">Navigation system</label>
+                        </close>
+                        <close code="06">
+                            <label lang="en">Knee airbags</label>
+                        </close>
+                    </rows>
+                    <columns>
+                        <close code="05">
+                            <label lang="en">Essential</label>
+                        </close>
+                        <close code="04">
+                            <label lang="en">Very important</label>
+                        </close>
+                        <close code="03">
+                            <label lang="en">Quite important</label>
+                        </close>
+                        <close code="02">
+                            <label lang="en">Relatively unimportant</label>
+                        </close>
+                        <close code="01">
+                            <label lang="en">Not at all important</label>
+                        </close>
+                    </columns>
+                </single>
+            </grid>
+            <open name="Q5">
+                <label lang="en">How many cars have you had or have of F brand?</label>
+                <integer>
+                    <min></min>
+                    <max></max>
+                    <value></value>
+                </integer>
+            </open>
+            <intro name="INF2">
+                <label lang="en">We are really happy knowing that you had the opportunity to have every car brand mentioned</label>
+            </intro>
+            <intro name="END">
+                <label lang="en">THANKS AND CLOSE</label>
+            </intro>
+        </section>
+        <section id="Inner">
+            <label lang="en">Inner</label>
+            <single name="Q6a">
+                <label lang="en">Have you ever had a car from <pipe ref="pipe0"/> brand?</label>
+                <close code="01">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="02">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+        </section>
+    </content>
+    <field>
+        <integer id="HAD_CAR" value="0"/>
+        <iterator id="p4_iterator"/>
+    </field>
+    <routing>
+        <statemodel ref="Outer">
+            <source id="INF1"/>
+            <state id="INF1">
+                <variable ref="INF1"/>
+                <transition target="Q1"/>
+            </state>
+            <state id="Q1">
+                <variable ref="Q1"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q1"/>
+                        <constant type="string" value="01"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="Q1"/>
+                        <constant type="string" value="02"/>
+                        <operator name="IS_SEL"/>                
+                        <operator name="OR"/>
+                        <variable ref="Q1"/>
+                        <constant type="string" value="03"/>
+                        <operator name="IS_SEL"/>        
+                        <operator name="OR"/>      
+                    </condition>
+                    <then>
+                        <transition target="sink0"/>
+                    </then>
+                    <else>
+                        <transition target="Q2"/>
+                    </else>
+                </if>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+            <state id="Q2">
+                <variable ref="Q2"/>
+                <transition target="p1"/>
+            </state>
+            <state id="p1">
+                <if>
+                    <condition>
+                        <variable ref="Q2"/>
+                        <constant type="string" value="99"/>
+                        <operator name="IS_SEL"/>        
+                    </condition>
+                    <then>
+                        <transition target="sink0"/>
+                    </then>
+                    <else>
+                        <transition target="Q3"/>
+                    </else>
+                </if>
+            </state>
+            <state id="Q3">
+                <variable ref="Q3"/>
+                <transition target="p2"/>
+            </state>
+            <state id="p2">
+                <if>
+                    <condition>
+                        <variable ref="Q3"/>
+                        <constant type="string" value="99"/>
+                        <operator name="IS_SEL"/>        
+                    </condition>
+                    <then>
+                        <transition target="sink0"/>
+                    </then>
+                    <else>
+                        <transition target="Q4"/>
+                    </else>
+                </if>
+            </state>
+            <state id="Q4">
+                <variable ref="Q4"/>
+                <transition target="p3"/>
+            </state>
+            <state id="p3">
+                <if>
+                    <condition>
+                        <variable ref="Q2"/>
+                        <constant type="string" value="06"/>
+                        <operator name="IS_SEL"/>
+                        <variable ref="Q3"/>
+                        <constant type="string" value="06"/>
+                        <operator name="IS_SEL"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="Q5"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
+            <state id="Q5">
+                <variable ref="Q5"/>
+                <transition target="p4"/>
+            </state>
+            <state id="p4">
+                <for>
+                    <field ref="p4_iterator"/>
+                    <in>
+                        <expr_list>
+                            <variable ref="Q2"/>
+                            <operator name="SEL"/>
+                            <variable ref="Q3"/>
+                            <operator name="SEL"/>
+                            <operator name="UNION"/>
+                        </expr_list>
+                    </in>
+                    <transition target="c1"/>
+                </for>
+                <transition target="p5"/>
+            </state>
+            <state id="c1">
+                <include statemodel="Inner"/>
+            </state>
+            <state id="p5">
+                <if>
+                    <condition>
+                        <variable ref="Q2"/>
+                        <operator name="SEL"/>
+                        <variable ref="Q3"/>
+                        <operator name="SEL"/>
+                        <operator name="UNION"/>
+                        <operator name="SIZE"/>
+                        <variable ref="HAD_CAR"/>
+                        <operator name="EQ"/>
+                        <variable ref="HAD_CAR"/>
+                        <constant type="integer" value="4"/>
+                        <operator name="EQ"/>
+                        <operator name="OR"/>
+                    </condition>
+                    <then>
+                        <transition target="INF2"/>
+                    </then>
+                    <else>
+                        <transition target="END"/>
+                    </else>
+                </if>
+            </state>
+            <state id="INF2">
+                <variable ref="INF2"/>
+                <transition target="END"/>
+            </state>
+            <state id="END">
+                <variable ref="END"/>
+                <transition target="sink0"/>
+            </state>
+        </statemodel>
+        <statemodel ref="Inner">
+            <source id="Q6a"/>
+            <state id="Q6a">
+                <variable ref="Q6a"/>
+                <transition target="p0"/>
+            </state>
+            <state id="p0">
+                <if>
+                    <condition>
+                        <variable ref="Q6a"/>
+                        <constant type="string" value="01"/>
+                        <operator name="IS_SEL"/>
+                    </condition>
+                    <then>
+                        <transition target="p1"/>
+                    </then>
+                    <else>
+                        <transition target="sink0"/>
+                    </else>
+                </if>
+            </state>
+            <state id="p1">
+                <computation ref="HAD_CAR">
+                    <assignment>
+                        <variable ref="HAD_CAR"/>
+                        <constant type="integer" value="1"/>
+                        <operator name="ADD"/>
+                    </assignment>
+                </computation>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="Outer"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+    <personalisation>
+        <piping ref="Outer">
+            <pipe id="pipe0">
+                <variable ref="Q2"/>
+                <operator name="UNSEL"/>
+            </pipe>
+        </piping>
+        <piping ref="Inner">
+            <pipe id="pipe0">
+                <variable ref="p4_iterator"/>
+                <operator name="VALUEOF"/>
+            </pipe>
+        </piping>
+    </personalisation>
+</ssm>
