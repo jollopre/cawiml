@@ -34,6 +34,18 @@
             </single>
             <single name="Q2">
                 <label lang="en">Which brands are you aware of? [FIRST SPONTANEOUS MENTION]</label>
+                <randomising>
+                    <subset>
+                        <code ref="01"/>
+                        <code ref="02"/>
+                        <code ref="03"/>
+                        <code ref="04"/>
+                        <code ref="05"/>
+                        <code ref="06"/>
+                        <code ref="07"/>
+                        <code ref="08"/>
+                    </subset>
+                </randomising>
                 <close code="01">
                     <label lang="en">A</label>
                 </close>
@@ -256,6 +268,9 @@
                             <operator name="SEL"/>
                             <operator name="UNION"/>
                         </expr_list>
+                        <randomising>
+                            <all present="4"/>
+                        </randomising>
                     </in>
                     <transition target="c1"/>
                 </for>
