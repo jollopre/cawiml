@@ -12,7 +12,7 @@
     <routing ref="section1">
         <variable ref="Q0"/>
         <variable ref="Q1"/>
-        <variable ref="Q2"/>
+        <variable ref="Q3"/>
     </routing>
     <routing ref="section2">
         <variable ref="Q3"/>
