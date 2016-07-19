@@ -1,3 +1,6 @@
 set boxwidth 0.9 relative
 set style fill solid 1.0
-plot 'content.dat' using 1:2:xticlabels(3) with boxes title 'Content', 'routing.dat' using 1:2:xticlabels(3) with boxes title 'Routing', 'personalisation.dat' using 1:2:xticlabels(3) with boxes title 'Personalisation'
+set key font ",14"
+set xtics font ",14"
+set ytics font ",14"
+plot 'content.dat' using 1:2:xticlabels(3) with boxes fillstyle pattern 2 title 'Content', 'routing.dat' using 1:2:xticlabels(3) with boxes fillstyle pattern 4 title 'Routing', 'personalisation.dat' using 1:2:xticlabels(3) with boxes fillstyle pattern 5 title 'Personalisation'
