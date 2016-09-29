@@ -2,7 +2,7 @@
 
 CAWIML is an XML language to describe electronic questionnaires. This authoring solution uses XSD (XML Schema Definition) to define structure and datatypes together with SCH (Schematron) to express integrity constraints and business rules.
 
-Using two different XML schema solutions help this language to ensure the correctness of XML electronic questionnaire instances through a tow step process that integrate the four different levels of validation (structure, datatypes, integrity constraints and business rules).
+Using two different XML schema solutions help this language to ensure the correctness of XML electronic questionnaire instances through a two step process that integrate the four different levels of validation (structure, datatypes, integrity constraints and business rules).
 
 Any XML instance conforming to CAWIML must define the following 5 categories:
 
