@@ -1,0 +1,16 @@
+	\gls{cawiml} addresses the content, routing and personalisation constructs of surveys by structuring \gls{xml} documents into 5 categories:
+
+	\begin{enumerate}
+		\item \emph{Survey} element defines global information relative to a questionnaire and contains information such as name, description and date.
+		\item \emph{Content} specifies questions grouped through sections. It provides support for the common question types such as intro, single, multiple, open and grid questions.
+		\item \emph{Field} element defines place holders variables needed to share information across different questionnaire sections. String, integer, decimal and list are the types supported currently.
+		\item \emph{Routing} captures questionnaire's flow using the state-transition structure proposed in Section \ref{sec:cawiLanguage:stateTransition}.
+		\item \emph{Personalisation} defines constructs to adapt questionnaires for an interviewee through features such as text-fill, carry-forward, randomising and rotating.
+	\end{enumerate}
+
+	Listings \ref{code:impl:globalStructure} represents the necessary elements to create a specification in \gls{cawiml}. The following sections, showcase the content, routing and personalisation categories.
+
+	\lstinputlisting[caption={CAWIML global structure},label={code:impl:globalStructure}]{appendix/code/overview.xml}
+
+
+	

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="https://github.com/jollopre/ssm"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://github.com/jollopre/ssm ../schema/ssm.xsd">
+    ...
+    <routing>
+        <statemodel ref="Outer">
+            <source id="INF1"/>
+            ...
+            <state id="c1">
+                <include statemodel="Inner"/>
+            </state>
+            ...
+        </statemodel>
+        <statemodel ref="Inner">
+            <source id="Q6a"/>
+            ...
+        </statemodel>
+        <entrypoint>
+            <source id="c0"/>
+            <state id="c0">
+                <include statemodel="Outer"/>
+                <transition target="sink0"/>
+            </state>
+            <state id="sink0">
+                <sink/>
+            </state>
+        </entrypoint>
+    </routing>
+</ssm>

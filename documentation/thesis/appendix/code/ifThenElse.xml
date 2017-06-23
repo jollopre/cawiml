@@ -1,0 +1,31 @@
+<routing>
+    ...
+    <statemodel ref="Outer">
+        ...
+        <state id="p0">
+            <if>
+                <condition>
+                    <variable ref="Q1"/>
+                    <constant type="string" value="01"/>
+                    <operator name="IS_SEL"/>
+                    <variable ref="Q1"/>
+                    <constant type="string" value="02"/>
+                    <operator name="IS_SEL"/>                
+                    <operator name="OR"/>
+                    <variable ref="Q1"/>
+                    <constant type="string" value="03"/>
+                    <operator name="IS_SEL"/>        
+                    <operator name="OR"/>      
+                </condition>
+                <then>
+                    <transition target="sink0"/>
+                </then>
+                <else>
+                    <transition target="Q2"/>
+                </else>
+            </if>
+        </state>
+        ...
+    </statemodel>
+    ...
+</routing>

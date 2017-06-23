@@ -1,0 +1,16 @@
+\chapter{Background}\label{ch:background}
+	This chapter is intended to introduce the reader to the terminology and concepts in the context of \gls{cai} systems. We have focused our efforts on \gls{xml} as the standard for exchange and representation of electronic questionnaires. Although we could have considered \gls{json} as a more attractive representation format due to its direct mapping to JavaScript objects, its simplicity and its less verbosity for using across a web application, we have discarded it because as far as we know, there is no standard schema formalism that permits the validation of correctness without relying on general purpose programming languages.
+
+	The rest of this Chapter is structured as follows: Section \ref{sec:background:questionnaires} uses an example questionnaire to describe the different features that are used in surveys. The Section \ref{sec:background:xml} explains the origin of \gls{xml} as well as the requirements needed to consider a file as \gls{xml} well-formed. Section \ref{sec:background:xmlSchemas} discusses the different schema paradigms that can be used to create constraints over well-formed \gls{xml} documents and finally, Section \ref{sec:background:xPath} introduces the reader to XPath query language since it is widely used for specifying sophisticated constraints.
+
+\section{Electronic Questionnaires}\label{sec:background:questionnaires}
+	\input{background/questionnaires}
+\section{Extensible Mark-up Language (XML)}\label{sec:background:xml}
+	\input{background/xml}
+\section{Schemas Languages}\label{sec:background:xmlSchemas}
+	\input{background/xmlSchemas}
+\section{XPath Query Language}\label{sec:background:xPath}
+	\input{background/xpath}
+\section{Conclusion}
+	\input{background/conclusion}
+

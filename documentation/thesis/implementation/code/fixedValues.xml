@@ -1,0 +1,28 @@
+<xs:schema
+    targetNamespace="https://github.com/jollopre/ssm"
+    xmlns:s="https://github.com/jollopre/ssm"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    elementFormDefault="qualified">
+    <xs:simpleType name="OperatorType">
+        <xs:restriction base="xs:string">
+            ...
+            <!-- UNARY OPERATORS -->
+            <xs:enumeration value="POS"></xs:enumeration><!-- Positive value -->
+            <xs:enumeration value="NEG"></xs:enumeration><!-- Negative value -->
+            <xs:enumeration value="INC"></xs:enumeration><!-- Increments a value by 1 -->
+            <xs:enumeration value="DEC"></xs:enumeration><!-- Decrements a value by 1 -->
+            <xs:enumeration value="NOT"></xs:enumeration><!-- Inverts the value of a boolean -->
+            <!-- UNARY FUNCTIONS -->
+            <xs:enumeration value="EMPTY"></xs:enumeration>
+            <xs:enumeration value="SIZE"></xs:enumeration>
+            <xs:enumeration value="SEL"></xs:enumeration><!-- Select -->
+            <xs:enumeration value="UNSEL"></xs:enumeration><!-- Unselect -->
+            <xs:enumeration value="ALL"></xs:enumeration><!-- Select and Unselect-->
+            <xs:enumeration value="VALUEOF"></xs:enumeration><!-- Gets the value of variable converted to String -->
+            ...
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="Operator">
+        <xs:attribute name="name" type="s:OperatorType" use="required"></xs:attribute>
+    </xs:complexType>
+</xs:schema>

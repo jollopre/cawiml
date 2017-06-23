@@ -1,0 +1,30 @@
+-Schematron specification is built on top of XSLT and XPath
+-The validation task uses an XSLT processor
+
+XSLT implementation of Schematron, The validation is performed in two stages:
+	1. The Schematron file is turned into an XSLT stylesheet by transforming it with one of XSLT stylesheet
+	provided on its website (e.g. schematron-basic.xsl, schematron-message.xsl and schematron-report.xsl).
+	For instance, schematron-basic.xsl permits generating simple text output
+	2. The transformed Schematron file together with an XML instance document are passed to the XSLT processor
+	which produces an output report (e.g text or SVRL) based on the rules and assertions in the original Schematron schema defined
+
+It's very easy to setup a Schematron processor since it is only needed an XSLT processor together with one of
+the Schematron stylesheets.
+
+XPath implementation of Schematron:
+	-faster than the XSLT approach since a transformation to an XSLT stylesheet is not needed, however
+	it has less functionality, i.e XSLT-specific functions such as document() and key() functions are not
+	available in XPath. For instance, contraints defined between XML documents cannot be checked using an
+	XPath implementation of Schematron.
+
+Perform a Schematron validation:
+
+	1. Apply a set of three pre-defined XSLT scripts onto a Schematron file.
+	2. After these transformations the original Schematron file is transformed into an XSLT script
+	3. This XSLT script can then be applied onto XML documents for validation
+	4. The output of this validation is an SVRL (Schematron Validation Report Language) document
+
+considerations:
+	1. Transforming a Schematron file into an XSLT may be very time consuming, specially for large
+	definitions so it is strongly recommended to cache the resulting XSLT script
+

@@ -1,0 +1,24 @@
+	In this section we highlight some desirable future extensions that we would like to carry out. The first extension consist of conducting user testing for our different interfaces. At Pexel, they frequently conduct 
+	training sessions for newer employees. These sessions help them to understand the survey life-cycle as well as to get familiarised with the system. Although, we have tested our collection interface during two sessions, further experiments would permit us to better assess system responsiveness. Similarly, the design interface requires different user testing evaluation that was postponed due to difficulties to arrange time with Pexel designers as well as company willingness to focus on implementing functionalities at other survey stages (e.g. management, analysis and reporting). 
+
+	The second extension consist of empowering the security of our \gls{cawi} solution. For instance, our interfaces are able to validate data entered against the \gls{xml} rules specified, however we acknowledge that the \gls{api} layer requires additional efforts to prevent non-valid data entered. In addition, it is also planned to encrypt sensitive data on client-server communication through \gls{ipsec} or \gls{ssl} as well as to introduce mechanisms of auditing to diagnose problems and observe intrusion signs.
+
+	The third extension consist of capturing additional data through our on-line interviewing system. This process, known as para-data, may help to improve the overall survey life-cycle and specifically the survey data quality. As such, our management stage may be enhanced with features that permit:
+
+	\begin{itemize}
+		\item identifying respondent response patterns;
+		\item monitoring the data collection progress (e.g. number of times an interview is started and suspended or at what question a survey is suspended or abandoned);
+		\item examining actions performed in each page (e.g. capturing whether or not the questions are answered in the order presented, number of keystrokes or mouse motions); or
+		\item determining time required to complete a questionnaire, section of a questionnaire or individual questions.
+	\end{itemize}
+
+	The new management features when analysed adequately may enhance the design of questionnaires since it should be easier to identify problematic areas of the questionnaire. Therefore, \gls{cawiml} can be augmented with constructs at different levels:
+
+	\begin{itemize}
+		\item \emph{system level}, to collect features such as software, database version or operative system used;
+		\item \emph{client level}, with mechanisms to identify type of device, operative system, browser utilised or screen size;
+		\item \emph{interview level}, to capture features such as language utilised, time zone, geographic identifiers or questionnaire completion time; and 
+		\item \emph{question level} with mechanisms to track time entered and exit from a question, number of times a question is revisited or order chosen in multiple response questions.
+	\end{itemize}
+
+	The fourth extension consist of designing and implementing a question recommender aimed at improving the design stage survey life-cycle. Since our survey \gls{xml} definitions can be stored in a searchable central repository, \gls{cawiml} questions can be extended to include information relative to the topic of a question, discipline in which it is applied, or what population is best suited to ask. These new \gls{xml} constructs together with the question level para-data collected may benefit our \gls{cawi} system to make useful question recommendations at the questionnaire design stage.

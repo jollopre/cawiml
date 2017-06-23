@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm>
+    <survey>
+        <name>...</name>
+        <description>...</description>
+        <date>...</date>
+    </survey>
+    <content>
+        <section id="Section1">
+            ...
+        </section>
+        ...
+    </content>
+    <field>
+        ...
+    </field>
+    <routing>
+        <statemodel ref="Section1">
+            ...
+        </statemodel>
+        ...
+        <entrypoint>
+            ...
+        </entrypoint>
+    </routing>
+    <personalisation>
+        <piping ref="Section1">
+            ...
+        </piping>
+        ...
+    </personalisation>
+</ssm>

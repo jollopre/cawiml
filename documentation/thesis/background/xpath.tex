@@ -1,0 +1,8 @@
+	XPath is a query language that uses path expressions to navigate through \gls{xml} documents. It is the recommended query language for \gls{xml} documents by \gls{w3c}. \gls{sch} was the first schema language that used XPath for expressing rules and after \gls{xsd} borrowed this idea to specify its integrity constraints. The syntax used in this query language is based on a location path, i.e. a similar concept used in file systems, which consist of a sequence of location steps:
+	\begin{itemize}
+		\item axis to direct the navigation with the relationships parent, children, siblings, ancestors or descendants \cite{web:w3caxes} since this language treats the \gls{xml} files as trees of nodes,
+		\item node test that permits filtering the path to a specific node or element and
+		\item predicates which allow selecting only those nodes with specific properties or attributes.
+	\end{itemize}
+
+	To better understand how this syntax works, we show some examples using the \gls{xml} document from Listings \ref{code:background:xmlCase}. For instance, in order to select the section 1 element and children, we could express /survey/section[@id='section1'] with the node test /survey/section and the predicate specified in brackets, but we could be more specific about retrieving only the ids of the questions /survey/section[@id='section1']/child::node()/@id. Note, that the first example obviates the axis, i.e. the expression has been defined using the \emph{abbreviated mode}, which is more compact. In contrast, the second one explicitly uses the axis to guide the location deeper in the sub tree /survey/section and it is known as \emph{full syntax mode}.

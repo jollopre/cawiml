@@ -1,0 +1,13 @@
+	\gls{cawi} systems are addressed for large group of respondents that can access simultaneously to complete a questionnaire at any time. As these systems are network-based applications, it is desired to conduct performance testing in order to determine the capacity of the system to work under different configurations.
+
+	The performance testing consist of creating different test plans by varying parameters such as number of concurrent users or the complexity of the survey selected. Typically, the methodology plan to execute performance testing consist of:
+
+	\begin{itemize}
+		\item Selecting a survey, where the length and complexity helps to predict the performance of the system to deal with questionnaires with similar constructs.
+		\item Designing a specific scenario either by randomly responding to questions or by taking the most common sequence of questions answered by survey respondents \cite{proc:volguine13}.
+		\item Varying the number of concurrent respondents and finally running the scenario under the parameters chosen.
+	\end{itemize}
+
+	Segel et al. discuss a \emph{stress test} strategy in order to verify the capacity of a web deployment of Blaise system \cite{proc:segel13}. In that experiment, they vary the number of concurrent respondents and introduce the \emph{thinking time} concept consisting of setting up a random distributed time that simulates the amount of time that takes respondents to answer questions. Additionally, they explain the importance of selecting an adequate time in which the maximum number of concurrent users will be reached in order to avoid unrealistic simultaneous accesses.
+
+	A more recent study carried out by Volguine pursues a stable and responsive on-line survey respondent experience through the introduction of three more test strategies a part from stress testing. These are: \emph{normal capacity} consisting in monitoring the system for two hours under an average load level for a day, \emph{peak} during two hours under a maximum load expected for day and \emph{endurance} with a significant load level during eight hours \cite{proc:volguine13}. Although Volguine offers a full suite of tests to assess performance, reliability and responsiveness of Blaise, it is not clear whether the thinking time is included or not. Therefore, this can lead to a biased testing situation that is not close to a real scenario in which an interviewee thinks before responding to a question. Moreover, the use of normal, peak and endurance tests strategies assumes that the tester knows what are the system level usages which is not always known, specially for \gls{cawi} systems that have never been in the market.

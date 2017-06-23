@@ -1,0 +1,12 @@
+*.aux
+/*/*.aux
+*.synctex.gz
+*.blg
+*.loa
+*.lof
+*.log
+*.lol
+*.lot
+*.out
+*.toc
+*.glsdefs

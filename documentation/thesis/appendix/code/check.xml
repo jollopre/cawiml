@@ -1,0 +1,21 @@
+<routing>
+    ...
+    <statemodel ref="X">
+        ...
+        <state id="x1">
+            <check type="error">
+                <condition>
+                    <variable ref="Qx"/>
+                    <constant type="string" value="never"/>
+                    <operator name="IS_SEL">
+                </condition>
+                <label lang="en">
+                    People younger than 18 have never been married
+                </label>
+                <transition target="x2" />
+            </check>
+        </state>
+        ...
+    </statemodel>
+    ...
+</routing>

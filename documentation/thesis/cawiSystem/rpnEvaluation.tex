@@ -1,0 +1,11 @@
+	The evaluation of a \gls{rpn} expressions is conducted for every interview that takes place. Every time a variable is updated, the system automatically re-evaluates those \gls{rpn} expressions in which a reference to that variable exists. The algorithm implemented to execute questionnaire expressions in our \gls{cawi} system (see Listings \ref{code:impl:rpn}) only requires two arrays: \emph{expression}, that contains an operand or operator in each position; and \emph{stack}, to simulate push and pop operations through software \cite{web:brown01} for intermediate operations that are carried out while executing an expression.
+
+	\lstinputlisting[caption={The RPN evaluation},label={code:impl:rpn}]{implementation/code/rpn.java}
+
+	The expression array, is read from left to right (e.g. Line 6). If a variable or constant is found (e.g. Lines 7 and 11), it is pushed in the stack. In contrast, the presence of an operator performs one or more operations depending on its type. For binary operations, two operands are popped from the stack whereas for unary operations, only one operand is required. In both cases, if there are still positions to read in the expression array, the intermediate result is pushed in the stack (see Lines 22 and 28). The algorithm terminates when every position of the expression array has been read and its computational complexity cost is linear. Exceptions may be thrown at three different levels:
+
+	\begin{itemize}
+		\item At the beginning, in cases where the expression is NULL.
+		\item During the loop execution, either because the stack is unexpectedly empty trying to retrieve an operand for unary or binary operation or because the expression contains a token element unknown for the algorithm.
+		\item At the end, when the loop has been completed, the stack must have only one element to pop, otherwise a malformed \gls{rpn} expression was passed.
+	\end{itemize}

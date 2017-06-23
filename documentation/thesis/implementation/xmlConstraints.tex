@@ -1,0 +1,41 @@
+	%With this schema is specified the \emph{lexical} of the language, i.e. the set of elements and attributes valid (e.g. survey, field, section, routing, personalisation, etc.). In regard to the syntax rules, the following constraint types are defined:
+	%\begin{itemize}
+	%	\item \emph{number of child elements}, for instance the routing category contains one and only one entry point and zero to many state models.
+	%	\item \emph{order of child elements} with examples such as there is a sequence of state model elements followed by an entry point, i.e. the entry point is defined the last for routing category or section category accepts intro, single, multiple, open and grid questions in any order.
+	%	\item \emph{data-types} for elements and attributes. For example, an integer element from field category expects an integer attribute value or more customised data-types based on regular expressions (e.g. the attribute name for question must conform to the regular expression $([a-zA-Z0-9\_])^+$).
+	%	\item And \emph{fixed values} for element and attributes. Particularly important for defining the set of operators valid for defining expressions (Tables \ref{tab:design:rpnunary} and \ref{tab:design:rpnbinary} present the valid unary and binary operators respectively).
+	%\end{itemize}
+
+	%We have used this language because our specifications for questionnaires are modular, i.e. every survey category (e.g. section, routing and personalisation) is defined separately and results impossible to verify relationships among elements and attributes using \gls{xsd} due to its limited subset of XPath expressions (see Section \ref{sec:literature:schemaCoverage}). We have grouped the semantic constraints into three categories:
+	%\begin{itemize}
+	%	\item \emph{integrity} that checks \emph{key} and \emph{key-ref} concepts for checking non-empty/unique and reference to a valid key respectively. For instance key constraints such as any state within a state model is non-empty and unique or checking that there are no duplicated question names for a section. Regarding keyref concept, there are reference checking for state models to ensure that they point to a valid section or more sophisticated rules such as every variable references to a question existing in the section that the state model points to.
+	%	\item \emph{conditional elements} which determines the presence or absence of an element depending on the context (e.g. if the state defined is sink, there is no outgoing transition).
+	%	\item \emph{other business rules} which permit checking constraints like self-loop is not a permitted transition or at least one sink state is target of another state. Particularly the last one is complex to verify since it is needed to verify whether or not that state targeting the sink state is reachable under any condition from the starting of the state model.
+	%\end{itemize}
+	%http://docstore.mik.ua/orelly/xml/xmlnut/ch20_04.htm
+
+
+	The lexical and syntax have been specified using \gls{xsd} since it is widely used for defining grammar for \gls{xml} documents, contains well defined structures that suits almost every purpose and its built-in data-types reduces the burden of creating patterns to validate the correctness of values for elements or attributes.
+
+	\subsection{Number and order of child elements}
+		The number and order of child elements may be specified using the complexType element. Listings \ref{code:impl:numberOrder} provides three different types (e.g. Routing, Statemodel and EntryPoint). Specifically, the Routing complexType defines the maximum number of occurrences for state model and entry point elements respectively but does not specify the minimum number which is assumed 1 by default. Regarding the order requirement, the sequence element is addressed to determine that first goes from one to many statemodel elements and after one entry point.
+		\lstinputlisting[caption={Number and order of child elements example rule},label={code:impl:numberOrder}]{impl/code/numberOrder.xml}
+	\subsection{Data-types}
+		\gls{xsd} has a rich built-in set for data-types which makes easy to declare constraints over values for attributes and elements. Listings \ref{code:impl:datatype} describes an Integer complexType that requires the id and value attributes (e.g. use="required"). The value attribute is restricted to integer through the predefined type xs:integer. This type represents a decimal number that does not include a trailing decimal point.
+		\lstinputlisting[caption={Data-type example rule},label={code:impl:datatype}]{impl/code/datatype.xml}
+	\subsection{Fixed values}
+		In order to define acceptable values for attributes and elements, it is used the xs:enumeration. Listings \ref{code:impl:fixedValues} represents the valid values applicable for unary operators (e.g. POS, NEG, INC, etc.).
+		\lstinputlisting[caption={Fixed values example rule},label={code:impl:fixedValues}]{impl/code/fixedValues.xml}
+
+	The semantics have been programmed using \gls{sch}. This rule-based schema defines constraints using the expressive power from XPath query language and unlike \gls{xsd}, permits defining customised messages for errors. The following sections provide examples rules for integrity constraints, conditional elements and business rules.
+
+	\subsection{Integrity constraints}
+		The integrity constraints verify primary keys, i.e. elements or attributes are non-empty and unique and key references, to ensure that point to a valid primary key. Listings \ref{code:impl:integrityConstraint} defines an assert that first checks if a variable is defined in the section whose id attribute is equal to the ref attribute from the state model. If not, \gls{sch} looks for a field whose id matches with the variable referenced. If both cases are evaluated to false, the error 'variable: ref attribute must reference to a question or a field' is raised.
+		\lstinputlisting[caption={Integrity constraint example rule},label={code:impl:integrityConstraint}]{impl/code/integrityConstraint.xml}
+	\subsection{Conditional elements}
+		There are some cases where the presence or absence of elements has to be checked. For instance, composite states require a successor state, specified through a transition, if and only if they are not target of a for state. Listings \ref{code:impl:conditionalElement} tests whether or not is necessary a transition for a composite state by checking if any preceding or following for state sibling has a transition whose target points to the composite state under test.
+		\lstinputlisting[caption={Conditional element example rule},label={code:impl:conditionalElement}]{impl/code/conditionalElement.xml}
+	\subsection{Business rules}
+		The business rules are intended to capture specific requirements for a domain. Particularly, the state-transition requires to validate that there are no cycles among states or guaranteeing that an end point for a state model is always reached, i.e. a sink or terminate state is reachable. Listings \ref{code:impl:businessRule} is addressed to verify whether a self loop is created, i.e. the transition defined within state references to the same state.
+		\lstinputlisting[caption={Business rule example constraint},label={code:impl:businessRule}]{impl/code/businessRule.xml}
+

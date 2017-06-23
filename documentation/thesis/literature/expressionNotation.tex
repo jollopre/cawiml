@@ -1,0 +1,15 @@
+	The routing constructs contain logical and arithmetical expressions applicable for filters, loops, checks and computations. Typically these expressions are defined using infix style. For instance, questionnaire languages such as \gls{qdl} and \gls{ddi} use this mode. Consider the following infix notation example, that follows the normalised convention proposed by Hughes \cite{proc:Hughes07} as an attempt for describing expressions in paper questionnaires:
+
+	\textbf{ASK IF:} [QB = 'Male' AND (QA = 'Scotland' OR QA = 'Wales') AND (Q5 = 'Less' OR Q5 = '1-3')], \emph{[Ask males in Scotland and Wales who eat less than or equal to 3 portions of vegetables per week]} \footnote{Expression extracted from survey 08 of the Appendix \ref{sec:appendix:questionnaires}}
+
+	Firstly, the filter construct (ASK IF) as described, secondly an algebraic expression is defined and finally a plain English instruction is provided in order to be more readable. Although this notation constitutes the natural way of thinking, the inclusion of brackets becomes a necessity in order to override the operators precedence.
+
+	Unlike the infix notation, with prefix and postfix notations where the operators are written before and after their operands respectively. Here the operators are no longer ambiguous with respect to the operands and consequently the parentheses may be obviated. Accordingly our example in prefix notation can be stated as follows:
+
+	\emph{AND AND = QB 'Male' OR = QA 'Scotland' = QA 'Wales' OR = Q5 'Less' = Q5 '1-3'}
+
+	And the postfix representation is:
+
+	\emph{QB 'Male' = QA 'Scotland' = QA 'Wales' = OR AND Q5 'Less' = Q5 '1-3' = OR AND}.
+
+	\gls{sss} uses the prefix mode through a functional programming style inspired by Lisp Language which is a more desirable approach to choose. However, when prefix mode is compared with postfix notation, it is less efficient because the order that the operators have to be evaluated does not strictly follow the left-to-right order, i.e. the operators placed on the left, must wait until the intermediate operations on the right part are solved (e.g. the first and second AND operators). This involves moving backward and forward through the structural representation of the expression, increasing the number of operations. With respect to postfix mode, there is no need for operands to wait (e.g. the last two operators OR, AND) have the intermediate results solved before being evaluated and consequently it is computationally most effective.

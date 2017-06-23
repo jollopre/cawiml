@@ -1,0 +1,17 @@
+	The web browsers use \gls{html} to build the presentation of information. They interpret each \gls{html} tag in order to display words, images or videos. However, this language is neither able to capture the description of contents, i.e. semantics, nor permits extending its mark-up with tags that are application-specific. In order to address these limitations, \gls{w3c} developed \gls{xml}. This meta-language, not only permits representing semi-structured data \cite{web:w3cxml} but also serves as a medium of communication that is widely used across Internet applications.
+
+	\gls{xml} files are composed of elements, attributes and relationships \cite{book:varde2010}. Listings \ref{code:background:xmlCase} shows an \gls{xml} document example that describes a small questionnaire with two sections and their respective routing. Specifically, an \emph{element} is used to represent an entity which is enclosed through a start and end tag (e.g. survey, section, intro, single, multiple, routing and variable). An element may contain character data, other elements or a mixture of both within. Also, this may have \emph{attributes} whose presence is limited to the start-tag exclusively (e.g. id or ref).
+
+	\lstinputlisting[caption={XML example case},label={code:background:xmlCase}]{background/xmlCase.xml}
+
+	The \emph{relationship} captures the nesting of elements and permit creating for simple to complex structures. For instance, the section element has 'section1' as id attribute and contains multiple, single and intro elements as children. Similarly, a more complex structure is the survey root element that contains section and routing elements within.
+
+	\gls{xml} only requires for documents to be \emph{well-formed}, i.e a valid \gls{xml} document according to \gls{w3c} must have:
+	\begin{itemize}
+		\item a unique single root element in which every other element is contained within,
+		\item properly nesting of all the elements,
+		\item presence of start and end tag for every element,
+		\item and value for attributes enclosed with quotes.
+	\end{itemize}
+
+	However, \gls{xml} by itself is merely a standard notation which does not restrict the elements and attributes permitted or the structures and content allowed. Therefore, in order to differentiate well-formed documents from those that a valid according to an \gls{xml} authoring language, it is needed to formally define a schema by using an \gls{xml} schema language.

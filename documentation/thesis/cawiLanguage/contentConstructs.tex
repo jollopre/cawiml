@@ -1,0 +1,12 @@
+	The content category of \gls{cawiml} is structured in sections. A section may contain one or more questions within and it is referenced through a state model (see Section \ref{sec:cawiLanguage:routingConstructs}). Our authoring language permits describing the most common question types for questionnaires (e.g. intro, single, multiple, open and grid). Listings \ref{code:impl:content} defines two sections (e.g. Outer and Inner) within the content element to group the questions specified in Figure \ref{fig:background:survey}. Essentially the use of a section serves as a container that defines questions through which state models reference and decide question's sequence. 
+	\lstinputlisting[caption={Content category},label={code:impl:content}]{appendix/code/content.xml}
+
+	In the outer section, there are eight questions (e.g INF1, Q1, Q2, Q3, Q4, Q5, INF2, END). For instance, an open-ended integer question (e.g. Q5), defined in Listings \ref{code:impl:open}, permits asking the number of cars of brand F that the interviewee has had. The open-ended integer question offers the possibility to define boundaries (e.g. min and max elements) in which the number responded must be within. It also allows setting a default value for the first time the question is shown to the interviewee (e.g. value element).
+
+	\lstinputlisting[caption={Open-ended question},label={code:impl:open}]{appendix/code/open.xml}
+
+	The inner section unlike the outer, only defines one question (e.g. Q6a) whose type is single. A single question (see Listings \ref{code:impl:single}) is addressed to capture one and only one response from a set. The example provided, asks through the label element whether or not the respondent had a car from a particular brand. Note that there is a text-fill pipe reference defined within that label (see Section \ref{sec:cawiLanguage:personalisationConstructs}) which will be replaced with the specific brand once the questionnaire is executing. This single question also defines two closed responses with codes 01 and 02 for yes and no respectively.
+
+	\lstinputlisting[caption={Single question},label={code:impl:single}]{appendix/code/single.xml}
+
+	In order to see other question types, please refer to Appendix \ref{sec:appendix:ssmInstance} containing the definition for the questionnaire from Figure \ref{fig:background:survey} in \gls{cawiml}.

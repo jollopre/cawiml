@@ -1,0 +1,18 @@
+<survey>
+    <section id="section1">
+        <multiple id="Q1"/>
+        <single id="Q2"/>
+        <intro id="Q0"/>
+    </section>
+    <section id="section2">
+        <intro id="Q3"/>
+    </section>
+    <routing ref="section1">
+        <variable ref="Q0"/>
+        <variable ref="Q1"/>
+        <variable ref="Q2"/>
+    </routing>
+    <routing ref="section2">
+        <variable ref="Q3"/>
+    </routing>
+</survey>

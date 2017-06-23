@@ -1,0 +1,28 @@
+	\chapter{Conclusion}\label{ch:Conclusion}
+	In this thesis, we addressed the problem of validating correctness of questionnaire specifications through the use of standard \gls{xml} schema languages. We compared the different \gls{xml} solutions in terms of routing or personalisation constructs to conclude with the necessary and sufficient constructs to address lexical, syntactic and semantic validation levels. 
+
+	Additionally, as part of the \gls{ktp} programme we developed a \gls{cawi} system that uses \gls{cawiml} with consideration of different architectural properties expected for distributed systems. In this chapter, we revisit our objectives proposed and discuss desirable future extensions to our work.
+
+	\section{Objectives Revisited}\label{sec:conclusion:objectivesRevisited}
+		\begin{enumerate}
+			\item \textbf{Conduct a comparative analysis of the state-of-art \gls{xml} language solutions that cover questionnaire definitions with a focus on the coverage of constructs and the capacity to validate correctness with standard \gls{xml} schema formalisms.} In Chapter \ref{ch:literature} we critically analysed four \gls{xml} authoring languages for representing questionnaire constructs. For routing, we concluded that these solutions normally replace the use of skip constructs in favour of structured patterns. Regarding personalisation features, existing languages do not provide sufficient mechanisms to express piping features such as carry-forward. In regard to their ability to validate correctness of specifications only using \gls{xml} schemas, we explored their underlying schema language and found that there is generally an inability to address semantics for questionnaire specifications.
+
+			\item \textbf{Critically appraise current modelling approaches in terms of their ability to manage questionnaire flow definitions for the purposes of routing.} In Chapter \ref{ch:literature}, we explored modelling solutions such as directed graphs, useful for analysing skip patterns, or Petri Nets, that help to analyse complex questionnaire paths. We focused on how the hierarchical modelling is being adopted by almost every authoring language solution explored. In particular, although this tree representation is able to quickly identify the circumstances under which a question is reached, the hierarchical modelling introduces a conceptual gap between language of the designers and the language of computation.
+
+			\item \textbf{Develop a new \gls{xml} authoring solution to better address the correctness, together with the state-transition structures necessary for routing.} In Chapter \ref{ch:cawiLanguage} we presented \gls{cawiml} as a novel authoring language to specify questionnaire constructs using grammar and rule-based schema languages to address correctness. This language is able to describe skip and filter constructs indistinctly, introduces \gls{rpn} expressions and is faster at processing expressions for routing and personalisation constructs than infix or prefix modes.
+
+			The state-transition adopted by \gls{cawiml} for its routing, helps to close the conceptual gap between what designers specify versus the code produced since it does not require any skip logic reversing. Additionally, the single operation on its states, prevents defining nested structures and consequently improves the maintenance.
+
+			\item \textbf{Analyse the architecture of different \gls{cawi} solutions in order to determine whether the necessary and sufficient properties for a \gls{cawi} system solution are induced or not.} In Chapter \ref{ch:literature} we reviewed Blaise and SurveyMonkey. Our analysis suggests that SurveyMonkey is better than Blaise in terms of scalability due to its stateless communication and portability because its cross platform language. In regard to the simplicity property, although it is well considered in these systems through a separation of functionalities into different components, its \gls{mvc} multi-pages paradigm to build web pages neither reduces the server burden nor addresses the responsiveness effectively.
+
+			\item \textbf{Implement an architecture based on \gls{rest} to better handle architectural properties such as scalability, simplicity, portability or reliability.} Our \gls{cawi} solution, presented in Chapter \ref{ch:cawiSystem}, adopts \gls{rest} constraints such as stateless communication or separation of concerns to induce scalability and simplicity respectively, utilises Java to build a multi-layer cross platform solution and uses a non-relational persistence platform suitable for data intensive applications. Moreover, the adoption of the \gls{spa} paradigm not only offers an improved user experience but also frees the server of tasks such as building web pages to induce more adequately the simplicity architectural principle.
+
+			\item \textbf{Conduct an evaluation at two levels, one for the coverage of questionnaire constructs and another to evaluate the capacity of the proposed architecture to work under different workloads.} The evaluation of \gls{cawiml} with fifteen real questionnaires suggests that the state-transition model is able to represent a wider range of questionnaire constructs as well as to address the routing task challenge.
+
+			The stress testing methodology proposed to evaluate our architecture considers the response time in relation to usability thresholds. Moreover, the absence of errors at the different configuration levels let us conclude that the system is able to adequately use server resources.
+		\end{enumerate}
+
+	\section{Future Work}\label{sec:conclusion:futureWork}
+		\input{conclusion/futureWork}
+
+	

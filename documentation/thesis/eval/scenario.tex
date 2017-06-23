@@ -1,0 +1,20 @@
+	\begin{algorithm}
+	$\textbf{POST}$ token\;
+	$\textbf{GET}$ surveyinfo\;
+	$\textbf{GET}$ resume\;
+	\While{stateClass $\neq$ Sink AND stateClass $\neq$ Terminate}{
+		Random Thinking Time from 500ms to 3000ms\;
+		70$\%$ of the iterations\;
+			\If{hasNext}{
+				Answer question(s) randomly\;
+				$\textbf{POST}$ next\;
+			}
+		30$\%$ of the iterations\;
+			\If{hasPrevious}{
+				$\textbf{POST}$ previous\;
+			}
+	}
+	$\textbf{DELETE}$ token\;
+	\caption{Scenario for stress testing}
+	\label{alg:eval:scenario}
+	\end{algorithm}

@@ -1,0 +1,18 @@
+<routing>
+    ...
+    <statemodel ref="Inner">
+        ...
+        <state id="p1">
+            <computation ref="HAD_CAR">
+                <assignment>
+                    <variable ref="HAD_CAR"/>
+                    <constant type="integer" value="1"/>
+                    <operator name="ADD"/>
+                </assignment>
+            </computation>
+            <transition target="sink0"/>
+        </state>
+        ...
+    </statemodel>
+    ...
+</routing>

@@ -1,0 +1,40 @@
+	In this section we detail a comparative analysis of the \gls{xml} authoring languages used to define questionnaire specifications. For that purpose, we explore the coverage of routing and personalisation constructs in Section \ref{sec:literature:routing} and \ref{sec:literature:personalisation} respectively. The relevant flow paradigms used to capture the routing sequence for questionnaires is explained in Section \ref{sec:literature:flowParadigm}. The constraining level coverage of the schema languages used to define these \gls{xml} languages is addressed in Section \ref{sec:literature:schemaLanguages}. Section \ref{sec:literature:expressionNotation} studies the three notation to describe logical and arithmetical expressions through an example from a real questionnaire and finally the survey life-cycle stages in which every \gls{xml} language is focused on is detailed in Section \ref{sec:literature:surveyStages}. Table \ref{tab:literature:comparison} summarises the above mentioned aspects that will be treated on the next sections.
+
+	\begin{sidewaystable}
+	\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+	\hline 
+	\textbf{\textcolor{blue}{\emph{Category}}} & \textbf{\textcolor{blue}{\emph{Feature}}} & \textbf{\textcolor{blue}{\emph{Triple-S}}} & \textbf{\textcolor{blue}{\emph{SSS}}} & \textbf{\textcolor{blue}{\emph{QDL}}} & \textbf{\textcolor{blue}{\emph{DDI}}}\tabularnewline
+	\hline 
+	\hline 
+	\multirow{5}{*}{\textbf{\textcolor{blue}{\emph{Routing}}}} & \textbf{Skip} & No & No & Yes & No\tabularnewline
+	\cline{2-6} 
+	 & \textbf{Filter} & Partial & Yes & Yes & Yes\tabularnewline
+	\cline{2-6} 
+	 & \textbf{Loop} & No & Yes & Partial & Yes\tabularnewline
+	\cline{2-6} 
+	 & \textbf{Check} & No & No & Yes & No\tabularnewline
+	\cline{2-6} 
+	 & \textbf{Computation} & No & Yes & Yes & Yes\tabularnewline
+	\hline 
+	\multirow{4}{*}{\textbf{\textcolor{blue}{Personalisation}}} & \textbf{Piping - text-fill} & No & Yes & No & Yes\tabularnewline
+	\cline{2-6} 
+	 & \textbf{Piping - carry-forward} & No & No & No & No\tabularnewline
+	\cline{2-6} 
+	 & \textbf{Randomising} & No & No & No & Partial\tabularnewline
+	\cline{2-6} 
+	 & \textbf{Rotating} & No & No & No & Partial\tabularnewline
+	\hline 
+	\multirow{4}{*}{\textbf{\textcolor{blue}{\emph{Other}}}} & \textbf{Flow Paradigm} & N/A & Hierarchical & Hierarchical & Hierarchical\tabularnewline
+	\cline{2-6} 
+	 & \textbf{XML Schema Language} & DTD & XSD 1.0 & DTD & XSD 1.0\tabularnewline
+	\cline{2-6} 
+	 & \textbf{Expressions Notation} & N/A & PreFix & Infix & Infix\tabularnewline
+	\cline{2-6} 
+	 & \textbf{Survey Stage} & Analysis/Reporting & Design/Collection & Design & Analysis/Reporting\tabularnewline
+	\hline 
+	\end{tabular}
+	\caption{Comparison of XML languages for electronic questionnaires}
+	\label{tab:literature:comparison}
+	\end{center}
+	\end{sidewaystable}

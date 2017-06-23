@@ -1,0 +1,14 @@
+<xs:schema 
+    targetNamespace="https://github.com/jollopre/ssm"
+    xmlns:s="https://github.com/jollopre/ssm"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+    ...
+    <xs:element name="integer" type="s:Integer"></xs:element>
+    ...
+	<xs:complexType name="Integer">
+		<xs:attribute name="id" type="s:Name" use="required"></xs:attribute>
+	    <xs:attribute name="value" type="xs:integer" use="required"></xs:attribute>
+	</xs:complexType>
+	...
+</xs:schema>

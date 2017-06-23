@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="https://github.com/jollopre/ssm"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://github.com/jollopre/ssm ../schema/ssm.xsd">
+    ...
+    <content>
+        <section id="Outer">
+            <label lang="en">Outer</label>
+            ...
+        </section>
+        <section id="Inner">
+            <label lang="en">Inner</label>
+            ...
+        </section>
+    </content>
+    ...
+</ssm>

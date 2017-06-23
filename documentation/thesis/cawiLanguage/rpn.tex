@@ -1,0 +1,102 @@
+    The postfix notation, also known as \gls{rpn}, is the notation formalism that we have adopted to define the logical and arithmetical expressions applicable not only for routing constructs such as filters, loops, checks and computations but also for describing text-fill and carry-forward personalisation constructs. Its simplicity to evaluate any kind of expression, the non-ambiguity for operators precedence and its efficiency in terms of number of operations to perform, make this formalism significantly better than infix or prefix modes (see Section \ref{sec:literature:expressionNotation}). The \gls{rpn} formalism has two types of operations: \emph{unary}, that expect one and only one operand; and \emph{binary} which require two operands. By combining these two categories, it is possible to express from simple to complex questionnaire logic constructs.
+
+    Table \ref{tab:design:rpnunary} lists the set of unary operators that \gls{cawiml} provides to express typical questionnaire constructs. The last four operators (e.g. \emph{SEL}, \emph{UNSEL}, \emph{ALL} and \emph{VALUEOF}) are particularly useful for operations carried out through piping constructs. For instance, Figure \ref{fig:background:survey} specifies a carry-forward piping to populate the unselected answers for Q2 as part of responses for Q3 (e.g. Q2 UNSEL). Similarly, the example questionnaire describes a text-fill construct for the Q6a text. This piping feature, which may be formally expressed as ITERATOR VALUEOF, describes the current loop iterator value since Q6a may be executed multiple times during the process of conducting an interview.
+
+    \begin{table}
+    \begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline 
+    \textbf{Name} & \textbf{Operand 1} & \textbf{Result}\tabularnewline
+    \hline 
+    \hline 
+    \textbf{POS} & Integer/Decimal & Integer/Decimal\tabularnewline
+    \hline 
+    \textbf{NEG} & Integer/Decimal & Integer/Decimal\tabularnewline
+    \hline 
+    \textbf{INC} & Integer & Integer\tabularnewline
+    \hline 
+    \textbf{DEC} & Integer & Integer\tabularnewline
+    \hline 
+    \textbf{NOT} & Boolean & Boolean\tabularnewline
+    \hline 
+    \textbf{EMPTY} & String/List & Boolean\tabularnewline
+    \hline 
+    \textbf{SIZE} & String/List & Integer\tabularnewline
+    \hline 
+    \textbf{SEL} & List & List\tabularnewline
+    \hline 
+    \textbf{UNSEL} & List & List\tabularnewline
+    \hline 
+    \textbf{ALL} & List & List\tabularnewline
+    \hline 
+    \multirow{4}{*}{\textbf{VALUEOF}} & String & \multirow{4}{*}{String}\tabularnewline
+    \cline{2-2} 
+     & Integer & \tabularnewline
+    \cline{2-2} 
+     & Decimal & \tabularnewline
+    \cline{2-2} 
+     & List & \tabularnewline
+    \hline 
+    \end{tabular}
+    \caption{Unary Operators of CAWIML}
+    \label{tab:design:rpnunary}
+    \end{center}
+    \end{table}
+
+    The set of binary operator constructs are listed in Table \ref{tab:design:rpnbinary} and differentiates the operations into four subtypes:
+    \begin{itemize}
+        \item \emph{equality and relational}, used for conditional statements such as filter, loop or check;
+        \item \emph{conditional}, utilised to join two boolean expressions;
+        \item \emph{arithmetical}, for operations such as addition, subtraction, multiplication or division; and
+        \item \emph{list} to perform operations like UNION or INTERSECTION of sets.
+    \end{itemize}
+
+    The commonly used binary operator \emph{IS\_SEL}, checks whether or not a response from a single, multiple or grid question has been chosen. Operators such as UNION or INTERSECTION are crucial to express personalisation features such as complex carry-forward constructs as these permit the join of selected, unselected or all responses from different question types (like single or multiple).
+
+    \begin{sidewaystable}
+    \begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline 
+    \textcolor{blue}{Type} & \textcolor{blue}{Name} & \textcolor{blue}{Operand 1} & \textcolor{blue}{Operand 2} & \textcolor{blue}{Result}\tabularnewline
+    \hline 
+    \hline 
+    \multirow{7}{*}{\textcolor{blue}{Equality and Relational}} & \multirow{2}{*}{\textbf{EQ}} & String & String & Boolean\tabularnewline
+    \cline{3-5} 
+     &  & Integer/Decimal & Integer/Decimal & Boolean\tabularnewline
+    \cline{2-5} 
+     & \multirow{2}{*}{\textbf{NE}} & String & String & Boolean\tabularnewline
+    \cline{3-5} 
+     &  & Integer/Decimal & Integer/Decimal & Boolean\tabularnewline
+    \cline{2-5} 
+     & \textbf{LT} & Integer/Decimal & Integer/Decimal & Boolean\tabularnewline
+    \cline{2-5} 
+     & \textbf{LE} & Integer/Decimal & Integer/Decimal & Boolean\tabularnewline
+    \cline{2-5} 
+     & \textbf{GT} & Integer/Decimal & Integer/Decimal & Boolean\tabularnewline
+    \hline 
+    \multirow{2}{*}{\textcolor{blue}{Conditional}} & \textbf{OR} & Boolean & Boolean & Boolean\tabularnewline
+    \cline{2-5} 
+     & \textbf{AND} & Boolean & Boolean & Boolean\tabularnewline
+    \hline 
+    \multirow{5}{*}{\textcolor{blue}{Arithmetical}} & \textbf{ADD} & Integer/Decimal & Integer/Decimal & Integer/Decimal\tabularnewline
+    \cline{2-5} 
+     & \textbf{SUB} & Integer/Decimal & Integer/Decimal & Integer/Decimal\tabularnewline
+    \cline{2-5} 
+     & \textbf{MUL} & Integer/Decimal & Integer/Decimal & Integer/Decimal\tabularnewline
+    \cline{2-5} 
+     & \textbf{DIV} & Integer/Decimal & Integer/Decimal & Integer/Decimal\tabularnewline
+    \cline{2-5} 
+     & \textbf{MOD} & Integer & Integer & Integer\tabularnewline
+    \hline 
+    \multirow{3}{*}{\textcolor{blue}{List}} & \textbf{IS\_SEL} & List & String & Boolean\tabularnewline
+    \cline{2-5} 
+     & \textbf{UNION} & List & List & List\tabularnewline
+    \cline{2-5} 
+     & \textbf{INTERSECTION} & List & List & List\tabularnewline
+    \hline 
+    \end{tabular}
+    \caption{Binary Operators of CAWIML}
+    \label{tab:design:rpnbinary}
+    \end{center}
+    \end{sidewaystable}
+   

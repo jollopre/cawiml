@@ -1,0 +1,16 @@
+	In order to test the coverage of questionnaire features through \gls{cawiml} language and to determine typical frequency of constructs, we have randomly chosen a set of fifteen real questionnaires provided by Pexel. Particularly, we have studied the frequency distribution of \gls{cawiml} vocabulary over this sample of surveys. Figure \ref{fig:eval:frequencies} shows the total number of occurrences for each construct sorted by decreasing order of frequency. The bar chart separates the content, routing and personalisation features with purple, green and blue colours respectively. A more detailed view for this dataset, presented in Table \ref{tab:eval:frequencies}, represents frequency of questionnaire constructs separated for each survey. %It was encouraging to us that all the questionnaires in the sample were represented using \gls{ssm} and apart from the check feature, every other construct was included in any of the surveys chosen. 
+
+	\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{eval/img/surveyfrequencies.png}
+	\caption{Total construct frequencies for fifteen surveys}
+	\label{fig:eval:frequencies}
+	\end{figure}
+
+	\input{eval/frequenciesTable}
+
+	Firstly, we can confirm that all constructs in our sample of questionnaires were encodable by \gls{cawiml}. Next, in terms of frequency of content, we can observe that single-response questions are most frequent whereas intro constructs were least frequent. Intro question whose purpose is introducing a part of a questionnaire, does not appears once at the beginning instead with each of the sections in the sampled surveys (e.g. questionnaire 04 and 10 with seven and five sections respectively, have only one intro for the entire survey).
+
+	Secondly, for the routing classification, filter construct has obtained the highest number of occurrences, however it does not appear in every questionnaire (e.g. 02, 04, 07, 12). In contrast, the skip feature, although slightly less frequent than filter, is popular amongst the surveys. Therefore, we conclude that skip logic remains an important feature of questionnaires and so should ideally be facilitated by the underlying language of surveys. Computation constructs, become essential when data from one section is needed for another section, but has only been found four times in the questionnaire 13. The absence of check constructs is not surprising since it is a rare feature that tends to appear in less well-designed questionnaires.
+
+	Thirdly, for the personalisation grouping, the three features are presented in the sample tested and piping appears to be the most common construct, specially for populating responses automatically through carry-forward mode. Regarding randomising and rotating constructs, they are less frequent.

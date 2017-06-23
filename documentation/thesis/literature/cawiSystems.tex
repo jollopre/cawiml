@@ -1,0 +1,11 @@
+	\gls{cawi} systems are based on a \gls{cs} architecture style that uses \gls{http} to communicate between client and server. Several refinements for this basic architecture have been made over the years such as the \emph{distributed objects} style (e.g. \gls{corba}), which uses the object-oriented paradigm, for client server communication by encapsulating data and behaviour together \cite{proc:overdick07}. This approach is not appropriate for distributed environments since it asserts too much responsibility on the client which has to manage the life-cycle of objects, i.e. operations such as create, copy, move or destroy, and the server that has to rely on these operations performed.
+
+	A more modern architecture style is \gls{soa} that defines services to address the different functionalities of a system. In this approach, there are two agents involved: the \emph{provider}, which implements a defined business function that operates independently of any other service provider; and the \emph{consumer} which uses the service \cite{tech:mackenzie06}. The interactions among the agents are performed through different communication protocols such as \gls{soap} and using standard exchangeable formats like \gls{xml}.
+
+	As Pexel company demands the design and development of a new \gls{cawi} solution that can offer potential advantages over competitors, we consider that it is important to evaluate different architectural properties for the existing \gls{cawi} systems in order to determine how they address the simplicity, portability, reliability and scalability. Similarly, as the software system is network-based, it is crucial to review different test strategies for performance since these may help to estimate response times that in term, impact usability.
+
+	The rest of this section is structured as follow: Section \ref{sec:literature:architectures} reviews the architectural style of different \gls{cawi} systems and Section \ref{sec:literature:performanceTesting} explores different testing methods and parameters used to simulate scenarios for performance testing of \gls{cawi} systems.
+
+
+
+

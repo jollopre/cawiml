@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="https://github.com/jollopre/ssm"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://github.com/jollopre/ssm ../schema/ssm.xsd">
+    ...
+    <content>
+        ...
+        <section id="Inner">
+            <label lang="en">Inner</label>
+            <single name="Q6a">
+                <label lang="en">Have you ever had a car from <pipe ref="pipe0"/> brand?</label>
+                <close code="01">
+                    <label lang="en">Yes</label>
+                </close>
+                <close code="02">
+                    <label lang="en">No</label>
+                </close>
+            </single>
+        </section>
+        ...
+    </content>
+    ...
+    <personalisation>
+        ...
+        <piping ref="Inner">
+            ...
+            <pipe id="pipe0">
+                <variable ref="p4_iterator"/>
+                <operator name="VALUEOF"/>
+            </pipe>
+            ...
+        </piping>
+        ...
+    </personalisation>
+</ssm>

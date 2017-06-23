@@ -1,0 +1,26 @@
+<schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2" xml:lang="en">
+    <title>Schematron rules for Survey State Model (SSM)</title>
+    <ns uri="https://github.com/jollopre/ssm" prefix="ssm"></ns>
+    <pattern id="composite">
+        ...
+        <rule context="ssm:state">
+            <let name="state" value="."/>
+            ...
+            <assert test="if(exists(child::ssm:include) and not(exists(child::ssm:transition))) then
+                          exists(preceding-sibling::ssm:state/ssm:for/ssm:transition[@target = $state/@id]) or
+                          exists(following-sibling::ssm:state/ssm:for/ssm:transition[@target = $state/@id])
+                          else true()" diagnostics="m22">  
+            </assert>
+            ...
+        </rule>
+        ...
+    </pattern>
+    ...
+    <diagnostics>
+        ...
+        <diagnostic id="m22" xml:lang="en">
+            state: transition is required for composite state.
+        </diagnostic>
+        ...
+    </diagnostics>
+</schema>

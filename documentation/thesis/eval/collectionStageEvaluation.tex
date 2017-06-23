@@ -1,0 +1,97 @@
+	%We have conducted a load testing experiment to evaluate the performance of the state-transition model and verify whether it works adequately according to a three metrics or not. There are several factors affecting the performance of our RESTful Web service such as the number of concurrent users requesting data, the complexity of the survey and the web server configuration. 
+
+	%This section discusses an approach for testing our model performance by defining a scenario addressed to emulate the interviewee's behaviour when responding a questionnaire. This simulation has been carried out through JMeter \cite{web:jmeter16}, an open source load testing tool which has executed our test plan collecting data for later being analysed.
+
+	\subsection{Methodology}
+		In order to evaluate the capacity of our \gls{cawi} system for collecting survey data, we have chosen the stress testing strategy with the following server configuration:
+		\begin{itemize}
+			\item 2.4 GHz Intel Core i5 CPU,
+			\item 1GB RAM dedicated exclusively for the \gls{cawi} system, %the maximum heap size that our Java app can take to allocate the new objects created. 
+			\item and a maximum pool size at 100 to satisfy high number of accesses to the database for update/retrieve state-transition objects. %And finally up to 100 cache of database pooling connections to minimise the frequency and number of connections.
+		\end{itemize}
+		This strategy has been executed with the methodology plan presented in Section \ref{sec:literature:performanceTesting} in which first a questionnaire is selected, second a scenario is designed and thirdly different parameters are varied.
+		
+		\subsubsection{Survey Choice}
+
+		We have chosen questionnaire 09 (see Appendix \ref{sec:appendix:questionnaires}) since it has an adequate distribution of survey features. Specifically, for the content features, there are: one intro, one single-grid, two single, eight multiple and six open-ended questions. In respect to the routing constructs, there are nine filters, two skip logics and two loops that iterate over a list of responses with sizes nine and thirteen respectively. Regarding the personalisation features, nine pipes are defined either as \emph{text-fill} or \emph{carry forward responses} as well as a randomising construct that changes the element's order for one of the loops.
+
+		\subsubsection{Scenario Design}
+		The scenario designed to simulate the gathering of survey data, represented in Algorithm \ref{alg:eval:scenario}, starts with the following statements: first, a new survey instance is created; second, general information of the questionnaire such as title or description is requested; and third, the first state of the survey is called. After that sequence, an iterative process is carried out until the end of the questionnaire is reached.
+
+		\input{eval/scenario}
+
+		The loop body firstly executes a random distributed time in order to simulate the amount of time that takes respondents to answer one or more questions and secondly, decides whether executing forward or backward requests for 70\% or 30\% respectively for the total of iterations. We have chosen a higher value for forward requests in order to ensure that every simulated interview is completed. When the forward action is requested, a JavaScript functionality that randomly chooses the response for a question according to its type, is performed. Finally, when the loop is completed, the task of deleting the client token is requested, i.e. a successful response will prevent the virtual respondent to modify her survey responses after that. %EXPLAIN THAT THE JAVASCRIPT EXECUTION IS CARRIED OUT ON THE CLIENT
+
+		\subsubsection{Parameters Varied}
+
+		Two parameters have been considered when the scenario is executed: the \emph{virtual users}, that is the number of concurrent users that are responding to the questionnaire. This constant varies from 50 to 300 by increments of 50; and the \emph{thinking time}, that is randomly distributed from 500 ms to 3000 ms. This parameter has served us to adequately emulate the interviewee's thinking behaviour before responding to a question. 
+
+	\subsection{Metrics}
+
+	We have collected average response time, peak load and error rate for each testing level executed. The \emph{average}, that corresponds to the statistical mean of the population, has been measured in milliseconds. Regarding the \emph{peak load}, that captures the highest response time obtained for all the requests sent, has permitted us to identify bottlenecks in resources. In respect to the \emph{error rate}, that is the percentage of problematic requests from every testing level executed.
+
+	In order to determine the responsiveness of the system we have compared the response times obtained for average and peak load metrics against the following three categories: \emph{100}ms, that is the threshold in which users feel that a system reacts instantaneously to their requests; \emph{1} second, that constitutes the limit for feeling a seamless flow; and \emph{10} seconds, which is the limit to keep user's attention. Any time above that threshold leads to less ideal situations \cite{web:nielsen10}.
+
+	\subsection{Results}
+
+	The results obtained after executing stress testing at different load levels of concurrent users are presented in Table \ref{tab:eval:stressTest}. This table captures for each level the sub resource, number of samples, average response time, minimum response time request, peak load or maximum response time request and the percentage of error. These sub resources correspond to the sub resources exposed to the client in our \gls{cawi} system (see Section \ref{sec:cawiSystem:restfulImplementation}).
+
+	The average response times for each sub resource remained under 100 milliseconds for 50, 100, 150 number of virtual users, i.e. for the interviews carried out at these levels, the respondents will feel that the system reacts instantaneously to their requests. POST token, GET survey info and DELETE token have extended this average response time threshold until 200 and GET survey info has obtained the greatest average performance until 250 simultaneous virtual interviewees. On average, none of the sub resources has exceeded 10 seconds threshold at any level in which the user's attention is difficult to handle. Not surprisingly, POST next and POST previous average response times are significantly higher than the others. In particular, POST next has obtained the highest average response time which is explained due to the fact that one or more \gls{rpn} expressions can be executed when moving from one state to another in the questionnaire's flow.
+	
+	In respect to the peak load, every request for GET survey info and DELETE token at number of users 50 and 100 has been enclosed under the threshold that the system reacts instantaneously. We have found bottlenecks for POST next at 250 and 300 (e.g. 8095 and 11025 respectively) and for POST previous at 300 (e.g. 11566). We consider that these values above the user's attention threshold are directly related to the number of database connections available when requesting data, i.e. having set up 100 pooling connections has lead the users to wait until a database connection is free for usage.
+
+	Regarding the percentage of errors, it has been encouraging to us that no errors were raised at any configuration level evaluated. This can be explained by the setting of an optimum ramp-up time of 10 users per second entering in the system. This value is sufficiently high to avoid saturating the server with unrealistic requests (e.g. all user at once) at the beginning of each test plan and low enough to prevent any interview to be completed before all the users are concurrently active.
+
+	%-----------------AVG
+	%POST token:
+	%	Avg under 100 milliseconds for 50,100,150 and 200
+	%	Avg less than 1 second for 250 and 300
+	%GET surveyinfo:
+	%	Avg under 100 milliseconds for 50,100,150,200 and 250
+	%	Avg less than 1 second for 300 with a value slightly above system reacts instantaneously
+	%GET resume:
+	%	Avg under 100 milliseconds for 50,100,150 and 200
+	%	Avg less than 1 second for 250 and 300
+	%POST next:
+	%	Avg under 100 milliseconds for 50,100,150
+	%	Avg less than 1 second for 200 and 250
+	%	Avg under 10 seconds for 300
+	%POST previous:
+	%	Avg under 100 milleconds for 50,100,150
+	%	Avg less than 1 second for 200 and 250
+	%	Avg under 10 seconds for 300
+	%DELETE token:
+	%	Avg under 100 milliseconds for 50,100,150 and 200
+	%	Avg less than 1 second for 250 and 300
+	%-----------------PEAK LOAD
+	%POST token:
+	%	Peak load under 1 second for 50,100,150,200
+	%	Peak load less than 10 seconds for 250 and 300 (still good value far from reaching the threshold of loosing user's attention)
+	%GET surveyinfo:
+	%	Peak load under 100 milliseconds for 50, 150
+	%	Peak load under 1 second for 100,200 and 250
+	%	Peak load under 10 seconds for 300
+	%GET resume:
+	%	Peak load under 100 milleconds for 50
+	%	Peak load less than 1 second for 100,150,200
+	%	Peak load less than 10 seconds for 250 and 300
+	%POST next:
+	%	Peak load under 1 second for 50, 100
+	%	Peak load less than 10 seconds for 150,200
+	%	Peak load not acceptable for 250 and 300
+	%POST previous:
+	%	Peak load under 1 second for 50, 100
+	%	Peak load less than 10 seconds for 150,200,250
+	%	Peak load not acceptable for 300
+	%DELETE token:
+	%	Peak load under 100 milliseconds for 50,100
+	%	Peak load less than 1 second for 150, 200
+	%	Peak load under 10 seconds for 250 and 300
+
+	\input{eval/stressTestTable}
+
+	The average response times obtained can be misleading if other aspects such as the standard deviation are not considered. For that purpose, we present in Table \ref{tab:eval:ci} the overall average response time for each configuration level, its standard deviation as well as the confidence value. The standard deviation has resulted higher than its mean at every level, i.e. it indicates that the response times are spread out over the wide range of values. This variety of data can be explained due to the fact that for every interview executed different paths can be taken which result in different durations when moving forward or backward through the questionnaire's flow.
+
+	\input{eval/ci}
+
+	In order to determine whether or not the average response times obtained are a good estimation of the statistical mean when this scenario is repeated indefinitely, we have also studied the confidence value. As we have collected a large number of independent requests to the server with a finite mean and variance, this parameter permits determining how likely are these overall averages to fluctuate. For instance, for levels 50, 100 and 150, with 95\% confidence, the average response time of the state-transition collection service is 40.11$\pm$2.93, 49.10$\pm$1.92 and 79.94$\pm$3.12 respectively. Similarly, for levels 200, 250, 300, the mean should fluctuate around 182.25$\pm$8.88, 774.02$\pm$29.40 and 1474.74$\pm$45.02 respectively, however at these levels the confidence intervals are significantly higher, which can be directly related with the instability of the system due the high number of simultaneous users connected to the limited resources of the server such as database connections or memory size.

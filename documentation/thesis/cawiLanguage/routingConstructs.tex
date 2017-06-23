@@ -1,0 +1,35 @@
+	The routing in \gls{cawiml} is composed of different state models that reference to sections defined in the content part of the language. Throughout this section, the questionnaire from Figure \ref{fig:background:survey} will be used to discuss the features supported by \gls{cawiml}. In Listings \ref{code:impl:routing}, there are two state models (e.g. Outer and Inner) to capture the question's sequence from those sections. In addition, there is an entry point state model element that marks the beginning of the questionnaire's flow. 
+
+	Every state model defines an initial state that determines what is the first state to execute through a source element (e.g. Outer defines INF1). Similarly, it requires at least one state that describes the end of a question's sequence through \emph{sink} element. The different states supported in our state-transition solution for questionnaires are detailed in the following subsections. %Every state type from \gls{cawiml} is defined though a common state element with an id attribute that is used in transitions to reference the source and target 
+
+	\lstinputlisting[caption={State-transition routing},label={code:impl:routing}]{appendix/code/routing.xml}
+
+	\subsubsection{Sink}
+		Sink state is aimed at describing the ending of a state model, i.e. it marks the end of a section. For instance, Listings \ref{code:impl:sink} describes a sink with id 'sink0'. When this state is reached, the state model Outer finishes and consequently the questionnaire terminates. As the reader may appreciate, there are no outgoing transitions from this state type. 
+		\lstinputlisting[caption={Sink state},label={code:impl:sink}]{appendix/code/sink.xml}
+
+	\subsubsection{Terminate}
+		Terminate state unlike Sink states, are addressed to interrupt the entire routing, i.e. when this state is reached not only finishes the state model under which is defined but also terminates the questionnaire's flow even if there are more states defined in the entry point state model. Listings \ref{code:impl:terminate} describes this state type with an id 'terminate0'.
+		\lstinputlisting[caption={Sink state},label={code:impl:terminate}]{appendix/code/terminate.xml}
+
+	\subsubsection{Simple}
+		Simple state is responsible for retrieving variables, i.e. the definition of a question and its associated responses, if any. It has capabilities to define one or more variables, i.e. every variable referenced here must be presented on the same screen of the \gls{cawi} collection stage that supports \gls{cawiml}. Listings \ref{code:impl:simple} describes two simple states (e.g. INF1 and Q1) that contain references to variables (e.g. INF1 and Q1 for intro and single question respectively). For instance, when an interviewee decides to move forward through the questionnaire after reading INF1, the state Q1 is reached given the transition target defined within the INF1 state.
+		\lstinputlisting[caption={Simple state},label={code:impl:simple}]{appendix/code/simple.xml}
+	\subsubsection{Composite}
+		Composite state permits switching to another state model. For instance, the Inner state model referenced under the 'c1' state (see Listings \ref{code:impl:composite}) describes the sequence of questions for the Inner section of the paper questionnaire that corresponds to Q6a (see Figure \ref{fig:background:survey}). Note that this state has been defined within the state model Outer, i.e. the Inner state model will be only reached under the sequence defined for the Outer state model.
+		\lstinputlisting[caption={Composite state},label={code:impl:composite}]{appendix/code/composite.xml}
+	\subsubsection{If-then-else}
+		If state represents filter and skip constructs indistinctly. It is composed of a boolean expression in \gls{rpn} notation and describes two transitions, then and else, for true and false result of the expression respectively. For instance, Listings \ref{code:impl:ifThenElse} specifies the skip features attached over Q1, i.e. if response 01, 02 or 03 is selected, the 'sink0' state has to be reached, otherwise the interviewee will see question Q2 on the screen.
+		\lstinputlisting[caption={If-then-else state},label={code:impl:ifThenElse}]{appendix/code/ifThenElse.xml}
+	\subsubsection{Check}
+		Check state defines a boolean expression that validates the presence of an inconsistency. There are two types supported: \emph{warning}, that alerts the interviewee but permits her to continue the section sequence; and \emph{error}, that stops the execution of the state model until the conflict is solved. Listings \ref{code:impl:check} describes a case where the questionnaire's flow is interrupted if the response was not selected. This example is useful to validate whether or not people younger than eighteen have never been married. It should described together with an if-then-else state to filter those interviewees with age under eighteen.
+		\lstinputlisting[caption={Check state},label={code:impl:check}]{appendix/code/check.xml}
+	\subsubsection{For}\label{sec:impl:for}
+		For state captures the loop construct of surveys and similar to the if-then-else state, has two transitions one for executing the loop body and another that is reached whenever the boolean expression is not met. There are three loop types: \emph{range}, that iterates numbers by specifying start, end and step expressions (e.g. start at 0, end at 5 and step 1 would iterate from 0 to 4); \emph{List} mode, that iterates all the elements of a list defined in the field section; and \emph{expr\_list} that iterates a list returned by \gls{rpn} expression.
+		
+		Listings \ref{code:impl:for} describes the instruction specified over Q6a through expr\_list loop mode. This state contains: \emph{field} element, that references a global variable (e.g. 'p4\_iterator'), updated every time the iterator changes; and two transitions, one for switching to another state model (e.g. target 'c1') and the other that is reached when the loop condition is not met (e.g. target 'p5'). Note that this example includes a randomising construct (see Section \ref{sec:impl:Randomising}) that alters the iterator order and ensures that at maximum four times the loop is executed.
+		\lstinputlisting[caption={For state},label={code:impl:for}]{appendix/code/for.xml}
+	\subsubsection{Computation}
+		Computation state is used to update place holder variables. These variables are typically used to share data across sections. For instance, Listings \ref{code:impl:computation} permits aggregating data from different state models through the global variable HAD\_CAR. This construct, implicitly defined within the paper questionnaire must be used together with an if-then-else to decide whether or not the interviewee responded \emph{yes} to the Q6a. Note that this question may be repeated multiple times for each brand mentioned at Q2 or Q3 and therefore through HAD\_CAR is captured the number of cars that the interviewee had.
+ 		\lstinputlisting[caption={Computation state},label={code:impl:computation}]{appendix/code/computation.xml}
+	

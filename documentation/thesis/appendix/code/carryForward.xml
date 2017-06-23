@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="https://github.com/jollopre/ssm"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://github.com/jollopre/ssm ../schema/ssm.xsd">
+    ...
+    <content>
+        ...
+        <section id="Outer">
+            <label lang="en">Outer</label>
+            <multiple name="Q3">
+                <label lang="en">Which brands are you aware of? [OTHER SPONTANEOUS MENTIONS Q2]</label>
+                <pipe ref="pipe0"/>
+            </multiple>
+        </section>
+        ...
+    </content>
+    ...
+    <personalisation>
+        ...
+        <piping ref="Outer">
+            <pipe id="pipe0">
+                <variable ref="Q2"/>
+                <operator name="UNSEL"/>
+            </pipe>
+        </piping>
+        ...
+    </personalisation>
+</ssm>

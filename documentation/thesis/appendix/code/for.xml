@@ -1,0 +1,27 @@
+<routing>
+    ...
+    <statemodel ref="Outer">
+        ...
+        <state id="p4">
+            <for>
+                <field ref="p4_iterator"/>
+                <in>
+                    <expr_list>
+                        <variable ref="Q2"/>
+                        <operator name="SEL"/>
+                        <variable ref="Q3"/>
+                        <operator name="SEL"/>
+                        <operator name="UNION"/>
+                    </expr_list>
+                    <randomising>
+                        <all present="4"/>
+                    </randomising>
+                </in>
+                <transition target="c1"/>
+            </for>
+            <transition target="p5"/>
+        </state>
+        ...
+    </statemodel>
+    ...
+</routing>

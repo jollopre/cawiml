@@ -1,0 +1,355 @@
+\begin{thebibliography}{}
+
+\bibitem[Alagar and Periyasamy, 2011]{book:alagar11}
+Alagar, V.~S. and Periyasamy, K. (2011).
+\newblock {\em Specification of Software Systems}.
+\newblock Springer London, London.
+
+\bibitem[Androutsopoulos et~al., 2008]{tech:androutsopoulos08}
+Androutsopoulos, K., Binkley, D., Clark, D., and Harman, M. (2008).
+\newblock Slicing extended finite state machines.
+\newblock Technical report, King's College London. Department of Computer
+  Science.
+
+\bibitem[Bethke, 2008]{art:bethke08}
+Bethke, A.~D. (2008).
+\newblock Representing procedural logic in xml.
+\newblock {\em Journal of Software}, 3(2).
+
+\bibitem[Bethlehem, 2000]{proc:bethlehem00}
+Bethlehem, J. (2000).
+\newblock The routing structure of questionnaires.
+\newblock In {\em ASC 1999. Leading Survey and Statistical Computing into the
+  New Millennium}, pages 1--14.
+
+\bibitem[Bethlehem and Biffignandi, 2012]{book:bethlehem12}
+Bethlehem, J. and Biffignandi, S. (2012).
+\newblock {\em Handbook of web surveys}.
+\newblock John Wiley and SONS.
+
+\bibitem[Bethlehem and Hundepool, 2002]{man:bethlehem02}
+Bethlehem, J. and Hundepool, A. (2002).
+\newblock {\em TADEQ prototype version 1.5 User Manual}.
+
+\bibitem[Bethlehem and Hundepool, 2004]{art:bethlehem04}
+Bethlehem, J. and Hundepool, A. (2004).
+\newblock Tadeq: A tool for the documentation and analysis of electronic
+  questionnaires.
+\newblock {\em Journal of Official Statistics}, 20(2):233--264.
+
+\bibitem[Bock, 2013]{web:bock13}
+Bock, T. (2013).
+\newblock Market research.
+
+\bibitem[Bray et~al., 2008a]{web:w3cxml}
+Bray, T., Paoli, J., Sperberg-McQueen, C., Maler, E., and Yergeau, F. (2008a).
+\newblock Extensible markup language (xml) 1.0 (fifth edition).
+\newblock \url{https://www.w3.org/TR/2008/REC-xml-20081126/}.
+
+\bibitem[Bray et~al., 2008b]{web:w3cdtd}
+Bray, T., Paoli, J., Sperberg-McQueen, C., Maler, E., and Yergeau, F. (2008b).
+\newblock Prolog and document type declaration.
+\newblock \url{https://www.w3.org/TR/2008/REC-xml-20081126/#sec-prolog-dtd}.
+
+\bibitem[Brown, 2001]{web:brown01}
+Brown, B. (2001).
+\newblock Postfix notation mini-lecture.
+
+\bibitem[Clark, 1999]{web:w3cxslt}
+Clark, J. (1999).
+\newblock Xsl transformations (xslt) version 1.0.
+\newblock \url{https://www.w3.org/TR/xslt}.
+
+\bibitem[Clark and DeRose, 2015]{web:w3caxes}
+Clark, J. and DeRose, S. (2015).
+\newblock Location path - axes.
+\newblock \url{https://www.w3.org/TR/xpath/#axes}.
+\newblock Xpath Axes.
+
+\bibitem[Corbett, 2011]{proc:corbett11}
+Corbett, J. (2011).
+\newblock Incorporating metadata standards into existing working practices -
+  how can it be done?
+\newblock In {\em Proceedings of the Fifth International Conference of the
+  Association for Survey Computing}, pages 177--184.
+
+\bibitem[Corporation, 2012]{booklet:ibm12}
+Corporation, I. B. M.~I. (2012).
+\newblock The hows and whys of survey research.
+
+\bibitem[Costello and Simmons, 2015]{web:costello15}
+Costello, R.~L. and Simmons, R.~A. (2015).
+\newblock Two types of xml schema languages.
+\newblock
+  \url{http://xfront.com/schematron/Two-types-of-XML-Schema-Language.html}.
+
+\bibitem[Costigan and Elder, 2003]{proc:costigan03}
+Costigan, P. and Elder, S. (2003).
+\newblock Does the questionnaire implements the specification? who knows?
+\newblock In {\em ASC 2003. The Impact of Technology on the Survey Process},
+  pages 85--95.
+
+\bibitem[de~Bolster, 2013]{proc:bolster13}
+de~Bolster, G. (2013).
+\newblock Generating blaise from ddi.
+\newblock In {\em International Blaise Users Conference}, pages 96--102.
+
+\bibitem[Dijkstra, 1968]{art:dijkstra68}
+Dijkstra, E.~W. (1968).
+\newblock Go-to statement considered harmful.
+\newblock {\em ACM 11, 3: 147-148.}
+
+\bibitem[Dodds, 2001]{web:doodds01}
+Dodds, L. (2001).
+\newblock Schematron: validating xml using xslt.
+\newblock \url{http://www.ldodds.com/papers/schematron_xsltuk.html}.
+\newblock Retrieved May, 2016.
+
+\bibitem[Dongwon and Chu, 2000]{art:lee00}
+Dongwon, L. and Chu, W.~W. (2000).
+\newblock Comparative analysis of six xml schema languages.
+\newblock {\em AGM SIGMOD}, 29(3).
+
+\bibitem[Esuli and Sebastiani, 2006]{proc:esuli06}
+Esuli, A. and Sebastiani, F. (2006).
+\newblock Sentiwordnet: A publicly available lexical resource for opinion
+  mining.
+\newblock In {\em In Proceedings of the 5th Conference on Language Resources
+  and Evaluation (LREC’06}, pages 417--422.
+
+\bibitem[Fagan and Greenberg, 1988]{tech:fagan88}
+Fagan, J. and Greenberg, B. (1988).
+\newblock Using graph theory to analyze skip patterns in questionnaires.
+\newblock Technical report, Statistical Research Division Bureau of the Census
+  Washington, D.C.
+
+\bibitem[Fan and Siméon, 2003]{art:fan03}
+Fan, W. and Siméon, J. (2003).
+\newblock Integrity constraints for \{XML\}.
+\newblock {\em Journal of Computer and System Sciences}, 66(1):254 -- 291.
+\newblock Special Issue on \{PODS\} 2000.
+
+\bibitem[Fielding, 2000]{phdthesis:fielding00}
+Fielding, R.~T. (2000).
+\newblock {\em Architectural Styles and the Design of Network-based Software
+  Architectures}.
+\newblock Phd thesis, University of California.
+
+\bibitem[Fielding et~al., 1999]{web:fielding99}
+Fielding, R.~T. et~al. (1999).
+\newblock Hypertext transfer protocol -- http/1.1.
+\newblock \url{https://tools.ietf.org/rfc/rfc2616.txt}.
+
+\bibitem[Gao et~al., 2012]{web:w3cxsdassertion}
+Gao, S., Sperberg-McQueen, C., and Thompson, H. (2012).
+\newblock W3c xml schema definition language (xsd) 1.1 part 1: Structures.
+\newblock \url{https://www.w3.org/TR/xmlschema11-1/#assertion-validation}.
+\newblock Retrieved May, 2016.
+
+\bibitem[Gerrard et~al., 2011]{book:triplesxml}
+Gerrard, L., Hughes, K., Jenkins, S., Ross, E., and Wright, G. (2011).
+\newblock {\em The Survey Interchange Standard}.
+\newblock The Asociation for Survey Computing (ASC).
+
+\bibitem[Gerrard et~al., 2015]{web:triples}
+Gerrard, L., Hughes, K., Jenkins, S., Ross, E., Wright, G., and Molloy, P.
+  (2015).
+\newblock Triple-s implementations november 2015.
+\newblock \url{http://www.triple-s.org/ssssoft.htm}.
+
+\bibitem[Groom, 2014]{web:groom14}
+Groom, C. (2014).
+\newblock Surveymonkey speeded up with python.
+\newblock Last updated Apr 13, 2014, 12:21 PM.
+
+\bibitem[Gyorodi et~al., 2015]{proc:gyorodi15}
+Gyorodi, C., Gyorodi, R., Pecherle, G., and Olah, A. (2015).
+\newblock A comparative study: Mongodb vs. mysql.
+\newblock In {\em Engineering of Modern Electric Systems (EMES), 2015 13th
+  International Conference on}, pages 1--6.
+
+\bibitem[Haque and Rahman, 2014]{art:haque14}
+Haque, A. and Rahman, T. (2014).
+\newblock Sentiment analysis by using fuzzy logic.
+\newblock {\em International Journal of Computer Science, Engineering and
+  Information Technology}, 4:33--48.
+
+\bibitem[Huhges, 2007]{proc:Hughes07}
+Huhges, N.~G. (2007).
+\newblock The difficulty of understanding social survey questionnaires from the
+  published documentation.
+\newblock In {\em Proceedings of the Fifth International Conference of the
+  Association for Survey Computing}, pages 213--222.
+
+\bibitem[Jabine, 1985]{art:jabine85}
+Jabine, T.~B. (1985).
+\newblock Flow charts: A tool for developing and understanding survey
+  questionnaires.
+\newblock {\em Journal of Official Statistics}, 1(2):189--207.
+
+\bibitem[Jellife, 2007]{web:jellife07}
+Jellife, R. (2007).
+\newblock Converting xml schemas to schematron.
+\newblock
+  \url{http://archive.oreilly.com/pub/post/converting_xml_schemas_to_sche.html}.
+\newblock Retrieved May, 2016.
+
+\bibitem[Kahn, 1962]{art:kahn62}
+Kahn, A.~B. (1962).
+\newblock Topological sorting of large networks.
+\newblock {\em Commun. ACM}, 5(11):558--562.
+
+\bibitem[Katz et~al., 1997]{proc:katz97}
+Katz, Irvin an~Mason, G., Stinson, L., and Conrad, F. (1997).
+\newblock Questionnaire designers versus instrument authors: Bottlenecks in the
+  development of computer-administered questionnaires.
+\newblock In {\em Proceedings of the Survey Research Methods Section}, pages
+  1029--1034.
+
+\bibitem[Kozlowski and Bacon~Darwin, 2013]{book:kozlowski13}
+Kozlowski, P. and Bacon~Darwin, P. (2013).
+\newblock {\em Mastering Web Aplication Development with AngularJS}.
+\newblock Packt Publishing Ltd.
+
+\bibitem[MacKenzie et~al., ]{tech:mackenzie06}
+MacKenzie, C.~M., Laskey, K., McCabe, F., Brown, P.~F., and Metz, R.
+\newblock Reference model for service oriented architecture 1.0.
+\newblock Technical report committee specification 1, OASIS.
+
+\bibitem[Madsen, 2009]{masterthesis:madsen09}
+Madsen, L.~B. (2009).
+\newblock Definition of validation rules for xml data for electronic
+  questionnaires.
+\newblock Thesis for master of information technology in software development,
+  IT University of Copenhagen.
+
+\bibitem[Mesbah and van Deursen, 2007]{proc:mesbah07}
+Mesbah, A. and van Deursen, A. (2007).
+\newblock Migrating multi-page web applications to single-page ajax interfaces.
+\newblock In {\em Software Maintenance and Reengineering, 2007. CSMR '07. 11th
+  European Conference on}, pages 181--190.
+
+\bibitem[Murata et~al., 2005]{art:murata05}
+Murata, M., Lee, D., Mani, M., and Kawaguchi, K. (2005).
+\newblock Taxonomy of xml schema languages using formal language theory.
+\newblock {\em ACM Trans. Internet Technol.}, 5(4):660--704.
+
+\bibitem[Møller and Schwartzbach, 2006]{book:moller06}
+Møller, A. and Schwartzbach, M.~I. (2006).
+\newblock {\em An Introduction to XML and Web Technologies}.
+\newblock Addison-Wesley.
+
+\bibitem[Netherlands, 2015]{web:blaise15}
+Netherlands, S. (2015).
+\newblock Blaise, survey software for professionals.
+
+\bibitem[Nielsen, 2010]{web:nielsen10}
+Nielsen, J. (2010).
+\newblock Website response times.
+\newblock \url{https://www.nngroup.com/articles/website-response-times/}.
+
+\bibitem[Nurseitov et~al., 2009]{art:nurseitov09}
+Nurseitov, N., Paulson, M., Reynolds, R., and Izurieta, C. (2009).
+\newblock Comparison of json and xml data interchange formats: A case study.
+\newblock {\em Scenario}, 59715:157--162.
+
+\bibitem[of~California, 2015]{web:cases15}
+of~California, U. (2015).
+\newblock Computer-assisted survey execution system.
+
+\bibitem[Overdick, 2007]{proc:overdick07}
+Overdick, H. (2007).
+\newblock The resource-oriented architecture.
+\newblock In {\em Services, 2007 IEEE Congress on}, pages 340--347.
+
+\bibitem[Padhy et~al., 2011]{art:padhy11}
+Padhy, R.~P., Patra, M.~R., and Satapathy, S.~C. (2011).
+\newblock Rdbms to nosql: Reviewing some next-generation non-relational
+  database's.
+\newblock {\em International Journal of Advanced Engineering sciences and
+  technologies}, 11:15--30.
+
+\bibitem[Rasmussen and Blank, 2007]{art:rasmussen07}
+Rasmussen, K. and Blank, G. (2007).
+\newblock The data documentation initiative: a preservation standard for
+  research.
+\newblock {\em Archival Science}, 7:55--71.
+
+\bibitem[Rolke, 2010]{proc:rolke10}
+Rolke, H. (2010).
+\newblock Automata and preti net models for visualizing and analyzing complex
+  questionnaires - a case study.
+\newblock In {\em Proceedings of the Workshops of the 31st International
+  Conference on Application and Theory of Petri Nets and Other Models of
+  Concurrency (PETRI NETS 2010)}, pages 317--329.
+
+\bibitem[Segel et~al., 2015]{proc:segel15}
+Segel, P., Subramanian, M., Frey, R., and Snowden, R. (2015).
+\newblock Blaise 5 server configuration for web surveys.
+\newblock In {\em International Blaise Users Conference}, pages 161--168.
+
+\bibitem[Segel et~al., 2013]{proc:segel13}
+Segel, P., Subramanian, M., Snowden, R., Frey, R., and Mike, F. (2013).
+\newblock Implementing blaise 5 in a production environment.
+\newblock In {\em International Blaise Users Conference}, pages 243--258.
+
+\bibitem[Spencer, 2012]{web:spencer12}
+Spencer, S. (2012).
+\newblock A case against the skip statement.
+\newblock \url{http://bit.ly/CaseAgainstSkip}.
+
+\bibitem[Sperberg-McQueen and Thompson, 2012]{web:w3cxsd}
+Sperberg-McQueen, C. and Thompson, H. (2012).
+\newblock W3c xml schema.
+\newblock \url{https://www.w3.org/XML/Schema}.
+\newblock Retrieved May, 2016.
+
+\bibitem[Stührenberg, 2013]{stuhrenberg13}
+Stührenberg, M. (2013).
+\newblock Quo vadis xml?
+\newblock In {\em XML Prague. A conference on XML}, pages 141--162.
+
+\bibitem[Stührenberg and Christian, 2010]{proc:stuhrenberg10}
+Stührenberg, M. and Christian, W. (2010).
+\newblock Refining the taxonomy of xml schema languages. a new approach for
+  categorizing xml schema languages in terms of processing complexity.
+\newblock In {\em Proceedings of Balisage: The Markup Conference 2010}.
+
+\bibitem[Thomas et~al., 2009]{man:thomas09}
+Thomas, W., Arofan, G., and Gager, J. (2009).
+\newblock {\em User Guide for Data Documentation Initiative Version 3.1}.
+
+\bibitem[Van~der Vlist, 2003]{book:vandervlist03}
+Van~der Vlist, E. (2003).
+\newblock {\em RELAX NG}.
+\newblock O'Reilly Media.
+
+\bibitem[Van~der Vlist, 2006]{proc:vandervlist06}
+Van~der Vlist, E. (2006).
+\newblock Xml schema languages compared.
+\newblock In {\em XML Prague. A conference on XML}, pages 9--28.
+
+\bibitem[Varde et~al., 2010]{book:varde2010}
+Varde, A., Rundensteiner, E., and Fahrenholz, S. (2010).
+\newblock {\em Web-based Support Systems}, chapter XML Based Markup Languages
+  for Specific Domains, pages 215--238.
+\newblock Springer London, London.
+
+\bibitem[Volguine, 2013]{proc:volguine13}
+Volguine, O. (2013).
+\newblock Blaise 4.8.4 web form load and performance testing.
+\newblock In {\em International Blaise Users Conference}, pages 64--95.
+
+\bibitem[Warner, 1965]{art:warner65}
+Warner, S.~L. (1965).
+\newblock Randomized response: A survey technique for eliminating evasive
+  answer bias.
+\newblock {\em Journal of the American Statxistical Association}, 60(309).
+
+\bibitem[Wright, 2007]{proc:wright07}
+Wright, G. (2007).
+\newblock Triple-s: The broader horizon.
+\newblock In {\em ASC 2007. The Challenges of a Changing World: Developments in
+  the Survey Process}, pages 241--246.
+
+\end{thebibliography}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ssm xmlns="https://github.com/jollopre/ssm"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://github.com/jollopre/ssm ../schema/ssm.xsd">
+    ...
+    <content>
+        <section id="Outer">
+            <single name="Q2">
+                <label lang="en">Which brands are you aware of? [FIRST SPONTANEOUS MENTION]</label>
+                <randomising>
+                    <subset>
+                        <code ref="01"/>
+                        <code ref="02"/>
+                        <code ref="03"/>
+                        <code ref="04"/>
+                        <code ref="05"/>
+                        <code ref="06"/>
+                        <code ref="07"/>
+                        <code ref="08"/>
+                    </subset>
+                </randomising>
+                <close code="01">
+                    <label lang="en">A</label>
+                </close>
+                <close code="02">
+                    <label lang="en">B</label>
+                </close>
+                <close code="03">
+                    <label lang="en">C</label>
+                </close>
+                <close code="04">
+                    <label lang="en">D</label>
+                </close>
+                <close code="05">
+                    <label lang="en">E</label>
+                </close>
+                <close code="06">
+                    <label lang="en">F</label>
+                </close>
+                <close code="07">
+                    <label lang="en">G</label>
+                </close>
+                <close code="08">
+                    <label lang="en">H</label>
+                </close>
+                <close code="99">
+                    <label lang="en">Don't know</label>
+                    <exclusive value="true"/>
+                </close>
+            </single>
+        </section>
+        ...
+    </content>
+    ...
+</ssm>

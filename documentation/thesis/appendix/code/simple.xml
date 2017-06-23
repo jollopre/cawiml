@@ -1,0 +1,16 @@
+<routing>
+    ...
+    <statemodel ref="Outer">
+        ...
+        <state id="INF1">
+            <variable ref="INF1"/>
+            <transition target="Q1"/>
+        </state>
+        <state id="Q1">
+            <variable ref="Q1"/>
+            <transition target="p0"/>
+        </state>
+        ...
+    </statemodel>
+    ...
+</routing>

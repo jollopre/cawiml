@@ -1,0 +1,21 @@
+<schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2" xml:lang="en">
+    <title>Schematron rules for Survey State Model (SSM)</title>
+    <ns uri="https://github.com/jollopre/ssm" prefix="ssm"></ns>
+	...
+	<pattern id="transition">
+		...
+        <rule context="ssm:transition">
+            <let name="transition" value="."/>
+            ...
+            <assert test="not(ancestor::ssm:state/@id  = $transition/@target)" diagnostics="m32"></assert>
+            ...
+        </rule>
+        ...
+    </pattern>
+    ...
+    <diagnostics>
+        <diagnostic id="m32" xml:lang="en">
+            transition: target attribute must not reference to itself because it creates a loop.
+        </diagnostic>
+    </diagnostics>
+</schema>
